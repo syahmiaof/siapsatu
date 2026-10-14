@@ -1,0 +1,223 @@
+.pageHeader {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.headline {
+  font-family: var(--font-display, inherit);
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--ss-navy-950);
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--ss-muted);
+  font-weight: 600;
+}
+
+/* Search Container */
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-pill);
+  padding: 0.4rem 0.5rem 0.4rem 1.25rem;
+  box-shadow: 0 4px 16px rgba(3, 20, 58, 0.05);
+  max-width: 540px;
+  transition: border-color var(--ss-motion-fast) ease,
+    box-shadow var(--ss-motion-fast) ease;
+}
+
+.searchBox:focus-within {
+  border-color: var(--ss-navy-950);
+  box-shadow: 0 6px 20px rgba(3, 20, 58, 0.1);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: var(--ss-navy-950);
+  font-weight: 600;
+}
+
+.searchInput::placeholder {
+  color: var(--ss-muted);
+  font-weight: 500;
+}
+
+.searchBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--ss-orange);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+    background-color var(--ss-motion-fast) ease;
+}
+
+.searchBtn:hover {
+  transform: scale(1.05);
+  background: var(--ss-red);
+}
+
+/* Filter Chips Bar */
+.filterBar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.filterChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--ss-radius-pill);
+  border: 1.5px solid var(--ss-line);
+  background: #ffffff;
+  color: var(--ss-navy-950);
+  cursor: pointer;
+  transition: all var(--ss-motion-fast) var(--ss-ease-spring);
+  box-shadow: 0 2px 6px rgba(3, 20, 58, 0.03);
+}
+
+.filterChip:hover {
+  border-color: var(--ss-navy-950);
+  transform: translateY(-2px);
+}
+
+.activeChip {
+  background: var(--ss-navy-950);
+  color: #ffffff;
+  border-color: var(--ss-navy-950);
+  box-shadow: 0 4px 12px rgba(3, 20, 58, 0.2);
+}
+
+.heroRight {
+  display: flex;
+  justify-content: center;
+}
+
+.heroArtWrap {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+}
+
+.heroArt {
+  width: 100%;
+  height: auto;
+  border-radius: var(--ss-radius-lg);
+  object-fit: cover;
+}
+
+/* Catalog Sections */
+.sectionBlock {
+  margin: 3rem 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--ss-navy-950);
+  letter-spacing: -0.02em;
+}
+
+.sectionDesc {
+  font-size: 1rem;
+  color: var(--ss-muted);
+  font-weight: 500;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ss-navy-950);
+  text-decoration: none;
+  transition: color var(--ss-motion-fast) ease;
+}
+
+.viewAllLink:hover {
+  color: var(--ss-orange);
+}
+
+.featuredGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 1280px) {
+  .compactGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+  .featuredGrid {
+    grid-template-columns: 1fr;
+  }
+  .compactGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .compactGrid {
+    grid-template-columns: 1fr;
+  }
+}

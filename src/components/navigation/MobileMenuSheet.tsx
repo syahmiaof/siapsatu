@@ -1,0 +1,125 @@
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { X, ChevronRight } from "lucide-react";
+import { PrimaryButton } from "@/components/brand/PrimaryButton";
+import styles from "./MobileMenuSheet.module.css";
+
+interface MobileMenuSheetProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export function MobileMenuSheet({ isOpen, onClose }: MobileMenuSheetProps) {
+  const pathname = usePathname();
+  const sheetRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    // Lock body scroll
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
+
+  if (!isOpen || !mounted) return null;
+
+  const navLinks = [
+    { label: "Utama", href: "/" },
+    { label: "Modul", href: "/modules" },
+    { label: "Tools", href: "/tools" },
+    { label: "Laluan", href: "/paths/ai-automation" },
+    { label: "Pustaka Saya", href: "/library" },
+    { label: "Peta Hasil", href: "/progress" },
+    { label: "Komuniti", href: "/community" },
+  ];
+
+  return createPortal(
+    <>
+      <div
+        className={styles.backdrop}
+        onClick={onClose}
+        aria-hidden="true"
+      />
+      <div
+        ref={sheetRef}
+        className={styles.sheet}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu navigasi"
+      >
+        <div className={styles.header}>
+          <Image
+            src="/assets/brand/siapsatu-logo.png"
+            alt="SiapSatu"
+            width={120}
+            height={32}
+            style={{ objectFit: "contain" }}
+          />
+          <button
+            onClick={onClose}
+            className={styles.closeBtn}
+            aria-label="Tutup menu"
+          >
+            <X size={20} />
+          </button>
+        </div>
+
+        <nav className={styles.links}>
+          {navLinks.map((item) => {
+            const isActive =
+              item.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(item.href);
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={onClose}
+                className={`${styles.linkItem} ${isActive ? styles.active : ""}`}
+              >
+                <span>{item.label}</span>
+                <ChevronRight size={18} />
+              </Link>
+            );
+          })}
+        </nav>
+
+        <div className={styles.bottomAction}>
+          <PrimaryButton
+            href="/login"
+            onClick={onClose}
+            variant="navy"
+            className="w-full"
+          >
+            Masuk ke akaun
+          </PrimaryButton>
+        </div>
+      </div>
+    </>,
+    document.body
+  );
+}

@@ -1,0 +1,38 @@
+.wrapper {
+  position: relative;
+  display: block;
+}
+
+.visualContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.28em;
+  perspective: 1000px;
+}
+
+.wordMask {
+  display: inline-flex;
+  overflow: hidden;
+  vertical-align: baseline;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+
+.wordInner {
+  display: inline-block;
+  will-change: transform, opacity;
+  transform-origin: center bottom;
+}
+
+.accent {
+  color: var(--ss-orange);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wordInner {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}

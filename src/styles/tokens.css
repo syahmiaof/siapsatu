@@ -1,0 +1,64 @@
+:root {
+  /* Brand Structure & Contrast */
+  --ss-navy-950: #03143a;
+  --ss-navy-900: #062457;
+  --ss-navy-800: #0b3474;
+  --ss-ink: #071a3d;
+  --ss-muted: #53627d;
+  --ss-muted-light: #8798b3;
+  --ss-line: #dbe4f1;
+  --ss-line-subtle: #edf2f9;
+
+  /* Malaysian Flag & Accent Signals */
+  --ss-orange: #ff5a0a;
+  --ss-red: #ff2445;
+  --ss-green: #08bd59;
+  --ss-green-dark: #057a44;
+  --ss-yellow: #ffd12a;
+  --ss-blue: #1777f2;
+  --ss-cyan: #00c4cc;
+  --ss-purple: #6d28d9;
+
+  /* Gradients */
+  --ss-gradient-primary: linear-gradient(135deg, #ff5a0a 0%, #ff2445 100%);
+  --ss-gradient-navy: linear-gradient(180deg, #062457 0%, #03143a 100%);
+  --ss-gradient-card-navy: linear-gradient(135deg, #062457 0%, #0b3474 100%);
+  --ss-gradient-card-red: linear-gradient(135deg, #b31317 0%, #d81c25 100%);
+  --ss-gradient-card-green: linear-gradient(135deg, #057a44 0%, #08bd59 100%);
+
+  /* Surfaces */
+  --ss-surface: #ffffff;
+  --ss-bg: #f8fafd;
+  --ss-surface-subtle: #f1f5fa;
+  --ss-surface-blue: #f2f7ff;
+  --ss-surface-red: #fff2f4;
+  --ss-surface-green: #effbf5;
+  --ss-surface-yellow: #fffbe8;
+
+  /* Border Radii */
+  --ss-radius-xs: 8px;
+  --ss-radius-sm: 14px;
+  --ss-radius-md: 22px;
+  --ss-radius-lg: 32px;
+  --ss-radius-xl: 40px;
+  --ss-radius-pill: 9999px;
+
+  /* Shadows */
+  --ss-shadow-sm: 0 2px 8px rgb(3 20 58 / 0.05);
+  --ss-shadow-card: 0 16px 44px rgb(3 20 58 / 0.10);
+  --ss-shadow-lift: 0 22px 60px rgb(3 20 58 / 0.18);
+  --ss-shadow-glow-orange: 0 10px 28px rgb(255 90 10 / 0.32);
+  --ss-shadow-glow-green: 0 10px 28px rgb(8 189 89 / 0.30);
+
+  /* Animation Timings */
+  --ss-motion-fast: 160ms;
+  --ss-motion-base: 280ms;
+  --ss-motion-slow: 760ms;
+  --ss-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ss-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout Constraints */
+  --ss-max-width: 1400px;
+  --ss-header-height: 80px;
+  --ss-mobile-nav-height: 68px;
+}

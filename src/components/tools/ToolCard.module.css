@@ -1,0 +1,134 @@
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-md);
+  padding: 1.25rem 1.4rem;
+  text-decoration: none;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+    border-color var(--ss-motion-fast) ease,
+    box-shadow var(--ss-motion-fast) ease;
+  box-shadow: 0 4px 16px rgba(3, 20, 58, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--ss-navy-950);
+  box-shadow: var(--ss-shadow-card);
+}
+
+.leftInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.name {
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ss-navy-950);
+}
+
+.badgeRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.categoryPill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--ss-radius-pill);
+  background: var(--ss-surface-blue);
+  color: var(--ss-blue);
+}
+
+.cat-automation {
+  background: var(--ss-surface-red);
+  color: var(--ss-red);
+}
+
+.cat-productivity {
+  background: var(--ss-surface-green);
+  color: var(--ss-green-dark);
+}
+
+.cat-coding {
+  background: var(--ss-surface-subtle);
+  color: var(--ss-navy-900);
+}
+
+.cat-design {
+  background: #fdf2f8;
+  color: #db2777;
+}
+
+.countRow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--ss-muted);
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.arrowBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--ss-surface-subtle);
+  color: var(--ss-navy-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+    background-color var(--ss-motion-fast) ease,
+    color var(--ss-motion-fast) ease;
+}
+
+.card:hover .arrowBtn {
+  transform: translateX(3px);
+  background: var(--ss-navy-950);
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+  .leftInfo {
+    width: 100%;
+    gap: 0.85rem;
+  }
+  .arrowBtn {
+    align-self: flex-end;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+  .card:hover .arrowBtn {
+    transform: none;
+  }
+}

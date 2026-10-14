@@ -1,0 +1,461 @@
+.readerHeader {
+  background: #ffffff;
+  border-bottom: 1.5px solid var(--ss-line);
+  padding: 0.85rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 850;
+}
+
+.readerHeaderInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background: var(--ss-surface-subtle);
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-pill);
+  padding: 0.5rem 1.15rem;
+  width: 380px;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.9rem;
+  color: var(--ss-navy-950);
+  margin-left: 0.5rem;
+  width: 100%;
+}
+
+.readerHeaderRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.libraryLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--ss-navy-950);
+  text-decoration: none;
+}
+
+.libraryLink:hover {
+  color: var(--ss-orange);
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ss-line);
+  object-fit: cover;
+}
+
+/* Main Reader 3-Column Layout */
+.readerLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr 340px;
+  gap: 2rem;
+  padding: 2rem 0 6rem;
+  align-items: start;
+}
+
+/* Center Content Column */
+.centerCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Progress Bar Track */
+.progressTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--ss-muted);
+  margin-bottom: -0.5rem;
+}
+
+.progressBarWrap {
+  width: 100%;
+  height: 8px;
+  background: var(--ss-line);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--ss-red);
+  border-radius: 4px;
+  transition: width 300ms ease;
+}
+
+.mainHeadline {
+  font-family: var(--font-display, inherit);
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ss-navy-950);
+}
+
+.lessonSubtitle {
+  font-size: 1.05rem;
+  color: var(--ss-muted);
+  line-height: 1.5;
+}
+
+/* Outcome Callout Banner */
+.outcomeCallout {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--ss-surface-green);
+  border: 1.5px solid rgba(8, 189, 89, 0.25);
+  border-radius: var(--ss-radius-md);
+  padding: 1rem 1.35rem;
+  color: var(--ss-green-dark);
+  font-family: var(--font-display, inherit);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.outcomeCheck {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ss-green);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Step Detail Box */
+.stepDetailBox {
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-lg);
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(3, 20, 58, 0.04);
+}
+
+.stepDetailHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.badgeNumber {
+  background: var(--ss-red);
+  color: #ffffff;
+  font-family: var(--font-display, inherit);
+  font-size: 1.1rem;
+  font-weight: 900;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--ss-radius-sm);
+}
+
+.stepDetailTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--ss-navy-950);
+  line-height: 1.2;
+}
+
+.stepDetailSub {
+  font-size: 0.95rem;
+  color: var(--ss-muted);
+  margin-top: 0.25rem;
+}
+
+.instructionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.instructionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.instructionNum {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ss-surface-subtle);
+  border: 1px solid var(--ss-line);
+  color: var(--ss-navy-950);
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.instructionTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ss-navy-950);
+  margin-bottom: 0.2rem;
+}
+
+.instructionDetail {
+  font-size: 0.92rem;
+  color: var(--ss-muted);
+  line-height: 1.45;
+}
+
+/* Canvas Mockup Container */
+.canvasMockupBox {
+  background: var(--ss-surface-subtle);
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.canvasTopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ss-navy-950);
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ss-line);
+}
+
+.nodesFlowVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.canvasNode {
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 12px rgba(3, 20, 58, 0.04);
+}
+
+.nodeIconSquare {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.addNodeBtn {
+  align-self: center;
+  background: var(--ss-red);
+  color: #ffffff;
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--ss-radius-pill);
+}
+
+/* Official Link Callout */
+.officialLinkStrip {
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.officialLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.officialTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ss-navy-950);
+}
+
+.officialSub {
+  font-size: 0.85rem;
+  color: var(--ss-muted);
+}
+
+.externalOpenBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.15rem;
+  border-radius: var(--ss-radius-pill);
+  background: var(--ss-surface-subtle);
+  border: 1.5px solid var(--ss-line);
+  color: var(--ss-navy-950);
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--ss-motion-fast) ease;
+}
+
+.externalOpenBtn:hover {
+  background: var(--ss-navy-950);
+  color: #ffffff;
+}
+
+/* Right Column: Template & Task Box */
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.taskBox {
+  background: var(--ss-surface-yellow);
+  border: 1.5px solid rgba(255, 209, 42, 0.4);
+  border-radius: var(--ss-radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 4px 16px rgba(255, 209, 42, 0.08);
+}
+
+.taskHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ss-navy-950);
+}
+
+.taskText {
+  font-size: 0.92rem;
+  color: var(--ss-navy-950);
+  line-height: 1.5;
+}
+
+.taskSuccessBtn {
+  background: var(--ss-green);
+  color: #ffffff;
+  font-family: var(--font-display, inherit);
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--ss-radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform var(--ss-motion-fast) ease,
+    background-color var(--ss-motion-fast) ease;
+}
+
+.taskSuccessBtn:hover {
+  transform: translateY(-2px);
+  background: var(--ss-green-dark);
+}
+
+/* Sticky Bottom Bar */
+.bottomActionDock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1.5px solid var(--ss-line);
+  padding: 1rem 0;
+  z-index: 800;
+  box-shadow: 0 -4px 20px rgba(3, 20, 58, 0.06);
+}
+
+.bottomDockInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.prevBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--ss-radius-pill);
+  background: var(--ss-surface-subtle);
+  border: 1.5px solid var(--ss-line);
+  color: var(--ss-navy-950);
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.rightDockButtons {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.markCompleteBtn {
+  background: var(--ss-red);
+  color: #ffffff;
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--ss-radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .readerLayout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,140 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border-radius: var(--ss-radius-pill);
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+    box-shadow var(--ss-motion-base) ease,
+    background-color var(--ss-motion-fast) ease;
+  overflow: clip;
+  white-space: nowrap;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Light sweep pseudo element */
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: skewX(-24deg);
+  transition: left 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  pointer-events: none;
+}
+
+.button:hover::before,
+.button:focus-visible::before {
+  left: 140%;
+}
+
+/* Primary Variant */
+.primary {
+  background: var(--ss-gradient-primary);
+  color: #ffffff;
+  padding: 0.85rem 1.65rem;
+  box-shadow: 0 4px 14px rgb(255 90 10 / 0.28);
+}
+
+.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ss-shadow-glow-orange);
+}
+
+.primary:active {
+  transform: scale(0.98) translateY(0);
+}
+
+/* Secondary / Outline Variant */
+.secondary {
+  background: #ffffff;
+  color: var(--ss-navy-950);
+  border: 2px solid var(--ss-navy-950);
+  padding: 0.78rem 1.55rem;
+  box-shadow: 0 2px 8px rgb(3 20 58 / 0.06);
+}
+
+.secondary:hover {
+  transform: translateY(-2px);
+  background: var(--ss-surface-subtle);
+  box-shadow: var(--ss-shadow-sm);
+}
+
+.secondary:active {
+  transform: scale(0.98);
+}
+
+/* Navy variant */
+.navy {
+  background: var(--ss-navy-950);
+  color: #ffffff;
+  padding: 0.85rem 1.65rem;
+  box-shadow: 0 4px 14px rgb(3 20 58 / 0.25);
+}
+
+.navy:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgb(3 20 58 / 0.35);
+  background: var(--ss-navy-900);
+}
+
+.navy:active {
+  transform: scale(0.98);
+}
+
+/* Green WhatsApp variant */
+.green {
+  background: #25d366;
+  color: #ffffff;
+  padding: 0.85rem 1.65rem;
+  box-shadow: 0 4px 14px rgb(37 211 102 / 0.3);
+}
+
+.green:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--ss-shadow-glow-green);
+}
+
+.green:active {
+  transform: scale(0.98);
+}
+
+/* Small size */
+.sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.92rem;
+}
+
+.arrowIcon {
+  transition: transform var(--ss-motion-base) var(--ss-ease-spring);
+}
+
+.button:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button::before {
+    display: none;
+  }
+  .button:hover {
+    transform: none;
+  }
+  .button:hover .arrowIcon {
+    transform: none;
+  }
+}

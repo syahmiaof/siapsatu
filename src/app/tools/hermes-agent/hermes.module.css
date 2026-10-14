@@ -1,0 +1,330 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ss-muted);
+  font-weight: 600;
+  padding: 1.5rem 0 1rem;
+}
+
+.breadcrumb a {
+  transition: color var(--ss-motion-fast) ease;
+}
+
+.breadcrumb a:hover {
+  color: var(--ss-navy-950);
+}
+
+.heroSection {
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-lg);
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+  box-shadow: 0 16px 44px rgba(3, 20, 58, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.headline {
+  font-family: var(--font-display, inherit);
+  font-size: clamp(2.4rem, 4.4vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: var(--ss-navy-950);
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--ss-muted);
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.githubPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--ss-surface-subtle);
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-pill);
+  color: var(--ss-navy-950);
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all var(--ss-motion-fast) ease;
+}
+
+.githubPill:hover {
+  border-color: var(--ss-navy-950);
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.highlightsStrip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1.5px solid var(--ss-line);
+}
+
+.highlightPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: var(--ss-radius-sm);
+  background: var(--ss-surface-subtle);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ss-navy-950);
+}
+
+.heroRight {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.characterArtWrap {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+}
+
+.characterArt {
+  width: 100%;
+  height: auto;
+  border-radius: var(--ss-radius-md);
+  object-fit: cover;
+}
+
+/* Modules Section */
+.modulesSection {
+  margin: 3.5rem 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.sectionTitleGroup {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--ss-navy-950);
+}
+
+.sectionDesc {
+  font-size: 1rem;
+  color: var(--ss-muted);
+}
+
+.hermesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hermesCard {
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(3, 20, 58, 0.04);
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+    border-color var(--ss-motion-fast) ease,
+    box-shadow var(--ss-motion-fast) ease;
+}
+
+.hermesCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--ss-navy-950);
+  box-shadow: var(--ss-shadow-card);
+}
+
+.cardIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 1.15rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ss-navy-950);
+  margin-bottom: 0.5rem;
+}
+
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--ss-muted);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ss-line-subtle);
+}
+
+.badgePill {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--ss-radius-pill);
+}
+
+.cardPrice {
+  font-family: var(--font-display, inherit);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--ss-navy-950);
+}
+
+.cardArrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ss-surface-subtle);
+  color: var(--ss-navy-950);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--ss-motion-fast) ease;
+}
+
+.hermesCard:hover .cardArrow {
+  transform: translateX(3px);
+  background: var(--ss-orange);
+  color: #ffffff;
+}
+
+/* How It Works Banner */
+.howItWorksBar {
+  background: #ffffff;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-lg);
+  padding: 1.75rem 2rem;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 8px 24px rgba(3, 20, 58, 0.05);
+}
+
+.howLeftTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ss-navy-950);
+  margin-bottom: 0.25rem;
+}
+
+.howLeftDesc {
+  font-size: 0.85rem;
+  color: var(--ss-muted);
+}
+
+.howStepsFlow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.howStep {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.howIconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.howStepText {
+  display: flex;
+  flex-direction: column;
+}
+
+.howStepTitle {
+  font-family: var(--font-display, inherit);
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ss-navy-950);
+}
+
+.howStepDesc {
+  font-size: 0.78rem;
+  color: var(--ss-muted);
+  max-width: 140px;
+}
+
+@media (max-width: 1024px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+  .hermesGrid {
+    grid-template-columns: 1fr;
+  }
+  .howItWorksBar {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,147 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: var(--ss-header-height);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1.5px solid var(--ss-line);
+  z-index: 900;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.leftBrand {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+    filter var(--ss-motion-fast) ease;
+}
+
+.logoLink:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 4px 10px rgba(3, 20, 58, 0.12));
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navItemContainer {
+  position: relative;
+}
+
+.navLink {
+  position: relative;
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--ss-navy-950);
+  padding: 0.5rem 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--ss-motion-fast) ease;
+}
+
+/* Animated underline growing left to right */
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--ss-orange);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--ss-motion-fast) ease;
+}
+
+.navLink:hover {
+  color: var(--ss-orange);
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+}
+
+.navLink.active {
+  color: var(--ss-orange);
+}
+
+.navLink.active::after {
+  transform: scaleX(1);
+}
+
+.chevronIcon {
+  transition: transform var(--ss-motion-fast) ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobileControls {
+  display: none;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobileIconBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--ss-radius-sm);
+  background: var(--ss-surface-subtle);
+  color: var(--ss-navy-950);
+  border: 1px solid var(--ss-line);
+}
+
+@media (max-width: 900px) {
+  .desktopNav {
+    display: none;
+  }
+  .rightActions {
+    display: none;
+  }
+  .mobileControls {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logoLink:hover {
+    transform: none;
+  }
+  .navLink::after {
+    transition: none;
+  }
+}
