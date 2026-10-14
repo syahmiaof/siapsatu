@@ -107,5 +107,6 @@ academy-syahmi/
 - [UI_PLAN.md](UI_PLAN.md): UX architecture and visual direction.
 - [BRAND_COPY.md](BRAND_COPY.md): Copy deck and taglines.
 - [mockups/UI_MOCKUPS_INDEX.md](mockups/UI_MOCKUPS_INDEX.md): Index of 10 Malaysia Utility expansion screens.
-- [docs/ASSET_SOURCES.md](docs/ASSET_SOURCES.md): Complete provenance log for all media assets.
-- [docs/VISUAL_QA.md](docs/VISUAL_QA.md): Detailed visual inspection against reference mockups.
+- [docs/ASSET_SOURCES.md](docs/ASSET_SOURCES.md): Previous agent's asset log; some logo and crop claims need verification.
+- [docs/VISUAL_QA.md](docs/VISUAL_QA.md): Previous agent's QA report; visual match claims need fresh comparison.
+- [ASTRA_VISUAL_REBUILD_PROMPT.md](ASTRA_VISUAL_REBUILD_PROMPT.md): targeted repair brief for Astra, based on actual gaps between saved captures and approved mockups.

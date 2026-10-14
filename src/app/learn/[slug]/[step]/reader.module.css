@@ -391,7 +391,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  transition: transform var(--ss-motion-fast) ease,
+  transition:
+    transform var(--ss-motion-fast) ease,
     background-color var(--ss-motion-fast) ease;
 }
 
@@ -457,5 +458,352 @@
 @media (max-width: 1100px) {
   .readerLayout {
     grid-template-columns: 1fr;
+  }
+}
+.readerLogo {
+  width: 220px;
+  height: auto;
+}
+.readerHeader {
+  padding: 16px 0;
+  position: relative;
+}
+.readerLayout {
+  grid-template-columns: 210px minmax(0, 1fr) 320px;
+  gap: 22px;
+  padding-block: 24px 130px;
+}
+.chapterMenu {
+  min-width: 0;
+}
+.chapterMenu > summary {
+  display: none;
+}
+.centerCol {
+  gap: 14px;
+  min-width: 0;
+}
+.mainHeadline {
+  font-size: 42px;
+  line-height: 1.05;
+}
+.progressTop {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.progressBarWrap {
+  height: 5px;
+  margin: 0;
+}
+.lessonSubtitle {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.outcomeCallout {
+  padding: 10px 13px;
+  font-size: 13px;
+  border: 0;
+  border-radius: 10px;
+  gap: 8px;
+}
+.outcomeCallout svg {
+  flex-shrink: 0;
+}
+.stepDetailBox {
+  padding: 18px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 14px;
+  background: #f5f8fe;
+}
+.stepDetailHeader {
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.badgeNumber {
+  border-radius: 10px;
+  font-size: 21px;
+}
+.stepDetailTitle {
+  font-size: 24px;
+}
+.stepDetailSub {
+  font-size: 13px;
+}
+.lessonBodyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+.instructionsList {
+  list-style: none;
+  gap: 12px;
+  margin: 0;
+}
+.instructionItem {
+  gap: 10px;
+}
+.instructionTitle {
+  font-size: 15px;
+}
+.instructionDetail {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.instructionNum {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+}
+.officialLinkStrip {
+  padding: 12px;
+  margin-top: 16px;
+  border-radius: 10px;
+  gap: 10px;
+  font-size: 13px;
+}
+.officialSub {
+  font-size: 11px;
+}
+.externalOpenBtn {
+  padding: 9px 12px;
+  min-height: 40px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.rightCol {
+  gap: 14px;
+  min-width: 0;
+}
+.readerArt {
+  height: 205px;
+  margin-top: -12px;
+}
+.taskBox {
+  padding: 18px;
+  border: 0;
+  box-shadow: none;
+  border-radius: 15px;
+  gap: 12px;
+}
+.taskHeader {
+  font-size: 21px;
+}
+.taskText {
+  font-size: 13px;
+}
+.taskSuccessBtn {
+  font-size: 14px;
+  border-radius: 10px;
+  padding: 12px;
+  background: var(--ss-green-dark);
+}
+.bottomActionDock {
+  padding: 12px 0;
+}
+.markCompleteBtn {
+  font-size: 14px;
+  padding: 13px 18px;
+  border-radius: 12px;
+}
+.rightDockButtons > a {
+  font-size: 14px;
+  border-radius: 12px;
+}
+.prevBtn {
+  font-size: 14px;
+  border-radius: 12px;
+}
+.searchBox {
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #f1f5fa;
+}
+@media (min-width: 1300px) {
+  .lessonBodyGrid {
+    grid-template-columns: 1fr 1.15fr;
+    align-items: center;
+  }
+  .readerLayout {
+    grid-template-columns: 210px minmax(0, 1fr) 330px;
+  }
+  .centerCol {
+    gap: 18px;
+  }
+  .stepDetailBox {
+    padding: 20px;
+  }
+  .mainHeadline {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1100px) {
+  .readerLayout {
+    grid-template-columns: 175px minmax(0, 1fr);
+    gap: 18px;
+  }
+  .rightCol {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .readerArt {
+    display: none;
+  }
+  .chapterMenu {
+    grid-row: span 2;
+  }
+  .rightCol > p {
+    grid-column: 1/-1;
+  }
+  .searchBox {
+    width: 300px;
+  }
+}
+@media (max-width: 700px) {
+  .readerHeader {
+    padding: 14px 0;
+  }
+  .readerHeaderInner {
+    gap: 10px;
+  }
+  .readerLogo {
+    width: 160px;
+  }
+  .searchBox {
+    display: none;
+  }
+  .libraryLink {
+    font-size: 12px;
+    gap: 6px;
+  }
+  .libraryLink svg {
+    width: 17px;
+  }
+  .readerLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-block: 8px 145px;
+  }
+  .chapterMenu {
+    width: 100%;
+  }
+  .chapterMenu > summary {
+    display: block;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 800;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f1f5fa;
+  }
+  .chapterMenu > summary:after {
+    content: " +";
+    float: right;
+  }
+  .chapterMenu[open] > summary:after {
+    content: " −";
+  }
+  .chapterMenu[open] > div {
+    margin-top: 8px;
+  }
+  .centerCol {
+    gap: 14px;
+    width: 100%;
+  }
+  .mainHeadline {
+    font-size: 32px;
+  }
+  .lessonSubtitle {
+    font-size: 15px;
+  }
+  .outcomeCallout {
+    font-size: 13px;
+  }
+  .stepDetailBox {
+    padding: 16px;
+  }
+  .stepDetailTitle {
+    font-size: 23px;
+  }
+  .stepDetailSub {
+    font-size: 13px;
+  }
+  .instructionTitle {
+    font-size: 15px;
+  }
+  .instructionDetail {
+    font-size: 14px;
+  }
+  .lessonBodyGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .rightCol {
+    display: flex;
+    width: 100%;
+    gap: 14px;
+  }
+  .bottomDockInner {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .prevBtn {
+    font-size: 12px;
+    min-height: 38px;
+    padding: 8px 12px;
+  }
+  .rightDockButtons {
+    flex: 1;
+    gap: 6px;
+    justify-content: flex-end;
+  }
+  .markCompleteBtn {
+    font-size: 12px;
+    padding: 10px 11px;
+    min-height: 44px;
+  }
+  .rightDockButtons > a {
+    font-size: 12px;
+    padding: 10px 11px;
+    min-height: 44px;
+    white-space: normal;
+  }
+  .rightDockButtons > a svg {
+    display: none;
+  }
+  .bottomActionDock {
+    padding: 10px 0 calc(10px + env(safe-area-inset-bottom, 0px));
+  }
+  .progressTop {
+    font-size: 11px;
+  }
+  .taskText {
+    font-size: 14px;
+  }
+  .officialLinkStrip {
+    padding: 12px;
+  }
+  .readerLayout .rightCol .taskBox {
+    padding: 18px;
+  }
+}
+@media (max-width: 400px) {
+  .prevBtn span {
+    display: none;
+  }
+  .prevBtn {
+    padding: 10px;
+  }
+  .rightDockButtons {
+    gap: 5px;
+  }
+  .markCompleteBtn,
+  .rightDockButtons > a {
+    font-size: 11px;
+    padding: 10px;
   }
 }

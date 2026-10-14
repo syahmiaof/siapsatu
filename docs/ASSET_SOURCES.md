@@ -1,32 +1,46 @@
-# Asset Sources and Provenance Log
+# SiapSatu asset provenance
 
-Last updated: 2026-10-14 22:47:21
+Verified 15 October 2026. This replaces inaccurate descriptions of rectangular screenshot crops as isolated artwork. Simple Icons is a community-maintained library, not an official brand kit.
 
-| Asset Name | Source / Brand Kit | Original URL / Path | Local Destination | Retrieval Date |
-|---|---|---|---|---|
-| SiapSatu Primary Logo | Supplied workspace brand asset | `local:brand/logo-concepts/siapsatu-primary-final.png` | `public/assets/brand/siapsatu-logo.png` | 2026-10-14 |
-| n8n Official Logo | Supplied workspace brand asset | `local:brand/tool-logos/n8n-official.png` | `public/assets/tools/n8n.png` | 2026-10-14 |
-| Hermes Agent Official Logo | Supplied workspace brand asset | `local:brand/tool-logos/hermes-agent-official.png` | `public/assets/tools/hermes-agent.png` | 2026-10-14 |
-| Openai Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/openai.svg` | `public/assets/tools/chatgpt.svg` | 2026-10-14 |
-| Anthropic Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/anthropic.svg` | `public/assets/tools/claude.svg` | 2026-10-14 |
-| Perplexity Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/perplexity.svg` | `public/assets/tools/perplexity.svg` | 2026-10-14 |
-| Make Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/make.svg` | `public/assets/tools/make.svg` | 2026-10-14 |
-| Zapier Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/zapier.svg` | `public/assets/tools/zapier.svg` | 2026-10-14 |
-| Github Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/github.svg` | `public/assets/tools/github.svg` | 2026-10-14 |
-| Vercel Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/vercel.svg` | `public/assets/tools/vercel.svg` | 2026-10-14 |
-| Canva Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/canva.svg` | `public/assets/tools/canva.svg` | 2026-10-14 |
-| Notion Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/notion.svg` | `public/assets/tools/notion.svg` | 2026-10-14 |
-| Meta Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/meta.svg` | `public/assets/tools/meta.svg` | 2026-10-14 |
-| Whatsapp Logo | Simple Icons official vector library | `https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/whatsapp.svg` | `public/assets/tools/whatsapp.svg` | 2026-10-14 |
-| Google Gemini Star Logo | Google Official Brand Guidelines SVG | `https://ai.google.dev` | `public/assets/tools/gemini.svg` | 2026-10-14 |
-| Figma Logo | Simple Icons official vector library | `https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/figma.svg` | `public/assets/tools/figma.svg` | 2026-10-14 |
-| OpenAI Codex Logo | OpenAI Official Mark SVG | `https://openai.com` | `public/assets/tools/codex.svg` | 2026-10-14 |
-| NotebookLM Logo | Google NotebookLM Mark SVG | `https://notebooklm.google.com` | `public/assets/tools/notebooklm.svg` | 2026-10-14 |
-| Cursor Logo | Cursor IDE Mark SVG | `https://cursor.com` | `public/assets/tools/cursor.svg` | 2026-10-14 |
-| Antigravity Logo | Antigravity Mark SVG | `local:custom` | `public/assets/tools/antigravity.svg` | 2026-10-14 |
-| Hero Malaysian Learners Artwork | homepage-theme-03-malaysia-utility.png (isolated artwork crop without UI/text) | `local:mockups/homepage-theme-03-malaysia-utility.png` | `public/assets/illustrations/hero-learners.png` | 2026-10-14 |
-| Community Learners Discussion Artwork | homepage-theme-03-malaysia-utility.png (isolated banner illustration crop) | `local:mockups/homepage-theme-03-malaysia-utility.png` | `public/assets/illustrations/community-learners.png` | 2026-10-14 |
-| n8n Hero Learner Artwork | ui-02-tool-n8n-desktop.png (isolated character artwork crop) | `local:mockups/ui-02-tool-n8n-desktop.png` | `public/assets/illustrations/n8n-hero-character.png` | 2026-10-14 |
-| Hermes Hero Learner Artwork | ui-03-tool-hermes-desktop.png (isolated character artwork crop) | `local:mockups/ui-03-tool-hermes-desktop.png` | `public/assets/illustrations/hermes-hero-character.png` | 2026-10-14 |
-| AI Automation Path Hero Artwork | ui-04-learning-path-automation-v2.png (isolated character artwork crop) | `local:mockups/ui-04-learning-path-automation-v2.png` | `public/assets/illustrations/path-hero-character.png` | 2026-10-14 |
+## Supplied originals
 
+| Runtime file | Source | Treatment |
+|---|---|---|
+| `brand/siapsatu-logo.png` | `brand/logo-concepts/siapsatu-primary-final.png` | Original bytes preserved. |
+| `brand/siapsatu-display.png` | Same logo | Exact-pixel crop `(99,213,1710,668)`, 1611 by 455. Meaningful alpha bounds approximately `(101,215,1706,664)`; near-transparent noise explains misleading full-image bounds. No redrawing. |
+| `tools/n8n.png` | `brand/tool-logos/n8n-official.png` | Supplied bytes unchanged. Official label comes from the supplied filename. |
+| `tools/hermes-agent.png` | `brand/tool-logos/hermes-agent-official.png` | Supplied bytes unchanged. Limited source resolution remains visible at large sizes. |
+
+Runtime paths above are relative to `public/assets/`. SHA-256 checks: [protected assets](../artifacts/visual-qa/astra/protected-assets.json). Neither `brand/` nor `mockups/` was edited. `scripts/prepare_assets.py` now only reproduces these copies and crop. It no longer crops mockup UI, invents marks, or overwrites provenance.
+
+## Clean artwork
+
+| Runtime asset | Creation and reference | Limits |
+|---|---|---|
+| `illustrations/learners-clean.png` | Generated transparent trio, guided by the approved Malaysia Utility homepage. | New illustration, not an exact extraction; different poses and silhouettes. No baked-in headings, navbar, buttons or prices. |
+| `illustrations/learner-clean.png` | Generated transparent pointing learner and laptop, guided by the n8n reference. | Different pose; reused in supporting pages and mobile cards. |
+| `illustrations/hermes-clean.png` | Generated transparent woman, laptop, books and mug, guided by the Hermes reference. | New illustration; simpler small-card composition. |
+| Flag ribbon, crescent, 14-point star, arrow, skyline | Authored SVG in `BrandScene.tsx`. | Stylized brand decoration, not an official flag drawing; simplified skyline. |
+| Workflow browser and nodes | Real HTML/CSS/Lucide in `WorkflowDiagram.tsx`, with supplied n8n mark. | Labelled `contoh visual`; does not claim a live integration ran. |
+| Card decoration and avatars | Lucide icons, clean illustrations and initial-letter avatars. | Generic UI graphics and demo avatars, not real learners. |
+
+Generated outputs: `exec-1fd48740-bd5e-4e36-aad0-2b0bf3ca3130.png`, `exec-cf375921-2f4d-4c6e-a915-2f1af37705d0.png`, `exec-e857bb0b-040e-45af-834e-54dec68ff13b.png` in this chat's generated-images folder. Runtime copies were inspected with transparency and in rendered pages.
+
+## Tool marks
+
+| Local name | Source / status | Treatment |
+|---|---|---|
+| Gemini | [Simple Icons 16.0.0 googlegemini](https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/googlegemini.svg) | Verified library geometry, blue tint, not the reference's multicolor rendering. |
+| Claude | [Simple Icons 16.0.0 claude](https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/claude.svg) | Correct spokes replace unrelated Anthropic A; orange tint. |
+| Cursor | [Simple Icons 16.0.0 cursor](https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/cursor.svg) | Verified library geometry replaces invented mark. |
+| NotebookLM | Neutral `NLM` text | Library retrieval timed out. No official-logo claim. |
+| Codex | Neutral `Codex` text | No independently verified distinct mark acquired. |
+| Antigravity | Neutral `AG` text | No independently verified mark acquired. |
+| ChatGPT, Perplexity, Make, Zapier, GitHub, Vercel, Canva, Figma, Notion, Meta, WhatsApp | Simple Icons 14.0.0, individual SVG URLs in evidence below | Retrieved and compared path geometry. All final paths agree. Vercel differed and was replaced with the sourced file. Some fills tinted locally; geometry preserved. OpenAI library mark used for ChatGPT. |
+| Vibe Code | Authored generic angle-bracket icon | A learning-topic icon, not an official product mark. |
+
+Exact URLs, hashes and retrieval results: [new marks](../artifacts/visual-qa/astra/logo-retrieval.json), [existing marks](../artifacts/visual-qa/astra/existing-logo-verification.json). Trademark ownership remains with the respective owners; no endorsement implied.
+
+## Retired screenshot crops
+
+Old `hero-learners.png`, `community-learners.png`, `n8n-hero-character.png`, `hermes-hero-character.png`, `path-hero-character.png`, avatar and thumbnail crops are historical rectangular portions of generated mockups. Some contain UI/text. They are retained as historical files, **not isolated artwork**, and are not rendered by rebuilt route components. Dormant mock-data image paths do not constitute runtime usage.

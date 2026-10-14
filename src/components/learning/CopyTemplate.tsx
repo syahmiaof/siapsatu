@@ -1,87 +1,82 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Copy, Check, FileCode } from "lucide-react";
 import styles from "./CopyTemplate.module.css";
-
-interface CopyTemplateProps {
-  code: string;
-  title?: string;
-  language?: string;
-}
-
 export function CopyTemplate({
   code,
   title = "Template untuk disalin",
-  language = "json",
-}: CopyTemplateProps) {
-  const [copied, setCopied] = useState(false);
-
-  async function handleCopy() {
+}: {
+  code: string;
+  title?: string;
+  language?: string;
+}) {
+  const [status, setStatus] = useState<"idle" | "copied" | "error">("idle");
+  const timer = useRef<ReturnType<typeof setTimeout>>();
+  useEffect(() => () => clearTimeout(timer.current), []);
+  useEffect(() => {
+    setStatus("idle");
+    clearTimeout(timer.current);
+  }, [code]);
+  async function copy() {
+    clearTimeout(timer.current);
+    const previous = document.activeElement as HTMLElement | null;
     try {
-      if (navigator.clipboard && window.isSecureContext) {
+      if (navigator.clipboard && window.isSecureContext)
         await navigator.clipboard.writeText(code);
-      } else {
-        throw new Error("Clipboard API unavailable");
+      else {
+        const area = document.createElement("textarea");
+        area.value = code;
+        area.style.cssText = "position:fixed;left:-9999px";
+        document.body.append(area);
+        try {
+          area.select();
+          if (!document.execCommand("copy"))
+            throw new Error("Copy unavailable");
+        } finally {
+          area.remove();
+          previous?.focus();
+        }
       }
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2400);
+      setStatus("copied");
+      timer.current = setTimeout(() => setStatus("idle"), 2400);
     } catch {
-      try {
-        const textArea = document.createElement("textarea");
-        textArea.value = code;
-        textArea.style.position = "fixed";
-        textArea.style.left = "-9999px";
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2400);
-      } catch {
-        setCopied(true);
-        setTimeout(() => setCopied(false), 2400);
-      }
+      setStatus("error");
     }
   }
-
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles.headerLeft}>
-          <FileCode size={18} color="var(--ss-orange)" />
+          <FileCode size={18} />
           <span>{title}</span>
         </div>
-
         <button
           type="button"
-          onClick={handleCopy}
-          className={`${styles.copyBtn} ${copied ? styles.copied : ""}`}
-          aria-label={copied ? "Telah disalin ke papan klip" : "Salin template"}
+          onClick={copy}
+          className={`${styles.copyBtn} ${status === "copied" ? styles.copied : ""}`}
+          aria-label={
+            status === "copied"
+              ? "Telah disalin ke papan klip"
+              : "Salin template"
+          }
         >
-          {copied ? (
-            <>
-              <Check size={14} />
-              <span>Disalin!</span>
-            </>
-          ) : (
-            <>
-              <Copy size={14} />
-              <span>Salin template</span>
-            </>
-          )}
+          {status === "copied" ? <Check size={14} /> : <Copy size={14} />}
+          <span>{status === "copied" ? "Disalin!" : "Salin template"}</span>
         </button>
       </div>
-
-      <pre className={styles.codeArea}>
+      <pre className={styles.codeArea} tabIndex={0}>
         <code>{code}</code>
       </pre>
-
-      {/* Accessible live region */}
-      <span className="sr-only" role="status" aria-live="polite">
-        {copied ? "Template telah berjaya disalin ke papan klip anda." : ""}
-      </span>
+      <p
+        role="status"
+        className={status === "error" ? "prototype-note" : "sr-only"}
+      >
+        {status === "error"
+          ? "Salinan automatik gagal. Pilih teks template dan salin secara manual."
+          : status === "copied"
+            ? "Template telah disalin."
+            : ""}
+      </p>
     </div>
   );
 }

@@ -1,0 +1,68 @@
+
+> siapsatu-lms@1.0.0 test:e2e
+> playwright test
+
+
+Running 54 tests using 1 worker
+
+(node:18424) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop-chromium] › tests\astra-behavior.spec.ts:3:5 › Tools search, empty reset, and category selection (495ms)
+  ok  2 [desktop-chromium] › tests\astra-behavior.spec.ts:23:5 › Query-linked catalog and back navigation remain readable (2.3s)
+  ok  3 [desktop-chromium] › tests\astra-behavior.spec.ts:49:5 › Checkout keyboard trap, Escape and focus restoration (528ms)
+  ok  4 [desktop-chromium] › tests\astra-behavior.spec.ts:69:5 › Reader coherent step, clipboard contents and persistent completion (718ms)
+  ok  5 [desktop-chromium] › tests\astra-behavior.spec.ts:101:5 › Denied clipboard reports manual fallback (405ms)
+  ok  6 [desktop-chromium] › tests\astra-behavior.spec.ts:118:5 › Malformed local progress safely falls back to demo (350ms)
+  ok  7 [desktop-chromium] › tests\astra-behavior.spec.ts:134:5 › Login preview makes no account or delivery claim (274ms)
+  -   8 [desktop-chromium] › tests\astra-behavior.spec.ts:146:5 › Mobile dock leaves final tool reachable
+  ok  9 [desktop-chromium] › tests\astra-behavior.spec.ts:168:5 › Community publishing stays local and supports optional title (519ms)
+  ok 10 [desktop-chromium] › tests\astra-behavior.spec.ts:179:5 › Mega menu keyboard arrows and Escape restore trigger focus (364ms)
+  ok 11 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for homepage (/) (2.1s)
+  ok 12 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for modules-catalog (/modules) (2.1s)
+  ok 13 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tools-directory (/tools) (2.0s)
+  ok 14 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-n8n (/tools/n8n) (1.9s)
+  ok 15 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-hermes-agent (/tools/hermes-agent) (2.0s)
+  ok 16 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for learning-path-automation (/paths/ai-automation) (2.0s)
+  ok 17 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for module-detail-n8n (/modules/n8n-google-sheets) (2.1s)
+  ok 18 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for lesson-reader-n8n (/learn/n8n-google-sheets/2) (2.0s)
+  ok 19 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for library-dashboard (/library) (2.0s)
+  ok 20 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for progress-map (/progress) (2.0s)
+  ok 21 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for community-hub (/community) (2.0s)
+  ok 22 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for login-page (/login) (1.9s)
+  ok 23 [desktop-chromium] › tests\visual-qa.spec.ts:86:5 › Mega menu interaction on desktop (2.1s)
+  -  24 [desktop-chromium] › tests\visual-qa.spec.ts:114:5 › Mobile menu drawer interaction on mobile
+  ok 25 [desktop-chromium] › tests\visual-qa.spec.ts:146:5 › Tools directory search and category filter (1.5s)
+  ok 26 [desktop-chromium] › tests\visual-qa.spec.ts:177:5 › Checkout preview modal on module detail (2.0s)
+  ok 27 [desktop-chromium] › tests\visual-qa.spec.ts:209:5 › Lesson reader copy template and step completion (1.6s)
+(node:1168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 28 [mobile-chromium] › tests\astra-behavior.spec.ts:3:5 › Tools search, empty reset, and category selection (419ms)
+  ok 29 [mobile-chromium] › tests\astra-behavior.spec.ts:23:5 › Query-linked catalog and back navigation remain readable (2.3s)
+  ok 30 [mobile-chromium] › tests\astra-behavior.spec.ts:49:5 › Checkout keyboard trap, Escape and focus restoration (477ms)
+  ok 31 [mobile-chromium] › tests\astra-behavior.spec.ts:69:5 › Reader coherent step, clipboard contents and persistent completion (780ms)
+  ok 32 [mobile-chromium] › tests\astra-behavior.spec.ts:101:5 › Denied clipboard reports manual fallback (404ms)
+  ok 33 [mobile-chromium] › tests\astra-behavior.spec.ts:118:5 › Malformed local progress safely falls back to demo (320ms)
+  ok 34 [mobile-chromium] › tests\astra-behavior.spec.ts:134:5 › Login preview makes no account or delivery claim (348ms)
+  ok 35 [mobile-chromium] › tests\astra-behavior.spec.ts:146:5 › Mobile dock leaves final tool reachable (876ms)
+  ok 36 [mobile-chromium] › tests\astra-behavior.spec.ts:168:5 › Community publishing stays local and supports optional title (520ms)
+  -  37 [mobile-chromium] › tests\astra-behavior.spec.ts:179:5 › Mega menu keyboard arrows and Escape restore trigger focus
+  ok 38 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for homepage (/) (2.4s)
+  ok 39 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for modules-catalog (/modules) (2.3s)
+  ok 40 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tools-directory (/tools) (2.0s)
+  ok 41 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-n8n (/tools/n8n) (2.1s)
+  ok 42 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-hermes-agent (/tools/hermes-agent) (2.2s)
+  ok 43 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for learning-path-automation (/paths/ai-automation) (2.2s)
+  ok 44 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for module-detail-n8n (/modules/n8n-google-sheets) (2.2s)
+  ok 45 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for lesson-reader-n8n (/learn/n8n-google-sheets/2) (2.2s)
+  ok 46 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for library-dashboard (/library) (2.2s)
+  ok 47 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for progress-map (/progress) (2.4s)
+  ok 48 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for community-hub (/community) (2.4s)
+  ok 49 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for login-page (/login) (2.1s)
+  -  50 [mobile-chromium] › tests\visual-qa.spec.ts:86:5 › Mega menu interaction on desktop
+  ok 51 [mobile-chromium] › tests\visual-qa.spec.ts:114:5 › Mobile menu drawer interaction on mobile (2.3s)
+  -  52 [mobile-chromium] › tests\visual-qa.spec.ts:146:5 › Tools directory search and category filter
+  -  53 [mobile-chromium] › tests\visual-qa.spec.ts:177:5 › Checkout preview modal on module detail
+  -  54 [mobile-chromium] › tests\visual-qa.spec.ts:209:5 › Lesson reader copy template and step completion
+
+  7 skipped
+  47 passed (1.3m)

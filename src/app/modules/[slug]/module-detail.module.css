@@ -427,3 +427,228 @@
     grid-template-columns: 1fr;
   }
 }
+.breadcrumb {
+  padding: 10px 0;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+.heroSection {
+  padding: 12px 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  grid-template-columns: 61% 39%;
+  gap: 0;
+  min-height: 310px;
+  overflow: visible;
+}
+.heroLeft {
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  gap: 10px 18px;
+  position: relative;
+  z-index: 1;
+}
+.heroLeft > div:first-child {
+  grid-row: span 2;
+}
+.heroLeft > div:first-child > div > div {
+  width: 105px;
+  height: 105px;
+}
+.headline {
+  font-size: 42px;
+  line-height: 1.1;
+}
+.subtitle {
+  font-size: 18px;
+  grid-column: 2;
+}
+.metaRow,
+.ctaRow {
+  grid-column: 1/-1;
+  margin: 0;
+}
+.metaPill {
+  font-size: 13px;
+}
+.ctaRow a,
+.ctaRow button {
+  padding: 14px 24px;
+  font-size: 18px;
+  border-radius: 18px;
+}
+.heroRight {
+  height: 330px;
+  margin: 0 calc(-1 * var(--page-gutter)) 0 0;
+}
+.detailLayout {
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 22px;
+  margin: 20px 0 35px;
+}
+.sectionBox {
+  padding: 22px;
+  border: 0;
+  box-shadow: none;
+  background: #f7faff;
+  border-radius: 16px;
+}
+.sectionTitle {
+  font-size: 30px;
+}
+.sectionDesc {
+  font-size: 15px;
+}
+.stepsFlowGrid {
+  gap: 20px;
+}
+.stepItem {
+  gap: 12px;
+}
+.stepTitle {
+  font-size: 16px;
+}
+.stepDetail {
+  font-size: 14px;
+}
+.visualDiagramBox {
+  padding: 16px;
+  border: 0;
+  background: white;
+}
+.diagramIcon {
+  width: 60px;
+  height: 60px;
+}
+.diagramName {
+  font-size: 14px;
+}
+.diagramSub {
+  font-size: 12px;
+}
+.templatesGrid {
+  gap: 12px;
+}
+.templateCard {
+  padding: 15px;
+}
+.templateTitle {
+  font-size: 15px;
+}
+.templateDesc {
+  font-size: 12px;
+}
+.stickyBuyCard {
+  padding: 24px;
+  border: 0;
+  background: #f5f8fc;
+  box-shadow: none;
+  position: static;
+}
+.buyPriceTag {
+  font-size: 38px;
+}
+.buyFeaturesList {
+  gap: 14px;
+}
+.buyFeatureTitle {
+  font-size: 14px;
+}
+.buyFeatureDesc {
+  font-size: 12px;
+}
+.leftCol {
+  gap: 18px;
+}
+@media (max-width: 1100px) {
+  .headline {
+    font-size: 34px;
+  }
+  .detailLayout {
+    grid-template-columns: minmax(0, 1fr) 270px;
+  }
+  .stepsFlowGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroLeft {
+    grid-template-columns: 85px 1fr;
+  }
+  .heroLeft > div:first-child > div > div {
+    width: 85px;
+    height: 85px;
+  }
+}
+@media (max-width: 900px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+  .heroRight {
+    height: 250px;
+    margin: 16px -20px 0;
+  }
+  .detailLayout {
+    grid-template-columns: 1fr;
+  }
+  .heroLeft {
+    grid-template-columns: 80px 1fr;
+  }
+  .headline {
+    font-size: 34px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+  .stepsFlowGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .heroLeft {
+    gap: 10px;
+  }
+  .headline {
+    font-size: 28px;
+  }
+  .heroLeft > div:first-child {
+    grid-row: 1;
+  }
+  .subtitle {
+    grid-column: 1/-1;
+  }
+  .metaRow {
+    gap: 7px;
+  }
+  .metaPill {
+    font-size: 11px;
+    padding: 6px;
+  }
+  .ctaRow {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .ctaRow a,
+  .ctaRow button {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+  .heroRight {
+    height: 230px;
+    margin-inline: -16px;
+  }
+  .stepsFlowGrid {
+    grid-template-columns: 1fr;
+  }
+  .templatesGrid {
+    grid-template-columns: 1fr;
+  }
+  .sectionBox {
+    padding: 18px;
+  }
+  .sectionTitle {
+    font-size: 26px;
+  }
+  .detailLayout {
+    margin-top: 10px;
+  }
+}

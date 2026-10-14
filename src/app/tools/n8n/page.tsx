@@ -1,3 +1,4 @@
+import { WorkflowDiagram } from "@/components/learning/WorkflowDiagram";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,7 +37,11 @@ export default function N8nToolHubPage() {
       tag: "Automation",
       time: "30 min",
       level: "Beginner",
-      icons: [<User key="1" size={16} />, <ArrowRight key="2" size={12} />, <FileSpreadsheet key="3" size={16} />],
+      icons: [
+        <User key="1" size={16} />,
+        <ArrowRight key="2" size={12} />,
+        <FileSpreadsheet key="3" size={16} />,
+      ],
     },
     {
       slug: "n8n-whatsapp-autoreply",
@@ -45,7 +50,11 @@ export default function N8nToolHubPage() {
       tag: "Communication",
       time: "30 min",
       level: "Beginner",
-      icons: [<MessageSquare key="1" size={16} />, <ArrowRight key="2" size={12} />, <Settings key="3" size={16} />],
+      icons: [
+        <MessageSquare key="1" size={16} />,
+        <ArrowRight key="2" size={12} />,
+        <Settings key="3" size={16} />,
+      ],
     },
     {
       slug: "n8n-weekly-report",
@@ -54,7 +63,11 @@ export default function N8nToolHubPage() {
       tag: "Productivity",
       time: "45 min",
       level: "Beginner",
-      icons: [<FileSpreadsheet key="1" size={16} />, <ArrowRight key="2" size={12} />, <Mail key="3" size={16} />],
+      icons: [
+        <FileSpreadsheet key="1" size={16} />,
+        <ArrowRight key="2" size={12} />,
+        <Mail key="3" size={16} />,
+      ],
     },
     {
       slug: "n8n-faq-assistant",
@@ -63,7 +76,11 @@ export default function N8nToolHubPage() {
       tag: "AI / LLM",
       time: "45 min",
       level: "Beginner",
-      icons: [<Bot key="1" size={16} />, <ArrowRight key="2" size={12} />, <Settings key="3" size={16} />],
+      icons: [
+        <Bot key="1" size={16} />,
+        <ArrowRight key="2" size={12} />,
+        <Settings key="3" size={16} />,
+      ],
     },
   ];
 
@@ -89,6 +106,8 @@ export default function N8nToolHubPage() {
           />
 
           <AnimatedHeading
+            breakAfter={1}
+            accentFrom={1}
             text="n8n: automasi kerja tanpa coding."
             accentWords={["automasi", "kerja", "tanpa", "coding."]}
             as="h1"
@@ -103,7 +122,11 @@ export default function N8nToolHubPage() {
             <PrimaryButton href="/modules/n8n-google-sheets" variant="primary">
               Mula dengan modul RM10
             </PrimaryButton>
-            <PrimaryButton href="#modul-n8n" variant="secondary" showArrow={false}>
+            <PrimaryButton
+              href="#modul-n8n"
+              variant="secondary"
+              showArrow={false}
+            >
               Lihat semua modul n8n
             </PrimaryButton>
           </div>
@@ -115,7 +138,9 @@ export default function N8nToolHubPage() {
               </div>
               <div className={styles.highlightText}>
                 <span className={styles.highlightTitle}>Mudah digunakan</span>
-                <span className={styles.highlightDesc}>Drag & drop workflow</span>
+                <span className={styles.highlightDesc}>
+                  Drag & drop workflow
+                </span>
               </div>
             </div>
 
@@ -124,7 +149,9 @@ export default function N8nToolHubPage() {
                 <Puzzle size={18} color="#1777f2" />
               </div>
               <div className={styles.highlightText}>
-                <span className={styles.highlightTitle}>Sambung 400+ apps</span>
+                <span className={styles.highlightTitle}>
+                  Sambung pelbagai apps
+                </span>
                 <span className={styles.highlightDesc}>Tanpa coding</span>
               </div>
             </div>
@@ -134,8 +161,12 @@ export default function N8nToolHubPage() {
                 <Users size={18} color="#08bd59" />
               </div>
               <div className={styles.highlightText}>
-                <span className={styles.highlightTitle}>Automasi kerja harian</span>
-                <span className={styles.highlightDesc}>Jimat masa, lebih fokus</span>
+                <span className={styles.highlightTitle}>
+                  Automasi kerja harian
+                </span>
+                <span className={styles.highlightDesc}>
+                  Jimat masa, lebih fokus
+                </span>
               </div>
             </div>
           </div>
@@ -143,19 +174,20 @@ export default function N8nToolHubPage() {
 
         <div className={styles.heroRight}>
           <div className={styles.workflowBrowserMockup}>
-            <Image
-              src="/assets/illustrations/n8n-hero-character.png"
-              alt="Ilustrasi alur kerja n8n visual bersama pelajar Malaysia"
-              width={540}
-              height={380}
-              priority
-              className={styles.heroCharacter}
-            />
-            <div className={styles.stickySticky}>
-              Satu workflow,
-              <br />
-              banyak hasil.
-            </div>
+            <WorkflowDiagram />
+          </div>
+          <Image
+            src="/assets/illustrations/learner-clean.png"
+            alt=""
+            width={1024}
+            height={1536}
+            priority
+            className={styles.heroCharacter}
+          />
+          <div className={styles.stickySticky}>
+            Satu workflow,
+            <br />
+            banyak hasil.
           </div>
         </div>
       </section>
@@ -228,7 +260,9 @@ export default function N8nToolHubPage() {
             <Settings size={22} color="var(--ss-navy-950)" />
             <h3 className={styles.sidebarTitle}>Sebelum mula</h3>
           </div>
-          <p className={styles.sidebarSubtitle}>Pastikan kau dah ada benda ni:</p>
+          <p className={styles.sidebarSubtitle}>
+            Pastikan kau dah ada benda ni:
+          </p>
 
           <div className={styles.prereqList}>
             <div className={styles.prereqItem}>
@@ -238,7 +272,8 @@ export default function N8nToolHubPage() {
               <div className={styles.prereqText}>
                 <span className={styles.prereqTitle}>Akaun n8n</span>
                 <span className={styles.prereqDesc}>
-                  Boleh guna n8n Cloud (percuma) atau self-hosted.
+                  n8n Cloud atau self-hosted. Semak pelan dan kos tool sebelum
+                  mula.
                 </span>
               </div>
             </div>
@@ -248,7 +283,9 @@ export default function N8nToolHubPage() {
                 <Wifi size={18} />
               </div>
               <div className={styles.prereqText}>
-                <span className={styles.prereqTitle}>Akaun apps yang berkaitan</span>
+                <span className={styles.prereqTitle}>
+                  Akaun apps yang berkaitan
+                </span>
                 <span className={styles.prereqDesc}>
                   Contoh: Google, WhatsApp, Gmail, OpenAI, dll.
                 </span>

@@ -1,0 +1,25 @@
+[
+  {
+    "name": "gemini",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/googlegemini.svg",
+    "sha256": "1d53380cc11eb7c81935019b9b3d4d6e2de56421d2d0e42f48e934914e306f79",
+    "treatment": "Simple Icons 16.0.0 community-maintained brand mark; tinted locally"
+  },
+  {
+    "name": "claude",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/claude.svg",
+    "sha256": "a94332dc8ea0a3d701be9f6f66380b7b0b1b1917719af579a8c4f4b1d0a6cf8b",
+    "treatment": "Simple Icons 16.0.0 community-maintained brand mark; tinted locally"
+  },
+  {
+    "name": "cursor",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/cursor.svg",
+    "sha256": "46f8940843763fe4c606bcb758bfbeba5b9ab245c7055fec7f85850377561303",
+    "treatment": "Simple Icons 16.0.0 community-maintained brand mark; tinted locally"
+  },
+  {
+    "name": "notebooklm",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@16.0.0/icons/notebooklm.svg",
+    "error": "The read operation timed out"
+  }
+]

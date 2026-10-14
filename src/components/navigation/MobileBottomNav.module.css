@@ -58,3 +58,23 @@
     display: block;
   }
 }
+
+.bottomNav {
+  height: calc(76px + env(safe-area-inset-bottom, 0px));
+  background: #fff;
+  backdrop-filter: none;
+  box-shadow: 0 -5px 20px #03143a08;
+}
+.navItem {
+  min-height: 56px;
+}
+.navItem svg {
+  width: 25px;
+  height: 25px;
+}
+.active {
+  background: var(--ss-surface-red);
+}
+.activeDot {
+  display: none;
+}

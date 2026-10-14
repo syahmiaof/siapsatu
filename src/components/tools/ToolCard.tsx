@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, FileText } from "lucide-react";
 import { Tool } from "@/types";
+import { MODULES } from "@/data/mockData";
 import { ToolLogoTile } from "./ToolLogoTile";
 import styles from "./ToolCard.module.css";
 
@@ -16,14 +17,15 @@ export function ToolCard({ tool, className = "" }: ToolCardProps) {
     tool.slug === "n8n"
       ? "/tools/n8n"
       : tool.slug === "hermes-agent"
-      ? "/tools/hermes-agent"
-      : `/modules?search=${encodeURIComponent(tool.name)}`;
+        ? "/tools/hermes-agent"
+        : `/modules?search=${encodeURIComponent(tool.name)}`;
 
   return (
     <Link
       href={href}
       className={`${styles.card} ${className}`}
       data-reveal-item
+      data-tool={tool.slug}
     >
       <div className={styles.leftInfo}>
         <ToolLogoTile
@@ -42,13 +44,24 @@ export function ToolCard({ tool, className = "" }: ToolCardProps) {
                 styles[`cat-${tool.category}`] || ""
               }`}
             >
-              {tool.category.toUpperCase()}
+              {
+                {
+                  ai: "AI",
+                  automation: "Automation",
+                  coding: "Coding",
+                  design: "Design",
+                  productivity: "Productivity",
+                }[tool.category]
+              }
             </span>
           </div>
 
           <div className={styles.countRow}>
             <FileText size={13} />
-            <span>{tool.badge || `${tool.moduleSlugs.length} modul`}</span>
+            <span>
+              {MODULES.filter((m) => m.toolSlugs.includes(tool.slug)).length}{" "}
+              modul
+            </span>
           </div>
         </div>
       </div>

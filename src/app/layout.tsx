@@ -3,6 +3,7 @@ import { Bricolage_Grotesque, Manrope } from "next/font/google";
 import "@/styles/globals.css";
 import { SiteHeader } from "@/components/navigation/SiteHeader";
 import { MobileBottomNav } from "@/components/navigation/MobileBottomNav";
+import { PageMotion } from "@/components/motion/PageMotion";
 
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -32,11 +33,13 @@ export default function RootLayout({
   return (
     <html lang="ms" className={`${bricolage.variable} ${manrope.variable}`}>
       <body>
-        <SiteHeader />
-        <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-          {children}
-        </main>
-        <MobileBottomNav />
+        <PageMotion>
+          <SiteHeader />
+          <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+            {children}
+          </main>
+          <MobileBottomNav />
+        </PageMotion>
       </body>
     </html>
   );

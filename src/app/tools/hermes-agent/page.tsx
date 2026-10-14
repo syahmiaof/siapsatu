@@ -1,3 +1,4 @@
+import { BrandScene } from "@/components/brand/BrandScene";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,7 +71,10 @@ export default function HermesAgentHubPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className={styles.heroSection} aria-label="Maklumat Hermes Agent">
+      <section
+        className={styles.heroSection}
+        aria-label="Maklumat Hermes Agent"
+      >
         <div className={styles.heroLeft}>
           <ToolLogoTile
             name="Hermes Agent"
@@ -80,8 +84,17 @@ export default function HermesAgentHubPage() {
           />
 
           <AnimatedHeading
+            breakAfter={2}
+            accentFrom={2}
             text="Hermes Agent: agent yang belajar cara kau bekerja."
-            accentWords={["agent", "yang", "belajar", "cara", "kau", "bekerja."]}
+            accentWords={[
+              "agent",
+              "yang",
+              "belajar",
+              "cara",
+              "kau",
+              "bekerja.",
+            ]}
             as="h1"
             className={styles.headline}
           />
@@ -96,7 +109,7 @@ export default function HermesAgentHubPage() {
               Lihat modul Hermes
             </PrimaryButton>
             <a
-              href="https://github.com/hermes-agent/hermes"
+              href="https://github.com/NousResearch/hermes-agent"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.githubPill}
@@ -137,20 +150,17 @@ export default function HermesAgentHubPage() {
 
         <div className={styles.heroRight}>
           <div className={styles.characterArtWrap}>
-            <Image
-              src="/assets/illustrations/hermes-hero-character.png"
-              alt="Ilustrasi watak Hermes Agent tekun menelaah di sebelah laptop"
-              width={540}
-              height={380}
-              priority
-              className={styles.characterArt}
-            />
+            <BrandScene variant="hermes" />
           </div>
         </div>
       </section>
 
       {/* Modules Section */}
-      <section id="modul-hermes" className={styles.modulesSection} aria-label="Modul Hermes">
+      <section
+        id="modul-hermes"
+        className={styles.modulesSection}
+        aria-label="Modul Hermes"
+      >
         <div className={styles.sectionHeader}>
           <div className={styles.sectionTitleGroup}>
             <AnimatedHeading
@@ -163,7 +173,16 @@ export default function HermesAgentHubPage() {
               Ikuti modul ringkas dan praktikal untuk mula guna Hermes Agent.
             </span>
           </div>
-          <Link href="/modules?search=Hermes" style={{ color: "var(--ss-navy-950)", fontWeight: 700, display: "flex", alignItems: "center", gap: "0.3rem" }}>
+          <Link
+            href="/modules?search=Hermes"
+            style={{
+              color: "var(--ss-navy-950)",
+              fontWeight: 700,
+              display: "flex",
+              alignItems: "center",
+              gap: "0.3rem",
+            }}
+          >
             <span>Lihat semua modul</span>
             <ArrowRight size={16} />
           </Link>
@@ -219,7 +238,10 @@ export default function HermesAgentHubPage() {
 
         <div className={styles.howStepsFlow}>
           <div className={styles.howStep}>
-            <div className={styles.howIconCircle} style={{ background: "#1777f2" }}>
+            <div
+              className={styles.howIconCircle}
+              style={{ background: "#1777f2" }}
+            >
               <LinkIcon size={20} />
             </div>
             <div className={styles.howStepText}>
@@ -232,7 +254,10 @@ export default function HermesAgentHubPage() {
           <ArrowRight size={18} color="var(--ss-muted)" />
 
           <div className={styles.howStep}>
-            <div className={styles.howIconCircle} style={{ background: "#ff2445" }}>
+            <div
+              className={styles.howIconCircle}
+              style={{ background: "#ff2445" }}
+            >
               <FileCode size={20} />
             </div>
             <div className={styles.howStepText}>
@@ -245,7 +270,10 @@ export default function HermesAgentHubPage() {
           <ArrowRight size={18} color="var(--ss-muted)" />
 
           <div className={styles.howStep}>
-            <div className={styles.howIconCircle} style={{ background: "#08bd59" }}>
+            <div
+              className={styles.howIconCircle}
+              style={{ background: "#08bd59" }}
+            >
               <GraduationCap size={20} />
             </div>
             <div className={styles.howStepText}>
@@ -258,7 +286,10 @@ export default function HermesAgentHubPage() {
           <ArrowRight size={18} color="var(--ss-muted)" />
 
           <div className={styles.howStep}>
-            <div className={styles.howIconCircle} style={{ background: "#ff5a0a" }}>
+            <div
+              className={styles.howIconCircle}
+              style={{ background: "#ff5a0a" }}
+            >
               <Sparkles size={20} />
             </div>
             <div className={styles.howStepText}>

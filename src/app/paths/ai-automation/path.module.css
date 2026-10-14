@@ -132,7 +132,8 @@
   min-height: 290px;
   position: relative;
   box-shadow: 0 4px 16px rgba(3, 20, 58, 0.04);
-  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+  transition:
+    transform var(--ss-motion-fast) var(--ss-ease-spring),
     border-color var(--ss-motion-fast) ease;
 }
 
@@ -154,10 +155,18 @@
   color: #ffffff;
 }
 
-.step-01 { background: #1777f2; }
-.step-02 { background: #ff5a0a; }
-.step-03 { background: #08bd59; }
-.step-04 { background: #ff2445; }
+.step-01 {
+  background: #1777f2;
+}
+.step-02 {
+  background: #ff5a0a;
+}
+.step-03 {
+  background: #08bd59;
+}
+.step-04 {
+  background: #ff2445;
+}
 
 .moduleCardIcon {
   width: 44px;
@@ -257,7 +266,8 @@
   align-items: center;
   gap: 1.5rem;
   text-decoration: none;
-  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+  transition:
+    transform var(--ss-motion-fast) var(--ss-ease-spring),
     box-shadow var(--ss-motion-fast) ease;
 }
 
@@ -350,5 +360,194 @@
 @media (max-width: 640px) {
   .modulesTrackGrid {
     grid-template-columns: 1fr;
+  }
+}
+.heroSection {
+  margin: 0;
+  padding: 22px 0 12px;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  grid-template-columns: 55% 45%;
+  gap: 0;
+  min-height: 350px;
+  overflow: visible;
+}
+.heroLeft {
+  position: relative;
+  z-index: 1;
+  gap: 10px;
+}
+.pathBadge {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.headline {
+  font-size: 42px;
+  line-height: 1.08;
+  max-width: 740px;
+}
+.subtitle {
+  font-size: 17px;
+  max-width: 580px;
+}
+.metaRow {
+  gap: 8px;
+}
+.metaPill,
+.discountBadge {
+  font-size: 12px;
+  padding: 8px 10px;
+}
+.heroRight {
+  height: 365px;
+  margin-top: 0;
+  margin-right: calc(-1 * var(--page-gutter));
+}
+.pathContentGrid {
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 20px;
+  margin: 20px 0;
+}
+.trackHeaderTitle {
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+.modulesTrackGrid {
+  gap: 12px;
+}
+.trackModuleCard {
+  padding: 22px 14px 14px;
+  border: 0;
+  border-radius: 14px;
+  box-shadow: none;
+  background: #edf4ff;
+  min-height: 300px;
+}
+.trackModuleCard:nth-child(2) {
+  background: #fff1eb;
+}
+.trackModuleCard:nth-child(3) {
+  background: #ebfaf2;
+}
+.trackModuleCard:nth-child(4) {
+  background: #fff1f3;
+}
+.moduleCardTitle {
+  font-size: 20px;
+}
+.moduleCardDesc,
+.hasilText {
+  font-size: 13px;
+}
+.moduleCardIcon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 14px;
+}
+.hasilBlock {
+  padding: 10px;
+  margin-top: 12px;
+}
+.trackCardFooter {
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.completionToggle {
+  min-height: 38px;
+}
+.bottomBanner {
+  margin: 22px 0;
+  gap: 18px;
+}
+.bigCtaCard {
+  padding: 22px 25px;
+}
+.featuresCard {
+  padding: 20px;
+  gap: 15px;
+}
+.featureTitle {
+  font-size: 14px;
+}
+.featureDesc {
+  font-size: 12px;
+}
+@media (max-width: 1200px) {
+  .pathContentGrid {
+    grid-template-columns: 1fr 260px;
+  }
+  .headline {
+    font-size: 37px;
+  }
+  .modulesTrackGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bottomBanner {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .heroSection {
+    grid-template-columns: 1fr;
+  }
+  .headline {
+    font-size: 40px;
+  }
+  .heroRight {
+    height: 285px;
+    margin: 10px -20px 0;
+  }
+  .pathContentGrid {
+    grid-template-columns: 1fr;
+  }
+  .modulesTrackGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 600px) {
+  .heroSection {
+    padding-top: 10px;
+  }
+  .headline {
+    font-size: 31px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .heroRight {
+    height: 240px;
+    margin-inline: -16px;
+  }
+  .metaRow {
+    gap: 5px;
+  }
+  .metaPill,
+  .discountBadge {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+  .trackHeaderTitle {
+    font-size: 25px;
+  }
+  .trackModuleCard {
+    padding: 22px 12px 14px;
+  }
+  .moduleCardTitle {
+    font-size: 18px;
+  }
+  .featuresCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ctaCardTitle {
+    font-size: 22px;
+  }
+  .bigCtaCard {
+    padding: 20px;
+  }
+  .bottomBanner {
+    display: flex;
+    flex-direction: column;
   }
 }

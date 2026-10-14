@@ -1,0 +1,100 @@
+.browser {
+  border: 2px solid #8798b3;
+  border-radius: 20px;
+  background: #f8fafd;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0 12px 30px #06245712;
+}
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: #e6ecf5;
+  padding: 14px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ss-muted);
+}
+.bar span {
+  color: #ff5a0a;
+  letter-spacing: 3px;
+}
+.flow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 50px 16px;
+  background-image: radial-gradient(#dbe4f1 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+.node {
+  flex: 1;
+  text-align: center;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+}
+.node small {
+  font-size: 12px;
+  color: var(--ss-muted);
+}
+.icon {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  background: white;
+  border: 2px solid #8798b3;
+  border-radius: 17px;
+}
+.icon svg {
+  width: 40px;
+  height: 40px;
+}
+.icon img {
+  object-fit: contain;
+  max-width: 85%;
+  height: auto;
+}
+.arrow {
+  flex-shrink: 0;
+  width: 22px;
+  color: var(--ss-muted);
+}
+.compact .flow {
+  padding: 25px 10px;
+}
+.compact .icon {
+  width: 60px;
+  height: 60px;
+}
+.compact .node {
+  font-size: 12px;
+}
+.compact .node small {
+  font-size: 10px;
+}
+@media (max-width: 600px) {
+  .flow {
+    padding: 28px 8px;
+    gap: 5px;
+  }
+  .icon {
+    width: 58px;
+    height: 58px;
+  }
+  .node {
+    font-size: 12px;
+  }
+  .node small {
+    font-size: 10px;
+  }
+  .arrow {
+    width: 16px;
+  }
+}

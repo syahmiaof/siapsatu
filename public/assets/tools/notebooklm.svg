@@ -1,4 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-  <path fill="#1a73e8" d="M19.5 3H7.5A2.5 2.5 0 0 0 5 5.5v13A2.5 2.5 0 0 0 7.5 21h12a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 19.5 3zm-12 1.5h12V7h-12a1 1 0 0 1 0-2zm12 15h-12a1 1 0 0 1-1-1V8.5h13v11z"/>
-  <path fill="#1a73e8" d="M9 11h8v2H9zm0 4h5v2H9z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><title>notebooklm neutral text label, not a logo</title><rect width="120" height="120" rx="20" fill="#f1f5fa"/><text x="60" y="70" font-family="Arial,sans-serif" font-weight="700" font-size="30" text-anchor="middle" fill="#062457">NLM</text></svg>

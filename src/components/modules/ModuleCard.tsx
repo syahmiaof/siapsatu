@@ -1,7 +1,17 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Sparkles, Megaphone, BarChart3, Edit3, Palette, Clock, CheckCircle2 } from "lucide-react";
+import {
+  ArrowRight,
+  Sparkles,
+  Megaphone,
+  BarChart3,
+  Edit3,
+  Palette,
+  TrendingUp,
+  PanelsTopLeft,
+  FileText,
+} from "lucide-react";
 import { Module } from "@/types";
 import styles from "./ModuleCard.module.css";
 
@@ -24,24 +34,24 @@ export function ModuleCard({
     (module.toolSlugs.includes("meta")
       ? "/assets/tools/meta.svg"
       : module.toolSlugs.includes("gemini")
-      ? "/assets/tools/gemini.svg"
-      : module.toolSlugs.includes("vibecode")
-      ? "/assets/tools/vibecode.svg"
-      : module.toolSlugs.includes("n8n")
-      ? "/assets/tools/n8n.png"
-      : module.toolSlugs.includes("whatsapp")
-      ? "/assets/tools/whatsapp.svg"
-      : module.toolSlugs.includes("notion")
-      ? "/assets/tools/notion.svg"
-      : module.toolSlugs.includes("notebooklm")
-      ? "/assets/tools/notebooklm.svg"
-      : module.toolSlugs.includes("github")
-      ? "/assets/tools/github.svg"
-      : module.toolSlugs.includes("codex")
-      ? "/assets/tools/codex.svg"
-      : module.toolSlugs.includes("antigravity")
-      ? "/assets/tools/antigravity.svg"
-      : "/assets/tools/gemini.svg");
+        ? "/assets/tools/gemini.svg"
+        : module.toolSlugs.includes("vibecode")
+          ? "/assets/tools/vibecode.svg"
+          : module.toolSlugs.includes("n8n")
+            ? "/assets/tools/n8n.png"
+            : module.toolSlugs.includes("whatsapp")
+              ? "/assets/tools/whatsapp.svg"
+              : module.toolSlugs.includes("notion")
+                ? "/assets/tools/notion.svg"
+                : module.toolSlugs.includes("notebooklm")
+                  ? "/assets/tools/notebooklm.svg"
+                  : module.toolSlugs.includes("github")
+                    ? "/assets/tools/github.svg"
+                    : module.toolSlugs.includes("codex")
+                      ? "/assets/tools/codex.svg"
+                      : module.toolSlugs.includes("antigravity")
+                        ? "/assets/tools/antigravity.svg"
+                        : "/assets/tools/gemini.svg");
 
   const href = `/modules/${module.slug}`;
 
@@ -50,8 +60,8 @@ export function ModuleCard({
       module.themeColor === "crimson"
         ? styles["theme-crimson"]
         : module.themeColor === "green"
-        ? styles["theme-green"]
-        : styles["theme-navy"];
+          ? styles["theme-green"]
+          : styles["theme-navy"];
 
     return (
       <Link
@@ -59,6 +69,22 @@ export function ModuleCard({
         className={`${styles.featuredCard} ${themeClass} ${className}`}
         data-reveal-item
       >
+        <div className={styles.bgDeco} aria-hidden="true">
+          {module.themeColor === "green" ? (
+            <PanelsTopLeft size={240} />
+          ) : module.themeColor === "crimson" ? (
+            <FileText size={240} />
+          ) : (
+            <TrendingUp size={240} />
+          )}
+        </div>
+        <Image
+          className={styles.mobileCharacter}
+          src={`/assets/illustrations/${module.themeColor === "crimson" ? "hermes-clean" : "learner-clean"}.png`}
+          alt=""
+          width={180}
+          height={240}
+        />
         <div>
           <div className={styles.featuredTop}>
             <div className={styles.featuredIconSquare}>
@@ -114,14 +140,14 @@ export function ModuleCard({
             background: module.toolSlugs.includes("whatsapp")
               ? "rgba(37, 211, 102, 0.12)"
               : module.toolSlugs.includes("notion")
-              ? "rgba(255, 90, 10, 0.12)"
-              : module.toolSlugs.includes("notebooklm")
-              ? "rgba(26, 115, 232, 0.12)"
-              : module.toolSlugs.includes("github")
-              ? "rgba(36, 41, 47, 0.12)"
-              : module.toolSlugs.includes("codex")
-              ? "rgba(16, 163, 127, 0.12)"
-              : "rgba(3, 20, 58, 0.08)",
+                ? "rgba(255, 90, 10, 0.12)"
+                : module.toolSlugs.includes("notebooklm")
+                  ? "rgba(26, 115, 232, 0.12)"
+                  : module.toolSlugs.includes("github")
+                    ? "rgba(36, 41, 47, 0.12)"
+                    : module.toolSlugs.includes("codex")
+                      ? "rgba(16, 163, 127, 0.12)"
+                      : "rgba(3, 20, 58, 0.08)",
           }}
         >
           <Image

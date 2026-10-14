@@ -22,7 +22,11 @@ export function MobileBottomNav() {
   ];
 
   return (
-    <nav className={styles.bottomNav} aria-label="Navigasi Bawah">
+    <nav
+      className={styles.bottomNav}
+      aria-label="Navigasi Bawah"
+      data-fixed-dock
+    >
       <div className={styles.inner}>
         {navItems.map((item) => {
           const Icon = item.icon;

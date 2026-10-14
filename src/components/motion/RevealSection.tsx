@@ -23,29 +23,30 @@ export function RevealSection({
     () => {
       registerGSAP();
 
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced || !containerRef.current) return;
+      if (!containerRef.current) return;
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        if (!containerRef.current) return;
+        const items =
+          containerRef.current.querySelectorAll("[data-reveal-item]");
+        if (items.length === 0) return;
 
-      const items = containerRef.current.querySelectorAll("[data-reveal-item]");
-      if (items.length === 0) return;
-
-      gsap.from(items, {
-        opacity: 0,
-        y: 24,
-        stagger,
-        duration: 0.55,
-        ease: "power2.out",
-        delay,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 95%",
-          toggleActions: "play none none none",
-        },
+        gsap.from(items, {
+          y: 24,
+          stagger,
+          duration: 0.55,
+          ease: "power2.out",
+          delay,
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top 95%",
+            toggleActions: "play none none none",
+          },
+        });
       });
+      return () => mm.revert();
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (

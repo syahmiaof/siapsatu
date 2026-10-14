@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
-import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import React, { useState, useMemo, useEffect, Suspense } from "react";
+import { BrandScene } from "@/components/brand/BrandScene";
 import Link from "next/link";
 import {
   Search,
@@ -21,8 +22,24 @@ import { MODULES } from "@/data/mockData";
 import styles from "./modules.module.css";
 
 export default function ModulesCatalogPage() {
+  return (
+    <Suspense>
+      <DirectoryContent />
+    </Suspense>
+  );
+}
+
+function DirectoryContent() {
+  const params = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("semua");
+  useEffect(() => {
+    const goal = params.get("goal");
+    setSearchQuery(params.get("search") || "");
+    setSelectedCategory(
+      params.get("category") || (goal === "jual" ? "bisnes" : goal) || "semua",
+    );
+  }, [params]);
 
   const categories = [
     { id: "semua", label: "Semua", icon: LayoutGrid },
@@ -37,10 +54,16 @@ export default function ModulesCatalogPage() {
     return MODULES.filter((m) => {
       const matchesSearch =
         searchQuery.trim() === "" ||
-        m.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        m.shortOutcome.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        m.tags.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase())) ||
-        m.toolSlugs.some((t) => t.toLowerCase().includes(searchQuery.toLowerCase()));
+        m.title.toLowerCase().includes(searchQuery.trim().toLowerCase()) ||
+        m.shortOutcome
+          .toLowerCase()
+          .includes(searchQuery.trim().toLowerCase()) ||
+        m.tags.some((t) =>
+          t.toLowerCase().includes(searchQuery.trim().toLowerCase()),
+        ) ||
+        m.toolSlugs.some((t) =>
+          t.toLowerCase().includes(searchQuery.trim().toLowerCase()),
+        );
 
       const matchesCategory =
         selectedCategory === "semua" ||
@@ -49,7 +72,9 @@ export default function ModulesCatalogPage() {
         (selectedCategory === "student" && m.audience?.includes("student")) ||
         (selectedCategory === "bina" && m.audience?.includes("bina")) ||
         (selectedCategory === "ai-tools" &&
-          (m.tags.includes("AI") || m.tags.includes("AI Tools") || m.tags.includes("AI / LLM")));
+          (m.tags.includes("AI") ||
+            m.tags.includes("AI Tools") ||
+            m.tags.includes("AI / LLM")));
 
       return matchesSearch && matchesCategory;
     });
@@ -71,6 +96,7 @@ export default function ModulesCatalogPage() {
           <div className={styles.heroLeft}>
             <AnimatedHeading
               text="Pilih benda yang nak siap."
+              mobileBreakAfter={2}
               accentWords={["yang", "nak", "siap."]}
               as="h1"
               className={styles.headline}
@@ -86,7 +112,11 @@ export default function ModulesCatalogPage() {
               onSubmit={(e) => e.preventDefault()}
               role="search"
             >
-              <Search size={20} color="var(--ss-muted)" style={{ marginRight: "0.5rem" }} />
+              <Search
+                size={20}
+                color="var(--ss-muted)"
+                style={{ marginRight: "0.5rem" }}
+              />
               <input
                 type="text"
                 placeholder="Cari modul atau tool..."
@@ -105,7 +135,11 @@ export default function ModulesCatalogPage() {
             </form>
 
             {/* Category Filter Chips */}
-            <div className={styles.filterBar} role="group" aria-label="Tapis kategori">
+            <div
+              className={styles.filterBar}
+              role="group"
+              aria-label="Tapis kategori"
+            >
               {categories.map((cat) => {
                 const Icon = cat.icon;
                 const isActive = selectedCategory === cat.id;
@@ -129,14 +163,7 @@ export default function ModulesCatalogPage() {
 
           <div className={styles.heroRight}>
             <div className={styles.heroArtWrap}>
-              <Image
-                src="/assets/illustrations/hero-learners.png"
-                alt="Pelajar tekun belajar modul SiapSatu"
-                width={540}
-                height={360}
-                priority
-                className={styles.heroArt}
-              />
+              <BrandScene />
             </div>
           </div>
         </div>
@@ -161,7 +188,7 @@ export default function ModulesCatalogPage() {
                 <div className={styles.sectionTitleGroup}>
                   <h2 className={styles.sectionTitle}>Modul Pilihan</h2>
                   <p className={styles.sectionDesc}>
-                    Modul paling popular untuk mula belajar dan terus dapat hasil.
+                    Pilih satu hasil praktikal untuk mula belajar.
                   </p>
                 </div>
                 <Link href="#modul-lainnya" className={styles.viewAllLink}>
@@ -189,7 +216,8 @@ export default function ModulesCatalogPage() {
                 <div className={styles.sectionTitleGroup}>
                   <h2 className={styles.sectionTitle}>Modul Lainnya</h2>
                   <p className={styles.sectionDesc}>
-                    Pelbagai topik praktikal, setiap satu dengan hasil yang anda boleh guna.
+                    Pelbagai topik praktikal, setiap satu dengan hasil yang anda
+                    boleh guna.
                   </p>
                 </div>
                 <button

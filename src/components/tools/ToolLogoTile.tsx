@@ -31,9 +31,13 @@ export function ToolLogoTile({
       <div className={styles.tile}>
         <Image
           src={logoPath}
-          alt={`${name} logo`}
-          width={size === "lg" ? 44 : size === "md" ? 32 : 24}
-          height={size === "lg" ? 44 : size === "md" ? 32 : 24}
+          alt={
+            /codex|notebooklm|antigravity/i.test(logoPath)
+              ? name
+              : `${name} logo`
+          }
+          width={size === "lg" ? 146 : size === "md" ? 86 : 48}
+          height={size === "lg" ? 146 : size === "md" ? 86 : 48}
           className={styles.tileImage}
         />
       </div>

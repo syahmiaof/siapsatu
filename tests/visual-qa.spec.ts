@@ -2,7 +2,13 @@ import { test, expect } from "@playwright/test";
 import path from "path";
 import fs from "fs";
 
-const ARTIFACTS_DIR = path.join(process.cwd(), "artifacts", "visual-qa");
+const ARTIFACTS_DIR = path.join(
+  process.cwd(),
+  "artifacts",
+  "visual-qa",
+  "astra",
+  "tests",
+);
 
 test.beforeAll(async () => {
   if (!fs.existsSync(ARTIFACTS_DIR)) {
@@ -26,23 +32,54 @@ const ROUTES = [
 ];
 
 for (const route of ROUTES) {
-  test(`Capture visual screenshot for ${route.name} (${route.path})`, async ({ page }, testInfo) => {
+  test(`Capture visual screenshot for ${route.name} (${route.path})`, async ({
+    page,
+  }, testInfo) => {
     const isMobile = testInfo.project.name.includes("mobile");
     const deviceLabel = isMobile ? "mobile" : "desktop";
 
-    await page.goto(route.path, { waitUntil: "domcontentloaded" });
+    const errors: string[] = [];
+    page.on("pageerror", (error) => errors.push(error.message));
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await page.goto(route.path, { waitUntil: "networkidle" });
+    await page.evaluate(async () => {
+      await document.fonts.ready;
+      document
+        .querySelectorAll("img")
+        .forEach((img) => (img.loading = "eager"));
+      await Promise.all(
+        [...document.images].map((img) => img.decode().catch(() => {})),
+      );
+    });
     // Scroll through the page so GSAP ScrollTrigger reveals all below-the-fold elements
     await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
     await page.waitForTimeout(400);
     await page.evaluate(() => window.scrollTo(0, 0));
     await page.waitForTimeout(600);
 
-    const screenshotPath = path.join(ARTIFACTS_DIR, `${deviceLabel}-${route.name}.png`);
+    const screenshotPath = path.join(
+      ARTIFACTS_DIR,
+      `${deviceLabel}-${route.name}.png`,
+    );
     await page.screenshot({ path: screenshotPath, fullPage: true });
 
     // Verify key presence
     const body = page.locator("body");
     await expect(body).toBeVisible();
+    await expect(page.locator("h1")).toHaveCount(1);
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    expect(
+      await page.evaluate(() =>
+        [...document.images]
+          .filter((img) => !img.naturalWidth)
+          .map((img) => img.src),
+      ),
+    ).toEqual([]);
+    expect(errors).toEqual([]);
   });
 }
 
@@ -93,7 +130,10 @@ test("Mobile menu drawer interaction on mobile", async ({ page }, testInfo) => {
   await expect(menuSheet).toBeVisible();
 
   // Capture screenshot of mobile menu drawer
-  const screenshotPath = path.join(ARTIFACTS_DIR, "mobile-menu-drawer-open.png");
+  const screenshotPath = path.join(
+    ARTIFACTS_DIR,
+    "mobile-menu-drawer-open.png",
+  );
   await page.screenshot({ path: screenshotPath, fullPage: false });
 
   // Close drawer
@@ -103,7 +143,9 @@ test("Mobile menu drawer interaction on mobile", async ({ page }, testInfo) => {
   await expect(menuSheet).not.toBeVisible();
 });
 
-test("Tools directory search and category filter", async ({ page }, testInfo) => {
+test("Tools directory search and category filter", async ({
+  page,
+}, testInfo) => {
   if (testInfo.project.name.includes("mobile")) {
     test.skip();
     return;
@@ -138,7 +180,9 @@ test("Checkout preview modal on module detail", async ({ page }, testInfo) => {
     return;
   }
 
-  await page.goto("/modules/n8n-google-sheets", { waitUntil: "domcontentloaded" });
+  await page.goto("/modules/n8n-google-sheets", {
+    waitUntil: "domcontentloaded",
+  });
   await page.waitForTimeout(600);
 
   // Click buy button to open preview modal
@@ -162,14 +206,19 @@ test("Checkout preview modal on module detail", async ({ page }, testInfo) => {
   await expect(modal).not.toBeVisible();
 });
 
-test("Lesson reader copy template and step completion", async ({ page, context }, testInfo) => {
+test("Lesson reader copy template and step completion", async ({
+  page,
+  context,
+}, testInfo) => {
   if (testInfo.project.name.includes("mobile")) {
     test.skip();
     return;
   }
 
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
-  await page.goto("/learn/n8n-google-sheets/2", { waitUntil: "domcontentloaded" });
+  await page.goto("/learn/n8n-google-sheets/2", {
+    waitUntil: "domcontentloaded",
+  });
   await page.waitForTimeout(600);
 
   // Test copy template button
@@ -180,7 +229,9 @@ test("Lesson reader copy template and step completion", async ({ page, context }
   await expect(page.getByText(/Disalin!/i)).toBeVisible();
 
   // Test step completion button
-  const markCompleteBtn = page.getByRole("button", { name: /Tanda langkah siap/i });
+  const markCompleteBtn = page.getByRole("button", {
+    name: /Tanda langkah siap|Langkah telah siap/i,
+  });
   await markCompleteBtn.click();
   await page.waitForTimeout(300);
   await expect(page.getByText(/Langkah telah siap/i)).toBeVisible();

@@ -1,8 +1,10 @@
 "use client";
+import { BrandScene } from "@/components/brand/BrandScene";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useDialogFocus } from "@/lib/useDialogFocus";
 import { notFound } from "next/navigation";
 import {
   ChevronRight,
@@ -33,6 +35,31 @@ interface ModuleDetailPageProps {
 
 export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeCheckout = useCallback(() => setShowCheckoutModal(false), []);
+  useDialogFocus(showCheckoutModal, dialogRef, closeCheckout);
+  function downloadTemplate(type: "mapping" | "checklist") {
+    const content =
+      type === "mapping"
+        ? "nama,emel,telefon,sumber\nPelajar Demo,pelajar@example.com,contoh,borang-demo\n"
+        : "CHECKLIST DEMO n8n → Google Sheets\n[ ] Semak kos tool dan akaun\n[ ] Sediakan borang contoh\n[ ] Bina workflow manual\n[ ] Sambung Google Sheets\n[ ] Uji satu baris\n[ ] Semak output dan log\n";
+    const url = URL.createObjectURL(
+      new Blob([content], {
+        type:
+          type === "mapping"
+            ? "text/csv;charset=utf-8"
+            : "text/plain;charset=utf-8",
+      }),
+    );
+    const a = document.createElement("a");
+    a.href = url;
+    a.download =
+      type === "mapping"
+        ? "siapsatu-mapping-demo.csv"
+        : "siapsatu-checklist-demo.txt";
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
 
   const currentModule = MODULES.find((m) => m.slug === params.slug);
 
@@ -58,7 +85,9 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
             primaryTool.category.slice(1)}
         </Link>
         <ChevronRight size={14} />
-        <span style={{ color: "var(--ss-navy-950)" }}>{currentModule.title}</span>
+        <span style={{ color: "var(--ss-navy-950)" }}>
+          {currentModule.title}
+        </span>
       </nav>
 
       {/* Hero Section */}
@@ -92,7 +121,8 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
             <span className={styles.metaPill}>
               <BarChart2 size={15} color="var(--ss-muted)" />
               <span>
-                {currentModule.level.charAt(0).toUpperCase() + currentModule.level.slice(1)}
+                {currentModule.level.charAt(0).toUpperCase() +
+                  currentModule.level.slice(1)}
               </span>
             </span>
             <span className={styles.metaPill}>
@@ -109,9 +139,15 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
               Beli modul RM{currentModule.priceMyr}
             </PrimaryButton>
             <div className={styles.sunburstRays} aria-hidden="true">
-              <span className={styles.ray} style={{ transform: "rotate(25deg)" }} />
+              <span
+                className={styles.ray}
+                style={{ transform: "rotate(25deg)" }}
+              />
               <span className={styles.ray} style={{ width: "16px" }} />
-              <span className={styles.ray} style={{ transform: "rotate(-25deg)" }} />
+              <span
+                className={styles.ray}
+                style={{ transform: "rotate(-25deg)" }}
+              />
             </div>
 
             <PrimaryButton
@@ -125,14 +161,7 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
         </div>
 
         <div className={styles.heroRight}>
-          <Image
-            src="/assets/illustrations/hero-learners.png"
-            alt="Pelajar bersama modul pembelajaran SiapSatu"
-            width={520}
-            height={360}
-            priority
-            className={styles.heroArtwork}
-          />
+          <BrandScene variant="trio" />
         </div>
       </section>
 
@@ -141,7 +170,10 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
         {/* Left Column: What you will do & Templates */}
         <div className={styles.leftCol}>
           {/* Apa yang kau akan buat */}
-          <section className={styles.sectionBox} aria-label="Apa yang kau akan buat">
+          <section
+            className={styles.sectionBox}
+            aria-label="Apa yang kau akan buat"
+          >
             <h2 className={styles.sectionTitle}>Apa yang kau akan buat</h2>
             <p className={styles.sectionDesc}>
               Dalam modul ini, kau akan bina automasi yang sambungkan borang
@@ -150,17 +182,38 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
 
             <div className={styles.stepsFlowGrid}>
               <div className={styles.stepsList}>
-                {(currentModule.whatYouWillDo || [
-                  { step: 1, title: "Bina borang", description: "Sediakan Google Form untuk terima lead." },
-                  { step: 2, title: "Setup n8n workflow", description: "Sambungkan Google Form ke Google Sheets." },
-                  { step: 3, title: "Uji dan aktifkan", description: "Test dengan data sebenar." },
-                  { step: 4, title: "Kemas dan guna", description: "Susun kolum, tambah rule asas dan mula guna." },
-                ]).map((st) => (
+                {(
+                  currentModule.whatYouWillDo || [
+                    {
+                      step: 1,
+                      title: "Bina borang",
+                      description: "Sediakan Google Form untuk terima lead.",
+                    },
+                    {
+                      step: 2,
+                      title: "Setup n8n workflow",
+                      description: "Sambungkan Google Form ke Google Sheets.",
+                    },
+                    {
+                      step: 3,
+                      title: "Uji dan aktifkan",
+                      description: "Test dengan data sebenar.",
+                    },
+                    {
+                      step: 4,
+                      title: "Kemas dan guna",
+                      description:
+                        "Susun kolum, tambah rule asas dan mula guna.",
+                    },
+                  ]
+                ).map((st) => (
                   <div key={st.step} className={styles.stepItem}>
                     <div className={styles.stepNumberCircle}>{st.step}</div>
                     <div className={styles.stepText}>
                       <span className={styles.stepTitle}>{st.title}</span>
-                      <span className={styles.stepDetail}>{st.description}</span>
+                      <span className={styles.stepDetail}>
+                        {st.description}
+                      </span>
                     </div>
                   </div>
                 ))}
@@ -169,17 +222,25 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
               {/* Visual Node Diagram */}
               <div className={styles.visualDiagramBox} aria-hidden="true">
                 <div className={styles.diagramNode}>
-                  <div className={styles.diagramIcon} style={{ background: "#673ab7" }}>
+                  <div
+                    className={styles.diagramIcon}
+                    style={{ background: "#673ab7" }}
+                  >
                     <FileText size={22} />
                   </div>
                   <span className={styles.diagramName}>Google Form</span>
-                  <span className={styles.diagramSub}>Borang diisi pengguna</span>
+                  <span className={styles.diagramSub}>
+                    Borang diisi pengguna
+                  </span>
                 </div>
 
                 <ArrowRight size={18} color="var(--ss-muted)" />
 
                 <div className={styles.diagramNode}>
-                  <div className={styles.diagramIcon} style={{ background: "#ea4b71" }}>
+                  <div
+                    className={styles.diagramIcon}
+                    style={{ background: "#ea4b71" }}
+                  >
                     <Image
                       src="/assets/tools/n8n.png"
                       alt="n8n"
@@ -189,24 +250,34 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                     />
                   </div>
                   <span className={styles.diagramName}>n8n</span>
-                  <span className={styles.diagramSub}>Proses data automatik</span>
+                  <span className={styles.diagramSub}>
+                    Proses data automatik
+                  </span>
                 </div>
 
                 <ArrowRight size={18} color="var(--ss-muted)" />
 
                 <div className={styles.diagramNode}>
-                  <div className={styles.diagramIcon} style={{ background: "#08bd59" }}>
+                  <div
+                    className={styles.diagramIcon}
+                    style={{ background: "#08bd59" }}
+                  >
                     <FileSpreadsheet size={22} />
                   </div>
                   <span className={styles.diagramName}>Google Sheets</span>
-                  <span className={styles.diagramSub}>Data tersimpan kemas</span>
+                  <span className={styles.diagramSub}>
+                    Data tersimpan kemas
+                  </span>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Template yang dapat */}
-          <section className={styles.sectionBox} aria-label="Template yang dapat">
+          <section
+            className={styles.sectionBox}
+            aria-label="Template yang dapat"
+          >
             <h2 className={styles.sectionTitle}>Template yang dapat</h2>
             <p className={styles.sectionDesc}>
               Semua template disediakan, terus guna dan ubah ikut keperluan kau.
@@ -219,7 +290,9 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                     <FileSpreadsheet size={22} color="#08bd59" />
                   </div>
                   <div>
-                    <h3 className={styles.templateTitle}>Mapping Sheet (Template)</h3>
+                    <h3 className={styles.templateTitle}>
+                      Mapping Sheet (Template)
+                    </h3>
                     <p className={styles.templateDesc}>
                       Contoh struktur kolum untuk kemas dan konsisten.
                     </p>
@@ -227,7 +300,7 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                 </div>
                 <button
                   type="button"
-                  onClick={() => alert("Template Mapping Sheet dimuat turun.")}
+                  onClick={() => downloadTemplate("mapping")}
                   className={styles.downloadBtn}
                   aria-label="Muat turun Mapping Sheet"
                 >
@@ -249,7 +322,7 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                 </div>
                 <button
                   type="button"
-                  onClick={() => alert("Checklist Setup dimuat turun.")}
+                  onClick={() => downloadTemplate("checklist")}
                   className={styles.downloadBtn}
                   aria-label="Muat turun Checklist Setup"
                 >
@@ -278,10 +351,10 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                 <BookOpen size={18} className={styles.buyFeatureIcon} />
                 <div>
                   <div className={styles.buyFeatureTitle}>
-                    Akses modul selepas pembayaran
+                    Pembayaran belum diaktifkan
                   </div>
                   <div className={styles.buyFeatureDesc}>
-                    Terus belajar bila-bila masa.
+                    Teroka contoh langkah dalam pratonton ini.
                   </div>
                 </div>
               </div>
@@ -324,7 +397,13 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                 href={`/modules/${nextModule.slug}`}
                 className={styles.nextModuleInner}
               >
-                <div style={{ display: "flex", alignItems: "center", gap: "0.85rem" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.85rem",
+                  }}
+                >
                   <div className={styles.nextIconSquare}>
                     <MessageSquare size={22} />
                   </div>
@@ -340,7 +419,9 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                     >
                       {nextModule.title}
                     </div>
-                    <div style={{ fontSize: "0.8rem", color: "var(--ss-muted)" }}>
+                    <div
+                      style={{ fontSize: "0.8rem", color: "var(--ss-muted)" }}
+                    >
                       {nextModule.shortOutcome}
                     </div>
                   </div>
@@ -366,6 +447,10 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
             alignItems: "center",
             justifyContent: "center",
             padding: "1.5rem",
+          }}
+          ref={dialogRef}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) closeCheckout();
           }}
           role="dialog"
           aria-modal="true"
@@ -402,9 +487,19 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
               <X size={18} />
             </button>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", color: "var(--ss-green)", marginBottom: "0.85rem" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.6rem",
+                color: "var(--ss-green)",
+                marginBottom: "0.85rem",
+              }}
+            >
               <ShieldCheck size={24} />
-              <span style={{ fontWeight: 800, fontSize: "0.95rem" }}>Pratonton Checkout SiapSatu</span>
+              <span style={{ fontWeight: 800, fontSize: "0.95rem" }}>
+                Pratonton Checkout SiapSatu
+              </span>
             </div>
 
             <h3
@@ -417,11 +512,19 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                 marginBottom: "0.5rem",
               }}
             >
-              Langganan Modul: {currentModule.title}
+              Pratonton modul: {currentModule.title}
             </h3>
 
-            <p style={{ fontSize: "0.92rem", color: "var(--ss-muted)", lineHeight: 1.5, marginBottom: "1.25rem" }}>
-              Harga rasmi: <strong>RM{currentModule.priceMyr}</strong> (sekali bayar seumur hidup).
+            <p
+              style={{
+                fontSize: "0.92rem",
+                color: "var(--ss-muted)",
+                lineHeight: 1.5,
+                marginBottom: "1.25rem",
+              }}
+            >
+              Harga modul: <strong>RM{currentModule.priceMyr}</strong> untuk
+              satu modul.
             </p>
 
             <div
@@ -436,7 +539,9 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                 border: "1px solid var(--ss-line)",
               }}
             >
-              <em>Nota Kejujuran Produk:</em> Ini adalah pratonton prototaip frontend. Tiada pemproses gerbang pembayaran sebenar (FPX/Kad) disambungkan pada sesi ini.
+              <em>Nota Kejujuran Produk:</em> Ini adalah pratonton prototaip
+              frontend. Tiada pemproses gerbang pembayaran sebenar (FPX/Kad)
+              disambungkan pada sesi ini.
             </div>
 
             <div style={{ display: "flex", gap: "0.75rem" }}>

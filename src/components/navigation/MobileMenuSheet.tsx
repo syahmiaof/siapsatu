@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import { useDialogFocus } from "@/lib/useDialogFocus";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,26 +24,7 @@ export function MobileMenuSheet({ isOpen, onClose }: MobileMenuSheetProps) {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    if (!isOpen) return;
-
-    // Lock body scroll
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    function handleKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") {
-        onClose();
-      }
-    }
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.body.style.overflow = originalOverflow;
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [isOpen, onClose]);
+  useDialogFocus(isOpen && mounted, sheetRef, onClose);
 
   if (!isOpen || !mounted) return null;
 
@@ -58,11 +40,7 @@ export function MobileMenuSheet({ isOpen, onClose }: MobileMenuSheetProps) {
 
   return createPortal(
     <>
-      <div
-        className={styles.backdrop}
-        onClick={onClose}
-        aria-hidden="true"
-      />
+      <div className={styles.backdrop} onClick={onClose} aria-hidden="true" />
       <div
         ref={sheetRef}
         className={styles.sheet}
@@ -72,10 +50,10 @@ export function MobileMenuSheet({ isOpen, onClose }: MobileMenuSheetProps) {
       >
         <div className={styles.header}>
           <Image
-            src="/assets/brand/siapsatu-logo.png"
+            src="/assets/brand/siapsatu-display.png"
             alt="SiapSatu"
-            width={120}
-            height={32}
+            width={190}
+            height={54}
             style={{ objectFit: "contain" }}
           />
           <button
@@ -120,6 +98,6 @@ export function MobileMenuSheet({ isOpen, onClose }: MobileMenuSheetProps) {
         </div>
       </div>
     </>,
-    document.body
+    document.body,
   );
 }

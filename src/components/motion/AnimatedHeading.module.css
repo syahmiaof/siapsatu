@@ -1,38 +1,38 @@
 .wrapper {
   position: relative;
-  display: block;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
 }
-
-.visualContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0 0.28em;
-  perspective: 1000px;
+.heading {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  margin: 0;
 }
-
 .wordMask {
-  display: inline-flex;
-  overflow: hidden;
-  vertical-align: baseline;
-  padding-bottom: 0.08em;
-  margin-bottom: -0.08em;
+  display: inline-block;
+  overflow: clip;
+  vertical-align: top;
+  padding-bottom: 0.12em;
+  margin-bottom: -0.12em;
+  white-space: nowrap;
 }
-
 .wordInner {
   display: inline-block;
-  will-change: transform, opacity;
   transform-origin: center bottom;
 }
-
 .accent {
-  color: var(--ss-orange);
+  color: var(--heading-accent, var(--ss-orange));
 }
-
+.mobileBreak {display:none}
+@media(max-width:700px){.mobileBreak{display:initial}.desktopSpace{display:none}}
 @media (prefers-reduced-motion: reduce) {
   .wordInner {
     opacity: 1 !important;
-    transform: none !important;
     visibility: visible !important;
+    transform: none !important;
   }
 }

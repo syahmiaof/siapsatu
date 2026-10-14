@@ -1,10 +1,8 @@
 "use client";
-
-import React, { useRef, useId } from "react";
-import { registerGSAP, gsap } from "@/lib/gsap";
+import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { gsap, registerGSAP } from "@/lib/gsap";
 import styles from "./AnimatedHeading.module.css";
-
 interface AnimatedHeadingProps {
   text: string;
   accentWords?: string[];
@@ -13,131 +11,79 @@ interface AnimatedHeadingProps {
   className?: string;
   accentColor?: string;
   delay?: number;
+  breakAfter?: number;
+  mobileBreakAfter?: number;
+  accentFrom?: number;
 }
-
 export function AnimatedHeading({
   text,
   accentWords = [],
   highlightWords,
-  as: Component = "h2",
+  as: Tag = "h2",
   className = "",
   accentColor,
   delay = 0,
+  breakAfter,
+  mobileBreakAfter,
+  accentFrom,
 }: AnimatedHeadingProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const headingId = useId();
-
-  const effectiveAccents = highlightWords || accentWords;
-
-  // Normalize accent lookup
-  const accentSet = new Set(
-    effectiveAccents.map((w) => w.toLowerCase().replace(/[.,!?:;]/g, ""))
+  const ref = useRef<HTMLDivElement>(null);
+  const accents = new Set(
+    (highlightWords || accentWords).map((w) =>
+      w.toLowerCase().replace(/[.,!?:;]/g, ""),
+    ),
   );
-
-  const words = text.split(" ");
-
   useGSAP(
     () => {
       registerGSAP();
-
-      const prefersReduced = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      ).matches;
-      if (prefersReduced || !containerRef.current) return;
-
-      const baseWordEls = containerRef.current.querySelectorAll(
-        `[data-word="base"]`
-      );
-      const accentWordEls = containerRef.current.querySelectorAll(
-        `[data-word="accent"]`
-      );
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top 88%",
-          end: "bottom top",
-          toggleActions: "play reverse play reverse",
-        },
+      const mm = gsap.matchMedia();
+      mm.add("(prefers-reduced-motion: no-preference)", () => {
+        gsap.fromTo(
+          "[data-word]",
+          { yPercent: 110, autoAlpha: 0 },
+          {
+            yPercent: 0,
+            autoAlpha: 1,
+            duration: 0.7,
+            stagger: 0.045,
+            delay: delay + (Tag === "h1" ? 0.12 : 0),
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: ref.current,
+              start: "top 96%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
       });
-
-      if (baseWordEls.length > 0) {
-        tl.fromTo(
-          baseWordEls,
-          {
-            autoAlpha: 0,
-            yPercent: 115,
-            rotationX: -12,
-          },
-          {
-            autoAlpha: 1,
-            yPercent: 0,
-            rotationX: 0,
-            stagger: 0.05,
-            duration: 0.75,
-            ease: "power3.out",
-            delay,
-          },
-          0
-        );
-      }
-
-      if (accentWordEls.length > 0) {
-        tl.fromTo(
-          accentWordEls,
-          {
-            autoAlpha: 0,
-            yPercent: 115,
-            rotationX: -12,
-            scale: 0.94,
-          },
-          {
-            autoAlpha: 1,
-            yPercent: 0,
-            rotationX: 0,
-            scale: 1,
-            stagger: 0.06,
-            duration: 0.78,
-            ease: "power3.out",
-            delay: delay + 0.08,
-          },
-          0.05
-        );
-      }
+      return () => mm.revert();
     },
-    { scope: containerRef, dependencies: [text, accentWords] }
+    { scope: ref, dependencies: [text, delay], revertOnUpdate: true },
   );
-
   return (
-    <div ref={containerRef} className={`${styles.wrapper} ${className}`}>
-      {/* Accessible readable heading for Screen Readers */}
-      <Component id={headingId} className="sr-only">
-        {text}
-      </Component>
-
-      {/* Decorative split-word container */}
-      <div
-        className={styles.visualContainer}
-        aria-hidden="true"
-        role="presentation"
-      >
-        {words.map((word, idx) => {
-          const cleanWord = word.toLowerCase().replace(/[.,!?:;]/g, "");
-          const isAccent = accentSet.has(cleanWord);
-
-          return (
-            <span key={`${word}-${idx}`} className={styles.wordMask}>
+    <div ref={ref} className={`${styles.wrapper} ${className}`} data-heading>
+      <Tag aria-label={text} className={styles.heading}>
+        {text.split(" ").map((word, i) => (
+          <React.Fragment key={`${i}-${word}`}>
+            {i > 0 && (i === breakAfter ? <br /> : i === mobileBreakAfter ? <><br className={styles.mobileBreak}/><span className={styles.desktopSpace}> </span></> : " ")}
+            <span className={styles.wordMask} aria-hidden="true">
               <span
-                data-word={isAccent ? "accent" : "base"}
-                className={`${styles.wordInner} ${isAccent ? styles.accent : ""}`}
-                style={isAccent && accentColor ? { color: accentColor } : undefined}
+                data-word
+                className={`${styles.wordInner} ${(accentFrom !== undefined ? i >= accentFrom : accents.has(word.toLowerCase().replace(/[.,!?:;]/g, ""))) ? styles.accent : ""}`}
+                style={
+                  accentColor
+                    ? ({
+                        "--heading-accent": accentColor,
+                      } as React.CSSProperties)
+                    : undefined
+                }
               >
                 {word}
               </span>
             </span>
-          );
-        })}
-      </div>
+          </React.Fragment>
+        ))}
+      </Tag>
     </div>
   );
 }

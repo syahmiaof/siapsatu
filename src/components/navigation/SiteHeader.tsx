@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -15,23 +15,29 @@ export function SiteHeader() {
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const closeMobile = useCallback(() => setIsMobileMenuOpen(false), []);
+  const closeMega = useCallback(() => setIsMegaMenuOpen(false), []);
+
   const isModulActive = pathname.startsWith("/modules");
   const isToolsActive = pathname.startsWith("/tools");
   const isLaluanActive = pathname.startsWith("/paths");
   const isKomunitiActive = pathname.startsWith("/community");
 
+  if (pathname.startsWith("/learn/")) return null;
+
   return (
     <header className={styles.header}>
+      {isMegaMenuOpen && <div className={styles.menuScrim} onClick={closeMega} aria-hidden="true" />}
       <div className={`container ${styles.inner}`}>
         <div className={styles.leftBrand}>
           <Link href="/" className={styles.logoLink} aria-label="SiapSatu Home">
             <Image
-              src="/assets/brand/siapsatu-logo.png"
+              src="/assets/brand/siapsatu-display.png"
               alt="SiapSatu — Satu modul. Satu hasil."
-              width={160}
-              height={44}
+              width={1611}
+              height={455}
               priority
-              style={{ objectFit: "contain", height: "42px", width: "auto" }}
+              className={styles.logo}
             />
           </Link>
 
@@ -47,7 +53,14 @@ export function SiteHeader() {
                 className={`${styles.navLink} ${
                   isModulActive || isMegaMenuOpen ? styles.active : ""
                 }`}
-                onClick={() => setIsMegaMenuOpen(!isMegaMenuOpen)}
+                onClick={() => setIsMegaMenuOpen(true)}
+                onKeyDown={(event)=>{
+                  if(event.key==='ArrowDown'){
+                    event.preventDefault();setIsMegaMenuOpen(true);
+                    const parent=event.currentTarget.parentElement;
+                    requestAnimationFrame(()=>parent?.querySelector<HTMLAnchorElement>('[role="menu"] a')?.focus());
+                  }
+                }}
                 aria-expanded={isMegaMenuOpen}
                 aria-haspopup="menu"
               >
@@ -59,10 +72,7 @@ export function SiteHeader() {
                   }`}
                 />
               </button>
-              <DesktopMegaMenu
-                isOpen={isMegaMenuOpen}
-                onClose={() => setIsMegaMenuOpen(false)}
-              />
+              <DesktopMegaMenu isOpen={isMegaMenuOpen} onClose={closeMega} />
             </div>
 
             <Link
@@ -114,10 +124,7 @@ export function SiteHeader() {
         </div>
       </div>
 
-      <MobileMenuSheet
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
+      <MobileMenuSheet isOpen={isMobileMenuOpen} onClose={closeMobile} />
     </header>
   );
 }

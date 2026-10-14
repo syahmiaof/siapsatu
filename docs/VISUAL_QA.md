@@ -1,118 +1,123 @@
-# SiapSatu LMS Frontend — Visual QA & Design System Verification Report
+# SiapSatu LMS Frontend — Visual QA & Forensic Verification Report
 
 **Date:** 2026-10-15  
-**Product:** SiapSatu ("Satu modul. Satu hasil.")  
-**Design Direction:** Malaysia Utility  
-**Target Viewports:**
-- **Desktop:** 1440 × 1024 px
-- **Mobile:** 390 × 844 px (iPhone 14 / standard modern mobile)
+**Product:** SiapSatu (*"Satu modul. Satu hasil."*)  
+**Design Authority:** Malaysia Utility Reference Suite (`mockups/`)  
+**Audit Protocol:** Normalized width comparisons (1440px Desktop, 390px Mobile), 50% alpha overlays, bounding-box geometry checks, and automated behavior tests.  
+**Interactive Evidence Viewer:** [`artifacts/visual-qa/astra/index.html`](../artifacts/visual-qa/astra/index.html)  
+**Comparison Contact Sheet:** [`artifacts/visual-qa/astra/comparisons/contact.jpg`](../artifacts/visual-qa/astra/comparisons/contact.jpg)
 
 ---
 
 ## 1. Executive Summary
 
-All 12 required routes and interaction surfaces have been fully implemented, styled in accordance with the **Malaysia Utility** design system, and verified against the approved reference mockups.
+This report supersedes all prior unverified "100% Match" claims. Visual fidelity has been measured by pairing immutable mockup references against live production builds at identical normalized widths (1440px and 390px) with corresponding viewport crops.
 
-Playwright end-to-end tests captured 27 full-fidelity screenshots under `artifacts/visual-qa/`. Automated tests and visual inspections confirm:
-1. **Zero Layout Shifts & Zero Stacking Context Bleeds:** Header, mobile drawer, desktop mega menu, and checkout modal operate without z-index collisions or viewport clipping.
-2. **Product Truth Adherence:** No fake user stats, fake ratings, or countdown timers. Standalone pricing is consistently RM10 per module. Base module lessons contain strictly text, screenshots, official links, template code, and practical tasks (zero video).
-3. **Typography & Styling:** Display headings feature rounded geometric weights, navy structural backgrounds (`--ss-navy-900: #062457`), energetic orange-red primary CTAs (`--ss-orange: #ff5a0a`), clean green completion tags (`--ss-green: #08bd59`), and authentic Malaysian flag ribbon accents.
-4. **All Tool Logos Locally Sourced:** SVG/PNG marks for n8n, Hermes Agent, OpenAI, Gemini, Claude, Perplexity, NotebookLM, Make, Zapier, GitHub, Vercel, Canva, Figma, Notion, Meta, WhatsApp, Cursor, and Codex are stored locally in `public/assets/tools/`.
+### Key Milestones Achieved
+1. **Asset Contamination Resolved:**
+   - Replaced rectangular mockup crops that contained baked-in text, navigation fragments, and buttons with transparent vector SVGs and clean transparent character artwork (`learners-clean.png`, `learner-clean.png`, `hermes-clean.png`).
+   - Sourced and verified genuine brand geometry via Simple Icons for Gemini, Claude, Cursor, ChatGPT, Perplexity, Make, Zapier, GitHub, Vercel, Canva, Figma, Notion, Meta, and WhatsApp.
+   - Transparent logo padding resolved via pixel-exact display crop (`public/assets/brand/siapsatu-display.png`).
+2. **Layout & Hierarchy Alignment:**
+   - Reconstructed prominent header, wide hero compositions, integrated Malaysian flag ribbons, and responsive card grids.
+   - Solved double-header collision, step coherence, and sticky dock content occlusion in `/learn/n8n-google-sheets/2`.
+   - Recreated live HTML/CSS workflow nodes in `WorkflowDiagram.tsx` replacing pixelated screenshot cards.
+3. **Engineering Gates:**
+   - **TypeScript (`strict: true`):** 0 errors (`npm run typecheck`).
+   - **ESLint:** 0 warnings, 0 errors (`npm run lint`).
+   - **Production Build:** All 13 routes statically compiled (`npm run build`).
+   - **Playwright Test Suite:** 47 passed, 7 skipped (cross-platform guards), 0 failed across Chromium Desktop (1440x1024) and Mobile (390x844).
+   - **Responsive Geometry Check:** 0 horizontal overflows across 6 viewports (1440px, 1280px, 768px, 430px, 390px, 360px).
 
 ---
 
-## 2. Visual QA Matrix & Reference Comparison
+## 2. Route Verdict Matrix
 
-| Screen # | Reference Mockup | Route | Desktop Capture (1440px) | Mobile Capture (390px) | Fidelity Status & Notes |
+Verdicts are categorized as:
+- **Close:** Layout, typography, spacing, card proportions, and first-fold density match reference structure within acceptable production tolerances (~5%).
+- **Material delta remains:** Measurable structural, compositional, or artwork differences persist.
+- **Blocked by missing artwork:** High-fidelity source illustration does not exist in repository assets.
+
+| Route / Screen | Reference Mockup | Viewport | Verdict | Comparative Analysis & Remaining Deltas | Evidence Links |
 |:---|:---|:---|:---|:---|:---|
-| **Home** | `homepage-theme-03-malaysia-utility.png` | `/` | `desktop-homepage.png` | `mobile-homepage.png` | **Match.** Malaysia utility hero with ribbon accents, value pillars, featured module cards, tool grid, community CTA, and Malaysian learner illustrations. |
-| **Catalog** | `modules-catalog-desktop.png`<br>`modules-catalog-mobile.png` | `/modules` | `desktop-modules-catalog.png` | `mobile-modules-catalog.png` | **Match.** Category filter pills, search input, RM10 price callout, outcome badges, step counts, and active filter empty states. |
-| **Mega Menu** | `modules-mega-menu-desktop.png` | `/` (nav dropdown) | `desktop-mega-menu-open.png` | *Covered by drawer* | **Match.** 3-column categorical layout (AI & Agent, Automasi & Integrasi, No-Code & Web) with quick links, outcome descriptions, and direct route navigation. |
-| **01** | `ui-01-tools-directory-desktop.png` | `/tools` | `desktop-tools-directory.png` | `mobile-tools-directory.png` | **Match.** Multi-category tool directory, search filter, tool badges, module counts, and clean card grid. |
-| **02** | `ui-02-tool-n8n-desktop.png` | `/tools/n8n` | `desktop-tool-n8n.png` | `mobile-tool-n8n.png` | **Match.** Hero with official n8n logo, official website link, outcome pillars, RM10 modules for n8n, and bundled AI automation path card. |
-| **03** | `ui-03-tool-hermes-desktop.png` | `/tools/hermes-agent` | `desktop-tool-hermes-agent.png` | `mobile-tool-hermes-agent.png` | **Match.** Hermes Agent official mark, command-line quickstart block, practical enterprise outcomes, and related agent modules. |
-| **04** | `ui-04-learning-path-automation-v2.png` | `/paths/ai-automation` | `desktop-learning-path-automation.png` | `mobile-learning-path-automation.png` | **Match.** 4-step progressive track, timeline connector line, outcome checklists, bundle pricing preview (RM35 vs RM40), and module deep-links. |
-| **05** | `ui-05-module-detail-n8n.png` | `/modules/n8n-google-sheets` | `desktop-module-detail-n8n.png` | `mobile-module-detail-n8n.png` | **Match.** RM10 standalone purchase card, step breakdown, "Apa yang anda dapat", practical outcome preview, and interactive checkout modal trigger. |
-| **06** | `ui-06-lesson-reader-n8n.png`<br>`lesson-mobile-siapsatu-v2.png` | `/learn/n8n-google-sheets/2` | `desktop-lesson-reader-n8n.png` | `mobile-lesson-reader-n8n.png` | **Match.** Step progress sidebar, clean reading typography, official link badges, code template box with accessible clipboard copy, and next step navigation. |
-| **07** | `ui-07-library-dashboard.png` | `/library` | `desktop-library-dashboard.png` | `mobile-library-dashboard.png` | **Match.** Purchased modules list with progress percentage, quick resume actions, completed deliverables download, and recommended next RM10 module. |
-| **08** | `ui-08-progress-map.png` | `/progress` | `desktop-progress-map.png` | `mobile-progress-map.png` | **Match.** Overall completion statistics, visual track progress bars, completed milestones, and actionable next steps. |
-| **09** | `ui-09-community-hub.png` | `/community` | `desktop-community-hub.png` | `mobile-community-hub.png` | **Match.** WhatsApp group support channels, Malaysian learner showcase wins, and community guidelines with official links. |
-| **10** | `ui-10-tools-directory-mobile-v2.png` | `/tools` (mobile) | *N/A (mobile specific)* | `mobile-tools-directory.png` | **Match.** Mobile-optimized single column card stack with category chips and persistent bottom navigation dock. |
-| **Modal** | Interaction surface | Triggered on `/modules/[slug]` | `desktop-checkout-modal.png` | *Responsive modal* | **Match.** RM10 order summary, payment method options (FPX / DuitNow QR / Card), prototype disclaimer, and dismiss controls. |
-| **Drawer** | Mobile navigation sheet | Triggered on hamburger | *N/A (mobile)* | `mobile-menu-drawer-open.png` | **Match.** Portalized full-height slide-over sheet with clean navigation links, search, and login button. |
-| **Auth** | Derived from system | `/login` | `desktop-login-page.png` | `mobile-login-page.png` | **Match.** Clean, focused card with phone/email input, OTP trigger, and return link to home. |
+| **Laman Utama (`/`)** | `homepage-theme-03-malaysia-utility.png` | 1440px | **Close** | Hero width, two-line bold title, Malaysian flag ribbon accent, and 3-column featured cards align tightly. Artwork uses clean generated Malaysian learner trio (`learners-clean.png`) rather than the exact mockup characters. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-home-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-home-overlay.png) |
+| **Katalog Modul (`/modules`)** | `modules-catalog-desktop.png` | 1440px | **Close** | Wide headline, search input, category filter pills, RM10 price callouts, and dense card grid match the reference first fold. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-modules-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-modules-overlay.png) |
+| **Katalog Modul Mobile** | `modules-catalog-mobile.png` | 390px | **Close** | Device status bar excluded from web layout. Search and chips start at reference depth; single-column card stack scrolls smoothly above the persistent bottom dock. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/390-modules-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/390-modules-overlay.png) |
+| **Mega Menu** | `modules-mega-menu-desktop.png` | 1440px | **Close** | 3 categorical columns (AI & Ejen, Automasi & Integrasi, No-Code & Web) open cleanly below "Modul" link with keyboard focus trapping and Escape restoration. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-mega-menu-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-mega-menu-overlay.png) |
+| **Direktori Alat (`/tools`)** | `ui-01-tools-directory-desktop.png` | 1440px | **Close** | Broad flag/ribbon hero, search input, 4-column tool grid, opaque brand marks, and module count badges match reference geometry. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-tools-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-tools-overlay.png) |
+| **Direktori Alat Mobile** | `ui-10-tools-directory-mobile-v2.png` | 390px | **Close** | Large logo, compact filters, readable tool cards, and non-obscuring bottom navigation dock. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/390-tools-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/390-tools-overlay.png) |
+| **Hab n8n (`/tools/n8n`)** | `ui-02-tool-n8n-desktop.png` | 1440px | **Close** | Wide integrated workflow area built via `WorkflowDiagram.tsx`, official n8n mark, outcome pillars, and 4-column module tiles row. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-tools-n8n-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-tools-n8n-overlay.png) |
+| **Hab Hermes (`/tools/hermes-agent`)** | `ui-03-tool-hermes-desktop.png` | 1440px | **Close** | Hermes official logo preserved, CLI quickstart terminal block, practical enterprise outcome points, and character illustration card (`hermes-clean.png`). | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-tools-hermes-agent-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-tools-hermes-agent-overlay.png) |
+| **Laluan Automasi (`/paths/ai-automation`)** | `ui-04-learning-path-automation-v2.png` | 1440px | **Close** | 4-step progressive timeline rail, outcome checklist boxes, bundle price comparison (RM35 vs RM40), and deep links to modules. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-paths-ai-automation-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-paths-ai-automation-overlay.png) |
+| **Detail Modul (`/modules/n8n-google-sheets`)** | `ui-05-module-detail-n8n.png` | 1440px | **Close** | RM10 standalone purchase card, step breakdown, "Apa yang anda dapat" deliverables list, and interactive checkout modal preview. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-modules-n8n-google-sheets-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-modules-n8n-google-sheets-overlay.png) |
+| **Lesson Reader (`/learn/n8n-google-sheets/2`)** | `ui-06-lesson-reader-n8n.png` | 1440px | **Material delta remains** | Single unified reader header fixed; step sidebar and template copy box operational. Note: mockup depicts step 3 while implemented demo serves step 2 content with accurate interactive template copy. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-learn-n8n-google-sheets-2-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-learn-n8n-google-sheets-2-overlay.png) |
+| **Lesson Reader Mobile** | `lesson-mobile-siapsatu-v2.png` | 390px | **Material delta remains** | Single header and accessible copy box operational; sticky footer leaves content reachable. Reference depicts different lesson topic (Meta Ads vs n8n); structural layout matches. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/390-learn-n8n-google-sheets-2-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/390-learn-n8n-google-sheets-2-overlay.png) |
+| **Library (`/library`)** | `ui-07-library-dashboard.png` | 1440px | **Close** | Active purchased modules, progress percentages, deliverable downloads, and recommended next module card. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-library-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-library-overlay.png) |
+| **Peta Kemajuan (`/progress`)** | `ui-08-progress-map.png` | 1440px | **Close** | Skill tracks with progress bars, completed milestone badges, and clear "Next Action" recommendations. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-progress-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-progress-overlay.png) |
+| **Komuniti (`/community`)** | `ui-09-community-hub.png` | 1440px | **Close** | Official WhatsApp channel links, Malaysian learner showcase wins, and community guidelines with local post creation dialog. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-community-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-community-overlay.png) |
+| **Log Masuk (`/login`)** | *Derived Malaysia Utility* | 1440px / 390px | **Close** | Clean, focused card with phone/email OTP input, prototype disclaimer, and return link to home. No dedicated mockup was supplied. | [Desktop Fold](../artifacts/visual-qa/astra/final/1440-login-fold.png)<br>[Mobile Fold](../artifacts/visual-qa/astra/final/390-login-fold.png) |
 
 ---
 
-## 3. Design Tokens & Styling Fidelity
+## 3. Forensic Asset & Logo Verification
 
-The frontend strictly enforces the Malaysia Utility token system in `src/styles/tokens.css`:
+Every logo in `public/assets/tools/` was audited against official brand marks and Simple Icons vector geometry:
 
-```css
-:root {
-  --ss-navy-950: #03143a;
-  --ss-navy-900: #062457;
-  --ss-navy-800: #0b3474;
-  --ss-orange: #ff5a0a;
-  --ss-red: #ff2445;
-  --ss-green: #08bd59;
-  --ss-yellow: #ffd12a;
-  --ss-blue: #1777f2;
-  --ss-ink: #071a3d;
-  --ss-muted: #53627d;
-  --ss-line: #dbe4f1;
-  --ss-surface: #ffffff;
-  --ss-surface-blue: #f2f7ff;
-  --ss-surface-red: #fff2f4;
-  --ss-surface-green: #effbf5;
-  --ss-radius-sm: 14px;
-  --ss-radius-md: 22px;
-  --ss-radius-lg: 32px;
-  --ss-shadow-card: 0 16px 44px rgb(3 20 58 / 0.10);
-  --ss-shadow-lift: 0 22px 60px rgb(3 20 58 / 0.18);
-  --ss-motion-fast: 160ms;
-  --ss-motion-base: 280ms;
-  --ss-motion-slow: 760ms;
-}
+- **Supplied Official Assets (Untouched):**
+  - SiapSatu Logo: `brand/logo-concepts/siapsatu-primary-final.png` (SHA256: `ae9bb07d...`)
+  - n8n Mark: `brand/tool-logos/n8n-official.png` (SHA256: `91dbb883...`)
+  - Hermes Agent: `brand/tool-logos/hermes-agent-official.png` (SHA256: `5fbced60...`)
+- **Simple Icons Geometry Verified (Exact SVG Path Match):**
+  - `chatgpt.svg`, `claude.svg`, `cursor.svg`, `gemini.svg`, `perplexity.svg`, `make.svg`, `zapier.svg`, `github.svg`, `vercel.svg`, `canva.svg`, `figma.svg`, `notion.svg`, `meta.svg`, `whatsapp.svg`.
+- **Neutral Text Treatments (Honest Provenance):**
+  - `notebooklm.svg`: Neutral `NLM` text badge (Simple Icons retrieval timed out).
+  - `codex.svg`: Neutral `Codex` text badge (no standalone official mark available).
+  - `antigravity.svg`: Neutral `AG` text badge.
+  - `vibecode.svg`: Authored code-bracket icon for learning topic.
+
+---
+
+## 4. Responsive & Accessibility Validation
+
+- **Viewport Geometry (`geometry.json`):**
+  - `1440x1024` (Desktop): `overflow: false`, `brokenImages: 0`, `errors: 0`.
+  - `1280x800` (Small Desktop): `overflow: false`, `brokenImages: 0`, `errors: 0`.
+  - `768x1024` (Tablet): `overflow: false`, `brokenImages: 0`, `errors: 0`.
+  - `430x932` (Large Mobile): `overflow: false`, `brokenImages: 0`, `errors: 0`.
+  - `390x844` (Standard Mobile): `overflow: false`, `brokenImages: 0`, `errors: 0`.
+  - `360x800` (Compact Mobile): `overflow: false`, `brokenImages: 0`, `errors: 0`.
+- **Keyboard & Focus Navigation:**
+  - Mega Menu: Keyboard arrow navigation, focus loop, and `Escape` key trigger restoration.
+  - Checkout Modal: Keyboard focus trap (`Tab`/`Shift+Tab`) with `Escape` dismiss and return focus to trigger button (`src/lib/useDialogFocus.ts`).
+  - Mobile Drawer: Focus trapped inside drawer, body scroll locked, mounted via `createPortal`.
+- **Accessible Clipboard Action:**
+  - `CopyTemplate.tsx` implements `navigator.clipboard.writeText` with automated fallback to `document.execCommand("copy")` inside a hidden textarea for headless/restricted contexts.
+
+---
+
+## 5. Verification Command Logs
+
+```bash
+# 1. Typecheck
+$ npm run typecheck
+> tsc --noEmit
+# Exit code 0 (0 errors)
+
+# 2. Lint
+$ npm run lint
+> next lint
+✔ No ESLint warnings or errors
+# Exit code 0
+
+# 3. Production Build
+$ npm run build
+> next build
+✓ Compiled successfully
+✓ Generating static pages (13/13)
+# Exit code 0
+
+# 4. Playwright End-to-End Suite
+$ npm run test:e2e
+47 passed, 7 skipped (cross-platform guards), 0 failed
+# Exit code 0
 ```
-
-### Key UI Treatments
-- **Header:** Sticky top nav with subtle backdrop blur, high-contrast links with hover underline animations, and a prominent "Masuk" button.
-- **Ribbon Accent:** CSS linear-gradient flag stripe (`#ff2445`, `#ffffff`, `#1777f2`, `#ffd12a`) adorning top borders and hero badges.
-- **Card Hovers:** `-3px` transform elevation with shadow shift (`--ss-shadow-lift`) and icon nudge.
-- **Buttons:** Tactile feedback on press (`transform: scale(0.98)`), accessible `:focus-visible` ring with `2px` offset.
-- **Persistent Mobile Dock:** Fixed 4-item bottom navigation (`Laman Utama`, `Modul`, `Alat`, `Akaun`) visible exclusively below 768px.
-
----
-
-## 4. Architectural & Design Decisions
-
-1. **Semantic HTML & CSS Modules:**
-   - Every page and component utilizes dedicated `.module.css` files, preventing global style pollution and avoiding heavyweight CSS-in-JS runtimes.
-   - Zero reliance on external UI kits (no MUI/Chakra/Shadcn bloat) ensures instant hydration and tight adherence to the mockup specs.
-
-2. **GSAP ScrollTrigger Progressive Enhancement:**
-   - Animations use `@gsap/react` with safe defaults (`gsap.from` with `start: "top 95%"`). If JavaScript or GSAP is disabled, elements remain fully visible.
-   - Screen-readers receive unpolluted text via `aria-hidden` attributes on split-word spans paired with an accessible visually-hidden root label.
-
-3. **React 18 `createPortal` for Modals & Mobile Drawer:**
-   - Because `SiteHeader` uses `backdrop-filter: blur(...)`, CSS specifications dictate that it establishes a new containing block for `fixed` children.
-   - Moving `MobileMenuSheet` and the Checkout Modal into `createPortal(..., document.body)` guarantees they render above all z-index and stacking contexts across all modern browsers.
-
-4. **Resilient Clipboard API Implementation:**
-   - `CopyTemplate.tsx` implements modern `navigator.clipboard.writeText` with a graceful fallback to `document.execCommand("copy")` inside a hidden textarea. This guarantees clipboard copying works reliably across headless CI environments, older browsers, and non-HTTPS local development.
-
-5. **Local Storage Adapter with Seed Fallback:**
-   - `src/lib/storage.ts` provides typed, crash-resilient access to prototype state (e.g., active user modules, completed steps) while ensuring server-side rendering never triggers hydration mismatches.
-
----
-
-## 5. Verification Checklist & Test Results
-
-- [x] `npm run typecheck` (`tsc --noEmit`): **0 errors**
-- [x] `npm run lint` (`next lint`): **0 errors, 0 warnings**
-- [x] `npm run build` (`next build`): **Successful production build (all routes statically optimized or dynamic)**
-- [x] `npm run test:e2e` (`playwright test`): **29 tests passed**
-  - Desktop viewports (1440x1024): All routes render cleanly without horizontal overflow.
-  - Mobile viewports (390x844): Touch targets are >= 44px, bottom nav dock persists, menus open smoothly.
-  - Interactive flows: Mega-menu opens on hover/focus, category filter updates cards, tool search filters instantaneously, template copy triggers confirmation badge, checkout modal opens and closes via escape key or overlay click.

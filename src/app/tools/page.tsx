@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
-import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import React, { useState, useMemo, useEffect, Suspense } from "react";
+import { BrandScene } from "@/components/brand/BrandScene";
 import {
   Search,
   Bot,
@@ -18,8 +19,24 @@ import { TOOLS } from "@/data/mockData";
 import styles from "./tools.module.css";
 
 export default function ToolsDirectoryPage() {
+  return (
+    <Suspense>
+      <DirectoryContent />
+    </Suspense>
+  );
+}
+
+function DirectoryContent() {
+  const params = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("semua");
+  useEffect(() => {
+    const goal = params.get("goal");
+    setSearchQuery(params.get("search") || "");
+    setSelectedCategory(
+      params.get("category") || (goal === "jual" ? "bisnes" : goal) || "semua",
+    );
+  }, [params]);
 
   const categories = [
     { id: "semua", label: "Semua", icon: null },
@@ -34,9 +51,9 @@ export default function ToolsDirectoryPage() {
     return TOOLS.filter((tool) => {
       const matchesSearch =
         searchQuery.trim() === "" ||
-        tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tool.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tool.category.toLowerCase().includes(searchQuery.toLowerCase());
+        tool.name.toLowerCase().includes(searchQuery.trim().toLowerCase()) ||
+        tool.summary.toLowerCase().includes(searchQuery.trim().toLowerCase()) ||
+        tool.category.toLowerCase().includes(searchQuery.trim().toLowerCase());
 
       const matchesCat =
         selectedCategory === "semua" || tool.category === selectedCategory;
@@ -53,25 +70,21 @@ export default function ToolsDirectoryPage() {
           <div className={styles.heroLeft}>
             <AnimatedHeading
               text="Belajar tool yang orang tengah guna."
-              accentWords={["orang", "tengah", "guna."]}
+              breakAfter={3}
+              accentFrom={3}
               as="h1"
               className={styles.headline}
             />
             <p className={styles.subtitle}>
-              Kenal fungsi, ikut modul, terus hasilkan sesuatu. Cari, teroka dan
-              belajar alat yang bantu kerja lebih mudah.
+              Kenal fungsi, ikut modul, terus hasilkan sesuatu.
             </p>
           </div>
 
           <div className={styles.heroRight}>
-            <Image
-              src="/assets/illustrations/hero-learners.png"
-              alt="Ilustrasi pelajar Malaysia menguasai pelbagai perisian"
-              width={480}
-              height={300}
-              priority
-              className={styles.heroArtwork}
-            />
+            <BrandScene variant="ribbon" />
+            <div className={styles.mobileLearner}>
+              <BrandScene variant="learner" />
+            </div>
           </div>
         </div>
       </section>
@@ -90,7 +103,11 @@ export default function ToolsDirectoryPage() {
           />
         </div>
 
-        <div className={styles.filterChips} role="group" aria-label="Tapis mengikut kategori">
+        <div
+          className={styles.filterChips}
+          role="group"
+          aria-label="Tapis mengikut kategori"
+        >
           {categories.map((cat) => {
             const Icon = cat.icon;
             const isActive = selectedCategory === cat.id;

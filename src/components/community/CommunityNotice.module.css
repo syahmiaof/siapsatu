@@ -1,120 +1,106 @@
 .banner {
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
-  gap: 1.5rem;
-  margin: 2.5rem 0;
-  width: 100%;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 16px;
+  margin: 14px 0 24px;
 }
-
 .navyBox {
-  background: var(--ss-gradient-card-navy);
-  border-radius: var(--ss-radius-lg);
-  padding: 1.75rem 2.25rem;
-  color: #ffffff;
+  background: var(--ss-navy-900);
+  border-radius: 22px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
   position: relative;
-  box-shadow: 0 16px 40px rgba(3, 20, 58, 0.14);
+  overflow: hidden;
+  height: 164px;
+  padding: 0 26px 0 0;
 }
-
+.navyBox:after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: -20px;
+  right: -20px;
+  height: 60px;
+  border-top: 12px solid white;
+  border-bottom: 12px solid white;
+  background: var(--ss-red);
+  transform: rotate(6deg);
+  z-index: 0;
+}
 .learnersArt {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-  max-width: 240px;
-}
-
-.headingText {
-  font-family: var(--font-display, inherit);
-  font-size: 1.95rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-  text-align: right;
+  width: 48%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  align-self: flex-end;
+  position: relative;
   z-index: 1;
 }
-
+.headingText {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 43px);
+  font-weight: 800;
+  line-height: 1.06;
+  color: white;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
 .orangeWord {
   color: var(--ss-orange);
 }
-
 .whatsappBox {
-  background: var(--ss-surface-green);
-  border: 1.5px solid rgba(8, 189, 89, 0.25);
-  border-radius: var(--ss-radius-lg);
-  padding: 1.75rem;
+  background: #f0f4fc;
+  border-radius: 22px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.15rem;
-  box-shadow: 0 12px 32px rgba(8, 189, 89, 0.08);
+  gap: 12px;
 }
-
 .whatsappBtn {
-  background: #25d366;
-  color: #ffffff;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-  font-family: var(--font-display, inherit);
-  font-weight: 700;
-  font-size: 1.1rem;
-  padding: 0.85rem 1.4rem;
-  border-radius: var(--ss-radius-pill);
-  text-decoration: none;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
-  transition: transform var(--ss-motion-fast) ease,
-    box-shadow var(--ss-motion-fast) ease;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 800;
 }
-
 .whatsappBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  color: var(--ss-orange);
 }
-
-.avatarStrip {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
+.whatsappBtn img {
+  filter: none;
 }
-
-.avatarsGroup {
-  display: flex;
-  align-items: center;
-}
-
-.avatarImg {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  margin-left: -8px;
-  object-fit: cover;
-}
-
-.avatarImg:first-child {
-  margin-left: 0;
-}
-
 .subtext {
-  font-size: 0.85rem;
-  color: var(--ss-navy-900);
-  font-weight: 600;
-  line-height: 1.35;
+  font-size: 13px;
+  color: var(--ss-muted);
+  line-height: 1.5;
 }
-
 @media (max-width: 900px) {
   .banner {
     grid-template-columns: 1fr;
   }
-  .navyBox {
-    padding: 1.5rem;
-  }
   .headingText {
-    font-size: 1.5rem;
+    font-size: 30px;
+  }
+  .navyBox {
+    height: 160px;
+  }
+  .whatsappBox {
+    padding: 20px;
+  }
+  .whatsappBtn {
+    font-size: 21px;
+  }
+}
+@media (max-width: 400px) {
+  .headingText {
+    font-size: 24px;
+  }
+  .navyBox {
+    padding-right: 15px;
+    height: 140px;
   }
 }

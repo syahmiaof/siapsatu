@@ -1,0 +1,167 @@
+[
+  {
+    "slug": "1440-home",
+    "reference": "homepage-theme-03-malaysia-utility.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-modules",
+    "reference": "modules-catalog-desktop.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-mega-menu",
+    "reference": "modules-mega-menu-desktop.png",
+    "originalSize": [
+      1586,
+      992
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 901
+  },
+  {
+    "slug": "1440-tools",
+    "reference": "ui-01-tools-directory-desktop.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-tools-n8n",
+    "reference": "ui-02-tool-n8n-desktop.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-tools-hermes-agent",
+    "reference": "ui-03-tool-hermes-desktop.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-paths-ai-automation",
+    "reference": "ui-04-learning-path-automation-v2.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-modules-n8n-google-sheets",
+    "reference": "ui-05-module-detail-n8n.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-learn-n8n-google-sheets-2",
+    "reference": "ui-06-lesson-reader-n8n.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-library",
+    "reference": "ui-07-library-dashboard.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-progress",
+    "reference": "ui-08-progress-map.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-community",
+    "reference": "ui-09-community-hub.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "390-modules",
+    "reference": "modules-catalog-mobile.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 70,
+    "width": 390,
+    "comparedHeight": 811
+  },
+  {
+    "slug": "390-tools",
+    "reference": "ui-10-tools-directory-mobile-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 90,
+    "width": 390,
+    "comparedHeight": 802
+  },
+  {
+    "slug": "390-learn-n8n-google-sheets-2",
+    "reference": "lesson-mobile-siapsatu-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 0,
+    "width": 390,
+    "comparedHeight": 843
+  }
+]

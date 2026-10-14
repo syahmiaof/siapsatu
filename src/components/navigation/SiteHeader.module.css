@@ -27,7 +27,8 @@
 .logoLink {
   display: inline-flex;
   align-items: center;
-  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
+  transition:
+    transform var(--ss-motion-fast) var(--ss-ease-spring),
     filter var(--ss-motion-fast) ease;
 }
 
@@ -145,3 +146,82 @@
     transition: none;
   }
 }
+
+.header {
+  height: 100px;
+  background: #fff;
+  backdrop-filter: none;
+  border: 0;
+  position: relative;
+}
+.logo {
+  width: 290px;
+  height: auto;
+}
+.leftBrand {
+  flex: 1;
+  gap: 0;
+}
+.desktopNav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 38px;
+}
+.navLink {
+  font-size: 20px;
+  min-height: 48px;
+}
+.rightActions a {
+  font-size: 19px;
+  min-width: 150px;
+  min-height: 50px;
+  border-radius: 18px;
+}
+@media (max-width: 1100px) {
+  .logo {
+    width: 245px;
+  }
+  .desktopNav {
+    left: 57%;
+    gap: 20px;
+  }
+}
+@media (max-width: 900px) {
+  .header {
+    height: 84px;
+  }
+  .logo {
+    width: 190px;
+  }
+  .mobileControls {
+    gap: 4px;
+  }
+  .mobileIconBtn {
+    background: transparent;
+    border: 0;
+    width: 44px;
+    height: 48px;
+  }
+  .mobileIconBtn svg {
+    width: 27px;
+    height: 27px;
+  }
+}
+@media (max-width: 380px) {
+  .logo {
+    width: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    height: 68px;
+  }
+  .logo {
+    width: 165px;
+  }
+}
+
+.menuScrim{position:fixed;inset:100px 0 0;background:#03143a55;z-index:0}.inner{position:relative;z-index:1}
+@media(max-width:900px){.menuScrim{display:none}}

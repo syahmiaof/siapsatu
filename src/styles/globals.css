@@ -1,13 +1,21 @@
 @import "./tokens.css";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-family: var(--font-body, "Manrope", system-ui, -apple-system, sans-serif);
+  font-family: var(
+    --font-body,
+    "Manrope",
+    system-ui,
+    -apple-system,
+    sans-serif
+  );
   color: var(--ss-ink);
   background-color: var(--ss-bg);
   text-rendering: optimizeLegibility;
@@ -23,8 +31,18 @@ body {
   background-color: var(--ss-bg);
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display, "Bricolage Grotesque", system-ui, sans-serif);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(
+    --font-display,
+    "Bricolage Grotesque",
+    system-ui,
+    sans-serif
+  );
   color: var(--ss-navy-950);
   letter-spacing: -0.02em;
   font-weight: 800;
@@ -42,12 +60,15 @@ button {
   background: none;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: 1rem;
 }
 
-img, svg {
+img,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -88,10 +109,70 @@ img, svg {
 
 /* Reduced motion overrides */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+html,
+body {
+  background: #fff;
+}
+body {
+  overflow-x: visible;
+}
+.container {
+  max-width: 1505px;
+  padding-inline: var(--page-gutter);
+}
+input,
+textarea {
+  min-width: 0;
+  caret-color: var(--ss-orange);
+}
+::selection {
+  background: var(--ss-yellow);
+  color: var(--ss-navy-950);
+}
+html {
+  scroll-padding-top: 24px;
+  scrollbar-color: var(--ss-muted-light) var(--ss-surface-subtle);
+}
+button,
+a,
+input,
+textarea {
+  touch-action: manipulation;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.prototype-note {
+  font-size: 12px;
+  color: var(--ss-muted);
+  padding: 8px 0;
+  line-height: 1.5;
+}
+@media (max-width: 900px) {
+  body {
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  }
+  body:has([data-reader]) {
+    padding-bottom: 0;
+  }
+}
+
+:root {
+  --page-gutter: clamp(16px, 2.7vw, 42px);
+}
+@media (max-width: 600px) {
+  :root {
+    --page-gutter: 16px;
   }
 }

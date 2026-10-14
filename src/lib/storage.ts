@@ -10,9 +10,37 @@ export function getStoredProgress(): UserProgress {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return INITIAL_USER_PROGRESS;
-    return JSON.parse(raw);
-  } catch (e) {
-    console.error("Failed to read user progress from localStorage", e);
+    const value: unknown = JSON.parse(raw);
+    if (!value || typeof value !== "object") return INITIAL_USER_PROGRESS;
+    const candidate = value as Partial<UserProgress>;
+    if (
+      !Array.isArray(candidate.ownedModuleSlugs) ||
+      !candidate.ownedModuleSlugs.every((s) => typeof s === "string") ||
+      !Array.isArray(candidate.completedModuleSlugs) ||
+      !candidate.completedModuleSlugs.every((s) => typeof s === "string") ||
+      typeof candidate.currentModuleSlug !== "string" ||
+      !Number.isInteger(candidate.currentStepIndex) ||
+      !candidate.completedSteps ||
+      typeof candidate.completedSteps !== "object" ||
+      Array.isArray(candidate.completedSteps) ||
+      !Object.values(candidate.completedSteps).every(
+        (steps) =>
+          Array.isArray(steps) &&
+          steps.every((n) => Number.isInteger(n) && n > 0),
+      ) ||
+      !Array.isArray(candidate.completedOutputs) ||
+      !candidate.completedOutputs.every(
+        (o) =>
+          o &&
+          typeof o === "object" &&
+          ["id", "type", "title", "date", "moduleSlug"].every(
+            (key) => typeof o[key as keyof typeof o] === "string",
+          ),
+      )
+    )
+      return INITIAL_USER_PROGRESS;
+    return candidate as UserProgress;
+  } catch {
     return INITIAL_USER_PROGRESS;
   }
 }
@@ -26,7 +54,10 @@ export function saveStoredProgress(progress: UserProgress): void {
   }
 }
 
-export function markStepCompleted(moduleSlug: string, stepNumber: number): UserProgress {
+export function markStepCompleted(
+  moduleSlug: string,
+  stepNumber: number,
+): UserProgress {
   const current = getStoredProgress();
   const currentCompleted = current.completedSteps[moduleSlug] || [];
   if (!currentCompleted.includes(stepNumber)) {
@@ -34,8 +65,8 @@ export function markStepCompleted(moduleSlug: string, stepNumber: number): UserP
       ...current,
       completedSteps: {
         ...current.completedSteps,
-        [moduleSlug]: [...currentCompleted, stepNumber]
-      }
+        [moduleSlug]: [...currentCompleted, stepNumber],
+      },
     };
     saveStoredProgress(updated);
     return updated;

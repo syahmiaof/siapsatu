@@ -65,3 +65,37 @@
   line-height: 1.5;
   overflow-x: auto;
 }
+.container {
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  border-radius: 14px;
+  background: #edf3ff;
+}
+.header {
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.headerLeft {
+  font-size: 15px;
+  gap: 8px;
+}
+.copyBtn {
+  min-height: 40px;
+  font-size: 12px;
+  padding: 9px 12px;
+  border-radius: 10px;
+}
+.codeArea {
+  font-size: 12px;
+  padding: 13px;
+  border-radius: 10px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.copied {
+  background: var(--ss-green-dark) !important;
+  border-color: var(--ss-green-dark) !important;
+}

@@ -2,133 +2,159 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
-  border: 1.5px solid var(--ss-line);
-  border-radius: var(--ss-radius-md);
-  padding: 1.25rem 1.4rem;
+  background: #fff;
+  border: 1px solid #e5ebf5;
+  border-radius: 18px;
+  padding: 16px 18px;
+  min-height: 128px;
   text-decoration: none;
-  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
-    border-color var(--ss-motion-fast) ease,
-    box-shadow var(--ss-motion-fast) ease;
-  box-shadow: 0 4px 16px rgba(3, 20, 58, 0.04);
+  box-shadow: 0 5px 16px #03143a04;
+  transition:
+    transform 160ms,
+    border-color 160ms;
+  min-width: 0;
 }
-
 .card:hover {
-  transform: translateY(-5px);
-  border-color: var(--ss-navy-950);
-  box-shadow: var(--ss-shadow-card);
+  transform: translateY(-3px);
+  border-color: var(--ss-navy-900);
 }
-
+.card:active {
+  transform: scale(0.99);
+}
 .leftInfo {
   display: flex;
   align-items: center;
-  gap: 1.15rem;
+  gap: 16px;
+  min-width: 0;
+  width: 100%;
 }
-
 .details {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 7px;
+  min-width: 0;
 }
-
 .name {
-  font-family: var(--font-display, inherit);
-  font-size: 1.25rem;
+  font-size: 23px;
+  line-height: 1.08;
   font-weight: 800;
-  color: var(--ss-navy-950);
+  overflow-wrap: anywhere;
 }
-
 .badgeRow {
   display: flex;
-  align-items: center;
+  gap: 5px;
   flex-wrap: wrap;
-  gap: 0.4rem;
 }
-
 .categoryPill {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: var(--ss-radius-pill);
-  background: var(--ss-surface-blue);
-  color: var(--ss-blue);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 9px;
+  padding: 4px 9px;
+  background: #e5efff;
+  color: #0756ad;
 }
-
 .cat-automation {
-  background: var(--ss-surface-red);
-  color: var(--ss-red);
+  background: #fff0e4;
+  color: #ad3a00;
 }
-
 .cat-productivity {
-  background: var(--ss-surface-green);
-  color: var(--ss-green-dark);
+  background: #e0f9ec;
+  color: #057a44;
 }
-
 .cat-coding {
-  background: var(--ss-surface-subtle);
-  color: var(--ss-navy-900);
+  background: #e6efff;
+  color: #0749b0;
 }
-
 .cat-design {
-  background: #fdf2f8;
-  color: #db2777;
+  background: #f1e7ff;
+  color: #63349c;
 }
-
 .countRow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.82rem;
-  color: var(--ss-muted);
-  font-weight: 600;
-  margin-top: 0.15rem;
-}
-
-.arrowBtn {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--ss-surface-subtle);
-  color: var(--ss-navy-950);
   display: flex;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ss-muted);
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: transform var(--ss-motion-fast) var(--ss-ease-spring),
-    background-color var(--ss-motion-fast) ease,
-    color var(--ss-motion-fast) ease;
+  margin-top: 3px;
+  padding-right: 24px;
 }
-
+.arrowBtn {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f1f5fc;
+}
 .card:hover .arrowBtn {
-  transform: translateX(3px);
   background: var(--ss-navy-950);
-  color: #ffffff;
+  color: white;
 }
-
-@media (max-width: 640px) {
+@media (max-width: 1150px) and (min-width: 901px) {
   .card {
-    padding: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.85rem;
+    padding: 14px 10px;
   }
   .leftInfo {
-    width: 100%;
-    gap: 0.85rem;
+    gap: 10px;
   }
-  .arrowBtn {
-    align-self: flex-end;
+  .name {
+    font-size: 19px;
   }
 }
-
+@media (max-width: 600px) {
+  .card {
+    padding: 10px 8px;
+    min-height: 105px;
+    border-radius: 13px;
+  }
+  .leftInfo {
+    gap: 9px;
+    align-items: center;
+  }
+  .name {
+    font-size: 15px;
+    line-height: 1.15;
+  }
+  .details {
+    gap: 5px;
+  }
+  .categoryPill {
+    font-size: 9px;
+    padding: 4px 6px;
+  }
+  .countRow {
+    font-size: 11px;
+    order: 1;
+    padding: 0;
+  }
+  .countRow svg {
+    display: none;
+  }
+  .badgeRow {
+    order: 2;
+  }
+  .arrowBtn {
+    width: 25px;
+    height: 25px;
+    bottom: 10px;
+    right: 7px;
+  }
+  .arrowBtn svg {
+    width: 14px;
+  }
+  .badgeRow {
+    padding-right: 12px;
+  }
+  .leftInfo > div:first-child {
+    flex-shrink: 0;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .card:hover {
     transform: none;
   }
-  .card:hover .arrowBtn {
-    transform: none;
-  }
 }
+

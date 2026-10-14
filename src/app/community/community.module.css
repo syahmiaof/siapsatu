@@ -435,3 +435,350 @@
     display: none;
   }
 }
+.pageLayout {
+  grid-template-columns: 155px minmax(0, 1fr) 300px;
+  gap: 20px;
+  padding: 16px 0 30px;
+}
+.channelsSidebar {
+  padding: 10px 0;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+.channelItem {
+  font-size: 13px;
+  gap: 8px;
+  padding: 12px 9px;
+  border-radius: 10px;
+}
+.channelItem svg {
+  flex-shrink: 0;
+  width: 17px;
+}
+.feedCol {
+  min-width: 0;
+  gap: 14px;
+}
+.communityBanner {
+  position: relative;
+  width: calc(100% + 320px);
+  min-height: 190px;
+  grid-template-columns: 56% 44%;
+  gap: 0;
+  border-radius: 0;
+  background: #f5f8ff;
+  padding: 18px 20px;
+  box-shadow: none;
+  color: var(--ss-navy-950);
+  overflow: hidden;
+}
+.communityBanner > div:first-child {
+  z-index: 1;
+}
+.communityBanner > div:last-child {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 47%;
+}
+.communityBanner > div:first-child > div:first-child {
+  background: #e8f0ff !important;
+  color: var(--ss-muted);
+  font-size: 11px !important;
+  padding: 4px 8px !important;
+  margin-bottom: 8px !important;
+}
+.bannerTitle {
+  font-size: 41px;
+  line-height: 1.02;
+  color: var(--ss-navy-950);
+  max-width: 480px;
+}
+.bannerSub {
+  font-size: 13px;
+  color: var(--ss-muted);
+  max-width: 470px;
+  line-height: 1.4;
+}
+.rightSidebar {
+  padding-top: 204px;
+  gap: 15px;
+}
+.createPostBox {
+  padding: 16px;
+  border-radius: 15px;
+  box-shadow: none;
+}
+.postTopRow {
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.postInput {
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  width: 100%;
+}
+.initialAvatar {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e7efff;
+  color: var(--ss-navy-900);
+  font-family: var(--font-display);
+  font-size: 21px;
+  font-weight: 800;
+}
+.postActionsBar {
+  padding-top: 8px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.attachBtn {
+  font-size: 12px;
+  min-height: 36px;
+}
+.publishBtn {
+  font-size: 12px;
+  min-height: 38px;
+}
+.feedFiltersRow {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.filterPill {
+  font-size: 12px;
+  padding: 8px 13px;
+  min-height: 36px;
+}
+.postCard {
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: none;
+  gap: 12px;
+}
+.postTitle {
+  font-size: 21px;
+}
+.postBody {
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.authorName {
+  font-size: 14px;
+}
+.postTime {
+  font-size: 11px;
+}
+.reactionBtn {
+  font-size: 12px;
+  min-height: 38px;
+}
+.whatsappSidebarCard,
+.challengeCard,
+.rulesCard {
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: none;
+}
+.postThumbImage {
+  display: none;
+}
+.pinnedBadge {
+  font-size: 11px;
+}
+.tagsRow {
+  gap: 6px;
+}
+.tagPill {
+  font-size: 10px;
+}
+@media (max-width: 1100px) {
+  .pageLayout {
+    grid-template-columns: 135px minmax(0, 1fr) 250px;
+    gap: 16px;
+  }
+  .communityBanner {
+    width: calc(100% + 266px);
+  }
+  .bannerTitle {
+    font-size: 35px;
+  }
+  .rightSidebar {
+    padding-top: 204px;
+  }
+  .communityBanner {
+    min-height: 188px;
+  }
+}
+@media (max-width: 900px) {
+  .pageLayout {
+    grid-template-columns: minmax(0, 1fr) 250px;
+    gap: 16px;
+  }
+  .channelsSidebar {
+    grid-column: 1/-1;
+    flex-direction: row;
+    overflow: auto;
+    padding: 0;
+  }
+  .channelsSidebar > div:first-child {
+    display: none;
+  }
+  .channelItem {
+    width: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .communityBanner {
+    width: calc(100% + 266px);
+  }
+  .rightSidebar {
+    padding-top: 204px;
+  }
+}
+@media (max-width: 600px) {
+  .pageLayout {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0 24px;
+  }
+  .channelsSidebar {
+    width: 100%;
+    gap: 5px;
+    order: 1;
+  }
+  .feedCol {
+    width: 100%;
+    order: 0;
+  }
+  .communityBanner {
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+    min-height: 210px;
+    padding: 16px;
+  }
+  .communityBanner > div:last-child {
+    width: 50%;
+    top: 50px;
+  }
+  .communityBanner > div:first-child {
+    width: 75%;
+  }
+  .bannerTitle {
+    font-size: 32px;
+    max-width: 240px;
+  }
+  .bannerSub {
+    font-size: 12px;
+    max-width: 200px;
+  }
+  .rightSidebar {
+    padding-top: 0;
+    order: 2;
+    width: 100%;
+  }
+  .postCard {
+    padding: 15px;
+  }
+  .postTitle {
+    font-size: 20px;
+  }
+  .postBody {
+    font-size: 14px;
+  }
+  .createPostBox {
+    padding: 12px;
+  }
+  .postTopRow {
+    gap: 8px;
+  }
+  .initialAvatar {
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+  }
+  .postActionsBar {
+    gap: 6px;
+  }
+  .attachButtons {
+    gap: 8px;
+  }
+  .attachBtn {
+    padding: 5px;
+    font-size: 11px;
+  }
+  .publishBtn {
+    font-size: 11px;
+    padding: 8px 12px;
+  }
+  .feedFiltersRow > div:last-child {
+    font-size: 11px !important;
+  }
+  .communityBanner > div:first-child > div:first-child {
+    font-size: 9px !important;
+  }
+}
+
+.optionalTitle {
+  position: relative;
+  font-size: 12px;
+  align-self: center;
+}
+.optionalTitle summary {
+  cursor: pointer;
+  font-weight: 700;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+.optionalTitle input {
+  position: absolute;
+  left: 0;
+  bottom: 40px;
+  z-index: 4;
+  width: 280px;
+  max-width: 75vw;
+  background: white;
+  box-shadow: 0 8px 25px #06245720;
+}
+.createPostBox {
+  padding: 12px 16px;
+}
+.postTopRow {
+  margin-bottom: 6px;
+}
+.postInput {
+  min-height: 44px;
+}
+.postActionsBar {
+  padding-top: 4px;
+}
+.postCard {
+  padding: 16px;
+}
+.postReactionRow {
+  padding-top: 8px;
+}
+.postTitle {
+  font-size: 20px;
+}
+@media (max-width: 900px) {
+  .channelsSidebar {
+    display: flex;
+  }
+}
+@media (max-width: 600px) {
+  .channelsSidebar {
+    order: -1;
+  }
+  .attachButtons {
+    gap: 6px;
+  }
+}

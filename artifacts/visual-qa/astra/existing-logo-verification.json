@@ -1,0 +1,70 @@
+[
+  {
+    "name": "chatgpt",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/openai.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "2b4a04ddc2395b20d168694d3850ce2050a702c4a0cdeb4d8b31b9a970481a8c"
+  },
+  {
+    "name": "perplexity",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/perplexity.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "57220c29378ce5e615e7244d2fdfcf5a44fad40dad81a99f2e0e4260c726ca74"
+  },
+  {
+    "name": "make",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/make.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "3985e5ed42709d253a772f99e56c5436af98c35d45bebc36b0aef29a9c9e7828"
+  },
+  {
+    "name": "zapier",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/zapier.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "51fa9cca6198c74f924600e6972520541261e2f74ff80b6bec5bbd60a4bdcc73"
+  },
+  {
+    "name": "github",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/github.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "3bf8cceead820aec50d4ee825a3fd02c5a1cd6665cc9cf4cbf3d9c8861a204bb"
+  },
+  {
+    "name": "vercel",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/vercel.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "9b6cdab026cf954a0f369879d008da7d4bcd3e23250cb44982e6cb33530c8cec",
+    "replacedUnverifiedLocalPath": true,
+    "finalSha256": "9b6cdab026cf954a0f369879d008da7d4bcd3e23250cb44982e6cb33530c8cec"
+  },
+  {
+    "name": "canva",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/canva.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "0d90ba2030f2ad642e19234241467280e97034a151905d60e05f0fc9fc41dcff"
+  },
+  {
+    "name": "notion",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/notion.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "b17d2a2b592a06252efef522d5205f0c7a958f748d40df1011ed081417e42f85"
+  },
+  {
+    "name": "meta",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/meta.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "e3e9db62f59dc477e5917687349b8aa9685b841d40300c1afad60ad85075cd2e"
+  },
+  {
+    "name": "whatsapp",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/whatsapp.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "8fb209a53a61618c3483594b3e070481a35575d6aaecbe00a6fe386670c8fb1c"
+  },
+  {
+    "name": "figma",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@14.0.0/icons/figma.svg",
+    "pathGeometryEqual": true,
+    "sourceSha256": "2f86fca501dfed321a62f28743f29d9dd738dac91668eac5260ab746d1ef8840"
+  }
+]

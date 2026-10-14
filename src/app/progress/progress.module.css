@@ -146,9 +146,15 @@
   justify-content: center;
 }
 
-.sideNavy { background: var(--ss-gradient-card-navy); }
-.sideCrimson { background: var(--ss-gradient-card-red); }
-.sideGreen { background: var(--ss-gradient-card-green); }
+.sideNavy {
+  background: var(--ss-gradient-card-navy);
+}
+.sideCrimson {
+  background: var(--ss-gradient-card-red);
+}
+.sideGreen {
+  background: var(--ss-gradient-card-green);
+}
 
 .trackNumber {
   font-family: var(--font-display, inherit);
@@ -316,5 +322,255 @@
   }
   .headerGrid {
     grid-template-columns: 1fr;
+  }
+}
+.mainContent {
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+  padding: 12px 30px 30px;
+}
+.leftRail {
+  width: 80px;
+}
+.headerGrid {
+  grid-template-columns: 65% 35%;
+  position: relative;
+  margin-bottom: 18px;
+  min-height: 190px;
+  gap: 0;
+}
+.headerLeft {
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+.headline {
+  font-size: 48px;
+}
+.subtitle {
+  font-size: 18px;
+}
+.headerGrid > div:last-child {
+  height: 220px;
+  margin: -30px -30px 0 0;
+}
+.statsRow {
+  gap: 10px;
+}
+.statCard {
+  padding: 10px 14px;
+  border: 0;
+  background: #f3f7fe;
+  box-shadow: none;
+  gap: 10px;
+  border-radius: 12px;
+}
+.statNumTitle {
+  font-size: 17px;
+}
+.statSub {
+  font-size: 11px;
+}
+.tracksContainer {
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.trackRow {
+  grid-template-columns: 240px minmax(0, 1fr);
+  box-shadow: none;
+  border: 0;
+  border-radius: 16px;
+  background: #f4f7fc;
+}
+.trackSideHeader {
+  padding: 20px;
+}
+.trackTitle {
+  font-size: 27px;
+}
+.trackDesc {
+  font-size: 13px;
+}
+.trackPipeline {
+  padding: 15px;
+  gap: 12px;
+  overflow: visible;
+  min-width: 0;
+}
+.stepNodeCard {
+  width: auto;
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  box-shadow: none;
+  background: white;
+  padding: 13px;
+  border-radius: 12px;
+  gap: 8px;
+}
+.nodeTitle {
+  font-size: 16px;
+}
+.nodeDesc {
+  font-size: 12px;
+}
+.nodeStatusPill {
+  font-size: 10px;
+  padding: 3px 6px;
+}
+.artifactBox {
+  padding: 7px;
+  font-size: 10px;
+}
+.bottomRocketBar {
+  padding: 20px;
+  background: #fff3e8;
+  border: 0;
+  box-shadow: none;
+}
+@media (max-width: 1100px) {
+  .trackRow {
+    grid-template-columns: 180px minmax(0, 1fr);
+  }
+  .trackSideHeader {
+    padding: 16px;
+  }
+  .trackTitle {
+    font-size: 23px;
+  }
+  .trackPipeline {
+    gap: 7px;
+    padding: 10px;
+  }
+  .stepNodeCard {
+    padding: 10px;
+  }
+  .trackPipeline > svg {
+    width: 14px;
+  }
+}
+@media (max-width: 900px) {
+  .mainContent {
+    padding: 14px 20px 24px;
+  }
+  .trackRow {
+    grid-template-columns: 1fr;
+  }
+  .headerGrid {
+    grid-template-columns: 1fr;
+  }
+  .headerGrid > div:last-child {
+    height: 210px;
+    margin: 10px -20px 0;
+  }
+  .trackSideHeader {
+    padding: 18px;
+  }
+  .trackPipeline {
+    padding: 15px;
+  }
+  .bottomRocketBar {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .mainContent {
+    padding: 8px 16px 24px;
+  }
+  .headline {
+    font-size: 37px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .statsRow {
+    gap: 6px;
+  }
+  .statCard {
+    padding: 8px;
+    flex: 1;
+    gap: 6px;
+  }
+  .statCard svg {
+    width: 20px;
+  }
+  .statNumTitle {
+    font-size: 13px;
+  }
+  .statSub {
+    font-size: 9px;
+  }
+  .trackPipeline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .stepNodeCard {
+    width: 100%;
+    padding: 16px;
+  }
+  .trackPipeline > svg {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+  .nodeTitle {
+    font-size: 19px;
+  }
+  .nodeDesc {
+    font-size: 14px;
+  }
+  .nodeStatusPill {
+    font-size: 12px;
+  }
+  .artifactBox {
+    font-size: 12px;
+  }
+  .headerGrid > div:last-child {
+    margin-inline: -16px;
+  }
+  .bottomRocketBar {
+    padding: 18px;
+  }
+  .rocketTitle {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 901px) {
+  .headerGrid {
+    min-height: 170px;
+  }
+  .headerGrid > div:last-child {
+    height: 190px;
+  }
+  .trackPipeline {
+    padding: 10px;
+  }
+  .stepNodeCard {
+    padding: 10px;
+    gap: 5px;
+  }
+  .artifactBox {
+    padding: 5px;
+  }
+  .trackSideHeader {
+    padding: 16px;
+  }
+  .tracksContainer {
+    gap: 12px;
+  }
+  .trackRow {
+    min-height: 0;
+  }
+  .nodeDesc {
+    font-size: 11px;
+  }
+  .trackTitle {
+    font-size: 25px;
+  }
+  .trackDesc {
+    font-size: 12px;
   }
 }

@@ -400,3 +400,215 @@
     align-items: flex-start;
   }
 }
+.pageHeader {
+  padding: 15px 0;
+  gap: 24px;
+  grid-template-columns: 1.1fr 1fr;
+}
+.headline {
+  font-size: 44px;
+  line-height: 1.05;
+  max-width: 600px;
+}
+.subtitle {
+  font-size: 16px;
+}
+.metricCard {
+  padding: 18px 14px;
+  border: 0;
+  background: #eef5ff;
+  border-radius: 16px;
+  box-shadow: none;
+}
+.metricCard:nth-child(2) {
+  background: #eaf9f1;
+}
+.metricCard:nth-child(3) {
+  background: #fff0e8;
+}
+.metricLeft {
+  gap: 10px;
+}
+.metricLabel {
+  font-size: 12px;
+}
+.metricNum {
+  font-size: 30px;
+}
+.continueGrid {
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin: 12px 0 24px;
+}
+.continueCard {
+  padding: 26px;
+  background: #edf5ff;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: none;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 10px;
+  min-height: 310px;
+}
+.continueTitle {
+  font-size: 32px;
+  line-height: 1.1;
+}
+.continueDesc {
+  font-size: 14px;
+}
+.continueRight {
+  height: 280px;
+  align-self: end;
+  margin-right: -26px;
+  margin-bottom: -26px;
+}
+.continueLeft {
+  gap: 12px;
+}
+.outcomesPanel {
+  padding: 20px;
+  border: 0;
+  background: #f3f7fe;
+  box-shadow: none;
+}
+.outcomesTitle {
+  font-size: 24px;
+}
+.outcomesSub {
+  font-size: 13px;
+}
+.outcomeCard {
+  padding: 12px;
+  border: 0;
+  background: white;
+}
+.outcomeItemTitle {
+  font-size: 16px;
+}
+.myModulesHeader {
+  margin-bottom: 12px;
+}
+.myModulesSection {
+  margin-bottom: 20px;
+}
+.myModulesGrid {
+  gap: 16px;
+}
+.myModuleCard {
+  border-radius: 16px;
+  box-shadow: none;
+}
+.myModuleTop {
+  padding: 16px;
+}
+.myModuleTitle {
+  font-size: 21px;
+}
+.myModuleDesc {
+  font-size: 13px;
+}
+.myModuleBottom {
+  padding: 14px 16px;
+  gap: 10px;
+}
+.recommendationBanner {
+  padding: 20px;
+  background: #fff8e8;
+  border: 0;
+  box-shadow: none;
+  margin-bottom: 30px;
+}
+.recomTitle {
+  font-size: 25px;
+}
+@media (max-width: 1000px) {
+  .pageHeader {
+    grid-template-columns: 1fr;
+  }
+  .continueGrid {
+    grid-template-columns: 1fr;
+  }
+  .myModulesGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .myModuleTop {
+    flex-wrap: wrap;
+  }
+  .metricLabel {
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .headline {
+    font-size: 34px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .metricsGrid {
+    gap: 6px;
+  }
+  .metricCard {
+    padding: 12px 8px;
+  }
+  .metricIconBox {
+    width: 27px;
+    height: 27px;
+  }
+  .metricIconBox svg {
+    width: 21px;
+  }
+  .metricLeft {
+    gap: 5px;
+  }
+  .metricNum {
+    font-size: 24px;
+  }
+  .metricLabel {
+    font-size: 10px;
+  }
+  .metricCard > svg {
+    display: none;
+  }
+  .continueCard {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .continueTitle {
+    font-size: 28px;
+  }
+  .continueRight {
+    height: 210px;
+    margin: 0 -20px -20px;
+  }
+  .myModulesGrid {
+    grid-template-columns: 1fr;
+  }
+  .myModuleTop {
+    flex-wrap: nowrap;
+  }
+  .outcomesHeader {
+    gap: 8px;
+  }
+  .outcomesTitle {
+    font-size: 22px;
+  }
+  .outcomeCard {
+    gap: 8px;
+  }
+  .outcomeLeft {
+    gap: 9px;
+    min-width: 0;
+  }
+  .recommendationBanner {
+    padding: 18px;
+  }
+  .recomTitle {
+    font-size: 21px;
+  }
+  .recomLeft {
+    gap: 10px;
+  }
+}

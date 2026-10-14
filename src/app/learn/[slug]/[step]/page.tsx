@@ -1,378 +1,241 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  Search,
+  ArrowLeft,
   BookOpen,
   CheckCircle2,
   ExternalLink,
   Target,
-  ArrowLeft,
-  ArrowRight,
-  Plus,
-  Webhook,
-  FileSpreadsheet,
 } from "lucide-react";
 import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
 import { LessonSidebar } from "@/components/learning/LessonSidebar";
 import { CopyTemplate } from "@/components/learning/CopyTemplate";
+import { WorkflowDiagram } from "@/components/learning/WorkflowDiagram";
+import { BrandScene } from "@/components/brand/BrandScene";
 import { PrimaryButton } from "@/components/brand/PrimaryButton";
 import { MODULES } from "@/data/mockData";
 import { getStoredProgress, markStepCompleted } from "@/lib/storage";
 import styles from "./reader.module.css";
 
-interface LessonReaderPageProps {
-  params: {
-    slug: string;
-    step: string;
-  };
-}
-
-export default function LessonReaderPage({ params }: LessonReaderPageProps) {
-  const currentModule = MODULES.find((m) => m.slug === params.slug);
-  const stepNum = parseInt(params.step, 10) || 1;
-
-  const [completedSteps, setCompletedSteps] = useState<number[]>([1, 2]);
+export default function LessonReaderPage({
+  params,
+}: {
+  params: { slug: string; step: string };
+}) {
+  const learningModule = MODULES.find((m) => m.slug === params.slug);
+  const step = Number(params.step);
+  const lesson = learningModule?.lessons.find((l) => l.stepNumber === step);
+  const chaptersRef = useRef<HTMLDetailsElement>(null);
+  useEffect(() => {
+    if (chaptersRef.current) chaptersRef.current.open = window.innerWidth > 700;
+  }, []);
+  const [completed, setCompleted] = useState<number[]>([]);
   const [taskDone, setTaskDone] = useState(false);
   const [markedDone, setMarkedDone] = useState(false);
-
   useEffect(() => {
-    const progress = getStoredProgress();
-    if (progress.completedSteps[params.slug]) {
-      setCompletedSteps(progress.completedSteps[params.slug]);
-    }
-  }, [params.slug]);
-
-  if (!currentModule) {
-    notFound();
-  }
-
-  // Find corresponding lesson or fallback to lesson 3
-  const activeLesson =
-    currentModule.lessons.find((l) => l.stepNumber === stepNum) ||
-    currentModule.lessons[2] ||
-    currentModule.lessons[0];
-
-  const totalSteps = currentModule.lessons.length || 6;
-  const currentStepNumber = activeLesson.stepNumber || stepNum;
-  const progressPercent = Math.round((currentStepNumber / totalSteps) * 100);
-
-  const prevStep = currentStepNumber > 1 ? currentStepNumber - 1 : null;
-  const nextStep = currentStepNumber < totalSteps ? currentStepNumber + 1 : null;
-
-  function handleMarkComplete() {
-    markStepCompleted(currentModule!.slug, currentStepNumber);
-    setCompletedSteps((prev) => [...new Set([...prev, currentStepNumber])]);
+    const saved = getStoredProgress().completedSteps[params.slug] || [];
+    setCompleted(saved);
+    setMarkedDone(saved.includes(Number(params.step)));
+    setTaskDone(false);
+  }, [params.slug, params.step]);
+  if (!learningModule || !lesson || !Number.isInteger(step)) notFound();
+  const percent = Math.round(
+    (completed.length / learningModule.lessons.length) * 100,
+  );
+  const instructions = lesson.instructions || [
+    { step: 1, title: lesson.title, detail: lesson.body },
+  ];
+  const template =
+    lesson.template ||
+    `Catatan langkah ${step}: ${lesson.title}\nHasil yang saya dapat:\nPerkara yang perlu disemak:`;
+  function complete() {
+    const saved = markStepCompleted(params.slug, step);
+    setCompleted(saved.completedSteps[params.slug]);
     setMarkedDone(true);
   }
-
   return (
-    <div>
-      {/* Top Reader Navigation Bar */}
-      <div className={styles.readerHeader}>
+    <div data-reader>
+      <header className={styles.readerHeader}>
         <div className={`container ${styles.readerHeaderInner}`}>
-          <Link href="/">
+          <Link href="/" aria-label="SiapSatu Home">
             <Image
-              src="/assets/brand/siapsatu-logo.png"
+              src="/assets/brand/siapsatu-display.png"
               alt="SiapSatu"
-              width={140}
-              height={38}
-              style={{ objectFit: "contain" }}
+              width={1611}
+              height={455}
+              className={styles.readerLogo}
+              priority
             />
           </Link>
-
-          <div className={styles.searchBox}>
-            <Search size={18} color="var(--ss-muted)" />
+          <form action="/modules" className={styles.searchBox} role="search">
             <input
-              type="text"
+              name="search"
+              aria-label="Cari modul"
               placeholder="Cari modul, topik atau kemahiran..."
               className={styles.searchInput}
             />
-          </div>
-
-          <div className={styles.readerHeaderRight}>
-            <Link href="/library" className={styles.libraryLink}>
-              <BookOpen size={18} />
-              <span>Pustaka Saya</span>
-            </Link>
-
-            <Link href="/progress">
-              <Image
-                src="/assets/avatars/avatar-user.png"
-                alt="Profil pengguna"
-                width={36}
-                height={36}
-                className={styles.userAvatar}
-              />
-            </Link>
-          </div>
+          </form>
+          <Link href="/library" className={styles.libraryLink}>
+            <BookOpen size={18} />
+            <span>Pustaka Saya</span>
+          </Link>
         </div>
-      </div>
-
-      <div className="container">
-        {/* Main 3-Column Layout */}
-        <div className={styles.readerLayout}>
-          {/* Left Column: Lesson Sidebar */}
+      </header>
+      <div className={`container ${styles.readerLayout}`}>
+        <details ref={chaptersRef} className={styles.chapterMenu} open>
+          <summary>Langkah modul</summary>
           <LessonSidebar
-            moduleTitle={currentModule.title}
-            moduleSlug={currentModule.slug}
-            lessons={currentModule.lessons}
-            activeStepNumber={currentStepNumber}
-            completedStepNumbers={completedSteps}
+            moduleTitle={learningModule.title}
+            moduleSlug={learningModule.slug}
+            lessons={learningModule.lessons}
+            activeStepNumber={step}
+            completedStepNumbers={completed}
           />
-
-          {/* Center Column: Step Content */}
-          <main className={styles.centerCol}>
-            {/* Progress Bar */}
-            <div>
-              <div className={styles.progressTop}>
-                <span>
-                  Langkah {currentStepNumber} daripada {totalSteps}
-                </span>
-                <span>{progressPercent}% siap</span>
-              </div>
-              <div className={styles.progressBarWrap}>
-                <div
-                  className={styles.progressBarFill}
-                  style={{ width: `${progressPercent}%` }}
-                />
-              </div>
-            </div>
-
-            {/* Main Lesson Heading */}
-            <AnimatedHeading
-              text={activeLesson.title}
-              accentWords={["Google", "Sheets", "design", "workflow"]}
-              as="h1"
-              className={styles.mainHeadline}
-            />
-
-            <p className={styles.lessonSubtitle}>{activeLesson.body}</p>
-
-            {/* Outcome Callout Banner */}
-            <div className={styles.outcomeCallout}>
-              <div className={styles.outcomeCheck}>
-                <CheckCircle2 size={18} strokeWidth={2.5} />
-              </div>
+        </details>
+        <article className={styles.centerCol}>
+          <div>
+            <div className={styles.progressTop}>
               <span>
-                {activeLesson.outcomeCallout ||
-                  "Hasil langkah ini: data ujian masuk ke spreadsheet."}
+                Langkah {step} daripada {learningModule.lessons.length}
               </span>
+              <span>{percent}% siap</span>
             </div>
-
-            {/* Step Detail Card */}
-            <div className={styles.stepDetailBox}>
-              <div className={styles.stepDetailHeader}>
-                <span className={styles.badgeNumber}>
-                  {String(currentStepNumber).padStart(2, "0")}
-                </span>
-                <div>
-                  <h2 className={styles.stepDetailTitle}>
-                    {activeLesson.actionTitle || "Pilih action Google Sheets"}
-                  </h2>
-                  <p className={styles.stepDetailSub}>
-                    {activeLesson.actionSubtitle ||
-                      "Sekarang kita tambah nod Google Sheets untuk simpan data yang masuk."}
-                  </p>
-                </div>
+            <div className={styles.progressBarWrap}>
+              <div
+                className={styles.progressBarFill}
+                style={{ width: `${percent}%` }}
+              />
+            </div>
+          </div>
+          <AnimatedHeading
+            text={lesson.title}
+            accentWords={["n8n", "Google", "Sheets"]}
+            as="h1"
+            className={styles.mainHeadline}
+          />
+          <p className={styles.lessonSubtitle}>{lesson.body}</p>
+          <div className={styles.outcomeCallout}>
+            <CheckCircle2 size={22} />
+            <span>
+              {lesson.outcomeCallout ||
+                `Hasil langkah ini: ${lesson.title.toLowerCase()}.`}
+            </span>
+          </div>
+          <section className={styles.stepDetailBox}>
+            <div className={styles.stepDetailHeader}>
+              <span className={styles.badgeNumber}>
+                {String(step).padStart(2, "0")}
+              </span>
+              <div>
+                <h2 className={styles.stepDetailTitle}>
+                  {lesson.actionTitle || lesson.title}
+                </h2>
+                <p className={styles.stepDetailSub}>
+                  {lesson.actionSubtitle ||
+                    "Ikut panduan dan semak hasil sebelum teruskan."}
+                </p>
               </div>
-
-              {/* Numbered Instruction Steps */}
-              <div className={styles.instructionsList}>
-                {(
-                  activeLesson.instructions || [
-                    {
-                      step: 1,
-                      title: "Tambah nod Google Sheets",
-                      detail:
-                        "Dalam editor n8n, klik ikon +, cari Google Sheets dan pilih nod tersebut.",
-                    },
-                    {
-                      step: 2,
-                      title: "Pilih operasi",
-                      detail:
-                        "Tetapkan operasi kepada Append Row supaya setiap data baru akan ditambah sebagai baris baharu.",
-                    },
-                    {
-                      step: 3,
-                      title: "Sambungkan dengan kredensial",
-                      detail:
-                        "Log masuk dengan akaun Google anda dan pilih spreadsheet serta nama sheet yang ingin digunakan.",
-                    },
-                  ]
-                ).map((inst) => (
-                  <div key={inst.step} className={styles.instructionItem}>
-                    <div className={styles.instructionNum}>{inst.step}</div>
+            </div>
+            <div className={styles.lessonBodyGrid}>
+              <ol className={styles.instructionsList}>
+                {instructions.map((i) => (
+                  <li className={styles.instructionItem} key={i.step}>
+                    <span className={styles.instructionNum}>{i.step}</span>
                     <div>
-                      <h3 className={styles.instructionTitle}>{inst.title}</h3>
-                      <p className={styles.instructionDetail}>{inst.detail}</p>
+                      <h3 className={styles.instructionTitle}>{i.title}</h3>
+                      <p className={styles.instructionDetail}>{i.detail}</p>
                     </div>
-                  </div>
+                  </li>
                 ))}
-              </div>
-
-              {/* Visual Node Editor Mockup */}
-              <div className={styles.canvasMockupBox} aria-hidden="true">
-                <div className={styles.canvasTopBar}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                    <Image
-                      src="/assets/tools/n8n.png"
-                      alt="n8n"
-                      width={20}
-                      height={20}
-                    />
-                    <span>Lead ke Google Sheets</span>
-                  </div>
+              </ol>
+              {learningModule.toolSlugs.includes("n8n") && (
+                <WorkflowDiagram setup={step < 3} compact />
+              )}
+            </div>
+            {lesson.officialLinks.map((link) => (
+              <div className={styles.officialLinkStrip} key={link.href}>
+                <div>
+                  <strong>{link.label}</strong>
+                  <p className={styles.officialSub}>Panduan dan tool rasmi</p>
                 </div>
-
-                <div className={styles.nodesFlowVisual}>
-                  <div className={styles.canvasNode}>
-                    <div
-                      className={styles.nodeIconSquare}
-                      style={{ background: "#ea4b71" }}
-                    >
-                      <Webhook size={18} />
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 800, fontSize: "0.88rem" }}>
-                        Webhook
-                      </div>
-                      <div style={{ fontSize: "0.72rem", color: "var(--ss-muted)" }}>
-                        trigger
-                      </div>
-                    </div>
-                  </div>
-
-                  <ArrowRight size={18} color="var(--ss-muted)" />
-
-                  <div className={styles.canvasNode}>
-                    <div
-                      className={styles.nodeIconSquare}
-                      style={{ background: "#08bd59" }}
-                    >
-                      <FileSpreadsheet size={18} />
-                    </div>
-                    <div>
-                      <div style={{ fontWeight: 800, fontSize: "0.88rem" }}>
-                        Google Sheets
-                      </div>
-                      <div style={{ fontSize: "0.72rem", color: "var(--ss-muted)" }}>
-                        append: sheet
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <button type="button" className={styles.addNodeBtn}>
-                  <Plus size={14} style={{ display: "inline", marginRight: "4px" }} />
-                  Add node
-                </button>
-              </div>
-
-              {/* Official Tool Link Strip */}
-              <div className={styles.officialLinkStrip}>
-                <div className={styles.officialLeft}>
-                  <Image
-                    src="/assets/tools/n8n.png"
-                    alt="n8n"
-                    width={40}
-                    height={40}
-                    style={{ borderRadius: "8px" }}
-                  />
-                  <div>
-                    <div className={styles.officialTitle}>
-                      Buka n8n (laman rasmi)
-                    </div>
-                    <div className={styles.officialSub}>
-                      Gunakan n8n Cloud atau self-hosted anda.
-                    </div>
-                  </div>
-                </div>
-
                 <a
-                  href="https://n8n.io"
+                  href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.externalOpenBtn}
                 >
-                  <span>Buka n8n</span>
-                  <ExternalLink size={15} />
+                  Buka <ExternalLink size={16} />
                 </a>
               </div>
-            </div>
-          </main>
-
-          {/* Right Column: Copyable Template & Practice Task */}
-          <aside className={styles.rightCol}>
-            {/* Copy Template */}
-            <CopyTemplate
-              code={
-                activeLesson.template ||
-                `{\n  "nodes": [\n    {\n      "name": "Google Sheets",\n      "type": "n8n-nodes-base.googleSheets",\n      "typeVersion": 4,\n      "position": [800, 300]\n    }\n  ]\n}`
-              }
-              title="Template untuk disalin"
-            />
-
-            {/* Task Container */}
-            <div className={styles.taskBox}>
-              <div className={styles.taskHeader}>
-                <Target size={22} color="var(--ss-orange)" />
-                <span>Cuba sekarang</span>
-              </div>
-              <p className={styles.taskText}>
-                {activeLesson.task ||
-                  "Sambungkan n8n ke Google Sheets anda dan hantar satu data ujian. Pastikan ia masuk sebagai baris baharu dalam spreadsheet."}
-              </p>
-              <button
-                type="button"
-                onClick={() => setTaskDone(!taskDone)}
-                className={styles.taskSuccessBtn}
-              >
-                <span>{taskDone ? "✓ Berjaya diselesaikan" : "Saya dah berjaya ✓"}</span>
-              </button>
-            </div>
-          </aside>
-        </div>
-      </div>
-
-      {/* Sticky Bottom Dock */}
-      <div className={styles.bottomActionDock}>
-        <div className={`container ${styles.bottomDockInner}`}>
-          {prevStep ? (
-            <Link
-              href={`/learn/${currentModule.slug}/${prevStep}`}
-              className={styles.prevBtn}
+            ))}
+          </section>
+        </article>
+        <aside className={styles.rightCol}>
+          <div className={styles.readerArt}>
+            <BrandScene variant="learner" />
+          </div>
+          <CopyTemplate code={template} title="Template untuk disalin" />
+          <section className={styles.taskBox}>
+            <h2 className={styles.taskHeader}>
+              <Target size={22} />
+              Cuba sekarang
+            </h2>
+            <p className={styles.taskText}>
+              {lesson.task ||
+                `Cuba langkah ini dengan contoh sendiri dan catat hasilnya.`}
+            </p>
+            <button
+              type="button"
+              aria-pressed={taskDone}
+              className={styles.taskSuccessBtn}
+              onClick={() => setTaskDone(!taskDone)}
             >
-              <ArrowLeft size={16} />
-              <span>Sebelumnya: Langkah {prevStep}</span>
-            </Link>
-          ) : (
-            <div />
-          )}
-
+              {taskDone ? "Berjaya diselesaikan ✓" : "Saya dah berjaya ✓"}
+            </button>
+          </section>
+          <p className="prototype-note">
+            Reader demo · progress disimpan pada browser ini.
+          </p>
+        </aside>
+      </div>
+      <footer className={styles.bottomActionDock} data-fixed-dock>
+        <div className={`container ${styles.bottomDockInner}`}>
+          <Link
+            href={
+              step > 1
+                ? `/learn/${learningModule.slug}/${step - 1}`
+                : `/modules/${learningModule.slug}`
+            }
+            className={styles.prevBtn}
+          >
+            <ArrowLeft size={16} />
+            <span>{step > 1 ? "Sebelumnya" : "Isi modul"}</span>
+          </Link>
           <div className={styles.rightDockButtons}>
             <button
               type="button"
-              onClick={handleMarkComplete}
+              onClick={complete}
               className={styles.markCompleteBtn}
             >
-              <span>{markedDone ? "Langkah telah siap ✓" : "Tanda langkah siap ✓"}</span>
+              {markedDone ? "Langkah telah siap ✓" : "Tanda langkah siap ✓"}
             </button>
-
-            {nextStep && (
-              <PrimaryButton
-                href={`/learn/${currentModule.slug}/${nextStep}`}
-                variant="primary"
-              >
-                Seterusnya: Langkah {nextStep}
-              </PrimaryButton>
-            )}
+            <PrimaryButton
+              href={
+                step < learningModule.lessons.length
+                  ? `/learn/${learningModule.slug}/${step + 1}`
+                  : "/library"
+              }
+            >
+              {step < learningModule.lessons.length
+                ? `Seterusnya: Langkah ${step + 1}`
+                : "Kembali ke pustaka"}
+            </PrimaryButton>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }

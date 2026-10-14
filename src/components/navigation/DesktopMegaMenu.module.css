@@ -57,7 +57,8 @@
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
-  transition: background-color var(--ss-motion-fast) ease,
+  transition:
+    background-color var(--ss-motion-fast) ease,
     transform var(--ss-motion-fast) ease;
 }
 
@@ -144,7 +145,8 @@
   gap: 0.4rem;
   text-decoration: none;
   white-space: nowrap;
-  transition: transform var(--ss-motion-fast) ease,
+  transition:
+    transform var(--ss-motion-fast) ease,
     background-color var(--ss-motion-fast) ease;
   z-index: 1;
 }
@@ -161,4 +163,32 @@
   .menuItem:hover {
     transform: none;
   }
+}
+
+.menuOverlay {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 740px;
+  padding: 24px;
+  border-radius: 0 0 22px 22px;
+  animation: none;
+}
+.menuOverlay:before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  left: 0;
+  right: 0;
+  top: -12px;
+}
+.menuItem {
+  font-size: 15px;
+  padding: 10px 6px;
+}
+.columnTitle {
+  font-size: 18px;
+}
+.topColumns {
+  gap: 18px;
 }

@@ -29,7 +29,14 @@ export function DesktopMegaMenu({ isOpen, onClose }: DesktopMegaMenuProps) {
 
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
+        menuRef.current?.parentElement?.querySelector('button')?.focus();
         onClose();
+      }
+      if (menuRef.current?.contains(document.activeElement) && ['ArrowDown','ArrowUp','Home','End'].includes(e.key)) {
+        const links=Array.from(menuRef.current.querySelectorAll<HTMLAnchorElement>('a'));
+        const current=links.indexOf(document.activeElement as HTMLAnchorElement);
+        const next=e.key==='Home'?0:e.key==='End'?links.length-1:(current+(e.key==='ArrowDown'?1:-1)+links.length)%links.length;
+        e.preventDefault();links[next]?.focus();
       }
     }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import { BrandScene } from "@/components/brand/BrandScene";
 import Link from "next/link";
 import { Briefcase, Building, GraduationCap } from "lucide-react";
 import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
@@ -23,7 +23,8 @@ export default function HomePage() {
             <div className={styles.headlineWrap}>
               <AnimatedHeading
                 text="Satu modul. Satu hasil."
-                accentWords={["Satu", "hasil."]}
+                breakAfter={2}
+                accentFrom={2}
                 as="h1"
                 className={styles.heroHeadline}
               />
@@ -38,9 +39,15 @@ export default function HomePage() {
                 Cari modul RM10
               </PrimaryButton>
               <div className={styles.sunburstRays} aria-hidden="true">
-                <span className={styles.ray} style={{ transform: "rotate(25deg)" }} />
+                <span
+                  className={styles.ray}
+                  style={{ transform: "rotate(25deg)" }}
+                />
                 <span className={styles.ray} style={{ width: "18px" }} />
-                <span className={styles.ray} style={{ transform: "rotate(-25deg)" }} />
+                <span
+                  className={styles.ray}
+                  style={{ transform: "rotate(-25deg)" }}
+                />
               </div>
             </div>
 
@@ -57,7 +64,13 @@ export default function HomePage() {
                   <Briefcase size={18} />
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--ss-muted)", fontWeight: 500 }}>
+                  <div
+                    style={{
+                      fontSize: "0.75rem",
+                      color: "var(--ss-muted)",
+                      fontWeight: 500,
+                    }}
+                  >
                     Untuk
                   </div>
                   <div>bisnes</div>
@@ -75,7 +88,13 @@ export default function HomePage() {
                   <Building size={18} />
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--ss-muted)", fontWeight: 500 }}>
+                  <div
+                    style={{
+                      fontSize: "0.75rem",
+                      color: "var(--ss-muted)",
+                      fontWeight: 500,
+                    }}
+                  >
                     Untuk
                   </div>
                   <div>kerja</div>
@@ -93,7 +112,13 @@ export default function HomePage() {
                   <GraduationCap size={18} />
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.75rem", color: "var(--ss-muted)", fontWeight: 500 }}>
+                  <div
+                    style={{
+                      fontSize: "0.75rem",
+                      color: "var(--ss-muted)",
+                      fontWeight: 500,
+                    }}
+                  >
                     Untuk
                   </div>
                   <div>student</div>
@@ -105,14 +130,7 @@ export default function HomePage() {
           {/* Right Column: Hero Illustration */}
           <div className={styles.heroRight}>
             <div className={styles.heroIllustrationWrap}>
-              <Image
-                src="/assets/illustrations/hero-learners.png"
-                alt="Pelajar dan pemilik bisnes Malaysia mempelajari modul AI dan automasi bersama SiapSatu"
-                width={720}
-                height={520}
-                priority
-                className={styles.heroImage}
-              />
+              <BrandScene />
               <div className={styles.yellowNote}>
                 MODUL PRAKTIKAL
                 <br />
@@ -127,11 +145,7 @@ export default function HomePage() {
       <section className={styles.featuredSection} aria-label="Modul Pilihan">
         <RevealSection className={styles.featuredGrid}>
           {featuredModules.map((module) => (
-            <ModuleCard
-              key={module.slug}
-              module={module}
-              variant="featured"
-            />
+            <ModuleCard key={module.slug} module={module} variant="featured" />
           ))}
         </RevealSection>
       </section>
