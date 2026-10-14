@@ -9,6 +9,7 @@
 /blob-report
 /playwright/.cache
 /.agents
+/artifacts/visual-qa/astra/tests
 
 # Next.js build output
 /.next/
