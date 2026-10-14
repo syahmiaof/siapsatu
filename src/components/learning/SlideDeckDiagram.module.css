@@ -1,0 +1,146 @@
+.container {
+  background: #fbfbf9;
+  border: 1.5px solid var(--ss-line);
+  border-radius: var(--ss-radius-md);
+  padding: 1.5rem 1.25rem 2rem;
+  margin: 1.25rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.titleWrap {
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-display, inherit);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ss-navy-950);
+  font-style: italic;
+  display: inline-block;
+  position: relative;
+}
+
+.titleUnderline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--ss-red);
+  border-radius: 2px;
+}
+
+.cardsScroll {
+  display: flex;
+  gap: 0.65rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+  scrollbar-width: thin;
+}
+
+.slideCard {
+  flex: 0 0 108px;
+  min-width: 108px;
+  background: #ffffff;
+  border: 1.5px solid #d5dee9;
+  border-radius: 10px;
+  padding: 0.65rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(3, 20, 58, 0.04);
+}
+
+.cardNum {
+  width: 22px;
+  height: 22px;
+  background: #071a3d;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+
+.cardTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--ss-navy-950);
+  line-height: 1.2;
+  min-height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.cardIllustration {
+  width: 100%;
+  height: 52px;
+  background: #f6f8fb;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 4px;
+}
+
+.lines {
+  width: 80%;
+  height: 3px;
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.linesShort {
+  width: 50%;
+  height: 3px;
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 30px;
+}
+
+.bar {
+  width: 6px;
+  background: var(--ss-red);
+  border-radius: 2px 2px 0 0;
+}
+
+.annotationsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+  font-family: var(--font-display, inherit);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ss-red);
+  font-weight: 600;
+}
+
+.annotationLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.annotationRight {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: right;
+}

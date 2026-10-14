@@ -15,7 +15,7 @@ PAIRS={
  'tools-hermes-agent':'ui-03-tool-hermes-desktop.png',
  'paths-ai-automation':'ui-04-learning-path-automation-v2.png',
  'modules-n8n-google-sheets':'ui-05-module-detail-n8n.png',
- 'learn-n8n-google-sheets-2':'ui-06-lesson-reader-n8n.png',
+ 'learn-n8n-google-sheets-3':'ui-06-lesson-reader-n8n.png',
  'library':'ui-07-library-dashboard.png',
  'progress':'ui-08-progress-map.png',
  'community':'ui-09-community-hub.png',
@@ -40,8 +40,8 @@ for slug,ref in PAIRS.items():compare(slug,ref)
 # Device status bar is not website UI. Keep all app content below it.
 compare('modules','modules-catalog-mobile.png',390,70)
 compare('tools','ui-10-tools-directory-mobile-v2.png',390,90)
-# Mobile reader reference has no device status bar and depicts a different module.
-compare('learn-n8n-google-sheets-2','lesson-mobile-siapsatu-v2.png',390,0)
+# Mobile reader reference depicts gemini-slide-assignment step 2.
+compare('learn-gemini-slide-assignment-2','lesson-mobile-siapsatu-v2.png',390,0)
 (OUT/'normalization.json').write_text(json.dumps(records,indent=2),encoding='utf-8')
 thumbs=[]
 for r in records:

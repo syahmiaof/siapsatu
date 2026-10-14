@@ -14,6 +14,7 @@ import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
 import { LessonSidebar } from "@/components/learning/LessonSidebar";
 import { CopyTemplate } from "@/components/learning/CopyTemplate";
 import { WorkflowDiagram } from "@/components/learning/WorkflowDiagram";
+import { SlideDeckDiagram } from "@/components/learning/SlideDeckDiagram";
 import { BrandScene } from "@/components/brand/BrandScene";
 import { PrimaryButton } from "@/components/brand/PrimaryButton";
 import { MODULES } from "@/data/mockData";
@@ -110,9 +111,16 @@ export default function LessonReaderPage({
               />
             </div>
           </div>
+          {learningModule.eyebrow && (
+            <div className={styles.eyebrowBadge}>{learningModule.eyebrow}</div>
+          )}
           <AnimatedHeading
-            text={lesson.title}
-            accentWords={["n8n", "Google", "Sheets"]}
+            text={
+              learningModule.slug === "gemini-slide-assignment"
+                ? learningModule.title
+                : lesson.title
+            }
+            accentWords={["n8n", "Google", "Sheets", "slide", "AI"]}
             as="h1"
             className={styles.mainHeadline}
           />
@@ -154,23 +162,45 @@ export default function LessonReaderPage({
               {learningModule.toolSlugs.includes("n8n") && (
                 <WorkflowDiagram setup={step < 3} compact />
               )}
+              {learningModule.slug === "gemini-slide-assignment" && (
+                <SlideDeckDiagram />
+              )}
             </div>
-            {lesson.officialLinks.map((link) => (
-              <div className={styles.officialLinkStrip} key={link.href}>
-                <div>
-                  <strong>{link.label}</strong>
-                  <p className={styles.officialSub}>Panduan dan tool rasmi</p>
-                </div>
-                <a
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.externalOpenBtn}
-                >
-                  Buka <ExternalLink size={16} />
-                </a>
+            {lesson.officialLinks.length > 0 && (
+              <div>
+                <h3 className={styles.sectionSmallHeading}>Buka tool</h3>
+                {lesson.officialLinks.map((link) => (
+                  <div className={styles.officialLinkStrip} key={link.href}>
+                    <div className={styles.officialLeft}>
+                      {learningModule.slug === "gemini-slide-assignment" && (
+                        <Image
+                          src="/assets/tools/gemini.svg"
+                          alt="Gemini"
+                          width={28}
+                          height={28}
+                        />
+                      )}
+                      <div>
+                        <strong>{link.label}</strong>
+                        <p className={styles.officialSub}>
+                          {learningModule.slug === "gemini-slide-assignment"
+                            ? "Gunakan Gemini untuk hasilkan draf slide anda."
+                            : "Panduan dan tool rasmi"}
+                        </p>
+                      </div>
+                    </div>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.externalOpenBtn}
+                    >
+                      Buka <ExternalLink size={16} />
+                    </a>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </section>
         </article>
         <aside className={styles.rightCol}>

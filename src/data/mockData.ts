@@ -659,6 +659,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "gemini-slide-assignment",
+    eyebrow: "MODUL 1 — ASAS PRODUKTIVITI DENGAN AI",
     title: "Siapkan slide assignment dengan AI",
     shortOutcome: "8 slide yang jelas dan boleh dibentang.",
     priceMyr: 10,
@@ -682,7 +683,8 @@ export const MODULES: Module[] = [
         id: "gsa-2",
         stepNumber: 2,
         title: "Susun cerita sebelum design",
-        outcomeCallout: "8 slide yang jelas dan boleh dibentang",
+        actionTitle: "Susun cerita sebelum design",
+        outcomeCallout: "Hasil: 8 slide yang jelas dan boleh dibentang",
         body: "Sebelum minta AI hasilkan slide, sediakan rangka cerita yang jelas. Ini akan memastikan hasil lebih tersusun, relevan dan mudah difahami.",
         instructions: [
           {
@@ -710,7 +712,43 @@ export const MODULES: Module[] = [
         ],
         template:
           "Saya perlukan rangka 8 slide untuk pembentangan tentang [topik anda].\nSasaran khalayak: [nyatakan, contoh: pensyarah / rakan sekelas].\nSila beri tajuk setiap slide dan poin utama bagi setiap slide.",
-        task: "Salin prompt di atas, buka Gemini, tampal dan jana rangka 8 slide untuk topik anda.",
+        task: "Tugasan: Salin prompt di atas, buka Gemini, tampal dan jana rangka 8 slide untuk topik anda.",
+      },
+      {
+        id: "gsa-3",
+        stepNumber: 3,
+        title: "Jana Draf Teks Slide dengan AI",
+        body: "Gunakan Gemini untuk menjana draf isi kandungan bagi setiap 8 slide berpandukan rangka cerita.",
+        officialLinks: [
+          { label: "Google Gemini", href: "https://gemini.google.com" },
+        ],
+      },
+      {
+        id: "gsa-4",
+        stepNumber: 4,
+        title: "Pindahkan ke Google Slides / Canva",
+        body: "Salin teks yang dijana ke dalam template slide sedia ada untuk susun atur visual yang pantas.",
+        officialLinks: [
+          { label: "Google Slides", href: "https://slides.google.com" },
+        ],
+      },
+      {
+        id: "gsa-5",
+        stepNumber: 5,
+        title: "Perkemas Susun Atur & Visual",
+        body: "Tambahkan visual sokongan yang relevan dan pastikan setiap slaid kekal bersih dan fokus.",
+        officialLinks: [
+          { label: "Canva Slides", href: "https://canva.com" },
+        ],
+      },
+      {
+        id: "gsa-6",
+        stepNumber: 6,
+        title: "Latihan Pembentangan & Selesai",
+        body: "Semak masa pembentangan, sediakan nota pembentang, dan bersedia untuk sesi soal jawab.",
+        officialLinks: [
+          { label: "Google Gemini", href: "https://gemini.google.com" },
+        ],
       },
     ],
   },

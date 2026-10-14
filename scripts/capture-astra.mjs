@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const phase = process.argv[2] || 'final';
-const routes = ['/', '/modules', '/tools', '/tools/n8n', '/tools/hermes-agent', '/paths/ai-automation', '/modules/n8n-google-sheets', '/learn/n8n-google-sheets/2', '/library', '/progress', '/community', '/login'];
+const routes = ['/', '/modules', '/tools', '/tools/n8n', '/tools/hermes-agent', '/paths/ai-automation', '/modules/n8n-google-sheets', '/learn/n8n-google-sheets/2', '/learn/n8n-google-sheets/3', '/learn/gemini-slide-assignment/2', '/library', '/progress', '/community', '/login'];
 const sizes = phase === 'baseline' ? [[1440,1024],[390,844]] : [[1440,1024],[1280,800],[768,1024],[430,932],[390,844],[360,800]];
 const dir = path.join('artifacts/visual-qa/astra', phase);
 await fs.mkdir(dir, {recursive:true});
@@ -16,7 +16,7 @@ for (const [width,height] of sizes) {
     const errors = [];
     const listener = error => errors.push(String(error));
     page.on('pageerror', listener);
-    await page.goto(`${process.env.QA_URL || 'http://localhost:3001'}${route}`, {waitUntil:'networkidle',timeout:90000});
+    await page.goto(`${process.env.QA_URL || 'http://localhost:3000'}${route}`, {waitUntil:'networkidle',timeout:90000});
     await page.evaluate(async () => { await document.fonts.ready; document.querySelectorAll('img').forEach(i=>i.loading='eager'); await Promise.race([Promise.all([...document.images].map(i => i.decode().catch(() => {}))),new Promise(r=>setTimeout(r,8000))]); });
     const name = route === '/' ? 'home' : route.slice(1).replaceAll('/','-');
     const geometry = await page.evaluate(() => {

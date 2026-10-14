@@ -363,7 +363,99 @@
       "x": 270.875,
       "y": 361.515625,
       "width": 778.25,
-      "height": 396.796875
+      "height": 432.796875
+    },
+    "illustration": {
+      "x": 1071.125,
+      "y": 107.125,
+      "width": 330,
+      "height": 220
+    },
+    "search": {
+      "x": 598.671875,
+      "y": 37.5625,
+      "width": 344,
+      "height": 19
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 1440,
+    "height": 1024,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 95.125
+    },
+    "logo": {
+      "x": 38.875,
+      "y": 16,
+      "width": 220,
+      "height": 62.125
+    },
+    "title": {
+      "x": 270.875,
+      "y": 167.125,
+      "width": 778.25,
+      "height": 100.78125
+    },
+    "hero": {
+      "x": 270.875,
+      "y": 411.90625,
+      "width": 778.25,
+      "height": 470.359375
+    },
+    "illustration": {
+      "x": 1071.125,
+      "y": 107.125,
+      "width": 330,
+      "height": 220
+    },
+    "search": {
+      "x": 598.671875,
+      "y": 37.5625,
+      "width": 344,
+      "height": 19
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 1440,
+    "height": 1024,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 95.125
+    },
+    "logo": {
+      "x": 38.875,
+      "y": 16,
+      "width": 220,
+      "height": 62.125
+    },
+    "title": {
+      "x": 270.875,
+      "y": 197.125,
+      "width": 778.25,
+      "height": 100.78125
+    },
+    "hero": {
+      "x": 270.875,
+      "y": 441.90625,
+      "width": 778.25,
+      "height": 583.140625
     },
     "illustration": {
       "x": 1071.125,
@@ -915,7 +1007,99 @@
       "x": 266.546875,
       "y": 339.21875,
       "width": 636.90625,
-      "height": 553.859375
+      "height": 589.859375
+    },
+    "illustration": {
+      "x": 925.453125,
+      "y": 107.125,
+      "width": 320,
+      "height": 220
+    },
+    "search": {
+      "x": 518.671875,
+      "y": 37.5625,
+      "width": 344,
+      "height": 19
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 95.125
+    },
+    "logo": {
+      "x": 34.546875,
+      "y": 16,
+      "width": 220,
+      "height": 62.125
+    },
+    "title": {
+      "x": 266.546875,
+      "y": 163.125,
+      "width": 636.90625,
+      "height": 88.1875
+    },
+    "hero": {
+      "x": 266.546875,
+      "y": 383.3125,
+      "width": 636.90625,
+      "height": 628.859375
+    },
+    "illustration": {
+      "x": 925.453125,
+      "y": 107.125,
+      "width": 320,
+      "height": 220
+    },
+    "search": {
+      "x": 518.671875,
+      "y": 37.5625,
+      "width": 344,
+      "height": 19
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 95.125
+    },
+    "logo": {
+      "x": 34.546875,
+      "y": 16,
+      "width": 220,
+      "height": 62.125
+    },
+    "title": {
+      "x": 266.546875,
+      "y": 189.125,
+      "width": 636.90625,
+      "height": 88.1875
+    },
+    "hero": {
+      "x": 266.546875,
+      "y": 409.3125,
+      "width": 636.90625,
+      "height": 724.203125
     },
     "illustration": {
       "x": 925.453125,
@@ -1467,7 +1651,99 @@
       "x": 213.734375,
       "y": 339.21875,
       "width": 533.53125,
-      "height": 573.359375
+      "height": 609.359375
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 302.671875,
+      "y": 37.5625,
+      "width": 264,
+      "height": 19
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 95.125
+    },
+    "logo": {
+      "x": 20.734375,
+      "y": 16,
+      "width": 220,
+      "height": 62.125
+    },
+    "title": {
+      "x": 213.734375,
+      "y": 163.125,
+      "width": 533.53125,
+      "height": 88.1875
+    },
+    "hero": {
+      "x": 213.734375,
+      "y": 383.3125,
+      "width": 533.53125,
+      "height": 628.859375
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 302.671875,
+      "y": 37.5625,
+      "width": 264,
+      "height": 19
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 768,
+      "height": 95.125
+    },
+    "logo": {
+      "x": 20.734375,
+      "y": 16,
+      "width": 220,
+      "height": 62.125
+    },
+    "title": {
+      "x": 213.734375,
+      "y": 189.125,
+      "width": 533.53125,
+      "height": 88.1875
+    },
+    "hero": {
+      "x": 213.734375,
+      "y": 409.3125,
+      "width": 533.53125,
+      "height": 740.203125
     },
     "illustration": {
       "x": 0,
@@ -2019,7 +2295,99 @@
       "x": 16,
       "y": 373.28125,
       "width": 398,
-      "height": 634.15625
+      "height": 670.15625
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 74.1875
+    },
+    "logo": {
+      "x": 16,
+      "y": 14,
+      "width": 160,
+      "height": 45.1875
+    },
+    "title": {
+      "x": 16,
+      "y": 178.1875,
+      "width": 398,
+      "height": 67.1875
+    },
+    "hero": {
+      "x": 16,
+      "y": 396.875,
+      "width": 398,
+      "height": 712.15625
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 430,
+    "height": 932,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 430,
+      "height": 74.1875
+    },
+    "logo": {
+      "x": 16,
+      "y": 14,
+      "width": 160,
+      "height": 45.1875
+    },
+    "title": {
+      "x": 16,
+      "y": 204.1875,
+      "width": 398,
+      "height": 67.1875
+    },
+    "hero": {
+      "x": 16,
+      "y": 422.875,
+      "width": 398,
+      "height": 817.09375
     },
     "illustration": {
       "x": 0,
@@ -2571,7 +2939,99 @@
       "x": 16,
       "y": 373.28125,
       "width": 358,
-      "height": 655.15625
+      "height": 691.15625
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 74.1875
+    },
+    "logo": {
+      "x": 16,
+      "y": 14,
+      "width": 160,
+      "height": 45.1875
+    },
+    "title": {
+      "x": 16,
+      "y": 178.1875,
+      "width": 358,
+      "height": 67.1875
+    },
+    "hero": {
+      "x": 16,
+      "y": 406.875,
+      "width": 358,
+      "height": 756.75
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 74.1875
+    },
+    "logo": {
+      "x": 16,
+      "y": 14,
+      "width": 160,
+      "height": 45.1875
+    },
+    "title": {
+      "x": 16,
+      "y": 204.1875,
+      "width": 358,
+      "height": 67.1875
+    },
+    "hero": {
+      "x": 16,
+      "y": 422.875,
+      "width": 358,
+      "height": 873.09375
     },
     "illustration": {
       "x": 0,
@@ -3123,7 +3583,99 @@
       "x": 16,
       "y": 373.28125,
       "width": 328,
-      "height": 655.15625
+      "height": 691.15625
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 360,
+    "height": 800,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 74.1875
+    },
+    "logo": {
+      "x": 16,
+      "y": 14,
+      "width": 160,
+      "height": 45.1875
+    },
+    "title": {
+      "x": 16,
+      "y": 178.1875,
+      "width": 328,
+      "height": 67.1875
+    },
+    "hero": {
+      "x": 16,
+      "y": 406.875,
+      "width": 328,
+      "height": 773.75
+    },
+    "illustration": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "search": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0
+    },
+    "filters": null,
+    "firstCard": null,
+    "brokenImages": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 360,
+    "height": 800,
+    "overflow": false,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 360,
+      "height": 74.1875
+    },
+    "logo": {
+      "x": 16,
+      "y": 14,
+      "width": 160,
+      "height": 45.1875
+    },
+    "title": {
+      "x": 16,
+      "y": 204.1875,
+      "width": 328,
+      "height": 100.78125
+    },
+    "hero": {
+      "x": 16,
+      "y": 488.96875,
+      "width": 328,
+      "height": 891.09375
     },
     "illustration": {
       "x": 0,

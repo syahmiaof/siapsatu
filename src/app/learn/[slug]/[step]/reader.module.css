@@ -106,6 +106,25 @@
   transition: width 300ms ease;
 }
 
+.eyebrowBadge {
+  font-family: var(--font-display, inherit);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ss-muted);
+  margin-bottom: -0.25rem;
+}
+
+.sectionSmallHeading {
+  font-family: var(--font-display, inherit);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--ss-navy-950);
+  margin-top: 1.5rem;
+  margin-bottom: -0.75rem;
+}
+
 .mainHeadline {
   font-family: var(--font-display, inherit);
   font-size: clamp(2rem, 3.8vw, 3.2rem);

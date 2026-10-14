@@ -61,6 +61,7 @@ export interface Lesson {
 export interface Module {
   slug: string;
   title: string;
+  eyebrow?: string;
   shortOutcome: string;
   priceMyr: 10;
   level: "beginner" | "intermediate";
