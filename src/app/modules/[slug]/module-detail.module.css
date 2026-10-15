@@ -439,7 +439,7 @@
   box-shadow: none;
   grid-template-columns: 61% 39%;
   gap: 0;
-  min-height: 310px;
+  min-height: 280px;
   overflow: visible;
 }
 .heroLeft {
@@ -479,13 +479,13 @@
   border-radius: 18px;
 }
 .heroRight {
-  height: 330px;
+  height: 280px;
   margin: 0 calc(-1 * var(--page-gutter)) 0 0;
 }
 .detailLayout {
-  grid-template-columns: minmax(0, 1fr) 310px;
+  grid-template-columns: minmax(0, 1fr) 400px;
   gap: 22px;
-  margin: 20px 0 35px;
+  margin: 12px 0 35px;
 }
 .sectionBox {
   padding: 22px;
@@ -499,7 +499,9 @@
 }
 .sectionDesc {
   font-size: 15px;
+  margin-bottom: 16px;
 }
+.stepsList { gap: 13px; }
 .stepsFlowGrid {
   gap: 20px;
 }

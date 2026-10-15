@@ -10,6 +10,8 @@
 /playwright/.cache
 /.agents
 /artifacts/visual-qa/astra/tests
+/artifacts/visual-qa/astra/recovery/*.zip
+/artifacts/visual-qa/astra/recovery-review/
 
 # Next.js build output
 /.next/
@@ -37,3 +39,5 @@ next-env.d.ts
 # OS files
 .DS_Store
 Thumbs.db
+
+.vercel

@@ -1,0 +1,10 @@
+/artifacts/
+/mockups/
+/brand/
+/docs/
+/tests/
+/scripts/
+/playwright-report/
+/test-results/
+*.zip
+/.agents/

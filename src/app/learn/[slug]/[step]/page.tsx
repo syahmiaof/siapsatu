@@ -43,6 +43,7 @@ export default function LessonReaderPage({
     setTaskDone(false);
   }, [params.slug, params.step]);
   if (!learningModule || !lesson || !Number.isInteger(step)) notFound();
+  const isSlideModule = learningModule.slug === "gemini-slide-assignment";
   const percent = Math.round(
     (completed.length / learningModule.lessons.length) * 100,
   );
@@ -85,7 +86,7 @@ export default function LessonReaderPage({
           </Link>
         </div>
       </header>
-      <div className={`container ${styles.readerLayout}`}>
+      <div className={`container ${styles.readerLayout} ${isSlideModule ? styles.slideReader : ""}`}>
         <details ref={chaptersRef} className={styles.chapterMenu} open>
           <summary>Langkah modul</summary>
           <LessonSidebar
@@ -116,7 +117,7 @@ export default function LessonReaderPage({
           )}
           <AnimatedHeading
             text={
-              learningModule.slug === "gemini-slide-assignment"
+              isSlideModule
                 ? learningModule.title
                 : lesson.title
             }
@@ -124,7 +125,7 @@ export default function LessonReaderPage({
             as="h1"
             className={styles.mainHeadline}
           />
-          <p className={styles.lessonSubtitle}>{lesson.body}</p>
+          {!isSlideModule && <p className={styles.lessonSubtitle}>{lesson.body}</p>}
           <div className={styles.outcomeCallout}>
             <CheckCircle2 size={22} />
             <span>
@@ -142,7 +143,7 @@ export default function LessonReaderPage({
                   {lesson.actionTitle || lesson.title}
                 </h2>
                 <p className={styles.stepDetailSub}>
-                  {lesson.actionSubtitle ||
+                  {isSlideModule ? lesson.body : lesson.actionSubtitle ||
                     "Ikut panduan dan semak hasil sebelum teruskan."}
                 </p>
               </div>

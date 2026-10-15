@@ -339,7 +339,7 @@
   box-shadow: none;
   grid-template-columns: 53% 47%;
   gap: 0;
-  min-height: 408px;
+  min-height: 380px;
   overflow: visible;
 }
 .heroLeft {
@@ -393,7 +393,7 @@
   flex-shrink: 0;
 }
 .heroRight {
-  height: 420px;
+  height: 380px;
   margin-top: 0;
   margin-right: calc(-1 * var(--page-gutter));
 }
@@ -613,7 +613,7 @@
   margin-bottom: 8px;
 }
 .hermesCard {
-  min-height: 200px;
+  min-height: 180px;
 }
 .cardBottom {
   margin-top: 10px;

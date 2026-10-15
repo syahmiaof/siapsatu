@@ -144,3 +144,19 @@
   gap: 0.4rem;
   text-align: right;
 }
+
+@media (max-width: 700px) {
+  .container { padding: 10px 8px; margin: 4px 0; border-radius: 8px; }
+  .titleWrap { margin-bottom: 10px; }
+  .title { font-size: 12px; }
+  .cardsScroll { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; padding-bottom: 8px; }
+  .slideCard { min-width: 0; padding: 4px 2px; border-radius: 4px; box-shadow: none; }
+  .cardNum { width: 14px; height: 14px; font-size: 9px; margin-bottom: 3px; }
+  .cardTitle { font-size: 7px; min-height: 34px; margin-bottom: 3px; overflow-wrap: anywhere; }
+  .cardIllustration { height: 28px; padding: 2px; }
+  .cardIllustration svg { width: 18px; height: 18px; }
+  .bars { height: 24px; gap: 2px; }
+  .bar { width: 4px; }
+  .annotationsRow { font-size: 9px; gap: 18px; }
+  .annotationLeft, .annotationRight { flex: 1; }
+}

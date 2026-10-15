@@ -9,25 +9,6 @@ export function BrandScene({
   variant?: "trio" | "learner" | "hermes" | "ribbon";
   className?: string;
 }) {
-  if (variant === "trio") {
-    return (
-      <div
-        className={`${styles.scene} ${styles.trioHero} ${className}`}
-        aria-hidden="true"
-        data-hero-art
-      >
-        <Image
-          src="/assets/illustrations/hero-malaysia-utility.png"
-          alt="SiapSatu — Belajar AI, tools & software"
-          width={780}
-          height={490}
-          className={styles.trioArt}
-          priority
-        />
-      </div>
-    );
-  }
-
   const star = Array.from({ length: 28 }, (_, i) => {
     const a = (i * Math.PI) / 14 - Math.PI / 2,
       r = i % 2 ? 26 : 58;
@@ -92,10 +73,16 @@ export function BrandScene({
           strokeWidth="18"
           strokeLinejoin="round"
         />
+        {variant === "trio" && (
+          <g fill="#0b3474" stroke="#ffd12a" strokeWidth="2">
+            <path fill="#ffd12a" d="M640 480V355a85 85 0 0 1 170 0v125Z" />
+            <path d="M670 480V360h10v-40h8v-30h4v30h8v40h10v120m20 0V360h10v-40h8v-30h4v30h8v40h10v120" />
+          </g>
+        )}
       </svg>
       {variant !== "ribbon" && (
         <Image
-          src={`/assets/illustrations/${variant === "hermes" ? "hermes-clean" : "learner-clean"}.png`}
+          src={`/assets/illustrations/${variant === "trio" ? "learners-clean" : variant === "hermes" ? "hermes-clean" : "learner-clean"}.png`}
           alt=""
           width={variant === "learner" ? 1024 : 1505}
           height={variant === "learner" ? 1536 : 1045}

@@ -244,9 +244,9 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
                     <Image
                       src="/assets/tools/n8n.png"
                       alt="n8n"
-                      width={24}
-                      height={24}
-                      style={{ filter: "brightness(0) invert(1)" }}
+                      width={44}
+                      height={44}
+                      style={{ objectFit: "contain" }}
                     />
                   </div>
                   <span className={styles.diagramName}>n8n</span>

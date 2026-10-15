@@ -370,7 +370,7 @@
   box-shadow: none;
   grid-template-columns: 55% 45%;
   gap: 0;
-  min-height: 350px;
+  min-height: 310px;
   overflow: visible;
 }
 .heroLeft {
@@ -400,7 +400,7 @@
   padding: 8px 10px;
 }
 .heroRight {
-  height: 365px;
+  height: 310px;
   margin-top: 0;
   margin-right: calc(-1 * var(--page-gutter));
 }
@@ -411,13 +411,33 @@
 }
 .trackHeaderTitle {
   font-size: 28px;
-  margin-bottom: 28px;
+  margin-bottom: 48px;
 }
 .modulesTrackGrid {
   gap: 12px;
 }
+.modulesTrackGrid::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 12px;
+  right: 12px;
+  height: 6px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #1777f2 25%, #ff5a0a 25% 50%, #08bd59 50% 75%, #ff2445 75%);
+}
+.stepNumberPip {
+  top: -41px;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 50%;
+}
 .trackModuleCard {
-  padding: 22px 14px 14px;
+  padding: 18px 12px 12px;
   border: 0;
   border-radius: 14px;
   box-shadow: none;
@@ -441,13 +461,13 @@
   font-size: 13px;
 }
 .moduleCardIcon {
-  width: 52px;
-  height: 52px;
-  margin-bottom: 14px;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 8px;
 }
 .hasilBlock {
-  padding: 10px;
-  margin-top: 12px;
+  padding: 8px;
+  margin-top: 8px;
 }
 .trackCardFooter {
   gap: 6px;
@@ -474,6 +494,12 @@
   font-size: 12px;
 }
 @media (max-width: 1200px) {
+  .modulesTrackGrid::before {
+    display: none;
+  }
+  .modulesTrackGrid {
+    row-gap: 42px;
+  }
   .pathContentGrid {
     grid-template-columns: 1fr 260px;
   }

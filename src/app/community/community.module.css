@@ -761,10 +761,11 @@
   padding-top: 4px;
 }
 .postCard {
-  padding: 16px;
+  padding: 12px;
+  gap: 6px;
 }
-.postReactionRow {
-  padding-top: 8px;
+.reactionsBar {
+  padding-top: 4px;
 }
 .postTitle {
   font-size: 20px;

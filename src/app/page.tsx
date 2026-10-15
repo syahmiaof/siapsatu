@@ -131,6 +131,11 @@ export default function HomePage() {
           <div className={styles.heroRight}>
             <div className={styles.heroIllustrationWrap}>
               <BrandScene />
+              <div className={styles.yellowNote}>
+                MODUL PRAKTIKAL
+                <br />
+                UNTUK SEMUA
+              </div>
             </div>
           </div>
         </div>

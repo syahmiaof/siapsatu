@@ -170,6 +170,7 @@ export default function LearningPathAutomationPage() {
 
           <AnimatedHeading
             text="Laluan AI Automation Dari kerja manual, sampai workflow berjalan sendiri."
+            breakAfter={3}
             accentWords={[
               "AI",
               "Automation",

@@ -3,7 +3,7 @@ import json
 
 root=Path(__file__).resolve().parents[1]
 out=root/'artifacts/visual-qa/astra'
-routes=['home','modules','mega-menu','tools','tools-n8n','tools-hermes-agent','paths-ai-automation','modules-n8n-google-sheets','learn-n8n-google-sheets-3','learn-gemini-slide-assignment-2','library','progress','community','login']
+routes=['home','modules','mega-menu','tools','tools-n8n','tools-hermes-agent','paths-ai-automation','modules-n8n-google-sheets','learn-n8n-google-sheets-2','learn-n8n-google-sheets-3','learn-gemini-slide-assignment-2','library','progress','community','login']
 html='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SiapSatu visual evidence</title>
 <style>body{font:16px system-ui;margin:24px;background:#eef3fa;color:#062457}h1{font-size:28px}label{display:inline-flex;gap:8px;margin:8px 20px 16px 0}select,a{padding:8px}nav{display:flex;gap:12px;flex-wrap:wrap}img{max-width:100%;height:auto;background:white;border:1px solid #cfdaeb}#images{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}figure{margin:0}figcaption{font-weight:700;padding:12px 0}.wide{grid-column:1/-1}p{max-width:950px;line-height:1.5}@media(max-width:700px){#images{display:block}}</style>
 <h1>SiapSatu — current visual evidence</h1><p>Reduced-motion geometry captures from a local production build. References are immutable. Comparison pairs use the same normalized width and crop. Full-page captures relocate fixed docks to the document bottom for inspection; fold captures retain real fixed positioning.</p>
@@ -13,8 +13,8 @@ html='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewpor
 const routes=ROUTES;const select=document.querySelector('#route'),width=document.querySelector('#width'),images=document.querySelector('#images');
 routes.forEach(r=>select.add(new Option(r,r)));
 function draw(){const r=select.value,w=width.value;images.replaceChildren();function add(label,src,wide=false){const fig=document.createElement('figure');if(wide)fig.className='wide';const cap=document.createElement('figcaption');cap.textContent=label;const a=document.createElement('a');a.href=src;const im=document.createElement('img');im.src=src;im.alt=label;im.loading='lazy';im.onerror=()=>fig.remove();a.append(im);fig.append(cap,a);images.append(fig)}
-add('Final first fold',`final/${w}-${r}-fold.png`);add('Fresh baseline first fold',`baseline/${w}-${r}-fold.png`);add('Normalized reference / final',`comparisons/${w}-${r}-side-by-side.jpg`,true);add('50% overlay',`comparisons/${w}-${r}-overlay.png`);add('Final full page',`final/${w}-${r}-full.png`);
-document.querySelector('#note').textContent='Baseline exists at 1440 and 390. Dedicated mobile references exist for catalog, Tools and reader (gemini-slide-assignment step 2). Desktop reader reference depicts n8n-google-sheets step 3. Login has no supplied approved mockup.';}
+add('Final first fold',`final/${w}-${r}-fold.png`);if(r==='home')add('Before recovery (full-page capture)',`recovery/before-${w}.png`);else add('Restored checkpoint before final layout fixes',`recovery-review/${w}-${r}-fold.png`);add('Normalized reference / final',`comparisons/${w}-${r}-side-by-side.jpg`,true);add('50% overlay',`comparisons/${w}-${r}-overlay.png`);add('Final full page',`final/${w}-${r}-full.png`);
+document.querySelector('#note').textContent='Homepage recovery baseline exists at 1440, 1280 and 390. Other checkpoint images are intermediate renders. Dedicated mobile references exist for catalog, Tools and the Gemini reader. n8n step 2 comparisons deliberately retain the different reference content; step 3 and Gemini captures are supplemental. Login has no supplied approved mockup.';}
 select.onchange=width.onchange=draw;draw();
 </script></html>'''.replace('ROUTES',json.dumps(routes))
 (out/'index.html').write_text(html,encoding='utf-8')

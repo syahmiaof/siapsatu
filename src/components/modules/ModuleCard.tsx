@@ -20,6 +20,7 @@ interface ModuleCardProps {
   variant?: "featured" | "compact";
   iconPath?: string;
   className?: string;
+  density?: "normal" | "catalog";
 }
 
 export function ModuleCard({
@@ -27,6 +28,7 @@ export function ModuleCard({
   variant = "compact",
   iconPath,
   className = "",
+  density = "normal",
 }: ModuleCardProps) {
   // Determine tool icon
   const resolvedIcon =
@@ -66,7 +68,7 @@ export function ModuleCard({
     return (
       <Link
         href={href}
-        className={`${styles.featuredCard} ${themeClass} ${className}`}
+        className={`${styles.featuredCard} ${themeClass} ${density === "catalog" ? styles.catalogFeatured : ""} ${className}`}
         data-reveal-item
       >
         <div className={styles.bgDeco} aria-hidden="true">
@@ -130,7 +132,7 @@ export function ModuleCard({
   return (
     <Link
       href={href}
-      className={`${styles.compactCard} ${className}`}
+      className={`${styles.compactCard} ${density === "catalog" ? styles.catalogCompact : ""} ${className}`}
       data-reveal-item
     >
       <div>

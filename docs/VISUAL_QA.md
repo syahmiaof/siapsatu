@@ -1,123 +1,61 @@
-# SiapSatu LMS Frontend — Visual QA & Forensic Verification Report
+# SiapSatu visual repair QA
 
-**Date:** 2026-10-15  
-**Product:** SiapSatu (*"Satu modul. Satu hasil."*)  
-**Design Authority:** Malaysia Utility Reference Suite (`mockups/`)  
-**Audit Protocol:** Normalized width comparisons (1440px Desktop, 390px Mobile), 50% alpha overlays, bounding-box geometry checks, and automated behavior tests.  
-**Interactive Evidence Viewer:** [`artifacts/visual-qa/astra/index.html`](../artifacts/visual-qa/astra/index.html)  
-**Comparison Contact Sheet:** [`artifacts/visual-qa/astra/comparisons/contact.jpg`](../artifacts/visual-qa/astra/comparisons/contact.jpg)
+Date: 2026-10-16. This report supersedes earlier blanket match claims.
 
----
+## Outcome and scope
 
-## 1. Executive Summary
+Restored the Malaysia Utility direction after the homepage regression at `b181799`. The restoration uses the `b52d035` layout checkpoint, then adjusts hero/card proportions, menu placement, catalog density, learning-path timeline, reader spacing and mobile slide previews. Reader lesson improvements from `b52d035` remain.
 
-This report supersedes all prior unverified "100% Match" claims. Visual fidelity has been measured by pairing immutable mockup references against live production builds at identical normalized widths (1440px and 390px) with corresponding viewport crops.
+The root regression was artwork containing baked-in interface fragments. The homepage and shared brand scenes now use clean transparent character artwork, decorative ribbons and real DOM content. Community claims describe the prototype honestly. The generated artwork is an approximation of the approved references, not identical illustration geometry.
 
-### Key Milestones Achieved
-1. **Asset Contamination Resolved:**
-   - Replaced rectangular mockup crops that contained baked-in text, navigation fragments, and buttons with transparent vector SVGs and clean transparent character artwork (`learners-clean.png`, `learner-clean.png`, `hermes-clean.png`).
-   - Sourced and verified genuine brand geometry via Simple Icons for Gemini, Claude, Cursor, ChatGPT, Perplexity, Make, Zapier, GitHub, Vercel, Canva, Figma, Notion, Meta, and WhatsApp.
-   - Transparent logo padding resolved via pixel-exact display crop (`public/assets/brand/siapsatu-display.png`).
-2. **Layout & Hierarchy Alignment:**
-   - Reconstructed prominent header, wide hero compositions, integrated Malaysian flag ribbons, and responsive card grids.
-   - Solved double-header collision, step coherence, and sticky dock content occlusion in `/learn/n8n-google-sheets/2`.
-   - Recreated live HTML/CSS workflow nodes in `WorkflowDiagram.tsx` replacing pixelated screenshot cards.
-3. **Engineering Gates:**
-   - **TypeScript (`strict: true`):** 0 errors (`npm run typecheck`).
-   - **ESLint:** 0 warnings, 0 errors (`npm run lint`).
-   - **Production Build:** All 13 routes statically compiled (`npm run build`).
-   - **Playwright Test Suite:** 47 passed, 7 skipped (cross-platform guards), 0 failed across Chromium Desktop (1440x1024) and Mobile (390x844).
-   - **Responsive Geometry Check:** 0 horizontal overflows across 6 viewports (1440px, 1280px, 768px, 430px, 390px, 360px).
+This remains a frontend prototype: purchases, sign-in, community posts and progress are explicitly preview/local-demo behavior. No payment collection or real account entitlement is claimed.
 
----
+## Evidence
 
-## 2. Route Verdict Matrix
+- [Interactive before/reference/final viewer](../artifacts/visual-qa/astra/index.html)
+- [Normalized comparison contact sheet](../artifacts/visual-qa/astra/comparisons/contact.jpg)
+- [Reference normalization metadata](../artifacts/visual-qa/astra/comparisons/normalization.json)
+- [Measured live geometry](../artifacts/visual-qa/astra/final/geometry.json)
+- [Asset provenance](ASSET_SOURCES.md)
 
-Verdicts are categorized as:
-- **Close:** Layout, typography, spacing, card proportions, and first-fold density match reference structure within acceptable production tolerances (~5%).
-- **Material delta remains:** Measurable structural, compositional, or artwork differences persist.
-- **Blocked by missing artwork:** High-fidelity source illustration does not exist in repository assets.
+Screenshots cover 14 routes at six viewports: 1440×1024, 1280×800, 768×1024, 430×932, 390×844 and 360×800 (84 route/viewport captures), plus the desktop mega menu. The two supplemental lesson routes check the actual reference subject/content. Seventeen reference pairs use width-normalized side-by-side images and 50% overlays; normalization is disclosed in the metadata. This is visual inspection, not a numerical image-similarity certification.
 
-| Route / Screen | Reference Mockup | Viewport | Verdict | Comparative Analysis & Remaining Deltas | Evidence Links |
-|:---|:---|:---|:---|:---|:---|
-| **Laman Utama (`/`)** | `homepage-theme-03-malaysia-utility.png` | 1440px | **Close** | Hero width, two-line bold title, Malaysian flag ribbon accent, and 3-column featured cards align tightly. Artwork uses clean generated Malaysian learner trio (`learners-clean.png`) rather than the exact mockup characters. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-home-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-home-overlay.png) |
-| **Katalog Modul (`/modules`)** | `modules-catalog-desktop.png` | 1440px | **Close** | Wide headline, search input, category filter pills, RM10 price callouts, and dense card grid match the reference first fold. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-modules-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-modules-overlay.png) |
-| **Katalog Modul Mobile** | `modules-catalog-mobile.png` | 390px | **Close** | Device status bar excluded from web layout. Search and chips start at reference depth; single-column card stack scrolls smoothly above the persistent bottom dock. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/390-modules-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/390-modules-overlay.png) |
-| **Mega Menu** | `modules-mega-menu-desktop.png` | 1440px | **Close** | 3 categorical columns (AI & Ejen, Automasi & Integrasi, No-Code & Web) open cleanly below "Modul" link with keyboard focus trapping and Escape restoration. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-mega-menu-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-mega-menu-overlay.png) |
-| **Direktori Alat (`/tools`)** | `ui-01-tools-directory-desktop.png` | 1440px | **Close** | Broad flag/ribbon hero, search input, 4-column tool grid, opaque brand marks, and module count badges match reference geometry. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-tools-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-tools-overlay.png) |
-| **Direktori Alat Mobile** | `ui-10-tools-directory-mobile-v2.png` | 390px | **Close** | Large logo, compact filters, readable tool cards, and non-obscuring bottom navigation dock. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/390-tools-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/390-tools-overlay.png) |
-| **Hab n8n (`/tools/n8n`)** | `ui-02-tool-n8n-desktop.png` | 1440px | **Close** | Wide integrated workflow area built via `WorkflowDiagram.tsx`, official n8n mark, outcome pillars, and 4-column module tiles row. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-tools-n8n-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-tools-n8n-overlay.png) |
-| **Hab Hermes (`/tools/hermes-agent`)** | `ui-03-tool-hermes-desktop.png` | 1440px | **Close** | Hermes official logo preserved, CLI quickstart terminal block, practical enterprise outcome points, and character illustration card (`hermes-clean.png`). | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-tools-hermes-agent-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-tools-hermes-agent-overlay.png) |
-| **Laluan Automasi (`/paths/ai-automation`)** | `ui-04-learning-path-automation-v2.png` | 1440px | **Close** | 4-step progressive timeline rail, outcome checklist boxes, bundle price comparison (RM35 vs RM40), and deep links to modules. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-paths-ai-automation-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-paths-ai-automation-overlay.png) |
-| **Detail Modul (`/modules/n8n-google-sheets`)** | `ui-05-module-detail-n8n.png` | 1440px | **Close** | RM10 standalone purchase card, step breakdown, "Apa yang anda dapat" deliverables list, and interactive checkout modal preview. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-modules-n8n-google-sheets-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-modules-n8n-google-sheets-overlay.png) |
-| **Lesson Reader Desktop (`/learn/n8n-google-sheets/3`)** | `ui-06-lesson-reader-n8n.png` | 1440px | **Close** | Single unified reader header; 6-step progress sidebar with Step 3 active (50% progress); workflow card (n8n -> Google Sheets); live interactive JSON template copy box; Next Step sticky bar reachable. Resolved prior mismatch where Step 2 was previously captured against the Step 3 mockup. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-learn-n8n-google-sheets-3-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-learn-n8n-google-sheets-3-overlay.png) |
-| **Lesson Reader Mobile (`/learn/gemini-slide-assignment/2`)** | `lesson-mobile-siapsatu-v2.png` | 390px | **Close** | Exact match with mockup: Eyebrow badge `MODUL 1 — ASAS PRODUKTIVITI DENGAN AI`, Step 2 of 6 `02 / Susun cerita sebelum design`, `Hasil: 8 slide yang jelas dan boleh dibentang`, 8-slide outline cards diagram (`SlideDeckDiagram.tsx`) with red brand callouts, official Gemini tool action card, prompt template, and sticky footer. Resolved prior mismatch where n8n was captured against the Gemini slide deck reference. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/390-learn-gemini-slide-assignment-2-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/390-learn-gemini-slide-assignment-2-overlay.png) |
-| **Library (`/library`)** | `ui-07-library-dashboard.png` | 1440px | **Close** | Active purchased modules, progress percentages, deliverable downloads, and recommended next module card. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-library-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-library-overlay.png) |
-| **Peta Kemajuan (`/progress`)** | `ui-08-progress-map.png` | 1440px | **Close** | Skill tracks with progress bars, completed milestone badges, and clear "Next Action" recommendations. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-progress-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-progress-overlay.png) |
-| **Komuniti (`/community`)** | `ui-09-community-hub.png` | 1440px | **Close** | Official WhatsApp channel links, Malaysian learner showcase wins, and community guidelines with local post creation dialog. | [Side-by-side](../artifacts/visual-qa/astra/comparisons/1440-community-side-by-side.jpg)<br>[50% Overlay](../artifacts/visual-qa/astra/comparisons/1440-community-overlay.png) |
-| **Log Masuk (`/login`)** | *Derived Malaysia Utility* | 1440px / 390px | **Close** | Clean, focused card with phone/email OTP input, prototype disclaimer, and return link to home. No dedicated mockup was supplied. | [Desktop Fold](../artifacts/visual-qa/astra/final/1440-login-fold.png)<br>[Mobile Fold](../artifacts/visual-qa/astra/final/390-login-fold.png) |
+Captures wait for fonts/images and use reduced motion to stabilize geometry. Fold captures retain the real fixed learning dock. For full-page evidence only, the dock is moved to the document bottom so it does not obscure the long screenshot. The viewer includes the broken homepage baseline; other before images are an earlier restoration checkpoint and must not be mistaken for the same broken baseline.
 
----
+## Route verdicts and five principal deltas
 
-## 3. Forensic Asset & Logo Verification
+“Close” means recognizable composition with remaining differences; it does not mean pixel parity. “Material delta” means a visible mismatch remains. Severity describes the remaining visual gap, separately from working behavior.
 
-Every logo in `public/assets/tools/` was audited against official brand marks and Simple Icons vector geometry:
+| Route/state | Verdict | Five principal deltas (fixed or remaining) |
+|---|---|---|
+| `/` | Close — medium | Clean hero replaces contaminated crop; large heading/CTA hierarchy restored; logo/header scale restored; featured cards return to first fold; character poses and skyline remain approximate. |
+| `/modules` | Desktop close / mobile material delta — medium | Desktop featured height reduced to 208px; six secondary modules use denser rows; filter/search remain functional; current catalog has three featured entries versus four in reference; mobile ordering/artwork remains different. |
+| Desktop mega menu | Close — low | Centered under navigation; width restored to 660px; compact item spacing; hover bridge prevents accidental closure; icon/text metrics remain approximate. |
+| `/tools` | Desktop close / mobile material delta — medium | Directory hierarchy retained; real available marks used; unverified marks rendered as text; live catalog counts preserved; mobile tool ordering differs from the reference. |
+| `/tools/n8n` | Close — medium | Genuine supplied mark retained; structured hero restored; workflow is live DOM; content remains instructional; workflow contains three meaningful nodes versus four in reference. |
+| `/tools/hermes-agent` | Close — medium | Hero reduced to 380px; cards compacted; process bar appears earlier; clean artwork replaces screen crop; character and low-resolution supplied mark differ from reference fidelity. |
+| `/paths/ai-automation` | Close — medium | Heading wraps deliberately; artwork reduced to 310px; result panel compacted; rail and four timeline circles restored; truthful CTA omits unsupported bundle/certificate claims. |
+| `/modules/n8n-google-sheets` | Close — low | Artwork reduced to 280px; purchase sidebar widened to 400px; learning steps compacted; template preview reaches first fold; n8n PNG no longer becomes a white square under a brightness filter. |
+| `/learn/n8n-google-sheets/2` | Material delta — high | Real step 2 stays coherent; reference depicts different step/content; mobile gutters fixed; dock remains usable; typography/diagram differ from the reference. |
+| `/library` | Close — medium | Library grid retained; navigation works; local progress stays local; demo labeling replaces implied real account; smaller stats icons and public header differ from reference. |
+| `/progress` | Material delta — medium | Progress state persists locally; reset works; layout hierarchy retained; result previews remain text rather than illustrated thumbnails; text scale is smaller than reference. |
+| `/community` | Material delta — medium | Card spacing compacted; reaction selector fixed; local composer works; demo posts use text and initial avatars rather than reference thumbnails; unsupported social proof removed. |
+| `/login` | Derived layout — no parity rating | No approved login mockup; consistent brand/header; responsive form; validation works; submission clearly describes unavailable real authentication. |
+| Supplemental `/learn/n8n-google-sheets/3` | Close hierarchy — medium | Correct later lesson retained; reference subject closer; live workflow used; diagram geometry differs; content is not copied from screenshot. |
+| Supplemental `/learn/gemini-slide-assignment/2` | Material delta — medium | Correct Gemini lesson; eight mobile slide cards now visible; horizontal preview overflow removed; template/task content remains below first fold; Malaysia Utility typography differs from reference serif styling. |
 
-- **Supplied Official Assets (Untouched):**
-  - SiapSatu Logo: `brand/logo-concepts/siapsatu-primary-final.png` (SHA256: `ae9bb07d...`)
-  - n8n Mark: `brand/tool-logos/n8n-official.png` (SHA256: `91dbb883...`)
-  - Hermes Agent: `brand/tool-logos/hermes-agent-official.png` (SHA256: `5fbced60...`)
-- **Simple Icons Geometry Verified (Exact SVG Path Match):**
-  - `chatgpt.svg`, `claude.svg`, `cursor.svg`, `gemini.svg`, `perplexity.svg`, `make.svg`, `zapier.svg`, `github.svg`, `vercel.svg`, `canva.svg`, `figma.svg`, `notion.svg`, `meta.svg`, `whatsapp.svg`.
-- **Neutral Text Treatments (Honest Provenance):**
-  - `notebooklm.svg`: Neutral `NLM` text badge (Simple Icons retrieval timed out).
-  - `codex.svg`: Neutral `Codex` text badge (no standalone official mark available).
-  - `antigravity.svg`: Neutral `AG` text badge.
-  - `vibecode.svg`: Authored code-bracket icon for learning topic.
+## Verification
 
----
+- Production build: passed. See [build log](../artifacts/visual-qa/astra/build-final.log).
+- TypeScript: passed. See [typecheck log](../artifacts/visual-qa/astra/typecheck-final.log).
+- ESLint: passed. See [lint log](../artifacts/visual-qa/astra/lint-final.log).
+- Playwright: **47 passed, 7 skipped, 0 failed**. Skips are explicit device guards. See [test log](../artifacts/visual-qa/astra/test-results-final.log).
+- Geometry: **84 route/viewport results, no horizontal overflow, broken images or recorded page exceptions**.
+- Behavior coverage includes navigation and menu keyboard handling, search/filter URL history, reverse scrolling, copy success/fallback, checkout preview focus, local lesson/progress persistence, malformed local storage, community demo interactions and honest login behavior.
+- Runtime network audit distinguishes cancelled Next.js prefetches only when their request carries `next-router-prefetch: 1`. Such cancellations remain recorded separately; real failed requests and HTTP/console errors are findings. Live deployment verification is recorded separately in `RELEASE.md`.
 
-## 4. Responsive & Accessibility Validation
+## Preservation and limits
 
-- **Viewport Geometry (`geometry.json`):**
-  - `1440x1024` (Desktop): `overflow: false`, `brokenImages: 0`, `errors: 0`.
-  - `1280x800` (Small Desktop): `overflow: false`, `brokenImages: 0`, `errors: 0`.
-  - `768x1024` (Tablet): `overflow: false`, `brokenImages: 0`, `errors: 0`.
-  - `430x932` (Large Mobile): `overflow: false`, `brokenImages: 0`, `errors: 0`.
-  - `390x844` (Standard Mobile): `overflow: false`, `brokenImages: 0`, `errors: 0`.
-  - `360x800` (Compact Mobile): `overflow: false`, `brokenImages: 0`, `errors: 0`.
-- **Keyboard & Focus Navigation:**
-  - Mega Menu: Keyboard arrow navigation, focus loop, and `Escape` key trigger restoration.
-  - Checkout Modal: Keyboard focus trap (`Tab`/`Shift+Tab`) with `Escape` dismiss and return focus to trigger button (`src/lib/useDialogFocus.ts`).
-  - Mobile Drawer: Focus trapped inside drawer, body scroll locked, mounted via `createPortal`.
-- **Accessible Clipboard Action:**
-  - `CopyTemplate.tsx` implements `navigator.clipboard.writeText` with automated fallback to `document.execCommand("copy")` inside a hidden textarea for headless/restricted contexts.
+Protected original logo/n8n/Hermes assets and runtime copies were hash-verified. Original reference files were not edited by this repair. Four pre-existing deleted legacy mockups and untracked duplicate reference files are outside the repair and are not included in its commit. A recoverable pre-repair archive remains local under `artifacts/visual-qa/astra/recovery/`.
 
----
-
-## 5. Verification Command Logs
-
-```bash
-# 1. Typecheck
-$ npm run typecheck
-> tsc --noEmit
-# Exit code 0 (0 errors)
-
-# 2. Lint
-$ npm run lint
-> next lint
-✔ No ESLint warnings or errors
-# Exit code 0
-
-# 3. Production Build
-$ npm run build
-> next build
-✓ Compiled successfully
-✓ Generating static pages (13/13)
-# Exit code 0
-
-# 4. Playwright End-to-End Suite
-$ npm run test:e2e
-47 passed, 7 skipped (cross-platform guards), 0 failed
-# Exit code 0
-```
+The remaining reader, progress and community differences above are visible in the comparison evidence. They are not labeled exact matches or hidden behind the successful engineering checks. Mobile catalog/tool ordering and illustrated result thumbnails need further design work for closer reference parity.

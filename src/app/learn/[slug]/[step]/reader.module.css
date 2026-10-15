@@ -68,7 +68,7 @@
   display: grid;
   grid-template-columns: 280px 1fr 340px;
   gap: 2rem;
-  padding: 2rem 0 6rem;
+  padding: 2rem var(--page-gutter) 6rem;
   align-items: start;
 }
 
@@ -682,13 +682,13 @@
 }
 @media (max-width: 700px) {
   .readerHeader {
-    padding: 14px 0;
+    padding: 10px 0;
   }
   .readerHeaderInner {
     gap: 10px;
   }
   .readerLogo {
-    width: 160px;
+    width: 145px;
   }
   .searchBox {
     display: none;
@@ -703,8 +703,8 @@
   .readerLayout {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    padding-block: 8px 145px;
+    gap: 10px;
+    padding-block: 6px 110px;
   }
   .chapterMenu {
     width: 100%;
@@ -712,9 +712,9 @@
   .chapterMenu > summary {
     display: block;
     cursor: pointer;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
-    padding: 10px 12px;
+    padding: 8px 10px;
     border-radius: 10px;
     background: #f1f5fa;
   }
@@ -729,38 +729,52 @@
     margin-top: 8px;
   }
   .centerCol {
-    gap: 14px;
+    gap: 9px;
     width: 100%;
   }
   .mainHeadline {
-    font-size: 32px;
+    font-size: 27px;
   }
   .lessonSubtitle {
-    font-size: 15px;
+    font-size: 13px;
   }
   .outcomeCallout {
-    font-size: 13px;
+    font-size: 12px;
+    padding: 8px 10px;
   }
   .stepDetailBox {
-    padding: 16px;
+    padding: 12px;
   }
   .stepDetailTitle {
-    font-size: 23px;
+    font-size: 21px;
   }
   .stepDetailSub {
-    font-size: 13px;
+    font-size: 12px;
   }
   .instructionTitle {
-    font-size: 15px;
+    font-size: 13px;
   }
   .instructionDetail {
-    font-size: 14px;
+    font-size: 13px;
+    line-height: 1.4;
   }
   .lessonBodyGrid {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
+  .eyebrowBadge { font-size: 9px; margin: 0; }
+  .stepDetailHeader { margin-bottom: 12px; }
+  .instructionsList { gap: 8px; }
+  .instructionItem { gap: 7px; }
+  .instructionNum { width: 20px; height: 20px; font-size: 11px; }
+  .sectionSmallHeading { font-size: 15px; margin: 12px 0 6px; }
+  .slideReader .stepDetailBox { padding: 12px 0 0; border-top: 1px solid var(--ss-line); background: transparent; border-radius: 0; }
+  .slideReader .stepDetailHeader { flex-wrap: wrap; gap: 8px; }
+  .slideReader .stepDetailHeader > div { display: contents; }
+  .slideReader .stepDetailTitle { flex: 1; }
+  .slideReader .stepDetailSub { flex-basis: 100%; }
   .rightCol {
     display: flex;
     width: 100%;
@@ -804,7 +818,8 @@
     font-size: 14px;
   }
   .officialLinkStrip {
-    padding: 12px;
+    padding: 8px;
+    margin-top: 0;
   }
   .readerLayout .rightCol .taskBox {
     padding: 18px;

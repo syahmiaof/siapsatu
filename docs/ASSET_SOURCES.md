@@ -11,7 +11,7 @@ Verified 15 October 2026. This replaces inaccurate descriptions of rectangular s
 | `tools/n8n.png` | `brand/tool-logos/n8n-official.png` | Supplied bytes unchanged. Official label comes from the supplied filename. |
 | `tools/hermes-agent.png` | `brand/tool-logos/hermes-agent-official.png` | Supplied bytes unchanged. Limited source resolution remains visible at large sizes. |
 
-Runtime paths above are relative to `public/assets/`. SHA-256 checks: [protected assets](../artifacts/visual-qa/astra/protected-assets.json). Neither `brand/` nor `mockups/` was edited. `scripts/prepare_assets.py` now only reproduces these copies and crop. It no longer crops mockup UI, invents marks, or overwrites provenance.
+Runtime paths above are relative to `public/assets/`. SHA-256 checks: [protected assets](../artifacts/visual-qa/astra/protected-assets.json), [recovery verification](../artifacts/visual-qa/astra/recovery/protected-assets-verified.json). All three originals and runtime copies still match. This repair did not modify `brand/` or `mockups/`; unrelated deleted legacy references and added copies were already present in the workspace. `scripts/prepare_assets.py` only reproduces these copies and the logo crop. It does not crop mockup UI, invent marks, or overwrite provenance.
 
 ## Clean artwork
 
@@ -44,3 +44,5 @@ Exact URLs, hashes and retrieval results: [new marks](../artifacts/visual-qa/ast
 ## Retired screenshot crops
 
 Old `hero-learners.png`, `community-learners.png`, `n8n-hero-character.png`, `hermes-hero-character.png`, `path-hero-character.png`, avatar and thumbnail crops are historical rectangular portions of generated mockups. Some contain UI/text. They are retained as historical files, **not isolated artwork**, and are not rendered by rebuilt route components. Dormant mock-data image paths do not constitute runtime usage.
+
+The later `hero-malaysia-utility.png` was visually inspected during recovery: it includes baked-in navigation, a login button, text fragments and a sticky note. It has been removed from `BrandScene` runtime usage. `community-discussion.png` is another rectangular reference crop; the shared notice now uses the clean transparent trio instead. Both files remain on disk for recovery history, not as approved runtime assets. The prior implementation and screenshots are archived under `artifacts/visual-qa/astra/recovery/`.

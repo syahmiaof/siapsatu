@@ -199,7 +199,7 @@ function DirectoryContent() {
 
               <RevealSection className={styles.featuredGrid}>
                 {featuredList.map((m) => (
-                  <ModuleCard key={m.slug} module={m} variant="featured" />
+                  <ModuleCard key={m.slug} module={m} variant="featured" density="catalog" />
                 ))}
               </RevealSection>
             </section>
@@ -235,7 +235,7 @@ function DirectoryContent() {
 
               <RevealSection className={styles.compactGrid}>
                 {regularList.map((m) => (
-                  <ModuleCard key={m.slug} module={m} variant="compact" />
+                  <ModuleCard key={m.slug} module={m} variant="compact" density="catalog" />
                 ))}
               </RevealSection>
             </section>

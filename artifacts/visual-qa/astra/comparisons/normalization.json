@@ -88,6 +88,17 @@
     "comparedHeight": 1000
   },
   {
+    "slug": "1440-learn-n8n-google-sheets-2",
+    "reference": "ui-06-lesson-reader-n8n.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
     "slug": "1440-learn-n8n-google-sheets-3",
     "reference": "ui-06-lesson-reader-n8n.png",
     "originalSize": [
@@ -155,6 +166,17 @@
   },
   {
     "slug": "390-learn-gemini-slide-assignment-2",
+    "reference": "lesson-mobile-siapsatu-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 0,
+    "width": 390,
+    "comparedHeight": 843
+  },
+  {
+    "slug": "390-learn-n8n-google-sheets-2",
     "reference": "lesson-mobile-siapsatu-v2.png",
     "originalSize": [
       853,

@@ -58,7 +58,7 @@
   --ss-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Layout Constraints */
-  --ss-max-width: 1600px;
-  --ss-header-height: 76px;
+  --ss-max-width: 1400px;
+  --ss-header-height: 80px;
   --ss-mobile-nav-height: 68px;
 }

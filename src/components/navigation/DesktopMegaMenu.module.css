@@ -166,26 +166,27 @@
 }
 
 .menuOverlay {
-  top: 100%;
+  top: calc(100% + 26px);
   left: 50%;
   transform: translateX(-50%);
-  width: 740px;
-  padding: 24px;
+  width: 660px;
+  padding: 20px;
   border-radius: 0 0 22px 22px;
   animation: none;
 }
 .menuOverlay:before {
   content: "";
   position: absolute;
-  height: 12px;
+  height: 28px;
   left: 0;
   right: 0;
-  top: -12px;
+  top: -28px;
 }
 .menuItem {
   font-size: 15px;
-  padding: 10px 6px;
+  padding: 6px;
 }
+.column { gap: 8px; }
 .columnTitle {
   font-size: 18px;
 }

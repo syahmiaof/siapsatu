@@ -17,15 +17,15 @@
    Collecting build traces ...
 
 Route (app)                              Size     First Load JS
-┌ ○ /                                    2.38 kB         147 kB
+┌ ○ /                                    2.4 kB          147 kB
 ├ ○ /_not-found                          873 B          88.2 kB
-├ ○ /community                           5.74 kB         162 kB
-├ ƒ /learn/[slug]/[step]                 6.15 kB         162 kB
-├ ○ /library                             4.96 kB         161 kB
+├ ○ /community                           5.73 kB         162 kB
+├ ƒ /learn/[slug]/[step]                 7.73 kB         164 kB
+├ ○ /library                             4.95 kB         162 kB
 ├ ○ /login                               4.01 kB         149 kB
-├ ○ /modules                             6.03 kB         162 kB
-├ ƒ /modules/[slug]                      6.34 kB         163 kB
-├ ○ /paths/ai-automation                 5.35 kB         162 kB
+├ ○ /modules                             6.1 kB          163 kB
+├ ƒ /modules/[slug]                      6.33 kB         163 kB
+├ ○ /paths/ai-automation                 5.36 kB         162 kB
 ├ ○ /progress                            3.42 kB         160 kB
 ├ ○ /tools                               4.63 kB         161 kB
 ├ ○ /tools/hermes-agent                  2.22 kB         147 kB
@@ -33,7 +33,7 @@ Route (app)                              Size     First Load JS
 + First Load JS shared by all            87.3 kB
   ├ chunks/117-33a5490b659f19af.js       31.7 kB
   ├ chunks/fd9d1056-1757cfae5c74b74c.js  53.6 kB
-  └ other shared chunks (total)          1.96 kB
+  └ other shared chunks (total)          1.95 kB
 
 
 ○  (Static)   prerendered as static content
