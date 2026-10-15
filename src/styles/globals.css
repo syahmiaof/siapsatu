@@ -84,8 +84,8 @@ svg {
   max-width: var(--ss-max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: clamp(20px, 2.42vw, 31px);
+  padding-right: clamp(20px, 2.42vw, 31px);
 }
 
 @media (max-width: 640px) {

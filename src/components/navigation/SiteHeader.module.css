@@ -148,35 +148,46 @@
 }
 
 .header {
-  height: 100px;
-  background: #fff;
+  height: 76px;
+  background: transparent;
   backdrop-filter: none;
   border: 0;
   position: relative;
 }
 .logo {
-  width: 290px;
+  width: 230px;
   height: auto;
 }
 .leftBrand {
-  flex: 1;
-  gap: 0;
+  display: flex;
+  align-items: center;
+  gap: clamp(40px, 16vw, 215px);
 }
 .desktopNav {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  gap: 38px;
+  position: static;
+  transform: none;
+  display: flex;
+  align-items: center;
+  gap: 34px;
 }
 .navLink {
-  font-size: 20px;
-  min-height: 48px;
+  font-size: 16px;
+  font-weight: 700;
+  min-height: auto;
+  padding: 8px 4px;
+  color: var(--ss-navy-950);
 }
 .rightActions a {
-  font-size: 19px;
-  min-width: 150px;
-  min-height: 50px;
-  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  min-width: 112px;
+  min-height: 40px;
+  padding: 9px 22px;
+  border-radius: 9999px;
+  background: #ffffff;
+  color: var(--ss-navy-950);
+  border: 1.5px solid rgba(3, 20, 58, 0.12);
+  box-shadow: 0 4px 14px rgba(3, 20, 58, 0.08);
 }
 @media (max-width: 1100px) {
   .logo {

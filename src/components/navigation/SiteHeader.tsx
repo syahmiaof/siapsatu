@@ -76,17 +76,10 @@ export function SiteHeader() {
             </div>
 
             <Link
-              href="/tools"
-              className={`${styles.navLink} ${isToolsActive ? styles.active : ""}`}
-            >
-              Tools
-            </Link>
-
-            <Link
               href="/paths/ai-automation"
               className={`${styles.navLink} ${isLaluanActive ? styles.active : ""}`}
             >
-              Laluan
+              Cara kerja
             </Link>
 
             <Link
