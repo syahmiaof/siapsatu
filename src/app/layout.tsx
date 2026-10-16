@@ -20,9 +20,36 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://siapsatu.syahmiaof.my",
+  ),
   title: "SiapSatu — Satu modul. Satu hasil.",
   description:
     "Panduan mudah untuk AI, tools & software. RM10 satu modul, dengan satu hasil yang boleh anda terus guna.",
+  openGraph: {
+    title: "SiapSatu — Satu modul. Satu hasil.",
+    description:
+      "Panduan mudah untuk AI, tools & software. RM10 satu modul, dengan satu hasil yang boleh anda terus guna.",
+    url: "https://siapsatu.syahmiaof.my",
+    siteName: "SiapSatu",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1505,
+        height: 1045,
+        alt: "SiapSatu — Satu modul. Satu hasil.",
+      },
+    ],
+    locale: "ms_MY",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SiapSatu — Satu modul. Satu hasil.",
+    description:
+      "Panduan mudah untuk AI, tools & software. RM10 satu modul, dengan satu hasil yang boleh anda terus guna.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
