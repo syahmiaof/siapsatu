@@ -102,3 +102,25 @@ Home retains the clean parity-v2 trio and distinct discussion image; their origi
 - CommunityArtwork uses the distinct discussion trio and authored ribbon/skyline. DemoThumbnail renders illustrative tools digest, portfolio and workflow examples in DOM/SVG, with explicit example captions. These are not actual student work. Small illustrated avatars reuse the v2 characters and are labelled Watak demo. Counts are explicitly Suka demo / Balasan demo; actions remain local. No invented membership, testimonial evidence, WhatsApp availability, certificate or bundle pricing was added.
 
 Artwork has been reconstructed from visual references; differences in linework and exact pose remain documented in VISUAL_QA.md.
+
+## UI fidelity polish v4 — 17 Oct 2026
+
+All protected originals in `mockups/`, `public/assets/brand/`, verified tool marks, and historical v2/v3 assets remain byte-identical and unmodified.
+
+### Vector Art Suite (`public/assets/illustrations/ui-v4/`)
+Authored clean SVG vectors with stable viewBox geometry and intrinsic aspect ratios:
+1. `home-ribbon.svg` (`viewBox="0 0 900 580"`): Organic fluid S-curve Jalur Gemilang with deep midnight navy negative space, eliminating previous diagonal highway lane appearance.
+2. `tools-ribbon.svg` (`viewBox="0 0 800 250"`): Wide sweep banner with dedicated navy header zone and clean clearance for emblem.
+3. `path-ribbon.svg` (`viewBox="0 0 900 580"`): Dual-layered flag sweep framing path header and timeline.
+4. `community-ribbon.svg` (`viewBox="0 0 900 300"`): Top banner sweep framing discussion header.
+5. `emblem.svg` (`viewBox="0 0 172 121"`): Bintang Persekutuan 14-point star and crescent with heraldic vertical symmetry, scaled to fit inside the clear navy negative space without ribbon collisions.
+6. `growth-arrow.svg` (`viewBox="0 0 280 280"`): Crisp green (`#00ba51`) vector directional accent with rounded joins, positioned in top-right without covering handwritten DOM note.
+7. `kl-skyline.svg` (`viewBox="0 0 320 320"`): Petronas Twin Towers + Menara KL silhouette with sunset radial gradient backdrop, positioned subordinately behind learners.
+8. Channel icons: `channel-semua.svg`, `channel-pengumuman.svg`, `channel-tanya.svg`, `channel-kongsi.svg`, `channel-idea.svg`.
+
+### Unclipped Desk Baseline Learner
+- `public/assets/illustrations/ui-v4/path-learner-1100.webp` & `600.webp`: Full desk baseline with 100% intact bottom pixels, anchored at `bottom: 0; vertical-align: bottom;`.
+
+### Community Demo Project Previews
+- `public/assets/illustrations/community-digest-thumb.png`, `community-portfolio-thumb.png`, `community-workflow-thumb.png`: Mockup-derived project previews with honest prototype captions (`Ilustrasi contoh`, `Rekaan demo`, `Diagram contoh`). No false claims of live student submissions.
+

@@ -8,7 +8,7 @@ export function PathArtwork() {
     <div className={styles.scene} data-hero-art aria-hidden="true">
       <Image
         className={styles.ribbon}
-        src="/assets/illustrations/ui-v3/path-ribbon.svg"
+        src="/assets/illustrations/ui-v4/path-ribbon.svg"
         alt=""
         width={900}
         height={580}
@@ -16,31 +16,31 @@ export function PathArtwork() {
       />
       <Image
         className={styles.emblem}
-        src="/assets/illustrations/ui-v3/emblem.svg"
+        src="/assets/illustrations/ui-v4/emblem.svg"
         alt=""
-        width={162}
-        height={100}
+        width={172}
+        height={121}
         unoptimized
       />
       <Image
         className={styles.arrow}
-        src="/assets/illustrations/ui-v3/growth-arrow.svg"
+        src="/assets/illustrations/ui-v4/growth-arrow.svg"
         alt=""
-        width={320}
-        height={340}
+        width={280}
+        height={280}
         unoptimized
       />
       <div className={styles.learner}>
         <picture>
           <source
             media="(max-width:700px)"
-            srcSet="/assets/illustrations/ui-v3/path-learner-600.webp"
+            srcSet="/assets/illustrations/ui-v4/path-learner-600.webp"
           />
           <Image
-            src="/assets/illustrations/ui-v3/path-learner-1100.webp"
+            src="/assets/illustrations/ui-v4/path-learner-1100.webp"
             alt=""
             width={1100}
-            height={741}
+            height={764}
             sizes="(max-width:700px) 90vw, 45vw"
             priority
           />

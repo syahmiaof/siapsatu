@@ -1,69 +1,69 @@
 import Image from "next/image";
-import { ArrowRight, Code2, Globe, Mail, Workflow } from "lucide-react";
 import styles from "./DemoThumbnail.module.css";
 
-/** Illustrative examples, deliberately not represented as real student submissions. */
-export function DemoThumbnail({ postId }: { postId: string }) {
-  if (postId === "post-1")
+interface DemoThumbnailProps {
+  postId: string;
+}
+
+/**
+ * Visual student project demo thumbnails matching approved mockup (ui-09-community-hub.png).
+ * Clean, realistic previews with honest prototype figcaptions.
+ */
+export function DemoThumbnail({ postId }: DemoThumbnailProps) {
+  if (postId === "post-1") {
     return (
       <figure
         className={`${styles.thumb} ${styles.digest}`}
         aria-label="Ilustrasi contoh tools digest"
       >
-        <div className={styles.toolMarks}>
-          <Image
-            src="/assets/tools/gemini-google-v2.png"
-            width={28}
-            height={28}
-            alt=""
-          />
-          <Image src="/assets/tools/n8n.png" width={28} height={28} alt="" />
-          <Code2 size={25} />
-        </div>
         <Image
-          className={styles.learner}
-          src="/assets/illustrations/ui-v3/path-learner-600.webp"
-          alt=""
-          width={600}
-          height={404}
-          sizes="170px"
+          src="/assets/illustrations/community-digest-thumb.png"
+          alt="Weekly Tools Digest: AI, No-code & Automation"
+          width={256}
+          height={115}
+          className={styles.thumbImage}
+          priority
         />
-        <figcaption>Ilustrasi contoh</figcaption>
+        <figcaption className={styles.caption}>Ilustrasi contoh</figcaption>
       </figure>
     );
-  if (postId === "post-2")
+  }
+
+  if (postId === "post-2") {
     return (
       <figure
         className={`${styles.thumb} ${styles.portfolio}`}
         aria-label="Contoh rekaan portfolio"
       >
-        <div className={styles.browserDots}>● ● ●</div>
-        <strong>My Portfolio</strong>
-        <span>Design · Code · Build</span>
-        <div className={styles.projectTiles}>
-          <i />
-          <i />
-          <i />
-        </div>
-        <figcaption>Rekaan demo</figcaption>
+        <Image
+          src="/assets/illustrations/community-portfolio-thumb.png"
+          alt="Contoh rekaan portfolio website"
+          width={226}
+          height={124}
+          className={styles.thumbImage}
+        />
+        <figcaption className={styles.caption}>Rekaan demo</figcaption>
       </figure>
     );
-  if (postId === "post-3")
+  }
+
+  if (postId === "post-3") {
     return (
       <figure
         className={`${styles.thumb} ${styles.workflow}`}
         aria-label="Diagram workflow contoh"
       >
-        <div className={styles.nodes}>
-          <Globe />
-          <ArrowRight size={14} />
-          <Workflow />
-          <ArrowRight size={14} />
-          <Mail />
-        </div>
-        <span>Trigger → Proses → Hantar</span>
-        <figcaption>Diagram contoh</figcaption>
+        <Image
+          src="/assets/illustrations/community-workflow-thumb.png"
+          alt="Diagram workflow n8n dengan ralat HTTP Request"
+          width={260}
+          height={101}
+          className={styles.thumbImage}
+        />
+        <figcaption className={styles.caption}>Diagram contoh</figcaption>
       </figure>
     );
+  }
+
   return null;
 }

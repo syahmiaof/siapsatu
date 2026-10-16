@@ -67,5 +67,30 @@ Commands: npm run build; npm run typecheck; npm run lint; QA_URL=http://localhos
 - Production runtime audit: **28 checks, 0 findings**. [Runtime evidence](../artifacts/visual-qa/ui-v3/runtime-live.json).
 - All seven viewport variants × four changed routes captured live, including entrance, settled, full-page and reduced-motion states. **0 overflow, 0 broken images, 0 page errors**. [Live geometry](../artifacts/visual-qa/ui-v3/live/geometry.json).
 - Matched local/live card-top positions differ by **0 CSS pixels**. Largest whole-image mean absolute RGB difference is 2.109 on the 0–255 channel scale; this numerical comparison is not a perceptual-parity score. [Comparison measurements](../artifacts/visual-qa/ui-v3/local-live-comparison.json).
-- Reference pairs, overlays and user-capture comparisons now use the live captures. Curated fold screenshots are included in Git; complete entrance/full/reduced captures remain available locally.
 - Release evidence is committed separately from the tested application. Subsequent evidence-only commits leave application/runtime files identical; deployment status and public asset checks are verified after that push.
+
+## UI-v4 Polish & Visual Fidelity Finish — 17 October 2026
+
+- **Viewports Tested (7 total)**: `1505×1029` (approved desktop match), `1880×880` (wide-short), `1440×900` (standard laptop), `1248×588` @ DPR 1.5, `768×1024` (tablet), `390×844` (iPhone mobile), `360×800` (Android narrow).
+- **Routes Audited (4 total)**: `/`, `/tools`, `/paths/ai-automation`, `/community`.
+- **E2E Test Results**: **66 passed, 10 skips, 0 failures** across desktop and mobile chromium runners.
+- **Typecheck & Lint**: Clean pass (0 errors, 0 warnings).
+- **Geometric Landmark Parity (Desktop 1505×1029 vs Approved Reference Mockup)**:
+  - Header Bottom Y: `100px` (mockup reference: `110px`, Δ = -10px)
+  - Card Row Start Y: `575px` (mockup reference: `580px`, Δ = -5px)
+  - Community Notice Strip Start Y: `843px` (mockup reference: `845px`, Δ = -2px)
+  - First Card Y: `575px` (mockup reference: `580px`, Δ = -5px)
+  - Tools Grid Y: `443px` (mockup reference: `445px`, Δ = -2px)
+  - Community Central Feed Y: `378px` (mockup reference: `380px`, Δ = -2px)
+- **Defects Repaired**:
+  1. **Tools Emblem Collision**: Star/crescent repositioned in `DirectoryArtwork.module.css` (`left: 50%; top: 44%`) inside clean midnight navy negative space with >50px clearance from the sweeping red/white ribbon.
+  2. **Fluid Jalur Gemilang Ribbon**: Replaced rigid diagonal highway-lane silhouette with authored organic S-curve SVG (`home-ribbon.svg`, `tools-ribbon.svg`, `path-ribbon.svg`, `community-ribbon.svg`).
+  3. **Growth Arrow Visibility**: Upward-trending green vector accent (`growth-arrow.svg`) clearly visible in top-right quadrant without obscuring the DOM handwritten note.
+  4. **Learner Baseline Desk Integrity**: Replaced clipped learner with `path-learner-1100.webp` preserving 100% bottom pixels anchored at `bottom: 0`.
+  5. **Community 3-Column Layout**: Eliminated >600 lines of conflicting CSS overrides, established semantic CSS Grid template (`channels`, `hero`, `feed`, `sidebar`), integrated custom SVG channel icons, realistic demo thumbnails with prototype honesty labels, community guidelines, and practice challenge.
+  6. **Mobile Horizontal Overflow**: Resolved 406px `scrollWidth` on 390px/360px mobile community page by adding `min-width: 0; max-width: 100%; box-sizing: border-box; overflow-x: hidden;` to `.pageLayout` and `.channelsSidebar`.
+  7. **Strict Product Truth**: Retained honest standalone RM10 pricing, removed reference bundle/certificate copy, preserved authentic WhatsApp coming-soon preview copy.
+- **Evidence Directory**:
+  - `artifacts/visual-qa/ui-v4/post/`: 28 raw screenshots and `geometry.json`.
+  - `artifacts/visual-qa/ui-v4/comparisons/`: 28 side-by-side JPGs, 50% overlay PNGs, `contact-1505.jpg`, `landmark-analysis.json`, and `comparison-meta.json`.
+

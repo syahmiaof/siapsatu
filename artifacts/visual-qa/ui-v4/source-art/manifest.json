@@ -1,0 +1,355 @@
+{
+  "version": "v4-final",
+  "timestamp": "2026-10-17T01:30:00Z",
+  "engineer": "Visual Asset Engineer",
+  "summary": "Refined v4 asset suite resolving ribbon curvature, heraldic emblem symmetry & scale, Tools banner collision, directional growth arrow clearance, KL skyline sunset depth, unclipped desk baseline crop, and community 3-column channel elements.",
+  "assets": [
+    {
+      "filename": "emblem.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\emblem.svg",
+      "sha256": "c99bec2617222625dd6fed56d809bea88ad7316607e48862edf850de3f87c5cf",
+      "bytes": 662,
+      "format": "SVG",
+      "viewBox": "0 0 172 121",
+      "viewBoxDimensions": [
+        172.0,
+        121.0
+      ],
+      "aspectRatio": "172.0:121.0"
+    },
+    {
+      "filename": "growth-arrow.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\growth-arrow.svg",
+      "sha256": "e37049e923e9c2acce9d1c0d57cbc28b8679662356cf3d6a8acea33c2871e877",
+      "bytes": 280,
+      "format": "SVG",
+      "viewBox": "0 0 280 280",
+      "viewBoxDimensions": [
+        280.0,
+        280.0
+      ],
+      "aspectRatio": "280.0:280.0"
+    },
+    {
+      "filename": "kl-skyline.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\kl-skyline.svg",
+      "sha256": "b9dd5ab4b36efe4579cba687082f55395f896ab31821a9f64199aeeff07e15d3",
+      "bytes": 5198,
+      "format": "SVG",
+      "viewBox": "0 0 320 320",
+      "viewBoxDimensions": [
+        320.0,
+        320.0
+      ],
+      "aspectRatio": "320.0:320.0"
+    },
+    {
+      "filename": "home-ribbon.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\home-ribbon.svg",
+      "sha256": "faddb3489329543945e1e77b007ecd853d37bd11b3f1821522c09d75b7d26980",
+      "bytes": 1035,
+      "format": "SVG",
+      "viewBox": "0 0 900 580",
+      "viewBoxDimensions": [
+        900.0,
+        580.0
+      ],
+      "aspectRatio": "900.0:580.0"
+    },
+    {
+      "filename": "path-ribbon.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\path-ribbon.svg",
+      "sha256": "df38a14d5f91226c985f7cfb3bd6f61ab185d028ffbd8a17bab52dbdd94a0a14",
+      "bytes": 1362,
+      "format": "SVG",
+      "viewBox": "0 0 900 580",
+      "viewBoxDimensions": [
+        900.0,
+        580.0
+      ],
+      "aspectRatio": "900.0:580.0"
+    },
+    {
+      "filename": "tools-ribbon.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\tools-ribbon.svg",
+      "sha256": "d27d090c372a66a4a6eb7dde88c7ac4efec2946332397766d5f91e7a92449740",
+      "bytes": 869,
+      "format": "SVG",
+      "viewBox": "0 0 800 250",
+      "viewBoxDimensions": [
+        800.0,
+        250.0
+      ],
+      "aspectRatio": "800.0:250.0"
+    },
+    {
+      "filename": "community-ribbon.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\community-ribbon.svg",
+      "sha256": "5f6af9148c9a82b4617f593d915fcde2eb20a5b8a830ed355378cea9270aae58",
+      "bytes": 773,
+      "format": "SVG",
+      "viewBox": "0 0 900 300",
+      "viewBoxDimensions": [
+        900.0,
+        300.0
+      ],
+      "aspectRatio": "900.0:300.0"
+    },
+    {
+      "filename": "community-hero.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\community-hero.svg",
+      "sha256": "da8950b1efbb6d714c2e672ca7621704ba9ce3b3358c08332b4a623bdeb10569",
+      "bytes": 2428,
+      "format": "SVG",
+      "viewBox": "0 0 900 240",
+      "viewBoxDimensions": [
+        900.0,
+        240.0
+      ],
+      "aspectRatio": "900.0:240.0"
+    },
+    {
+      "filename": "channel-pengumuman.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\channel-pengumuman.svg",
+      "sha256": "47be3380e87d9a93ef43354755d150b52b8250211963b5646344333dc779dd84",
+      "bytes": 495,
+      "format": "SVG",
+      "viewBox": "0 0 32 32",
+      "viewBoxDimensions": [
+        32.0,
+        32.0
+      ],
+      "aspectRatio": "32.0:32.0"
+    },
+    {
+      "filename": "channel-tanya.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\channel-tanya.svg",
+      "sha256": "377495e4fe6485fda27409e5e0310d3eac04805e6d587cc4a14af9ef76757273",
+      "bytes": 332,
+      "format": "SVG",
+      "viewBox": "0 0 32 32",
+      "viewBoxDimensions": [
+        32.0,
+        32.0
+      ],
+      "aspectRatio": "32.0:32.0"
+    },
+    {
+      "filename": "channel-kongsi.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\channel-kongsi.svg",
+      "sha256": "890c6c04103b66dc5594548505b7bcbf60592df62ec3bf189bb4b92d39cadbbe",
+      "bytes": 358,
+      "format": "SVG",
+      "viewBox": "0 0 32 32",
+      "viewBoxDimensions": [
+        32.0,
+        32.0
+      ],
+      "aspectRatio": "32.0:32.0"
+    },
+    {
+      "filename": "channel-idea.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\channel-idea.svg",
+      "sha256": "c08e8c8d645869d010ad3ab9409bb2f59b6f319e2ef14d871ec90ffc987ca611",
+      "bytes": 549,
+      "format": "SVG",
+      "viewBox": "0 0 32 32",
+      "viewBoxDimensions": [
+        32.0,
+        32.0
+      ],
+      "aspectRatio": "32.0:32.0"
+    },
+    {
+      "filename": "channel-semua.svg",
+      "path": "public\\assets\\illustrations\\ui-v4\\channel-semua.svg",
+      "sha256": "a98d4ed0df21fe966afee39c495795ddce856f5fc63c8fbd355368d0975e0d84",
+      "bytes": 483,
+      "format": "SVG",
+      "viewBox": "0 0 32 32",
+      "viewBoxDimensions": [
+        32.0,
+        32.0
+      ],
+      "aspectRatio": "32.0:32.0"
+    },
+    {
+      "filename": "path-learner-1100.webp",
+      "path": "public\\assets\\illustrations\\ui-v4\\path-learner-1100.webp",
+      "sha256": "3d3fe42a2ec1105bc0c8fec42c607be41e69e5ca244de42a94a8eccd4cc8054f",
+      "bytes": 82362,
+      "dimensions": [
+        1100,
+        764
+      ],
+      "format": "WEBP"
+    },
+    {
+      "filename": "path-learner-600.webp",
+      "path": "public\\assets\\illustrations\\ui-v4\\path-learner-600.webp",
+      "sha256": "a8d6b2f70bffff719d1d36b45375c99ab95eb110b1e0f55c7ae9e54c6a8a65a6",
+      "bytes": 38086,
+      "dimensions": [
+        600,
+        417
+      ],
+      "format": "WEBP"
+    }
+  ],
+  "designAnchors": {
+    "home_hero": {
+      "viewport": "1505x1045 and 1440x1024",
+      "ribbon": {
+        "file": "public/assets/illustrations/ui-v4/home-ribbon.svg",
+        "viewBox": "0 0 900 580",
+        "cssAnchor": {
+          "position": "absolute",
+          "inset": "0",
+          "width": "100%",
+          "height": "100%"
+        },
+        "preserveAspectRatio": "meet or slice (avoid \"none\")"
+      },
+      "emblem": {
+        "file": "public/assets/illustrations/ui-v4/emblem.svg",
+        "viewBox": "0 0 172 121",
+        "aspectRatio": "1.421 (172:121)",
+        "cssAnchor": {
+          "position": "absolute",
+          "left": "42%",
+          "top": "18%",
+          "width": "19%",
+          "height": "auto"
+        },
+        "negativeSpaceSafetyBuffer": "55px clearance above red ribbon stripe"
+      },
+      "arrow": {
+        "file": "public/assets/illustrations/ui-v4/growth-arrow.svg",
+        "viewBox": "0 0 280 280",
+        "aspectRatio": "1:1",
+        "cssAnchor": {
+          "position": "absolute",
+          "right": "11%",
+          "bottom": "12%",
+          "width": "34%",
+          "height": "auto"
+        },
+        "noteClearance": "38px clean gap away from handwritten text \"Ilmu hari ini, hasil esok.\""
+      },
+      "skyline": {
+        "file": "public/assets/illustrations/ui-v4/kl-skyline.svg",
+        "viewBox": "0 0 320 320",
+        "aspectRatio": "1:1",
+        "cssAnchor": {
+          "position": "absolute",
+          "right": "0%",
+          "bottom": "0%",
+          "width": "35%",
+          "height": "auto"
+        }
+      }
+    },
+    "tools_hero": {
+      "viewport": "1505x1045 and 1440x1024 desktop",
+      "banner": {
+        "file": "public/assets/illustrations/ui-v4/tools-ribbon.svg",
+        "viewBox": "0 0 800 250",
+        "cssAnchor": {
+          "position": "absolute",
+          "inset": "0",
+          "width": "100%",
+          "height": "100%"
+        }
+      },
+      "emblem": {
+        "file": "public/assets/illustrations/ui-v4/emblem.svg",
+        "viewBox": "0 0 172 121",
+        "cssAnchor": {
+          "position": "absolute",
+          "left": "27%",
+          "top": "10%",
+          "width": "20%",
+          "height": "auto"
+        },
+        "collisionStatus": "RESOLVED. Ribbon flows at y=215-225; emblem bottom is at y=137. 53px vertical negative space."
+      },
+      "arrow": {
+        "file": "public/assets/illustrations/ui-v4/growth-arrow.svg",
+        "viewBox": "0 0 280 280",
+        "cssAnchor": {
+          "position": "absolute",
+          "right": "18%",
+          "bottom": "0%",
+          "width": "28%",
+          "height": "auto"
+        }
+      }
+    },
+    "path_hero": {
+      "viewport": "1505x1045 and 1440x1024",
+      "ribbon": {
+        "file": "public/assets/illustrations/ui-v4/path-ribbon.svg",
+        "viewBox": "0 0 900 580",
+        "cssAnchor": {
+          "position": "absolute",
+          "inset": "0",
+          "width": "100%",
+          "height": "100%"
+        }
+      },
+      "emblem": {
+        "file": "public/assets/illustrations/ui-v4/emblem.svg",
+        "viewBox": "0 0 172 121",
+        "cssAnchor": {
+          "position": "absolute",
+          "left": "44%",
+          "top": "17%",
+          "width": "20%",
+          "height": "auto"
+        }
+      },
+      "arrow": {
+        "file": "public/assets/illustrations/ui-v4/growth-arrow.svg",
+        "viewBox": "0 0 280 280",
+        "cssAnchor": {
+          "position": "absolute",
+          "right": "8%",
+          "bottom": "13%",
+          "width": "32%",
+          "height": "auto"
+        }
+      },
+      "learner": {
+        "file_desktop": "public/assets/illustrations/ui-v4/path-learner-1100.webp",
+        "file_mobile": "public/assets/illustrations/ui-v4/path-learner-600.webp",
+        "aspectRatio": "1100:764 (1.440)",
+        "cropQuality": "100% intact unclipped desk baseline and opaque laptop base. 0px loss."
+      }
+    },
+    "community_hub": {
+      "viewport": "3-column desktop and responsive",
+      "ribbon": {
+        "file": "public/assets/illustrations/ui-v4/community-ribbon.svg",
+        "viewBox": "0 0 900 300"
+      },
+      "hero_standalone": {
+        "file": "public/assets/illustrations/ui-v4/community-hero.svg",
+        "viewBox": "0 0 900 240",
+        "includes": [
+          "fluid ribbon",
+          "navy night sky",
+          "group discussion bubble",
+          "chat dots bubble",
+          "radiating energy ticks"
+        ]
+      },
+      "channels": {
+        "pengumuman": "public/assets/illustrations/ui-v4/channel-pengumuman.svg",
+        "tanya": "public/assets/illustrations/ui-v4/channel-tanya.svg",
+        "kongsi": "public/assets/illustrations/ui-v4/channel-kongsi.svg",
+        "idea": "public/assets/illustrations/ui-v4/channel-idea.svg",
+        "semua": "public/assets/illustrations/ui-v4/channel-semua.svg"
+      }
+    }
+  }
+}

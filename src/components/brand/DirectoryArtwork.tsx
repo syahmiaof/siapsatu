@@ -11,20 +11,38 @@ export function DirectoryArtwork() {
         viewBox="0 0 800 250"
         preserveAspectRatio="none"
       >
-        <path fill="#062457" d="M0 250C84 193 55 89 154 40L226 0H800V250Z" />
+        {/* Clean Midnight Navy Negative Space */}
         <path
-          d="M0 267C179 104 297 263 443 76S640 123 830-34"
-          fill="none"
-          stroke="white"
-          strokeWidth="64"
-        />
-        <path
-          d="M0 267C179 104 297 263 443 76S640 123 830-34"
-          fill="none"
-          stroke="#ff1938"
-          strokeWidth="32"
+          fill="#062457"
+          d="M 40 250 C 90 190, 150 110, 240 50 C 340 10, 520 0, 800 0 V 250 H 40 Z"
         />
 
+        {/* Fluid Malaysian Ribbon: Sweeps strictly BELOW the emblem region */}
+        <g id="tools-fluid-ribbon">
+          <path
+            d="M -20 240 C 120 235, 260 230, 380 220 C 500 210, 580 80, 820 20"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="66"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M -20 240 C 120 235, 260 230, 380 220 C 500 210, 580 80, 820 20"
+            fill="none"
+            stroke="#ff1938"
+            strokeWidth="54"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M -20 240 C 120 235, 260 230, 380 220 C 500 210, 580 80, 820 20"
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth="18"
+            strokeLinejoin="round"
+          />
+        </g>
+
+        {/* Growth Arrow & Sparkles */}
         <path
           d="M475 260 603 149"
           fill="none"
@@ -44,10 +62,10 @@ export function DirectoryArtwork() {
       </svg>
       <Image
         className={styles.emblem}
-        src="/assets/illustrations/ui-v3/emblem.svg"
+        src="/assets/illustrations/ui-v4/emblem.svg"
         alt=""
-        width={162}
-        height={100}
+        width={172}
+        height={121}
         unoptimized
       />
       <p className={styles.caption}>

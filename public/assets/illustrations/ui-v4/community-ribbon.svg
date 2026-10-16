@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" fill="none">
+  <!-- Midnight Navy Negative Space -->
+  <path fill="#062457" d="M 80 300 C 160 210, 280 120, 440 60 C 580 15, 740 5, 900 0 V 300 H 80 Z"/>
+
+  <!-- Fluid Malaysian Ribbon (Jalur Gemilang) -->
+  <g id="comm-fluid-ribbon">
+    <path d="M -20 280 C 180 230, 340 160, 480 140 C 640 120, 760 60, 920 15" fill="none" stroke="#ffffff" stroke-width="64" stroke-linejoin="round"/>
+    <path d="M -20 280 C 180 230, 340 160, 480 140 C 640 120, 760 60, 920 15" fill="none" stroke="#ff1938" stroke-width="54" stroke-linejoin="round"/>
+    <path d="M -20 280 C 180 230, 340 160, 480 140 C 640 120, 760 60, 920 15" fill="none" stroke="#ffffff" stroke-width="18" stroke-linejoin="round"/>
+  </g>
+</svg>

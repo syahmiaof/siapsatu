@@ -2,132 +2,55 @@
   margin: 0;
   position: relative;
   width: 100%;
-  height: 128px;
+  max-width: 260px;
+  height: 122px;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 10px;
-  border: 1px solid #dbe4f1;
+  border: 1.5px solid var(--ss-line, #e2e8f0);
+  background: var(--ss-surface-subtle, #f8fafc);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(3, 20, 58, 0.04);
 }
-.thumb figcaption {
+
+.thumbImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform var(--ss-motion-fast, 180ms) ease;
+}
+
+.thumb:hover .thumbImage {
+  transform: scale(1.03);
+}
+
+.caption {
   position: absolute;
-  bottom: 5px;
-  left: 7px;
-  font: 600 9px/1.3 var(--font-body);
-  padding: 3px 5px;
-  background: white;
-  color: #062457;
-  border-radius: 4px;
-}
-.digest {
-  background: linear-gradient(145deg, #fff3cf 50%, #1777f2 50%);
-}
-.learner {
-  position: absolute;
-  width: 90%;
-  height: auto;
-  right: -7%;
-  bottom: 0;
-}
-.toolMarks {
-  position: absolute;
+  bottom: 6px;
   left: 8px;
-  top: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  z-index: 1;
-}
-.toolMarks > * {
-  background: white;
-  border-radius: 5px;
-  padding: 2px;
-}
-.portfolio {
-  background: #062457;
-  color: white;
-  padding: 7px 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.portfolio strong {
-  font: 800 19px var(--font-display);
-}
-.portfolio > span {
-  font-size: 9px;
-  color: #dbe4f1;
-}
-.browserDots {
-  font-size: 8px;
-  color: #ffd12a;
-  border-bottom: 1px solid #ffffff40;
-  padding-bottom: 4px;
-}
-.projectTiles {
-  display: flex;
-  gap: 5px;
-}
-.projectTiles i {
-  height: 22px;
-  width: 30%;
-  background: #ff5a0a;
-  border-radius: 3px;
-}
-.projectTiles i:nth-child(2) {
-  background: #ffd12a;
-}
-.projectTiles i:nth-child(3) {
-  background: #08bd59;
-}
-.workflow {
-  background: #edf2fe;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 8px;
-  gap: 10px;
-}
-.nodes {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  color: #062457;
-}
-.nodes svg:not([width="14"]) {
-  background: white;
-  padding: 5px;
-  width: 34px;
-  height: 34px;
-  border: 1px solid #dbe4f1;
-  border-radius: 8px;
-}
-.workflow > span {
+  background: rgba(6, 36, 87, 0.85);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-family: var(--font-body, system-ui, sans-serif);
   font-size: 10px;
-  text-align: center;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--ss-radius-pill, 9999px);
+  letter-spacing: 0.02em;
+  z-index: 2;
+  pointer-events: none;
 }
-@media (max-width: 600px) {
+
+@media (max-width: 900px) {
   .thumb {
-    height: 115px;
-  }
-  .learner {
-    width: 75%;
-  }
-  .toolMarks {
-    flex-direction: row;
-  }
-  .toolMarks > * {
-    width: 24px;
-    height: 24px;
+    max-width: 100%;
+    height: 140px;
   }
 }
 
-.learner {
-  height: 100%;
-  width: auto;
-  max-width: 90%;
-  object-fit: contain;
-  object-position: bottom right;
-  right: 0;
-}
-.thumb figcaption {
-  z-index: 2;
+@media (max-width: 600px) {
+  .thumb {
+    height: 125px;
+  }
 }

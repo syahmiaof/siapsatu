@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SiapSatu UI v4 Baseline Evidence & Comparisons</title>
+  <style>
+    body { max-width: 1200px; margin: 40px auto; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #0a192f; background: #f8fafc; }
+    h1 { color: #0f172a; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; }
+    h2 { color: #1e293b; margin-top: 32px; }
+    .metric-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    .metric-table th, .metric-table td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; font-size: 14px; }
+    .metric-table th { background: #f1f5f9; font-weight: 600; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 16px; margin-top: 16px; }
+    .card { background: white; border-radius: 8px; border: 1px solid #e2e8f0; padding: 12px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+    .card img { width: 100%; height: auto; border-radius: 4px; display: block; }
+    .card h3 { font-size: 14px; margin: 8px 0 4px; color: #334155; }
+    .links a { color: #2563eb; text-decoration: none; font-size: 13px; margin-right: 12px; }
+    .links a:hover { text-decoration: underline; }
+    .badge-pass { display: inline-block; padding: 2px 8px; border-radius: 4px; background: #dcfce7; color: #166534; font-size: 12px; font-weight: 600; }
+    .badge-warn { display: inline-block; padding: 2px 8px; border-radius: 4px; background: #fef9c3; color: #854d0e; font-size: 12px; font-weight: 600; }
+    .badge-fail { display: inline-block; padding: 2px 8px; border-radius: 4px; background: #fee2e2; color: #991b1b; font-size: 12px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>SiapSatu UI v4 Baseline Evidence & Reference Comparisons</h1>
+  <p>Fresh pre-change baseline across 7 required viewports and 4 key routes. Headless Playwright captured with fonts settled, full decode, animations settled, and reduced-motion validated.</p>
+  
+  <h2>Desktop 1505x1029 Reference Comparisons Overview</h2>
+  <img src="comparisons/contact-1505.jpg" style="max-width:100%; border-radius:8px; border:1px solid #cbd5e1;" alt="Desktop Reference Contact">
+
+  <h2>Landmark Alignment Summary (Desktop 1505x1029 Reference Match)</h2>
+  <table class="metric-table">
+    <thead>
+      <tr>
+        <th>Route</th>
+        <th>Landmark</th>
+        <th>Reference Offset</th>
+        <th>Actual Baseline</th>
+        <th>Delta (px)</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/</td>
+        <td><code>header_bottom_y</code></td>
+        <td>110px</td>
+        <td>100px</td>
+        <td>-10px</td>
+        <td><span class="badge-pass">NOMINAL</span></td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td><code>card_row_start_y</code></td>
+        <td>580px</td>
+        <td>575px</td>
+        <td>-5px</td>
+        <td><span class="badge-pass">NOMINAL</span></td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td><code>community_strip_start_y</code></td>
+        <td>845px</td>
+        <td>843px</td>
+        <td>-2px</td>
+        <td><span class="badge-pass">NOMINAL</span></td>
+      </tr>
+      <tr>
+        <td>/</td>
+        <td><code>first_card_y</code></td>
+        <td>580px</td>
+        <td>575px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/tools</td>
+        <td><code>header_bottom_y</code></td>
+        <td>N/Apx</td>
+        <td>100px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/tools</td>
+        <td><code>tools_grid_y</code></td>
+        <td>N/Apx</td>
+        <td>443px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/tools</td>
+        <td><code>first_card_y</code></td>
+        <td>N/Apx</td>
+        <td>443px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/paths/ai-automation</td>
+        <td><code>header_bottom_y</code></td>
+        <td>N/Apx</td>
+        <td>100px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/paths/ai-automation</td>
+        <td><code>timeline_y</code></td>
+        <td>N/Apx</td>
+        <td>566px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/paths/ai-automation</td>
+        <td><code>first_card_y</code></td>
+        <td>N/Apx</td>
+        <td>608px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/community</td>
+        <td><code>header_bottom_y</code></td>
+        <td>N/Apx</td>
+        <td>100px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/community</td>
+        <td><code>feed_y</code></td>
+        <td>N/Apx</td>
+        <td>378px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+      <tr>
+        <td>/community</td>
+        <td><code>side_y</code></td>
+        <td>N/Apx</td>
+        <td>25px</td>
+        <td>N/A</td>
+        <td><span class="badge-warn">SHIFTED</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Comparison Pairs and Overlays</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="comparisons/1505-home-side-by-side.jpg" alt="1505-home Side by Side">
+      <h3>1505-home (1505x1029 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1505-home-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1505-home-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1505-home-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1505-home-full.png" target="_blank">Full Page</a>
+        <a href="post/1505-home-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1505-tools-side-by-side.jpg" alt="1505-tools Side by Side">
+      <h3>1505-tools (1505x1029 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1505-tools-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1505-tools-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1505-tools-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1505-tools-full.png" target="_blank">Full Page</a>
+        <a href="post/1505-tools-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1505-paths-ai-automation-side-by-side.jpg" alt="1505-paths-ai-automation Side by Side">
+      <h3>1505-paths-ai-automation (1505x1029 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1505-paths-ai-automation-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1505-paths-ai-automation-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1505-paths-ai-automation-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1505-paths-ai-automation-full.png" target="_blank">Full Page</a>
+        <a href="post/1505-paths-ai-automation-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1505-community-side-by-side.jpg" alt="1505-community Side by Side">
+      <h3>1505-community (1505x1029 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1505-community-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1505-community-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1505-community-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1505-community-full.png" target="_blank">Full Page</a>
+        <a href="post/1505-community-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1880-home-side-by-side.jpg" alt="1880-home Side by Side">
+      <h3>1880-home (1880x880 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1880-home-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1880-home-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1880-home-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1880-home-full.png" target="_blank">Full Page</a>
+        <a href="post/1880-home-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1880-tools-side-by-side.jpg" alt="1880-tools Side by Side">
+      <h3>1880-tools (1880x880 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1880-tools-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1880-tools-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1880-tools-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1880-tools-full.png" target="_blank">Full Page</a>
+        <a href="post/1880-tools-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1880-paths-ai-automation-side-by-side.jpg" alt="1880-paths-ai-automation Side by Side">
+      <h3>1880-paths-ai-automation (1880x880 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1880-paths-ai-automation-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1880-paths-ai-automation-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1880-paths-ai-automation-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1880-paths-ai-automation-full.png" target="_blank">Full Page</a>
+        <a href="post/1880-paths-ai-automation-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1880-community-side-by-side.jpg" alt="1880-community Side by Side">
+      <h3>1880-community (1880x880 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1880-community-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1880-community-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1880-community-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1880-community-full.png" target="_blank">Full Page</a>
+        <a href="post/1880-community-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1440-home-side-by-side.jpg" alt="1440-home Side by Side">
+      <h3>1440-home (1440x900 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1440-home-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1440-home-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1440-home-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1440-home-full.png" target="_blank">Full Page</a>
+        <a href="post/1440-home-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1440-tools-side-by-side.jpg" alt="1440-tools Side by Side">
+      <h3>1440-tools (1440x900 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1440-tools-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1440-tools-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1440-tools-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1440-tools-full.png" target="_blank">Full Page</a>
+        <a href="post/1440-tools-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1440-paths-ai-automation-side-by-side.jpg" alt="1440-paths-ai-automation Side by Side">
+      <h3>1440-paths-ai-automation (1440x900 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1440-paths-ai-automation-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1440-paths-ai-automation-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1440-paths-ai-automation-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1440-paths-ai-automation-full.png" target="_blank">Full Page</a>
+        <a href="post/1440-paths-ai-automation-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1440-community-side-by-side.jpg" alt="1440-community Side by Side">
+      <h3>1440-community (1440x900 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/1440-community-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1440-community-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1440-community-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1440-community-full.png" target="_blank">Full Page</a>
+        <a href="post/1440-community-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1248-home-side-by-side.jpg" alt="1248-home Side by Side">
+      <h3>1248-home (1248x588 - DPR 1.5)</h3>
+      <div class="links">
+        <a href="comparisons/1248-home-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1248-home-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1248-home-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1248-home-full.png" target="_blank">Full Page</a>
+        <a href="post/1248-home-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1248-tools-side-by-side.jpg" alt="1248-tools Side by Side">
+      <h3>1248-tools (1248x588 - DPR 1.5)</h3>
+      <div class="links">
+        <a href="comparisons/1248-tools-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1248-tools-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1248-tools-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1248-tools-full.png" target="_blank">Full Page</a>
+        <a href="post/1248-tools-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1248-paths-ai-automation-side-by-side.jpg" alt="1248-paths-ai-automation Side by Side">
+      <h3>1248-paths-ai-automation (1248x588 - DPR 1.5)</h3>
+      <div class="links">
+        <a href="comparisons/1248-paths-ai-automation-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1248-paths-ai-automation-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1248-paths-ai-automation-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1248-paths-ai-automation-full.png" target="_blank">Full Page</a>
+        <a href="post/1248-paths-ai-automation-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/1248-community-side-by-side.jpg" alt="1248-community Side by Side">
+      <h3>1248-community (1248x588 - DPR 1.5)</h3>
+      <div class="links">
+        <a href="comparisons/1248-community-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/1248-community-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/1248-community-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/1248-community-full.png" target="_blank">Full Page</a>
+        <a href="post/1248-community-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/768-home-side-by-side.jpg" alt="768-home Side by Side">
+      <h3>768-home (768x1024 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/768-home-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/768-home-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/768-home-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/768-home-full.png" target="_blank">Full Page</a>
+        <a href="post/768-home-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/768-tools-side-by-side.jpg" alt="768-tools Side by Side">
+      <h3>768-tools (768x1024 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/768-tools-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/768-tools-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/768-tools-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/768-tools-full.png" target="_blank">Full Page</a>
+        <a href="post/768-tools-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/768-paths-ai-automation-side-by-side.jpg" alt="768-paths-ai-automation Side by Side">
+      <h3>768-paths-ai-automation (768x1024 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/768-paths-ai-automation-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/768-paths-ai-automation-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/768-paths-ai-automation-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/768-paths-ai-automation-full.png" target="_blank">Full Page</a>
+        <a href="post/768-paths-ai-automation-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/768-community-side-by-side.jpg" alt="768-community Side by Side">
+      <h3>768-community (768x1024 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/768-community-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/768-community-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/768-community-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/768-community-full.png" target="_blank">Full Page</a>
+        <a href="post/768-community-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/390-home-side-by-side.jpg" alt="390-home Side by Side">
+      <h3>390-home (390x844 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/390-home-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/390-home-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/390-home-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/390-home-full.png" target="_blank">Full Page</a>
+        <a href="post/390-home-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/390-tools-side-by-side.jpg" alt="390-tools Side by Side">
+      <h3>390-tools (390x844 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/390-tools-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/390-tools-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/390-tools-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/390-tools-full.png" target="_blank">Full Page</a>
+        <a href="post/390-tools-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/390-paths-ai-automation-side-by-side.jpg" alt="390-paths-ai-automation Side by Side">
+      <h3>390-paths-ai-automation (390x844 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/390-paths-ai-automation-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/390-paths-ai-automation-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/390-paths-ai-automation-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/390-paths-ai-automation-full.png" target="_blank">Full Page</a>
+        <a href="post/390-paths-ai-automation-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/390-community-side-by-side.jpg" alt="390-community Side by Side">
+      <h3>390-community (390x844 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/390-community-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/390-community-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/390-community-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/390-community-full.png" target="_blank">Full Page</a>
+        <a href="post/390-community-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/360-home-side-by-side.jpg" alt="360-home Side by Side">
+      <h3>360-home (360x800 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/360-home-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/360-home-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/360-home-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/360-home-full.png" target="_blank">Full Page</a>
+        <a href="post/360-home-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/360-tools-side-by-side.jpg" alt="360-tools Side by Side">
+      <h3>360-tools (360x800 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/360-tools-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/360-tools-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/360-tools-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/360-tools-full.png" target="_blank">Full Page</a>
+        <a href="post/360-tools-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/360-paths-ai-automation-side-by-side.jpg" alt="360-paths-ai-automation Side by Side">
+      <h3>360-paths-ai-automation (360x800 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/360-paths-ai-automation-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/360-paths-ai-automation-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/360-paths-ai-automation-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/360-paths-ai-automation-full.png" target="_blank">Full Page</a>
+        <a href="post/360-paths-ai-automation-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="comparisons/360-community-side-by-side.jpg" alt="360-community Side by Side">
+      <h3>360-community (360x800 - DPR 1)</h3>
+      <div class="links">
+        <a href="comparisons/360-community-side-by-side.jpg" target="_blank">Side-by-Side</a>
+        <a href="comparisons/360-community-overlay.png" target="_blank">50% Overlay</a>
+        <a href="post/360-community-fold.png" target="_blank">Fold Capture</a>
+        <a href="post/360-community-full.png" target="_blank">Full Page</a>
+        <a href="post/360-community-reduced.png" target="_blank">Reduced Motion</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

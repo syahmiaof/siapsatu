@@ -6,54 +6,40 @@
 }
 .emblem {
   position: absolute;
-  width: 22%;
+  width: 20%;
   height: auto;
-  left: 40%;
-  top: 9%;
+  left: 43%;
+  top: 14%;
+  z-index: 2;
 }
 .arrow {
   position: absolute;
-  width: 37%;
+  width: 32%;
   height: auto;
-  right: 12%;
-  bottom: 10%;
+  right: 5%;
+  top: 12%;
+  z-index: 2;
 }
 .city {
   position: absolute;
-  width: 32%;
+  width: 33%;
   height: auto;
-  right: 0;
+  right: -1%;
   bottom: 0;
+  z-index: 1;
 }
-@media (max-width: 700px) {
-  .emblem {
-    width: 22%;
-    top: 6%;
-    left: 44%;
-  }
-  .city {
-    width: 32%;
-  }
-}
-
-.emblem {
-  left: 45%;
-  top: 16%;
-}
-.city {
-  width: 35%;
-}
-
-.emblem {
-  width: 19%;
-  left: 42%;
-  top: 19%;
-}
-
 @media (max-width: 700px) {
   .emblem {
     width: 20%;
-    left: 57%;
-    top: 2%;
+    top: 5%;
+    left: 48%;
+  }
+  .arrow {
+    width: 28%;
+    right: 4%;
+    top: 10%;
+  }
+  .city {
+    width: 32%;
   }
 }

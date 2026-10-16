@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" fill="none">
+  <!-- Clean Midnight Navy Negative Space: Ample room for 14-point star & crescent at x=200..360, y=20..140 -->
+  <path fill="#062457" d="M 40 250 C 90 190, 150 110, 240 50 C 340 10, 520 0, 800 0 V 250 H 40 Z"/>
+
+  <!-- Fluid Malaysian Ribbon: Sweeps strictly BELOW the emblem region -->
+  <g id="tools-fluid-ribbon">
+    <path d="M -20 240 C 120 235, 260 230, 380 220 C 500 210, 580 80, 820 20" fill="none" stroke="#ffffff" stroke-width="66" stroke-linejoin="round"/>
+    <path d="M -20 240 C 120 235, 260 230, 380 220 C 500 210, 580 80, 820 20" fill="none" stroke="#ff1938" stroke-width="54" stroke-linejoin="round"/>
+    <path d="M -20 240 C 120 235, 260 230, 380 220 C 500 210, 580 80, 820 20" fill="none" stroke="#ffffff" stroke-width="18" stroke-linejoin="round"/>
+  </g>
+</svg>

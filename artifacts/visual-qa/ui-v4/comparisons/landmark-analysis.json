@@ -1,0 +1,450 @@
+[
+  {
+    "route": "/",
+    "viewport": "1505x1029",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100,
+        "reference": 110,
+        "delta": -10
+      },
+      "card_row_start_y": {
+        "actual": 575,
+        "reference": 580,
+        "delta": -5
+      },
+      "community_strip_start_y": {
+        "actual": 843,
+        "reference": 845,
+        "delta": -2
+      },
+      "first_card_y": {
+        "actual": 575,
+        "reference": 580
+      }
+    }
+  },
+  {
+    "route": "/tools",
+    "viewport": "1505x1029",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "tools_grid_y": {
+        "actual": 443
+      },
+      "first_card_y": {
+        "actual": 443
+      }
+    }
+  },
+  {
+    "route": "/paths/ai-automation",
+    "viewport": "1505x1029",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "timeline_y": {
+        "actual": 566
+      },
+      "first_card_y": {
+        "actual": 608
+      }
+    }
+  },
+  {
+    "route": "/community",
+    "viewport": "1505x1029",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "feed_y": {
+        "actual": 378
+      },
+      "side_y": {
+        "actual": 25
+      }
+    }
+  },
+  {
+    "route": "/",
+    "viewport": "1880x880",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "card_row_start_y": {
+        "actual": 508
+      },
+      "community_strip_start_y": {
+        "actual": 776
+      },
+      "first_card_y": {
+        "actual": 508
+      }
+    }
+  },
+  {
+    "route": "/tools",
+    "viewport": "1880x880",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "tools_grid_y": {
+        "actual": 443
+      },
+      "first_card_y": {
+        "actual": 443
+      }
+    }
+  },
+  {
+    "route": "/paths/ai-automation",
+    "viewport": "1880x880",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "timeline_y": {
+        "actual": 566
+      },
+      "first_card_y": {
+        "actual": 608
+      }
+    }
+  },
+  {
+    "route": "/community",
+    "viewport": "1880x880",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "feed_y": {
+        "actual": 378
+      },
+      "side_y": {
+        "actual": 25
+      }
+    }
+  },
+  {
+    "route": "/",
+    "viewport": "1440x900",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "card_row_start_y": {
+        "actual": 517
+      },
+      "community_strip_start_y": {
+        "actual": 785
+      },
+      "first_card_y": {
+        "actual": 517
+      }
+    }
+  },
+  {
+    "route": "/tools",
+    "viewport": "1440x900",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "tools_grid_y": {
+        "actual": 443
+      },
+      "first_card_y": {
+        "actual": 443
+      }
+    }
+  },
+  {
+    "route": "/paths/ai-automation",
+    "viewport": "1440x900",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "timeline_y": {
+        "actual": 566
+      },
+      "first_card_y": {
+        "actual": 608
+      }
+    }
+  },
+  {
+    "route": "/community",
+    "viewport": "1440x900",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "feed_y": {
+        "actual": 378
+      },
+      "side_y": {
+        "actual": 25
+      }
+    }
+  },
+  {
+    "route": "/",
+    "viewport": "1248x588",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "card_row_start_y": {
+        "actual": 391
+      },
+      "community_strip_start_y": {
+        "actual": 589
+      },
+      "first_card_y": {
+        "actual": 391
+      }
+    }
+  },
+  {
+    "route": "/tools",
+    "viewport": "1248x588",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "tools_grid_y": {
+        "actual": 443
+      },
+      "first_card_y": {
+        "actual": 443
+      }
+    }
+  },
+  {
+    "route": "/paths/ai-automation",
+    "viewport": "1248x588",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "timeline_y": {
+        "actual": 566
+      },
+      "first_card_y": {
+        "actual": 614
+      }
+    }
+  },
+  {
+    "route": "/community",
+    "viewport": "1248x588",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 100
+      },
+      "feed_y": {
+        "actual": 378
+      },
+      "side_y": {
+        "actual": 25
+      }
+    }
+  },
+  {
+    "route": "/",
+    "viewport": "768x1024",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 84
+      },
+      "card_row_start_y": {
+        "actual": 471
+      },
+      "community_strip_start_y": {
+        "actual": 747
+      },
+      "first_card_y": {
+        "actual": 471
+      }
+    }
+  },
+  {
+    "route": "/tools",
+    "viewport": "768x1024",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 84
+      },
+      "tools_grid_y": {
+        "actual": 479
+      },
+      "first_card_y": {
+        "actual": 479
+      }
+    }
+  },
+  {
+    "route": "/paths/ai-automation",
+    "viewport": "768x1024",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 84
+      },
+      "timeline_y": {
+        "actual": 0
+      },
+      "first_card_y": {
+        "actual": 731
+      }
+    }
+  },
+  {
+    "route": "/community",
+    "viewport": "768x1024",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 84
+      },
+      "feed_y": {
+        "actual": 576
+      },
+      "side_y": {
+        "actual": 0
+      }
+    }
+  },
+  {
+    "route": "/",
+    "viewport": "390x844",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "card_row_start_y": {
+        "actual": 595
+      },
+      "community_strip_start_y": {
+        "actual": 1122
+      },
+      "first_card_y": {
+        "actual": 607
+      }
+    }
+  },
+  {
+    "route": "/tools",
+    "viewport": "390x844",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "tools_grid_y": {
+        "actual": 302
+      },
+      "first_card_y": {
+        "actual": 302
+      }
+    }
+  },
+  {
+    "route": "/paths/ai-automation",
+    "viewport": "390x844",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "timeline_y": {
+        "actual": 0
+      },
+      "first_card_y": {
+        "actual": 761
+      }
+    }
+  },
+  {
+    "route": "/community",
+    "viewport": "390x844",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "feed_y": {
+        "actual": 585
+      },
+      "side_y": {
+        "actual": 0
+      }
+    }
+  },
+  {
+    "route": "/",
+    "viewport": "360x800",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "card_row_start_y": {
+        "actual": 592
+      },
+      "community_strip_start_y": {
+        "actual": 1160
+      },
+      "first_card_y": {
+        "actual": 604
+      }
+    }
+  },
+  {
+    "route": "/tools",
+    "viewport": "360x800",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "tools_grid_y": {
+        "actual": 285
+      },
+      "first_card_y": {
+        "actual": 285
+      }
+    }
+  },
+  {
+    "route": "/paths/ai-automation",
+    "viewport": "360x800",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "timeline_y": {
+        "actual": 0
+      },
+      "first_card_y": {
+        "actual": 767
+      }
+    }
+  },
+  {
+    "route": "/community",
+    "viewport": "360x800",
+    "landmarks": {
+      "header_bottom_y": {
+        "actual": 68
+      },
+      "feed_y": {
+        "actual": 585
+      },
+      "side_y": {
+        "actual": 0
+      }
+    }
+  }
+]

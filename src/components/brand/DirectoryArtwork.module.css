@@ -78,10 +78,20 @@
 
 .emblem {
   position: absolute;
-  width: 24%;
+  width: 21%;
+  max-width: 172px;
   height: auto;
-  left: 27%;
-  top: 10%;
+  left: 50%;
+  top: 44%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+@media (max-width: 900px) {
+  .emblem {
+    width: 22%;
+    left: 49%;
+    top: 42%;
+  }
 }
 @media (max-width: 600px) {
   .emblem {

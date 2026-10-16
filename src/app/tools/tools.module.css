@@ -3,18 +3,18 @@
 }
 .heroBanner {
   position: relative;
-  min-height: 222px;
+  min-height: 236px;
   display: flex;
   align-items: center;
   background: var(--ss-bg);
   margin-inline: calc(-1 * var(--page-gutter));
-  padding: 22px var(--page-gutter);
+  padding: 26px var(--page-gutter) 22px;
   overflow: hidden;
 }
 .heroLeft {
   position: relative;
   z-index: 1;
-  width: 66%;
+  width: 62%;
 }
 .headline {
   font-size: clamp(44px, 5vw, 72px);
@@ -26,14 +26,14 @@
 .subtitle {
   font-size: clamp(18px, 1.9vw, 28px);
   line-height: 1.4;
-  margin-top: 12px;
+  margin-top: 14px;
 }
 .heroRight {
   position: absolute;
   right: 0;
   top: 0;
   bottom: 0;
-  width: 51%;
+  width: 56%;
 }
 .artCaption {
   position: absolute;
@@ -295,28 +295,32 @@
 
 @media (min-width: 1101px) {
   .heroBanner {
-    min-height: clamp(180px, 23vh, 235px);
-    padding-block: 18px;
+    min-height: 242px;
+    padding-block: 28px 24px;
   }
   .headline {
-    font-size: clamp(52px, min(4.8vw, 7.5vh), 72px);
+    font-size: clamp(48px, min(4.6vw, 7vh), 68px);
   }
   .subtitle {
-    font-size: clamp(18px, 2.7vh, 26px);
+    font-size: clamp(18px, 2.2vh, 24px);
+    margin-top: 14px;
   }
   .controlsBar {
-    margin: 16px 0 20px;
+    margin: 22px 0 24px;
     flex-wrap: nowrap;
+    gap: 12px;
   }
   .searchBox {
-    padding: 12px 16px;
-    min-width: 180px;
+    padding: 13px 18px;
+    min-width: 200px;
+    min-height: 52px;
   }
   .searchInput {
-    font-size: 20px;
+    font-size: 19px;
   }
   .chip {
-    min-height: 48px;
-    padding: 10px 18px;
+    min-height: 52px;
+    padding: 12px 20px;
+    font-size: 15px;
   }
 }

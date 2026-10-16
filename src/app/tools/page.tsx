@@ -5,11 +5,11 @@ import React, { useMemo, Suspense } from "react";
 import { DirectoryArtwork } from "@/components/brand/DirectoryArtwork";
 import {
   Search,
-  Bot,
+  Sparkles,
   Settings,
   Code,
   Palette,
-  CheckSquare,
+  BarChart3,
 } from "lucide-react";
 import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
 import { RevealSection } from "@/components/motion/RevealSection";
@@ -37,11 +37,11 @@ function DirectoryContent() {
 
   const categories = [
     { id: "semua", label: "Semua", icon: null },
-    { id: "ai", label: "AI Assistant", icon: Bot },
+    { id: "ai", label: "AI Assistant", icon: Sparkles },
     { id: "automation", label: "Automation", icon: Settings },
     { id: "coding", label: "Coding", icon: Code },
     { id: "design", label: "Design", icon: Palette },
-    { id: "productivity", label: "Productivity", icon: CheckSquare },
+    { id: "productivity", label: "Productivity", icon: BarChart3 },
   ];
 
   const filteredTools = useMemo(() => {
