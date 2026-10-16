@@ -58,6 +58,33 @@
   display: grid;
   place-items: center;
   flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform var(--ss-motion-fast) var(--ss-ease-spring),
+    background-color var(--ss-motion-fast) ease,
+    box-shadow var(--ss-motion-fast) ease;
+}
+.searchBtn svg {
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring);
+}
+.searchBtn:hover {
+  background: #e04f08;
+  transform: scale(1.05);
+}
+.searchBtn:hover svg {
+  transform: translateX(2px);
+}
+.searchBtn:focus-visible {
+  outline: 2px solid var(--ss-navy-950);
+  outline-offset: 2px;
+  transform: scale(1.05);
+}
+.searchBtn:active {
+  transform: scale(0.94);
+}
+.searchBtn:active svg {
+  transform: translateX(0);
 }
 .filterBar {
   display: flex;
@@ -77,11 +104,26 @@
   font-size: 14px;
   font-weight: 800;
   white-space: nowrap;
-  transition: transform 160ms;
+  cursor: pointer;
+  border: none;
+  transition:
+    transform var(--ss-motion-fast) var(--ss-ease-spring),
+    background var(--ss-motion-fast) ease,
+    color var(--ss-motion-fast) ease,
+    box-shadow var(--ss-motion-fast) ease;
 }
 .filterChip:hover {
   transform: translateY(-2px);
   background: #e2eaf7;
+}
+.filterChip:focus-visible {
+  outline: 2px solid var(--ss-navy-950);
+  outline-offset: 2px;
+  transform: translateY(-2px);
+}
+.filterChip:active,
+.activeChip:active {
+  transform: translateY(0) scale(0.96);
 }
 .activeChip,
 .activeChip:hover {
@@ -333,5 +375,24 @@
   .heroLeft {
     padding-top: 0;
     gap: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .searchBtn,
+  .searchBtn svg,
+  .filterChip {
+    transition: none;
+  }
+  .searchBtn:hover,
+  .searchBtn:focus-visible,
+  .searchBtn:active,
+  .searchBtn:hover svg,
+  .searchBtn:active svg,
+  .filterChip:hover,
+  .filterChip:focus-visible,
+  .filterChip:active,
+  .activeChip:active {
+    transform: none;
   }
 }

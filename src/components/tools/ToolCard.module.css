@@ -8,18 +8,21 @@
   padding: 16px 18px;
   min-height: 130px;
   text-decoration: none;
-  box-shadow: 0 5px 16px #03143a04;
+  box-shadow: var(--ss-shadow-subtle, 0 4px 16px rgb(3 20 58 / 0.04));
   transition:
-    transform 160ms,
-    border-color 160ms;
+    transform var(--ss-motion-base) var(--ss-ease-spring),
+    border-color var(--ss-motion-fast) ease,
+    box-shadow var(--ss-motion-base) ease;
   min-width: 0;
 }
 .card[href]:hover {
   transform: translateY(-3px);
-  border-color: var(--ss-navy-900);
+  border-color: rgba(255, 90, 10, 0.4);
+  box-shadow: 0 4px 14px rgb(3 20 58 / 0.05), 0 14px 32px rgb(3 20 58 / 0.08), 0 0 0 1px rgba(255, 90, 10, 0.16);
 }
 .card[href]:active {
-  transform: scale(0.99);
+  transform: translateY(-1px) scale(0.99);
+  box-shadow: 0 2px 8px rgb(3 20 58 / 0.06);
 }
 .leftInfo {
   display: flex;
@@ -38,36 +41,52 @@
   font-size: 23px;
   line-height: 1.08;
   font-weight: 800;
+  color: var(--ss-navy-950);
   overflow-wrap: anywhere;
 }
 .badgeRow {
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+  align-items: center;
 }
 .categoryPill {
+  display: inline-flex;
+  align-items: center;
   font-size: 12px;
   font-weight: 700;
-  border-radius: 9px;
-  padding: 4px 9px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  border-radius: var(--ss-radius-pill, 9999px);
+  padding: 4px 10px;
   background: #e5efff;
   color: #0756ad;
+  border: 1px solid rgba(7, 86, 173, 0.12);
+}
+.cat-ai {
+  background: #eef2ff;
+  color: #4338ca;
+  border-color: rgba(67, 56, 202, 0.12);
 }
 .cat-automation {
   background: #fff0e4;
   color: #ad3a00;
+  border-color: rgba(173, 58, 0, 0.12);
 }
 .cat-productivity {
   background: #e0f9ec;
   color: #057a44;
+  border-color: rgba(5, 122, 68, 0.12);
 }
 .cat-coding {
   background: #e6efff;
   color: #0749b0;
+  border-color: rgba(7, 73, 176, 0.12);
 }
 .cat-design {
   background: #f1e7ff;
   color: #63349c;
+  border-color: rgba(99, 52, 156, 0.12);
 }
 .countRow {
   display: flex;
@@ -77,6 +96,7 @@
   align-items: center;
   margin-top: 3px;
   padding-right: 24px;
+  font-weight: 500;
 }
 .arrowBtn {
   position: absolute;
@@ -88,10 +108,16 @@
   place-items: center;
   border-radius: 50%;
   background: #f1f5fc;
+  color: var(--ss-navy-950);
+  transition:
+    background-color var(--ss-motion-fast) ease,
+    color var(--ss-motion-fast) ease,
+    transform var(--ss-motion-base) var(--ss-ease-spring);
 }
 .card[href]:hover .arrowBtn {
   background: var(--ss-navy-950);
   color: white;
+  transform: translateX(2px);
 }
 .upcoming {
   background: var(--ss-bg);
@@ -129,8 +155,8 @@
     gap: 5px;
   }
   .categoryPill {
-    font-size: 9px;
-    padding: 4px;
+    font-size: 10px;
+    padding: 3px 8px;
   }
   .countRow {
     font-size: 11px;
@@ -160,7 +186,11 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  .card:hover {
+  .card:hover,
+  .card[href]:hover {
+    transform: none;
+  }
+  .card[href]:hover .arrowBtn {
     transform: none;
   }
 }

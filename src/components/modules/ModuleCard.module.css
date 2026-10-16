@@ -21,6 +21,10 @@
   box-shadow: var(--ss-shadow-lift);
 }
 
+.featuredCard:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
 .theme-navy {
   background: var(--ss-gradient-navy);
 }
@@ -133,14 +137,26 @@
   align-items: center;
   justify-content: center;
   transition:
-    transform var(--ss-motion-base) var(--ss-ease-spring),
+    transform var(--ss-motion-fast) var(--ss-ease-spring),
     background-color var(--ss-motion-fast) ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.featuredCard:hover .circleArrowBtn {
-  transform: translateX(4px);
+.circleArrowBtn:active,
+.featuredArrow:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+.featuredArrow {
+  display: inline-flex;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring);
+}
+
+.featuredCard:hover .circleArrowBtn,
+.featuredCard:hover .featuredArrow {
+  transform: translateX(3px);
   background: var(--ss-yellow);
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring);
 }
 
 /* Compact Card */
@@ -166,6 +182,10 @@
   transform: translateY(-6px);
   border-color: var(--ss-orange);
   box-shadow: var(--ss-shadow-card);
+}
+
+.compactCard:active {
+  transform: translateY(-2px) scale(0.99);
 }
 
 .compactIconSquare {
@@ -235,23 +255,51 @@
   justify-content: center;
   transition:
     transform var(--ss-motion-fast) var(--ss-ease-spring),
-    background-color var(--ss-motion-fast) ease;
+    background-color var(--ss-motion-fast) ease,
+    color var(--ss-motion-fast) ease;
 }
 
-.compactCard:hover .compactArrowBtn {
+.compactArrowBtn:active,
+.compactArrow:active {
+  transform: translateY(-2px) scale(0.99);
+}
+
+.compactArrow {
+  display: inline-flex;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring);
+}
+
+.compactCard:hover .compactArrowBtn,
+.compactCard:hover .compactArrow {
   transform: translateX(3px);
   background: var(--ss-orange);
   color: #ffffff;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-spring);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .featuredCard:hover,
-  .compactCard:hover {
-    transform: none;
-  }
+  .featuredCard,
+  .compactCard,
   .circleArrowBtn,
-  .compactArrowBtn {
+  .compactArrowBtn,
+  .featuredArrow,
+  .compactArrow {
     transition: none;
+  }
+  .featuredCard:hover,
+  .compactCard:hover,
+  .featuredCard:active,
+  .compactCard:active,
+  .circleArrowBtn:active,
+  .compactArrowBtn:active,
+  .featuredArrow:active,
+  .compactArrow:active,
+  .featuredCard:hover .circleArrowBtn,
+  .compactCard:hover .compactArrowBtn,
+  .featuredCard:hover .featuredArrow,
+  .compactCard:hover .compactArrow,
+  .featuredCard:hover svg {
+    transform: none;
   }
 }
 /* Reference geometry: 3 compact illustrated panels, then six smaller outcomes. */

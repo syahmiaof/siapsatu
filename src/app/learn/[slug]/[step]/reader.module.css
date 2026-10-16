@@ -70,6 +70,13 @@
   gap: 18px;
   min-width: 0;
 }
+.centerCol {
+  max-width: 760px;
+  width: 100%;
+}
+.centerCol p {
+  line-height: 1.7;
+}
 .progressTop {
   display: flex;
   justify-content: space-between;
@@ -122,7 +129,8 @@
 }
 .lessonSubtitle {
   font-size: 17px;
-  line-height: 1.5;
+  line-height: 1.7;
+  max-width: 68ch;
 }
 .outcomeCallout {
   display: flex;
@@ -165,7 +173,8 @@
   margin-top: 5px;
   font-size: 15px;
   color: var(--ss-muted);
-  line-height: 1.45;
+  line-height: 1.7;
+  max-width: 65ch;
 }
 .lessonBodyGrid {
   display: grid;
@@ -200,9 +209,10 @@
 }
 .instructionDetail {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.7;
   color: var(--ss-muted);
   margin-top: 4px;
+  max-width: 62ch;
 }
 .sectionSmallHeading {
   font-size: 19px;
@@ -268,16 +278,32 @@
   line-height: 1.6;
 }
 .taskSuccessBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   min-height: 46px;
-  padding: 12px;
+  padding: 12px 18px;
   border-radius: 12px;
   background: var(--ss-green-dark);
   color: white;
   font-weight: 800;
   font-size: 15px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(8, 189, 89, 0.2);
+  transition: transform 0.12s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.15s ease;
 }
 .taskSuccessBtn:hover {
-  filter: brightness(0.9);
+  background: var(--ss-green, #08bd59);
+  box-shadow: 0 8px 24px rgba(8, 189, 89, 0.35);
+  transform: translateY(-1px);
+}
+.taskSuccessBtn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 8px rgba(8, 189, 89, 0.25);
 }
 .bottomActionDock {
   position: fixed;
@@ -402,6 +428,7 @@
   }
   .lessonSubtitle {
     font-size: 15px;
+    line-height: 1.7;
   }
   .outcomeCallout {
     font-size: 14px;
@@ -418,6 +445,7 @@
   }
   .stepDetailSub {
     font-size: 14px;
+    line-height: 1.7;
   }
   .lessonBodyGrid {
     display: flex;
@@ -441,6 +469,7 @@
   }
   .instructionDetail {
     font-size: 14px;
+    line-height: 1.7;
   }
   .instructionsList {
     gap: 12px;
@@ -495,5 +524,9 @@
 @media (prefers-reduced-motion: reduce) {
   .progressBarFill {
     transition: none;
+  }
+  .taskSuccessBtn:hover,
+  .taskSuccessBtn:active {
+    transform: none;
   }
 }

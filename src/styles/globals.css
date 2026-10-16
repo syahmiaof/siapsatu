@@ -74,8 +74,9 @@ svg {
 }
 
 :focus-visible {
-  outline: 3px solid var(--ss-navy-950);
-  outline-offset: 2px;
+  outline: 3px solid var(--ss-orange);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px #ffffff;
 }
 
 /* Common utility classes */
@@ -141,6 +142,7 @@ textarea {
 }
 html {
   scroll-padding-top: 24px;
+  scroll-padding-bottom: 96px;
   scrollbar-color: var(--ss-muted-light) var(--ss-surface-subtle);
 }
 button,
@@ -161,7 +163,7 @@ button:disabled {
 }
 @media (max-width: 900px) {
   body {
-    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(108px + env(safe-area-inset-bottom, 0px));
   }
   body:has([data-reader]) {
     padding-bottom: 0;

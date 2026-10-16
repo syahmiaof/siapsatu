@@ -38,7 +38,7 @@ export function CopyTemplate({
         }
       }
       setStatus("copied");
-      timer.current = setTimeout(() => setStatus("idle"), 2400);
+      timer.current = setTimeout(() => setStatus("idle"), 2000);
     } catch {
       setStatus("error");
     }

@@ -1,22 +1,22 @@
 .sidebar {
-  width: 280px;
-  flex-shrink: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 16px;
+  padding: 14px 8px;
   background: #ffffff;
-  border: 1.5px solid var(--ss-line);
-  border-radius: var(--ss-radius-lg);
-  padding: 1.75rem 1.4rem;
-  box-shadow: 0 4px 16px rgba(3, 20, 58, 0.04);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .moduleTitle {
   font-family: var(--font-display, inherit);
-  font-size: 1.25rem;
+  font-size: 17px;
   font-weight: 800;
   color: var(--ss-navy-950);
   line-height: 1.25;
+  padding: 0 8px;
 }
 
 .stepRail {
@@ -28,87 +28,82 @@
 .stepItem {
   display: flex;
   align-items: center;
-  gap: 0.95rem;
-  padding: 0.75rem 0.85rem;
+  gap: 9px;
+  padding: 12px 8px;
   border-radius: var(--ss-radius-sm);
   text-decoration: none;
   color: var(--ss-muted);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 13px;
+  line-height: 1.25;
   position: relative;
   transition: all var(--ss-motion-fast) ease;
 }
 
-.stepItem:hover {
+.stepItem:hover:not(.active) {
   background: var(--ss-surface-subtle);
   color: var(--ss-navy-950);
 }
 
 .nodeCircle {
-  width: 28px;
-  height: 28px;
+  width: 23px;
+  height: 23px;
   border-radius: 50%;
   border: 1.5px solid var(--ss-line);
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.82rem;
+  font-size: 11px;
   font-weight: 800;
   color: var(--ss-navy-950);
   flex-shrink: 0;
+  position: relative;
+  z-index: 3;
   transition: all var(--ss-motion-fast) ease;
-  z-index: 1;
 }
 
 .active {
   background: var(--ss-surface-red);
   color: var(--ss-red);
   font-weight: 700;
+  border-radius: var(--ss-radius-sm);
+  box-shadow: inset 3px 0 0 var(--ss-red);
+}
+
+.active span {
+  color: var(--ss-navy-950);
+  font-weight: 800;
 }
 
 .active .nodeCircle {
   background: var(--ss-red);
   color: #ffffff;
   border-color: var(--ss-red);
-  box-shadow: 0 0 0 3px rgba(255, 36, 69, 0.2);
+  box-shadow: 0 0 0 4px rgba(255, 36, 69, 0.22), 0 2px 8px rgba(255, 36, 69, 0.25);
+  font-weight: 800;
+  transform: scale(1.05);
+}
+
+.completed {
+  color: var(--ss-navy-950);
+  font-weight: 600;
 }
 
 .completed .nodeCircle {
   background: var(--ss-green);
   color: #ffffff;
   border-color: var(--ss-green);
+  box-shadow: 0 0 0 2px rgba(8, 189, 89, 0.2);
 }
 
-@media (max-width: 900px) {
-  .sidebar {
-    width: 100%;
-    border-radius: var(--ss-radius-md);
-  }
+.completed.active .nodeCircle {
+  background: var(--ss-red);
+  color: #ffffff;
+  border-color: var(--ss-red);
+  box-shadow: 0 0 0 4px rgba(255, 36, 69, 0.22), 0 2px 8px rgba(255, 36, 69, 0.25);
 }
-.sidebar {
-  width: 100%;
-  padding: 14px 8px;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  gap: 16px;
-}
-.moduleTitle {
-  font-size: 17px;
-  padding: 0 8px;
-}
-.stepItem {
-  padding: 12px 8px;
-  gap: 9px;
-  font-size: 13px;
-  line-height: 1.25;
-}
-.nodeCircle {
-  width: 23px;
-  height: 23px;
-  font-size: 11px;
-}
+
 @media (max-width: 700px) {
   .sidebar {
     padding: 8px;
@@ -121,6 +116,7 @@
   .stepRail {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
   }
   .stepItem {
     font-size: 12px;
@@ -130,6 +126,7 @@
   .nodeCircle {
     width: 21px;
     height: 21px;
+    font-size: 10px;
   }
 }
 
@@ -142,6 +139,22 @@
     bottom: 24px;
     width: 2px;
     background: var(--ss-line);
+    z-index: 1;
+  }
+  .stepItem:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 50%;
+    height: 100%;
+    width: 2px;
+    background: transparent;
+    z-index: 2;
+    pointer-events: none;
+    transition: background 0.25s ease;
+  }
+  .stepItem.completed:not(:last-child)::after {
+    background: var(--ss-green, #08bd59);
   }
   .moduleTitle {
     font-size: 20px;
@@ -149,5 +162,11 @@
   .stepItem {
     font-size: 14px;
     padding-block: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .active .nodeCircle {
+    transform: none;
   }
 }

@@ -1,14 +1,16 @@
 import { test, expect } from "@playwright/test";
 import { MODULES, TOOLS } from "../src/data/mockData";
+import { directoryTools } from "../src/lib/catalog";
 
 test("Tools availability is truthful and every published journey reaches content", async ({
   page,
 }) => {
   test.setTimeout(90000);
   await page.goto("/tools");
+  const firstTool = directoryTools[0].slug;
   await expect(page.locator("[data-tool]").first()).toHaveAttribute(
     "data-tool",
-    "gemini",
+    firstTool,
   );
   expect(
     await page
@@ -16,7 +18,7 @@ test("Tools availability is truthful and every published journey reaches content
       .evaluateAll((cards) =>
         cards.slice(0, 6).map((c) => c.getAttribute("data-tool")),
       ),
-  ).toEqual(["gemini", "chatgpt", "n8n", "hermes-agent", "codex", "github"]);
+  ).toEqual(directoryTools.slice(0, 6).map((t) => t.slug));
   for (const tool of TOOLS) {
     const modules = MODULES.filter((m) => m.toolSlugs.includes(tool.slug));
     const card = page.locator(`[data-tool="${tool.slug}"]`);
@@ -57,7 +59,7 @@ test("Directory filters survive Back and exact tool filters can be cleared", asy
   ).toHaveAttribute("aria-pressed", "true");
   await expect(page.locator("[data-tool]").first()).toHaveAttribute(
     "data-tool",
-    "gemini",
+    directoryTools[0].slug,
   );
   await page.goto("/modules?tool=chatgpt");
   await expect(page.locator('main a[href^="/modules/"]')).toHaveCount(1);
