@@ -250,3 +250,9 @@
     background: transparent;
   }
 }
+
+@media (min-width: 901px) {
+  :global(body:has([data-path])) .header {
+    background: transparent;
+  }
+}

@@ -246,3 +246,49 @@
     transform: rotate(-10deg);
   }
 }
+
+/* Fold contract: reserve the card row using viewport height as well as width. */
+@media (min-width: 1101px) {
+  .heroGrid {
+    min-height: clamp(272px, 45vh, 468px);
+    grid-template-columns: 44% 56%;
+  }
+  .heroHeadline {
+    font-size: clamp(54px, min(6.4vw, 9.2vh), 96px);
+    line-height: 0.98;
+  }
+  .heroLeft {
+    gap: clamp(8px, 1.2vh, 12px);
+    padding-bottom: 16px;
+  }
+  .subtitle {
+    white-space: normal;
+    width: 110%;
+    max-width: 620px;
+    font-size: clamp(17px, min(1.8vw, 2.7vh), 26px);
+  }
+  .ctaContainer > a {
+    min-height: clamp(48px, 7.2vh, 74px);
+    font-size: clamp(21px, 3vh, 30px);
+    padding: clamp(12px, 1.7vh, 18px) 38px;
+  }
+  .audienceChip {
+    padding: clamp(8px, 1.5vh, 16px) 16px;
+  }
+  .heroRight {
+    inset: -112px calc(-1 * var(--page-gutter)) 14px 42%;
+  }
+}
+@media (min-width: 1101px) and (max-height: 700px) {
+  .audienceChips {
+    max-width: 480px;
+  }
+  .audienceChip {
+    font-size: 14px;
+    gap: 8px;
+  }
+  .chipIconWrap {
+    width: 30px;
+    height: 32px;
+  }
+}

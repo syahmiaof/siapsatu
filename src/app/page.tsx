@@ -22,6 +22,7 @@ export default function HomePage() {
           <div className={styles.heroLeft}>
             <div className={styles.headlineWrap}>
               <AnimatedHeading
+                steadyEntrance
                 text="Satu modul. Satu hasil."
                 breakAfter={2}
                 accentFrom={2}
@@ -138,7 +139,7 @@ export default function HomePage() {
 
       {/* Featured Modules Row (3 prominent cards) */}
       <section className={styles.featuredSection} aria-label="Modul Pilihan">
-        <RevealSection className={styles.featuredGrid}>
+        <RevealSection className={styles.featuredGrid} together>
           {featuredModules.map((module) => (
             <ModuleCard key={module.slug} module={module} variant="featured" />
           ))}

@@ -1,0 +1,133 @@
+.thumb {
+  margin: 0;
+  position: relative;
+  width: 100%;
+  height: 128px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #dbe4f1;
+}
+.thumb figcaption {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font: 600 9px/1.3 var(--font-body);
+  padding: 3px 5px;
+  background: white;
+  color: #062457;
+  border-radius: 4px;
+}
+.digest {
+  background: linear-gradient(145deg, #fff3cf 50%, #1777f2 50%);
+}
+.learner {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  right: -7%;
+  bottom: 0;
+}
+.toolMarks {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  z-index: 1;
+}
+.toolMarks > * {
+  background: white;
+  border-radius: 5px;
+  padding: 2px;
+}
+.portfolio {
+  background: #062457;
+  color: white;
+  padding: 7px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.portfolio strong {
+  font: 800 19px var(--font-display);
+}
+.portfolio > span {
+  font-size: 9px;
+  color: #dbe4f1;
+}
+.browserDots {
+  font-size: 8px;
+  color: #ffd12a;
+  border-bottom: 1px solid #ffffff40;
+  padding-bottom: 4px;
+}
+.projectTiles {
+  display: flex;
+  gap: 5px;
+}
+.projectTiles i {
+  height: 22px;
+  width: 30%;
+  background: #ff5a0a;
+  border-radius: 3px;
+}
+.projectTiles i:nth-child(2) {
+  background: #ffd12a;
+}
+.projectTiles i:nth-child(3) {
+  background: #08bd59;
+}
+.workflow {
+  background: #edf2fe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+  gap: 10px;
+}
+.nodes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #062457;
+}
+.nodes svg:not([width="14"]) {
+  background: white;
+  padding: 5px;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #dbe4f1;
+  border-radius: 8px;
+}
+.workflow > span {
+  font-size: 10px;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .thumb {
+    height: 115px;
+  }
+  .learner {
+    width: 75%;
+  }
+  .toolMarks {
+    flex-direction: row;
+  }
+  .toolMarks > * {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.learner {
+  height: 100%;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  object-position: bottom right;
+  right: 0;
+}
+.thumb figcaption {
+  z-index: 2;
+}

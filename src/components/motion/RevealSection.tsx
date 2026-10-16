@@ -9,6 +9,7 @@ interface RevealSectionProps {
   className?: string;
   stagger?: number;
   delay?: number;
+  together?: boolean;
 }
 
 export function RevealSection({
@@ -16,6 +17,7 @@ export function RevealSection({
   className = "",
   stagger = 0.08,
   delay = 0,
+  together = false,
 }: RevealSectionProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -31,22 +33,33 @@ export function RevealSection({
           containerRef.current.querySelectorAll("[data-reveal-item]");
         if (items.length === 0) return;
 
-        gsap.from(items, {
-          y: 24,
-          stagger,
-          duration: 0.55,
-          ease: "power2.out",
-          delay,
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 95%",
-            toggleActions: "play none none none",
+        // Explicit endpoint avoids capturing an in-flight CSS hover transition.
+        // A featured row moves as one unit so its cards remain aligned throughout.
+        gsap.fromTo(
+          together ? containerRef.current : items,
+          { y: 6 },
+          {
+            y: 0,
+            clearProps: "transform,translate,rotate,scale",
+            stagger: together ? 0 : Math.min(stagger, 0.03),
+            duration: 0.4,
+            ease: "power2.out",
+            delay,
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 95%",
+              toggleActions: "play none none none",
+            },
           },
-        });
+        );
       });
       return () => mm.revert();
     },
-    { scope: containerRef },
+    {
+      scope: containerRef,
+      dependencies: [together, stagger, delay],
+      revertOnUpdate: true,
+    },
   );
 
   return (

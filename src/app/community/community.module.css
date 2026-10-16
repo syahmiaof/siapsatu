@@ -783,3 +783,295 @@
     gap: 6px;
   }
 }
+
+/* Explicit grid areas keep the banner and side panels in normal flow. */
+.pageLayout {
+  grid-template-areas: "channels hero hero" "channels feed sidebar";
+  grid-template-columns: 180px minmax(0, 1fr) 320px;
+  gap: 16px 20px;
+  padding-top: 10px;
+}
+.channelsSidebar {
+  grid-area: channels;
+}
+.communityBanner {
+  grid-area: hero;
+  width: 100%;
+  margin: 0;
+  min-height: 210px;
+  padding: 16px 18px;
+  grid-template-columns: 52% 48%;
+}
+.communityBanner > div:last-child {
+  width: 59%;
+}
+.communityBanner > div:first-child {
+  position: relative;
+  width: 100%;
+}
+.bannerTitle {
+  font-size: clamp(33px, 3vw, 46px);
+  line-height: 1.04;
+  max-width: 490px;
+}
+.bannerSub {
+  max-width: 360px;
+  font-size: 13px;
+}
+.feedCol {
+  grid-area: feed;
+}
+.rightSidebar {
+  grid-area: sidebar;
+  padding-top: 0;
+}
+.initialAvatar {
+  overflow: hidden;
+  background: #fff1d5;
+}
+.initialAvatar img {
+  width: 100%;
+  height: auto;
+  align-self: start;
+}
+.postContent {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 190px;
+  gap: 14px;
+  align-items: start;
+}
+.postContent:not(:has(figure)) {
+  grid-template-columns: 1fr;
+}
+.postTitle {
+  font-size: 19px;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+.postBody {
+  font-size: 13px;
+  line-height: 1.45;
+}
+.postCard {
+  gap: 8px;
+  padding: 13px 15px;
+}
+.rulesCard {
+  order: 1;
+}
+.challengeCard {
+  order: 2;
+}
+@media (max-width: 1200px) {
+  .pageLayout {
+    grid-template-columns: 145px minmax(0, 1fr) 270px;
+    gap: 16px;
+  }
+  .bannerTitle {
+    font-size: 37px;
+  }
+  .postContent {
+    grid-template-columns: minmax(0, 1fr) 145px;
+  }
+  .postTitle {
+    font-size: 18px;
+  }
+  .communityBanner {
+    min-height: 210px;
+  }
+}
+@media (max-width: 900px) {
+  .pageLayout {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    grid-template-areas: "channels channels" "hero hero" "feed sidebar";
+  }
+  .communityBanner {
+    width: 100%;
+    min-height: 220px;
+  }
+  .communityBanner > div:last-child {
+    width: 55%;
+  }
+  .bannerTitle {
+    font-size: 36px;
+  }
+  .bannerSub {
+    max-width: 300px;
+  }
+  .rightSidebar {
+    padding-top: 0;
+  }
+  .postContent {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .postContent figure {
+    height: 140px;
+  }
+  .channelItem {
+    min-height: 44px;
+  }
+}
+@media (max-width: 600px) {
+  .pageLayout {
+    display: flex;
+    gap: 14px;
+  }
+  .channelsSidebar {
+    order: -1;
+  }
+  .communityBanner {
+    order: 0;
+    width: 100%;
+    min-height: 0;
+    padding: 14px 12px 0;
+    display: block;
+    overflow: hidden;
+  }
+  .communityBanner > div:first-child {
+    width: 100%;
+  }
+  .communityBanner > div:last-child {
+    position: relative;
+    width: calc(100% + 24px);
+    height: 145px;
+    top: auto;
+    right: auto;
+    margin: 10px -12px 0;
+  }
+  .bannerTitle {
+    font-size: 34px;
+    max-width: 100%;
+  }
+  .bannerSub {
+    max-width: 100%;
+    font-size: 13px;
+  }
+  .feedCol {
+    order: 1;
+  }
+  .rightSidebar {
+    order: 2;
+  }
+  .postContent {
+    grid-template-columns: 1fr;
+  }
+  .postContent figure {
+    height: 135px;
+  }
+  .postTitle {
+    font-size: 19px;
+  }
+  .postBody {
+    font-size: 14px;
+  }
+  .reactionBtn {
+    font-size: 11px;
+  }
+  .initialAvatar {
+    width: 34px;
+    height: 34px;
+  }
+  .publishBtn,
+  .filterPill,
+  .attachBtn {
+    min-height: 44px;
+  }
+}
+
+@media (min-width: 901px) {
+  .pageLayout {
+    grid-template-columns: 165px minmax(0, 1fr) 300px;
+    gap: 12px 20px;
+  }
+  .communityBanner {
+    min-height: 190px;
+  }
+  .feedCol {
+    gap: 10px;
+  }
+  .createPostBox {
+    padding: 10px 12px;
+  }
+  .postInput {
+    height: 42px;
+    min-height: 42px;
+    padding: 8px 12px;
+    line-height: 24px;
+  }
+  .postTopRow {
+    margin-bottom: 4px;
+  }
+  .postCard {
+    position: relative;
+    gap: 6px;
+    padding: 12px;
+  }
+  .postContent {
+    display: block;
+    padding-right: 205px;
+  }
+  .postContent:not(:has(figure)) {
+    padding-right: 0;
+  }
+  .postContent figure {
+    position: absolute;
+    right: 12px;
+    top: 40px;
+    width: 190px;
+    height: 120px;
+  }
+  .postTitle {
+    font-size: 18px;
+  }
+  .postBody {
+    font-size: 12px;
+  }
+  .postCard:has(figure) .tagsRow {
+    padding-right: 200px;
+  }
+  .rulesCard,
+  .challengeCard,
+  .whatsappSidebarCard {
+    padding: 16px;
+  }
+  .ruleItem {
+    font-size: 12px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .pageLayout {
+    grid-template-columns: 140px minmax(0, 1fr) 260px;
+  }
+  .postContent {
+    padding-right: 150px;
+  }
+  .postContent figure {
+    width: 140px;
+    height: 100px;
+  }
+  .postCard:has(figure) .tagsRow {
+    padding-right: 145px;
+  }
+}
+
+@media (min-width: 901px) {
+  .postTopRow > div {
+    flex-direction: row !important;
+  }
+  .postInput {
+    flex: none;
+    width: 100%;
+  }
+  .postTopRow {
+    align-items: center;
+  }
+  .postCard:has(figure) {
+    min-height: 195px;
+  }
+  .postContent figure {
+    height: 105px;
+  }
+  .postCard:has(figure) .postContent {
+    min-height: 50px;
+  }
+}

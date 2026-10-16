@@ -23,7 +23,8 @@ import {
   Hash,
 } from "lucide-react";
 
-import { BrandScene } from "@/components/brand/BrandScene";
+import { CommunityArtwork } from "@/components/brand/CommunityArtwork";
+import { DemoThumbnail } from "@/components/community/DemoThumbnail";
 
 import styles from "./community.module.css";
 
@@ -186,6 +187,43 @@ export default function CommunityPage() {
   return (
     <div className="container">
       <div className={styles.pageLayout}>
+        <section className={styles.communityBanner}>
+          <div>
+            <div
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                background: "rgba(255,255,255,0.15)",
+                padding: "0.3rem 0.8rem",
+                borderRadius: "var(--ss-radius-pill)",
+                fontSize: "0.8rem",
+                fontWeight: 800,
+                marginBottom: "0.75rem",
+              }}
+            >
+              <Sparkles size={14} color="var(--ss-yellow)" /> Komuniti demo ·
+              hantaran contoh
+            </div>
+
+            <AnimatedHeading
+              steadyEntrance
+              text="Belajar seorang, support ramai."
+              highlightWords={["support", "ramai."]}
+              as="h1"
+              className={styles.bannerTitle}
+            />
+
+            <p className={styles.bannerSub}>
+              Tanya, kongsi hasil dan belajar bersama. Semua hantaran di sini
+              ialah contoh prototaip.
+            </p>
+          </div>
+
+          <div>
+            <CommunityArtwork />
+          </div>
+        </section>
         {/* Left: Channels Sidebar */}
 
         <aside className={styles.channelsSidebar} aria-label="Saluran Komuniti">
@@ -225,43 +263,6 @@ export default function CommunityPage() {
 
         <div className={styles.feedCol}>
           {/* Top Banner */}
-
-          <section className={styles.communityBanner}>
-            <div>
-              <div
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                  background: "rgba(255,255,255,0.15)",
-                  padding: "0.3rem 0.8rem",
-                  borderRadius: "var(--ss-radius-pill)",
-                  fontSize: "0.8rem",
-                  fontWeight: 800,
-                  marginBottom: "0.75rem",
-                }}
-              >
-                <Sparkles size={14} color="var(--ss-yellow)" /> Komuniti demo ·
-                hantaran contoh
-              </div>
-
-              <AnimatedHeading
-                text="Belajar seorang, support ramai."
-                highlightWords={["support", "ramai."]}
-                as="h1"
-                className={styles.bannerTitle}
-              />
-
-              <p className={styles.bannerSub}>
-                Tanya, kongsi hasil dan belajar bersama. Semua hantaran di sini
-                ialah contoh prototaip.
-              </p>
-            </div>
-
-            <div>
-              <BrandScene />
-            </div>
-          </section>
 
           {/* Create Post Form */}
 
@@ -415,7 +416,16 @@ export default function CommunityPage() {
                   <div className={styles.postHeader}>
                     <div className={styles.authorGroup}>
                       <span className={styles.initialAvatar} aria-hidden="true">
-                        {post.author.name.charAt(0)}
+                        {["post-1", "post-2", "post-3"].includes(post.id) ? (
+                          <Image
+                            src={`/assets/illustrations/parity-v2/portrait-${post.id === "post-3" ? "woman" : post.id === "post-2" ? "coder" : "male"}-500.webp`}
+                            alt=""
+                            width={40}
+                            height={58}
+                          />
+                        ) : (
+                          post.author.name.charAt(0)
+                        )}
                       </span>
 
                       <div>
@@ -432,16 +442,18 @@ export default function CommunityPage() {
                         </div>
 
                         <div className={styles.postTime}>
-                          {post.timeAgo} · #{post.channel}
+                          {post.timeAgo} · #{post.channel} · Watak demo
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div>
-                    <h2 className={styles.postTitle}>{post.title}</h2>
-
-                    <p className={styles.postBody}>{post.body}</p>
+                  <div className={styles.postContent}>
+                    <div>
+                      <h2 className={styles.postTitle}>{post.title}</h2>
+                      <p className={styles.postBody}>{post.body}</p>
+                    </div>
+                    {post.image && <DemoThumbnail postId={post.id} />}
                   </div>
 
                   {post.tags && post.tags.length > 0 && (
@@ -465,7 +477,7 @@ export default function CommunityPage() {
                         fill={isLiked ? "currentColor" : "none"}
                       />
 
-                      <span>{post.reactions.likes} Suka</span>
+                      <span>{post.reactions.likes} Suka demo</span>
                     </button>
 
                     <button
@@ -477,7 +489,7 @@ export default function CommunityPage() {
                     >
                       <MessageSquare size={18} />
 
-                      <span>{post.reactions.replies} Balasan</span>
+                      <span>{post.reactions.replies} Balasan demo</span>
                     </button>
 
                     <button

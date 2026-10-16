@@ -162,3 +162,25 @@
     font-size: 12px;
   }
 }
+
+/* Preserve the complete speech bubbles inside the strip, independent of width. */
+.learnersArt {
+  height: 100%;
+  width: 55%;
+}
+.learnersArt img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: bottom left;
+}
+.whatsappBox {
+  padding: 16px;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .learnersArt {
+    width: 66%;
+    height: 100%;
+  }
+}

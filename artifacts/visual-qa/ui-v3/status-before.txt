@@ -1,0 +1,5 @@
+?? ASTRA_UI_ASSET_LAYOUT_V3_PROMPT.md
+?? artifacts/visual-qa/reference-v3-contact.jpg
+?? artifacts/visual-qa/user-feedback-2026-10-16/
+?? scripts/capture-ui-v3.mjs
+b079d3c287e63cd6faf7519e4e33507881f53c0a

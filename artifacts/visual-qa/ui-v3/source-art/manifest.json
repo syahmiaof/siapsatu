@@ -1,0 +1,29 @@
+{
+  "sourceSha256": "0d2b4312573ee4a8ee91e9cefb44f1c5b6ae11d1d08ccf9b8d34a953f2b4713f",
+  "alphaThreshold": 200,
+  "bounds": [
+    111,
+    62,
+    1442,
+    987
+  ],
+  "bottomTrim": 0.03,
+  "outputs": [
+    {
+      "path": "public\\assets\\illustrations\\ui-v3\\path-learner-1100.webp",
+      "size": [
+        1100,
+        741
+      ],
+      "sha256": "1b490dbfdac03bdb4eaa1b15e8bd8664076725a28d80148d4f5db2d42cc7a21b"
+    },
+    {
+      "path": "public\\assets\\illustrations\\ui-v3\\path-learner-600.webp",
+      "size": [
+        600,
+        404
+      ],
+      "sha256": "2a020ed66d37b683cdc5e793dd70c13f384575c8b80466782a4ad964515df500"
+    }
+  ]
+}

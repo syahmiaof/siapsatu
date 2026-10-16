@@ -4,11 +4,6 @@ import styles from "./DirectoryArtwork.module.css";
 
 /** The wide banner and mobile portrait have independently composed artwork. */
 export function DirectoryArtwork() {
-  const star = Array.from({ length: 28 }, (_, i) => {
-    const a = (i * Math.PI) / 14 - Math.PI / 2,
-      r = i % 2 ? 24 : 56;
-    return `${333 + Math.cos(a) * r},${83 + Math.sin(a) * r}`;
-  }).join(" ");
   return (
     <div className={styles.scene} data-hero-art aria-hidden="true">
       <svg
@@ -29,8 +24,7 @@ export function DirectoryArtwork() {
           stroke="#ff1938"
           strokeWidth="32"
         />
-        <path fill="#ffd12a" d="M309 28a62 62 0 1 0 0 111a52 52 0 1 1 0-111" />
-        <polygon points={star} fill="#ffd12a" />
+
         <path
           d="M475 260 603 149"
           fill="none"
@@ -48,6 +42,14 @@ export function DirectoryArtwork() {
           strokeLinecap="round"
         />
       </svg>
+      <Image
+        className={styles.emblem}
+        src="/assets/illustrations/ui-v3/emblem.svg"
+        alt=""
+        width={162}
+        height={100}
+        unoptimized
+      />
       <p className={styles.caption}>
         Tools betul.
         <br />

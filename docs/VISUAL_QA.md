@@ -1,55 +1,61 @@
-# SiapSatu — Top 5 repair QA
+# SiapSatu UI / asset / layout repair v3
 
-Date: 16 Oct 2026. **Local production build only**, served at http://localhost:3112. No push, deployment or DNS change in this sprint, as required by the latest repair brief. [Previous report](VISUAL_QA_PRE_TOP5.md) is preserved as historical evidence.
+Date: 17 October 2026 (work began 16 October). Started at b079d3c287e63cd6faf7519e4e33507881f53c0a. Scope: Home, Tools, AI Automation Path and Community. This report supersedes the older Top 5 runtime verdicts; historical reports/evidence remain unchanged.
 
-## Result and evidence
+## Current local result
 
-All five repairs are implemented: truthful tool availability, reference-led Tools composition, reachable reader controls, earlier mobile Home discovery, and outcome-first catalog titles with reversible URL filters. Existing sign-in, checkout, community and local-progress demo labels remain.
+Reference-led compositions are implemented and checked in a production build at http://localhost:3112. Release verification will be appended after the scoped GitHub/Vercel release. This is **not pixel-perfect artwork parity**: original illustrator layers were unavailable, and the truthful prototype deliberately differs from invented reference claims.
 
-- [Before/reference/final viewer](../artifacts/visual-qa/top5/index.html)
-- [Comparison contact sheet](../artifacts/visual-qa/top5/comparisons/contact.jpg) · [normalization](../artifacts/visual-qa/top5/comparisons/normalization.json)
-- [Fresh baseline geometry](../artifacts/visual-qa/top5/baseline/geometry.json) · [final geometry](../artifacts/visual-qa/top5/final/geometry.json)
-- [Runtime audit](../artifacts/visual-qa/top5/runtime-audit.json) · [asset provenance](ASSET_SOURCES.md)
+- [Evidence viewer](../artifacts/visual-qa/ui-v3/index.html)
+- [Approved reference / current contact sheet](../artifacts/visual-qa/ui-v3/comparisons/contact.jpg)
+- [Fresh baseline metadata](../artifacts/visual-qa/ui-v3/baseline/geometry.json), [final metadata](../artifacts/visual-qa/ui-v3/final/geometry.json)
+- [Comparison normalization and user-capture cropping](../artifacts/visual-qa/ui-v3/comparisons/normalization.json)
+- [Asset sources and provenance](ASSET_SOURCES.md)
 
-Baseline and final cover five route states at **1440×1024, 390×844, 360×800 and 768×1024**: 20 route/viewport checks per phase, with first-fold and full-page captures plus the desktop mega menu. Twelve additional final mobile reader captures show templates, tasks and the last paragraph with the real fixed footer.
+## Measured viewport assumptions
 
-**14 reference/final pairs** have labelled side-by-sides and 50% overlays. Comparison copies are width-normalized; mobile Tools removes 90 original pixels of device status bar, catalog removes 70. Height is cropped to the shorter image, never stretched. Original references are unchanged. Mobile reader reference has a different subject; comparisons concern layout grammar. Home has no dedicated approved mobile reference, so its mobile evidence is before/final.
+Six requested CSS viewports: 1880×880, 1505×1029, 1440×900, 768×1024, 390×844 and 360×800, all DPR 1 with browser zoom 100% in controlled Playwright contexts. A seventh 1248×588 CSS viewport at DPR 1.5 approximates the user's 1872×882 physical-pixel content shape. The user's logo/type scale strongly suggests approximately 150% combined zoom/display scaling. **Actual zoom on the user's browser was not accessible and is not claimed measured.**
 
-Captures wait for fonts/images and use reduced motion for stable geometry; normal motion is tested separately. Full-page captures move fixed docks to the document bottom only during screenshot stitching. Fold/scrolled captures retain actual fixed positioning.
+Original user captures retain their bytes. Comparison copies remove Edge chrome/taskbar using pixel crop (0,120,1864,1001); the resulting 1864×881 region differs by about 8 pixels from the simulated physical width. Individual user captures appear to have different effective scaling (Tools is denser than Home); the 1.5× simulation primarily matches Home. User comparisons are therefore an explicitly approximate reconstruction, with exact original sizes/crops/hashes in normalization.json. Approved mockups are never edited. Reference images are resized proportionally; differing heights are padded with white, never vertically stretched. Tools mobile removes its 90px status bar before proportional scaling. Tablet uses the desktop reference only as a composition guide; Home, Path and Community have no approved mobile references.
 
-## Route verdicts
+Each route/viewport has a normal-motion entrance capture, settled fold, full-page capture, reduced-motion capture and reverse-scroll check. Home also has a scrolled cards/community capture. Full-page stitching relocates the fixed dock only for that image; fold/scrolled images preserve actual fixed positioning. Capture metadata includes innerWidth, innerHeight, DPR, visualViewport.scale, rectangles, image errors and observed layout shifts.
 
-**close** means recognizable composition, not pixel parity. **material delta remains** is a visual verdict, separate from functional test results.
+## Route verdicts and remaining differences
 
-| Route / state | Before issue | Change | Final verdict / residual delta | Evidence |
-|---|---|---|---|---|
-| Tools journey | Zero-module cards led to empty searches; available modules were buried. | All 8 unavailable tools are non-interactive upcoming articles without arrows/tab stops. Counts derive from MODULES. Available cards reach hubs or exact tool filters. | **close** — all journeys tested. Real counts deliberately differ from invented reference counts. | [Baseline](../artifacts/visual-qa/top5/baseline/390-tools-fold.png), [tests](../artifacts/visual-qa/top5/test-e2e.log) |
-| /tools desktop + mobile | Mobile order, logo scale, hero and card hierarchy differed. | Larger tiles/type, learner crop, flag/star/arrow, desktop caption; Gemini, ChatGPT, n8n, Hermes, Codex and GitHub lead. URL-backed search/category/reset. | **close** — 390px first row is about 34px below normalized reference. Learner pose, neutral Codex/NLM labels and low-resolution supplied Hermes mark differ. | [Desktop](../artifacts/visual-qa/top5/comparisons/1440-tools-side-by-side.jpg), [mobile](../artifacts/visual-qa/top5/comparisons/390-tools-side-by-side.jpg), [360px overlay](../artifacts/visual-qa/top5/comparisons/360-tools-overlay.png) |
-| /learn/n8n-google-sheets/2 | Small workflow, weak rail/hierarchy and footer reachability risk. | Single header, clearer rail, large DOM workflow, template/task/official link. Dock reserve measures actual footer height with observer cleanup. | **material delta remains** — desktop reference depicts step 3; mobile reference depicts Gemini with different type/content. Real step 2 is preserved. Larger readable content puts the full workflow below the mobile fold. | [Desktop](../artifacts/visual-qa/top5/comparisons/1440-learn-n8n-google-sheets-2-side-by-side.jpg), [template](../artifacts/visual-qa/top5/final/390-learn-n8n-google-sheets-2-template.png), [last paragraph](../artifacts/visual-qa/top5/final/360-learn-n8n-google-sheets-2-last-paragraph.png) |
-| /learn/n8n-google-sheets/3 | Later lesson lacked the reference hierarchy and diagram prominence. | Larger heading, deliberate line break, stronger action panel, full workflow, template/task and accessible previous/next. | Desktop **close**; mobile **material delta remains** — reference is a different lesson and serif design. Supporting artwork and diagram detail remain approximate. Reachability passes. | [Desktop](../artifacts/visual-qa/top5/comparisons/1440-learn-n8n-google-sheets-3-side-by-side.jpg), [360px task/last paragraph](../artifacts/visual-qa/top5/final/360-learn-n8n-google-sheets-3-last-paragraph.png) |
-| Home | Mobile artwork pushed discovery down; desktop art/CTA accents were weak. | Mobile hero art 280→200px; larger desktop title/CTA/trio, undistorted emblem, KL skyline/note and conversation icon. | **close** — first card moves 684→604px at 390px, 681→601px at 360px. At least 100px of the card is visible above the dock at both widths. Poses, skyline and community artwork remain approximate; no invented member proof. | [Desktop](../artifacts/visual-qa/top5/comparisons/1440-home-side-by-side.jpg), [390px](../artifacts/visual-qa/top5/final/390-home-fold.png), [360px](../artifacts/visual-qa/top5/final/360-home-fold.png) |
-| /modules + desktop Modul menu | Tool-name-first cards, loose density and nonpersistent filters. | Outcome titles retain canonical names/prices. Exact tool filters, reversible categories/search/reset. Shorter hero copy, compact mobile cards and CSS portrait crops. Menu behavior retained. | **close** — all three featured cards fit the 390px fold. Three featured products versus four in mobile reference; no invented fourth product. Portraits are closer crops than the original torso art; exact illustration parity remains unavailable. | [Desktop](../artifacts/visual-qa/top5/comparisons/1440-modules-side-by-side.jpg), [mobile](../artifacts/visual-qa/top5/comparisons/390-modules-side-by-side.jpg), [menu](../artifacts/visual-qa/top5/comparisons/1440-mega-menu-side-by-side.jpg) |
+| Surface | Verified repair | Reference exception / residual difference | Evidence |
+|---|---|---|---|
+| Home first fold | Height-aware title/CTA/hero contract keeps all three desktop cards visible, including short/zoomed viewport. Mobile retains text → CTA → chips → art → cards. | Hero poses/linework remain reconstructed; yellow skyline is a stylized vector, not exact original illustration. | [1505 comparison](../artifacts/visual-qa/ui-v3/comparisons/1505-home-side-by-side.jpg), [user counterpart](../artifacts/visual-qa/ui-v3/comparisons/live-home-first-fold-side-by-side.jpg) |
+| Malaysia layers | Separate intrinsic crescent/14-point star, ribbon, arrow, skyline, people, device marks and DOM notes. No emblem stretch or slice cropping. Home, Tools, Path and Community use distinct compositions. | Ribbon curvature and handwritten lettering are not identical to original master layers. | [Home overlay](../artifacts/visual-qa/ui-v3/comparisons/1505-home-overlay.png), [source manifest](../artifacts/visual-qa/ui-v3/source-art/manifest.json) |
+| Home cards / strip | GSAP now has explicit y=0 endpoint; featured row moves together by 6px and clears inline transforms. Card tops/bottoms align at rest and during sampled entrance. Discussion image preserves speech bubbles, panel widths and honest WhatsApp preview. | Abstract group badge replaces fake social proof. Local preview wording differs from unavailable WhatsApp invite in mockup. | [User scrolled counterpart](../artifacts/visual-qa/ui-v3/comparisons/live-home-cards-community-side-by-side.jpg), [motion regression](../tests/ui-v3.spec.ts) |
+| Tools | Height-bounded wide flag/arrow hero, intrinsic emblem and compact controls. Four desktop columns, two mobile columns; required mobile first-six order retained. | Real module counts, 8 available/8 upcoming and neutral Codex/NLM marks intentionally differ. Protected Hermes source remains low resolution. | [Desktop](../artifacts/visual-qa/ui-v3/comparisons/1505-tools-side-by-side.jpg), [390](../artifacts/visual-qa/ui-v3/comparisons/390-tools-side-by-side.jpg) |
+| AI Automation Path | Separate seated learner, floating workflow symbols and connecting arrows. Four colored steps, outcome panel and CTA fit at 1505×1029. Checklist persists locally. | Reconstructed learner pose and generic Sheet/Mail/step icons differ; no RM27 bundle, certificate or unsupported completion metric. Two-column tablet/mobile timeline keeps real content readable. | [Reference pair](../artifacts/visual-qa/ui-v3/comparisons/1505-paths-ai-automation-side-by-side.jpg), [user counterpart](../artifacts/visual-qa/ui-v3/comparisons/live-learning-path-side-by-side.jpg) |
+| Community | Explicit 3-column grid, conversational hero, illustrated demo avatars and three authored thumbnail examples. Sidebar follows normal grid flow. Compose/filter/like actions remain local. | Demo qualifiers and longer truthful copy make posts taller than the reference; third post starts near the desktop fold. Thumbnail artwork represents examples, not real customer work. Public navigation stays consistent with the app instead of copying a fictitious logged-in profile. | [Reference pair](../artifacts/visual-qa/ui-v3/comparisons/1505-community-side-by-side.jpg), [user counterpart](../artifacts/visual-qa/ui-v3/comparisons/live-community-side-by-side.jpg) |
 
-## Final verification
+## Homepage fold measurements (CSS px)
 
-Commands ran after the final application/test edit. Browser checks use the local production build.
+| Viewport | Before first card top | Final top | Final bottom |
+|---|---:|---:|---:|
+| 1880×880 | 554 | 508 | 758 |
+| 1505×1029 | 554 | 575.05 | 825.05 |
+| 1440×900 | 554 | 517 | 767 |
+| 1248×588, DPR 1.5 | 554 | 390.81 | 570.81 |
+| 768×1024 | 471 | 471 | 729.23 |
+| 390×844 | 606.69 | 606.69 | 764.42 |
+| 360×800 | 603.69 | 603.69 | 778.22 |
 
-| Command / check | Result | Log |
-|---|---|---|
-| npm run typecheck | Pass, exit 0 | [typecheck](../artifacts/visual-qa/top5/typecheck.log) |
-| npm run lint | Pass, no ESLint warnings/errors | [lint](../artifacts/visual-qa/top5/lint.log) |
-| npm run build | Pass, 13 static pages generated | [build](../artifacts/visual-qa/top5/build.log) |
-| QA_URL=http://localhost:3112 npm run test:e2e | **57 passed, 9 skipped, 0 failed**, 1.7m; skips are device-specific guards | [e2e](../artifacts/visual-qa/top5/test-e2e.log) |
-| node scripts/capture-top5.mjs final | 20 checks; **0 overflow, 0 broken images, 0 page errors** | [geometry](../artifacts/visual-qa/top5/final/geometry.json) |
-| node scripts/audit-astra-runtime.mjs | 28 route/viewport checks; **0 console/HTTP/request/retired-image findings** | [runtime](../artifacts/visual-qa/top5/runtime-audit.json) |
-| Protected asset / reference hashes | 3 supplied asset pairs unchanged; 8 approved references unchanged | [assets](../artifacts/visual-qa/top5/protected-assets.json), [references](../artifacts/visual-qa/top5/reference-integrity.json) |
+At the reference shape, first cards begin within 5px of the brief's approximate y=580 guide. The community strip starts at approximately y=839. The mobile dock covers the lower portion of the first card until scroll; the existing discovery/reachability test passes. Desktop three-card height is 250px, reduced to 180px only for short desktop viewports. Test sampling requires card top/bottom differences below 1 CSS pixel throughout entrance.
 
-Coverage: every available/upcoming tool; exact filters, empty reset, reload/Back; clipboard contents, legacy fallback with focus restoration and denied-copy manual fallback; progress persistence; next/back; normal/reduced motion and reverse scroll; keyboard focus; 390px/360px dock reachability; Home→catalog; existing menu, checkout preview, login preview and local community regressions.
+## Verification
 
-[Initial test failures](../artifacts/visual-qa/top5/test-e2e-initial.log) are retained. Test fixes await the next lesson URL before Back, wait for hydration before direct keyboard activation/reload history checks, and select the final tool card instead of the last link now that upcoming tools are articles. These are not hidden retries: the final full suite passed with retries disabled.
+- Production build, typecheck and lint: pass. [Build](../artifacts/visual-qa/ui-v3/build.log), [typecheck](../artifacts/visual-qa/ui-v3/typecheck.log), [lint](../artifacts/visual-qa/ui-v3/lint.log).
+- Full E2E suite: **66 passed, 10 device-specific skips, 0 failures**; final results recorded in [test log](../artifacts/visual-qa/ui-v3/test-e2e.log). Device-specific skips are explicit; smoke results are not visual parity proof.
+- Runtime audit: 28 route/viewport checks, zero findings; [JSON](../artifacts/visual-qa/ui-v3/runtime-audit.json). Covers all principal routes, not only these four. Cancelled speculative prefetches are recorded separately.
+- Observed local CLS peaked at 0.003 during load (small font/entrance settling); this is not a claim of absolute zero layout shift.
+- Complete captures and the interactive evidence index are retained locally; source control includes curated desktop/mobile/user comparison pairs, overlays, provenance and machine-readable metadata to keep release evidence bounded.
+- 28 changed-route/viewport captures: geometry, overflow, broken images and page errors recorded in final metadata. Seven viewport variants × four routes. Normal and reduced-motion views retained separately.
+- Tests cover entrance alignment, full short-desktop fold, Back/reverse scrolling, Path checklist persistence, community example labels/local actions, existing keyboard menus, search/history, reader copy/progress and mobile dock reachability.
+- A final narrow-screen audit caught a 4px Path overflow at 360px caused by the tablet learner offset. A mobile-specific left inset corrected it; the Path test now explicitly uses 360px and asserts document width.
+- During development, the first new Back-navigation test failed because it invoked Back before the client route finished changing. The test now awaits the destination URL; the corrected regression passes.
+- [Integrity audit](../artifacts/visual-qa/ui-v3/protected-integrity.json): 666 protected files checked against HEAD; 637 byte-identical and 29 text files differ only by existing Windows CRLF checkout normalization. No content changes. Protected references, wordmark/tool sources and prior Top 5/parity-v2 evidence were not edited. Only scoped app components, new assets, scripts/tests and these reports are release candidates.
 
-React review: filters derive from URL state; articles/links/buttons reflect real availability; observer and animation cleanup is retained. Existing protected mockup deletions and untracked user files were not reset, staged or removed. No external/live testing is claimed for this sprint.
-
-## Reproduce
-
-Run npm run build, then npm run start -- --port 3112. Set QA_URL=http://localhost:3112 and run the e2e suite and node scripts/capture-top5.mjs final. Run python scripts/compare-top5.py and python scripts/top5-report-index.py for comparisons/viewer. For runtime audit, set QA_OUTPUT=artifacts/visual-qa/top5/runtime-audit.json. Preserve the pre-edit baseline folder.
+Commands: npm run build; npm run typecheck; npm run lint; QA_URL=http://localhost:3112 npm run test:e2e; node scripts/capture-ui-v3.mjs final; python scripts/compare-ui-v3.py. PowerShell environment syntax was used when running locally.

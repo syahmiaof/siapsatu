@@ -424,7 +424,13 @@
   right: 12px;
   height: 6px;
   border-radius: 6px;
-  background: linear-gradient(to right, #1777f2 25%, #ff5a0a 25% 50%, #08bd59 50% 75%, #ff2445 75%);
+  background: linear-gradient(
+    to right,
+    #1777f2 25%,
+    #ff5a0a 25% 50%,
+    #08bd59 50% 75%,
+    #ff2445 75%
+  );
 }
 .stepNumberPip {
   top: -41px;
@@ -575,5 +581,143 @@
   .bottomBanner {
     display: flex;
     flex-direction: column;
+  }
+}
+
+/* Reference-specific compact hero and four-step timeline. */
+.tagline {
+  font: 800 clamp(28px, 3.1vw, 46px)/1.03 var(--font-display);
+  letter-spacing: -0.035em;
+  max-width: 760px;
+}
+@media (min-width: 901px) {
+  .heroSection {
+    min-height: 360px;
+    padding: 18px 0 12px;
+    grid-template-columns: 54% 46%;
+  }
+  .headline {
+    font-size: clamp(42px, 4.4vw, 65px);
+    white-space: nowrap;
+    letter-spacing: -0.045em;
+  }
+  .heroLeft {
+    gap: 9px;
+  }
+  .heroRight {
+    position: absolute;
+    inset: -100px calc(-1 * var(--page-gutter)) 0 49%;
+    height: auto;
+    margin: 0;
+  }
+  .pathContentGrid {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    margin: 18px 0;
+    gap: 20px;
+  }
+  .trackHeaderTitle {
+    margin-bottom: 44px;
+    font-size: 28px;
+  }
+  .trackModuleCard {
+    min-height: 300px;
+    padding: 16px 14px 10px;
+  }
+  .moduleCardIcon {
+    float: left;
+    margin: 0 10px 8px 0;
+    width: 48px;
+    height: 48px;
+  }
+  .moduleCardTitle {
+    font-size: 21px;
+    min-height: 48px;
+  }
+  .moduleCardDesc {
+    min-height: 56px;
+    font-size: 14px;
+    clear: both;
+  }
+  .hasilBlock {
+    background: transparent;
+    padding: 10px 0 0;
+    border-top: 1px solid #06245718;
+  }
+  .hasilText {
+    font-size: 14px;
+  }
+  .bottomBanner {
+    margin: 18px 0;
+  }
+}
+@media (min-width: 901px) and (max-height: 700px) {
+  .heroSection {
+    min-height: 285px;
+  }
+  .headline {
+    font-size: 44px;
+  }
+  .tagline {
+    font-size: 32px;
+  }
+  .subtitle {
+    font-size: 15px;
+  }
+  .metaPill,
+  .discountBadge {
+    font-size: 11px;
+    padding: 6px;
+  }
+  .heroRight {
+    inset: -100px calc(-1 * var(--page-gutter)) 0 51%;
+  }
+}
+@media (max-width: 1200px) and (min-width: 901px) {
+  .pathContentGrid {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+  .headline {
+    font-size: 42px;
+  }
+  .tagline {
+    font-size: 34px;
+  }
+}
+@media (max-width: 900px) {
+  .heroRight {
+    height: 300px;
+  }
+  .tagline {
+    font-size: 33px;
+  }
+  .heroSection {
+    gap: 8px;
+  }
+  .headline {
+    font-size: 43px;
+  }
+}
+@media (max-width: 600px) {
+  .headline {
+    font-size: 32px;
+  }
+  .tagline {
+    font-size: 27px;
+  }
+  .heroRight {
+    height: 240px;
+  }
+  .modulesTrackGrid {
+    gap: 40px 10px;
+  }
+  .moduleCardTitle {
+    font-size: 18px;
+  }
+  .trackModuleCard {
+    padding: 18px 10px 10px;
+  }
+  .moduleCardDesc,
+  .hasilText {
+    font-size: 13px;
   }
 }

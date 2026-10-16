@@ -14,6 +14,7 @@ interface AnimatedHeadingProps {
   breakAfter?: number;
   mobileBreakAfter?: number;
   accentFrom?: number;
+  steadyEntrance?: boolean;
 }
 export function AnimatedHeading({
   text,
@@ -26,6 +27,7 @@ export function AnimatedHeading({
   breakAfter,
   mobileBreakAfter,
   accentFrom,
+  steadyEntrance = false,
 }: AnimatedHeadingProps) {
   const ref = useRef<HTMLDivElement>(null);
   const accents = new Set(
@@ -40,9 +42,12 @@ export function AnimatedHeading({
       mm.add("(prefers-reduced-motion: no-preference)", () => {
         gsap.fromTo(
           "[data-word]",
-          { yPercent: 110, autoAlpha: 0 },
+          steadyEntrance
+            ? { yPercent: 0, scale: 0.98, autoAlpha: 1 }
+            : { yPercent: 110, autoAlpha: 0 },
           {
             yPercent: 0,
+            scale: 1,
             autoAlpha: 1,
             duration: 0.7,
             stagger: 0.045,
@@ -51,21 +56,37 @@ export function AnimatedHeading({
             scrollTrigger: {
               trigger: ref.current,
               start: "top 96%",
-              toggleActions: "play none none reverse",
+              toggleActions: steadyEntrance
+                ? "play none none none"
+                : "play none none reverse",
             },
           },
         );
       });
       return () => mm.revert();
     },
-    { scope: ref, dependencies: [text, delay], revertOnUpdate: true },
+    {
+      scope: ref,
+      dependencies: [text, delay, steadyEntrance],
+      revertOnUpdate: true,
+    },
   );
   return (
     <div ref={ref} className={`${styles.wrapper} ${className}`} data-heading>
       <Tag aria-label={text} className={styles.heading}>
         {text.split(" ").map((word, i) => (
           <React.Fragment key={`${i}-${word}`}>
-            {i > 0 && (i === breakAfter ? <br /> : i === mobileBreakAfter ? <><br className={styles.mobileBreak}/><span className={styles.desktopSpace}> </span></> : " ")}
+            {i > 0 &&
+              (i === breakAfter ? (
+                <br />
+              ) : i === mobileBreakAfter ? (
+                <>
+                  <br className={styles.mobileBreak} />
+                  <span className={styles.desktopSpace}> </span>
+                </>
+              ) : (
+                " "
+              ))}
             <span className={styles.wordMask} aria-hidden="true">
               <span
                 data-word

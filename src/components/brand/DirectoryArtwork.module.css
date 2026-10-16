@@ -75,3 +75,16 @@
     transform: rotate(10deg);
   }
 }
+
+.emblem {
+  position: absolute;
+  width: 24%;
+  height: auto;
+  left: 27%;
+  top: 10%;
+}
+@media (max-width: 600px) {
+  .emblem {
+    display: none;
+  }
+}

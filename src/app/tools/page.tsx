@@ -66,6 +66,7 @@ function DirectoryContent() {
         <div className={styles.heroBanner}>
           <div className={styles.heroLeft}>
             <AnimatedHeading
+              steadyEntrance
               text="Belajar tool yang orang tengah guna."
               breakAfter={3}
               accentFrom={3}

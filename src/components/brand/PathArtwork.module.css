@@ -1,0 +1,226 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+}
+.ribbon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.emblem {
+  position: absolute;
+  width: 22%;
+  height: auto;
+  left: 49%;
+  top: 15%;
+}
+.arrow {
+  position: absolute;
+  width: 32%;
+  height: auto;
+  right: 8%;
+  bottom: 13%;
+}
+.learner {
+  position: absolute;
+  width: 80%;
+  left: 5%;
+  bottom: 0;
+}
+.learner picture,
+.learner picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.mark {
+  position: absolute;
+  left: 66%;
+  top: 70%;
+  width: 12%;
+  height: auto;
+  transform: rotate(-9deg);
+}
+.tile {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: clamp(50px, 5.3vw, 80px);
+  aspect-ratio: 1;
+  border: 4px solid white;
+  border-radius: 18px;
+  box-shadow: 0 4px 0 #06245712;
+}
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.n8n {
+  top: 26%;
+  left: 14%;
+  background: #f63867;
+  transform: rotate(-9deg);
+}
+.sheet {
+  top: 47%;
+  left: 6%;
+  background: #057a44;
+  color: white;
+  transform: rotate(-6deg);
+}
+.ai {
+  top: 63%;
+  left: 17%;
+  background: #057a44;
+  color: white;
+  transform: rotate(5deg);
+}
+.ai img {
+  filter: brightness(0) invert(1);
+  padding: 9px;
+}
+.mail {
+  top: 41%;
+  left: 53%;
+  background: white;
+  color: #062457;
+  transform: rotate(6deg);
+}
+.connections {
+  position: absolute;
+  left: 4%;
+  top: 24%;
+  width: 38%;
+  height: 65%;
+  z-index: -1;
+}
+@media (max-width: 900px) {
+  .learner {
+    width: 70%;
+    left: 16%;
+  }
+  .tile {
+    width: 58px;
+  }
+  .emblem {
+    width: 20%;
+    left: 55%;
+  }
+  .n8n {
+    top: 12%;
+    left: 20%;
+  }
+  .sheet {
+    top: 37%;
+    left: 10%;
+  }
+  .ai {
+    top: 63%;
+    left: 16%;
+  }
+  .mail {
+    left: 64%;
+    top: 24%;
+  }
+}
+@media (max-width: 600px) {
+  .tile {
+    width: 48px;
+    border-width: 3px;
+    border-radius: 12px;
+  }
+  .tile svg {
+    width: 28px;
+  }
+  .learner {
+    width: 86%;
+    left: 7%;
+  }
+  .emblem {
+    width: 24%;
+    left: 58%;
+    top: 7%;
+  }
+  .n8n {
+    left: 16%;
+    top: 12%;
+  }
+  .sheet {
+    left: 3%;
+    top: 38%;
+  }
+  .ai {
+    left: 10%;
+    top: 64%;
+  }
+  .mail {
+    left: 65%;
+    top: 30%;
+  }
+}
+
+@media (min-width: 901px) {
+  .learner {
+    width: auto;
+    height: 74%;
+    aspect-ratio: 1100/741;
+    left: 8%;
+  }
+  .learner picture,
+  .learner picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .emblem {
+    top: 20%;
+    left: 49%;
+    width: 21%;
+  }
+}
+
+@media (max-width: 900px) {
+  .learner {
+    height: 92%;
+    width: auto;
+    max-width: 86%;
+    aspect-ratio: 1100/741;
+    left: 15%;
+  }
+  .learner picture,
+  .learner picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .emblem {
+    left: 67%;
+    top: 4%;
+    width: 20%;
+  }
+  .mail {
+    left: 58%;
+    top: 34%;
+  }
+}
+
+@media (min-width: 901px) {
+  .emblem {
+    left: 44%;
+    top: 18%;
+    width: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .learner {
+    left: 7%;
+    max-width: 86%;
+  }
+}

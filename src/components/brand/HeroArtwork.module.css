@@ -146,3 +146,31 @@
     left: -4%;
   }
 }
+
+/* Intrinsic people layer: height bounds prevent a wide, short scene from swelling. */
+@media (min-width: 1101px) {
+  .scene:not(.catalog) .people {
+    width: auto;
+    height: 78%;
+    max-width: 90%;
+    left: 0;
+  }
+  .scene:not(.catalog) .people picture {
+    height: 100%;
+  }
+  .scene:not(.catalog) .people picture img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+  }
+  .scene:not(.catalog) .handnote {
+    top: 29%;
+    right: 2%;
+    font-size: clamp(17px, 2.4vh, 25px);
+  }
+  .scene:not(.catalog) .sketch {
+    top: 24%;
+    left: 14%;
+  }
+}

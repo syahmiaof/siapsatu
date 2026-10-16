@@ -1,6 +1,6 @@
 "use client";
 
-import { BrandScene } from "@/components/brand/BrandScene";
+import { PathArtwork } from "@/components/brand/PathArtwork";
 
 import React, { useState, useEffect } from "react";
 
@@ -157,7 +157,7 @@ export default function LearningPathAutomationPage() {
   ];
 
   return (
-    <div className="container">
+    <div className="container" data-path>
       {/* Hero Section */}
 
       <section className={styles.heroSection} aria-label="Laluan AI Automation">
@@ -169,7 +169,8 @@ export default function LearningPathAutomationPage() {
           </div>
 
           <AnimatedHeading
-            text="Laluan AI Automation Dari kerja manual, sampai workflow berjalan sendiri."
+            steadyEntrance
+            text="Laluan AI Automation"
             breakAfter={3}
             accentWords={[
               "AI",
@@ -182,6 +183,11 @@ export default function LearningPathAutomationPage() {
             className={styles.headline}
           />
 
+          <p className={styles.tagline}>
+            Dari kerja manual, sampai
+            <br />
+            workflow berjalan sendiri.
+          </p>
           <p className={styles.subtitle}>{path.subheadline}</p>
 
           <div className={styles.metaRow}>
@@ -210,7 +216,7 @@ export default function LearningPathAutomationPage() {
         </div>
 
         <div className={styles.heroRight}>
-          <BrandScene variant="learner" />
+          <PathArtwork />
         </div>
       </section>
 

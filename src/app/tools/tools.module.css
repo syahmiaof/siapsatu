@@ -292,3 +292,31 @@
     transform: none;
   }
 }
+
+@media (min-width: 1101px) {
+  .heroBanner {
+    min-height: clamp(180px, 23vh, 235px);
+    padding-block: 18px;
+  }
+  .headline {
+    font-size: clamp(52px, min(4.8vw, 7.5vh), 72px);
+  }
+  .subtitle {
+    font-size: clamp(18px, 2.7vh, 26px);
+  }
+  .controlsBar {
+    margin: 16px 0 20px;
+    flex-wrap: nowrap;
+  }
+  .searchBox {
+    padding: 12px 16px;
+    min-width: 180px;
+  }
+  .searchInput {
+    font-size: 20px;
+  }
+  .chip {
+    min-height: 48px;
+    padding: 10px 18px;
+  }
+}
