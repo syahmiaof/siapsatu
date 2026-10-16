@@ -1,4 +1,24 @@
-# SiapSatu release — 2026-10-16
+# SiapSatu release — 2026-10-17
+
+## UI / asset / layout repair v3
+
+Live at [siapsatu.syahmiaof.my](https://siapsatu.syahmiaof.my). Application commit `6ad909fc277a32665970110fc8d65954cf3d2cb5` was pushed to GitHub master and deployed automatically by Vercel. Deployment `dpl_51Wa8cUYmbBjzNUEccTHjy3z8Hqi` reached READY with that exact Git SHA and the existing custom-domain alias. DNS changes were unnecessary.
+
+Home now sizes its first fold by viewport height and aligns featured cards through entrance animation. Separate proportional Malaysia layers, a seated Path learner, a conversation-based Community hero and demo thumbnails replace the shared oversized compositions. Tools controls and the 360px Path layout are repaired. Existing design tokens, typography and protected wordmark/reference sources are preserved.
+
+Production checks on the public custom domain:
+
+- Full browser suite: **66 passed, 10 device-specific skips, 0 failures**.
+- Runtime: **28 route/viewport checks, 0 findings**.
+- Visual captures: **28 route/viewport combinations**, no horizontal overflow, broken images or page errors. Reference/user comparisons use these live captures.
+- HTTPS 200; all **8 new assets byte-identical** to local source. Matched local/live card positions have 0 CSS px delta.
+- Local production build, typecheck and lint passed before release.
+
+[Detailed QA and reference exceptions](VISUAL_QA.md), [live test log](../artifacts/visual-qa/ui-v3/test-e2e-live.log), [asset/version proof](../artifacts/visual-qa/ui-v3/live-version-proof.json), [live geometry](../artifacts/visual-qa/ui-v3/live/geometry.json).
+
+Illustrations are reconstructed, not pixel-perfect copies. Auth, checkout and community/progress behavior remain the existing prototype/local-state flows. The following evidence-only commit records this release without changing application/runtime files.
+
+## Previous release — 2026-10-16
 
 - Live UI: https://siapsatu.syahmiaof.my
 - Vercel alias: https://siapsatu.vercel.app

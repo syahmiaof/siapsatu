@@ -1,0 +1,450 @@
+[
+  {
+    "route": "/",
+    "width": 1880,
+    "height": 880,
+    "pixelSize": [
+      1880,
+      880
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.0008467284314470226,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/tools",
+    "width": 1880,
+    "height": 880,
+    "pixelSize": [
+      1880,
+      880
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 1.4708252740167632e-05,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1880,
+    "height": 880,
+    "pixelSize": [
+      1880,
+      880
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/community",
+    "width": 1880,
+    "height": 880,
+    "pixelSize": [
+      1880,
+      880
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.6718580754352032,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/",
+    "width": 1505,
+    "height": 1029,
+    "pixelSize": [
+      1505,
+      1029
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.00027741175138302636,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/tools",
+    "width": 1505,
+    "height": 1029,
+    "pixelSize": [
+      1505,
+      1029
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 2.582903118532653e-06,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1505,
+    "height": 1029,
+    "pixelSize": [
+      1505,
+      1029
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/community",
+    "width": 1505,
+    "height": 1029,
+    "pixelSize": [
+      1505,
+      1029
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.6997017823107727,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "height": 900,
+    "pixelSize": [
+      1440,
+      900
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.0002996693732807175,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/tools",
+    "width": 1440,
+    "height": 900,
+    "pixelSize": [
+      1440,
+      900
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 6.172839506172839e-06,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1440,
+    "height": 900,
+    "pixelSize": [
+      1440,
+      900
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/community",
+    "width": 1440,
+    "height": 900,
+    "pixelSize": [
+      1440,
+      900
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.7247875514403294,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "height": 1024,
+    "pixelSize": [
+      768,
+      1024
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.0017793443467881947,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.00029567985257017426,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/tools",
+    "width": 768,
+    "height": 1024,
+    "pixelSize": [
+      768,
+      1024
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.001803927951388889,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 768,
+    "height": 1024,
+    "pixelSize": [
+      768,
+      1024
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/community",
+    "width": 768,
+    "height": 1024,
+    "pixelSize": [
+      768,
+      1024
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.8456594679090711,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "height": 844,
+    "pixelSize": [
+      390,
+      844
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.000695710292866691,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.00026839868691743845,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/tools",
+    "width": 390,
+    "height": 844,
+    "pixelSize": [
+      390,
+      844
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0006197593875318994,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 390,
+    "height": 844,
+    "pixelSize": [
+      390,
+      844
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/community",
+    "width": 390,
+    "height": 844,
+    "pixelSize": [
+      390,
+      844
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 1.8450449629359582,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/",
+    "width": 360,
+    "height": 800,
+    "pixelSize": [
+      360,
+      800
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0012106481481481482,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.00035304988622665405,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/tools",
+    "width": 360,
+    "height": 800,
+    "pixelSize": [
+      360,
+      800
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0006944444444444445,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 360,
+    "height": 800,
+    "pixelSize": [
+      360,
+      800
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/community",
+    "width": 360,
+    "height": 800,
+    "pixelSize": [
+      360,
+      800
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 2.1087326388888887,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/",
+    "width": 1248,
+    "height": 588,
+    "pixelSize": [
+      1872,
+      882
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.0003880930087015795,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/tools",
+    "width": 1248,
+    "height": 588,
+    "pixelSize": [
+      1872,
+      882
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0.00013425879656383199,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1248,
+    "height": 588,
+    "pixelSize": [
+      1872,
+      882
+    ],
+    "maxCardTopDeltaCSS": 0.0,
+    "meanAbsoluteRGBDifference": 0.0,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  },
+  {
+    "route": "/community",
+    "width": 1248,
+    "height": 588,
+    "pixelSize": [
+      1872,
+      882
+    ],
+    "maxCardTopDeltaCSS": 0,
+    "meanAbsoluteRGBDifference": 1.0780730145809512,
+    "overflow": false,
+    "brokenImages": [],
+    "pageErrors": [],
+    "liveCLS": 0,
+    "note": "Pixel difference may include rasterization or subpixel animation timing; not a perceptual-parity score"
+  }
+]

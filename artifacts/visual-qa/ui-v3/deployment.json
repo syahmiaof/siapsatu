@@ -1,0 +1,43 @@
+{
+  "result": {
+    "deployment": {
+      "id": "dpl_51Wa8cUYmbBjzNUEccTHjy3z8Hqi",
+      "name": "siapsatu",
+      "url": "siapsatu-hx5ntgjfb-syahmiaofs-projects.vercel.app",
+      "type": "LAMBDAS",
+      "state": "READY",
+      "createdAt": 1792167024478,
+      "creator": {
+        "uid": "MatoiQRYp7iO5vm4NWaUYowW",
+        "username": "syahmiaof123-5420"
+      },
+      "project": {
+        "id": "prj_tzYezouil3Ima8qKGevLDGEH9uhq",
+        "name": "siapsatu",
+        "framework": "nextjs"
+      },
+      "meta": {
+        "githubCommitRef": "master",
+        "githubCommitSha": "6ad909fc277a32665970110fc8d65954cf3d2cb5",
+        "githubCommitMessage": "fix(ui): repair responsive folds, Malaysian artwork and route compositions",
+        "githubRepo": "siapsatu",
+        "githubOrg": "syahmiaof"
+      },
+      "alias": [
+        "siapsatu.vercel.app",
+        "siapsatu.syahmiaof.my",
+        "siapsatu-syahmiaofs-projects.vercel.app",
+        "siapsatu-git-master-syahmiaofs-projects.vercel.app"
+      ],
+      "target": "production",
+      "regions": [
+        "iad1"
+      ],
+      "buildingAt": 1792167026194,
+      "ready": 1792167078975,
+      "readyState": "READY",
+      "source": "git",
+      "aliasError": null
+    }
+  }
+}

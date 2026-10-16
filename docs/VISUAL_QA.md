@@ -2,9 +2,9 @@
 
 Date: 17 October 2026 (work began 16 October). Started at b079d3c287e63cd6faf7519e4e33507881f53c0a. Scope: Home, Tools, AI Automation Path and Community. This report supersedes the older Top 5 runtime verdicts; historical reports/evidence remain unchanged.
 
-## Current local result
+## Released result
 
-Reference-led compositions are implemented and checked in a production build at http://localhost:3112. Release verification will be appended after the scoped GitHub/Vercel release. This is **not pixel-perfect artwork parity**: original illustrator layers were unavailable, and the truthful prototype deliberately differs from invented reference claims.
+Reference-led compositions are live at [siapsatu.syahmiaof.my](https://siapsatu.syahmiaof.my), tested locally and again on the public production domain. Application commit: `6ad909fc277a32665970110fc8d65954cf3d2cb5`; Vercel deployment `dpl_51Wa8cUYmbBjzNUEccTHjy3z8Hqi` reached READY with this exact Git SHA and the custom-domain alias. This is **not pixel-perfect artwork parity**: original illustrator layers were unavailable, and the truthful prototype deliberately differs from invented reference claims.
 
 - [Evidence viewer](../artifacts/visual-qa/ui-v3/index.html)
 - [Approved reference / current contact sheet](../artifacts/visual-qa/ui-v3/comparisons/contact.jpg)
@@ -59,3 +59,13 @@ At the reference shape, first cards begin within 5px of the brief's approximate 
 - [Integrity audit](../artifacts/visual-qa/ui-v3/protected-integrity.json): 666 protected files checked against HEAD; 637 byte-identical and 29 text files differ only by existing Windows CRLF checkout normalization. No content changes. Protected references, wordmark/tool sources and prior Top 5/parity-v2 evidence were not edited. Only scoped app components, new assets, scripts/tests and these reports are release candidates.
 
 Commands: npm run build; npm run typecheck; npm run lint; QA_URL=http://localhost:3112 npm run test:e2e; node scripts/capture-ui-v3.mjs final; python scripts/compare-ui-v3.py. PowerShell environment syntax was used when running locally.
+
+## Production verification — 17 October 2026
+
+- Public HTTPS: 200 with normal certificate validation; all eight new assets match local source bytes and SHA-256. Browser checks confirm the new Home layers/CSS, short-fold card placement, 360px Path width and Community thumbnails. [Version proof](../artifacts/visual-qa/ui-v3/live-version-proof.json).
+- Full production E2E: **66 passed, 10 device-specific skips, 0 failures** (2.7 minutes). [Live test log](../artifacts/visual-qa/ui-v3/test-e2e-live.log).
+- Production runtime audit: **28 checks, 0 findings**. [Runtime evidence](../artifacts/visual-qa/ui-v3/runtime-live.json).
+- All seven viewport variants × four changed routes captured live, including entrance, settled, full-page and reduced-motion states. **0 overflow, 0 broken images, 0 page errors**. [Live geometry](../artifacts/visual-qa/ui-v3/live/geometry.json).
+- Matched local/live card-top positions differ by **0 CSS pixels**. Largest whole-image mean absolute RGB difference is 2.109 on the 0–255 channel scale; this numerical comparison is not a perceptual-parity score. [Comparison measurements](../artifacts/visual-qa/ui-v3/local-live-comparison.json).
+- Reference pairs, overlays and user-capture comparisons now use the live captures. Curated fold screenshots are included in Git; complete entrance/full/reduced captures remain available locally.
+- Release evidence is committed separately from the tested application. Subsequent evidence-only commits leave application/runtime files identical; deployment status and public asset checks are verified after that push.

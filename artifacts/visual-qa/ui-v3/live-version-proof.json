@@ -1,0 +1,104 @@
+{
+  "checkedAt": "2026-10-16T16:13:17.004Z",
+  "base": "https://siapsatu.syahmiaof.my",
+  "httpsStatus": 200,
+  "assets": [
+    {
+      "name": "community-ribbon.svg",
+      "status": 200,
+      "localSha256": "940f03f6f9d9732fe6a4c10790025b43fb044ef9b3e21b94d1ae80daa76d8275",
+      "liveSha256": "940f03f6f9d9732fe6a4c10790025b43fb044ef9b3e21b94d1ae80daa76d8275",
+      "matches": true
+    },
+    {
+      "name": "emblem.svg",
+      "status": 200,
+      "localSha256": "5c5c82cacccc85b0606a2cb242a45323639d22cfc280672aed835a9d758ce2dc",
+      "liveSha256": "5c5c82cacccc85b0606a2cb242a45323639d22cfc280672aed835a9d758ce2dc",
+      "matches": true
+    },
+    {
+      "name": "growth-arrow.svg",
+      "status": 200,
+      "localSha256": "bc861eee9e81273f9ab2204f4abf101d93c31dcaecd782a93348f01d78d87ce6",
+      "liveSha256": "bc861eee9e81273f9ab2204f4abf101d93c31dcaecd782a93348f01d78d87ce6",
+      "matches": true
+    },
+    {
+      "name": "home-ribbon.svg",
+      "status": 200,
+      "localSha256": "aac89d34c9a0e2bf0f2e5733ee9e80345077c5198bee0f9e513435b7fbdca298",
+      "liveSha256": "aac89d34c9a0e2bf0f2e5733ee9e80345077c5198bee0f9e513435b7fbdca298",
+      "matches": true
+    },
+    {
+      "name": "kl-skyline.svg",
+      "status": 200,
+      "localSha256": "ec52ca5d04bf7d6e74f7e73eaae98d152be70036aab44e600e82ae8dc536009d",
+      "liveSha256": "ec52ca5d04bf7d6e74f7e73eaae98d152be70036aab44e600e82ae8dc536009d",
+      "matches": true
+    },
+    {
+      "name": "path-learner-1100.webp",
+      "status": 200,
+      "localSha256": "1b490dbfdac03bdb4eaa1b15e8bd8664076725a28d80148d4f5db2d42cc7a21b",
+      "liveSha256": "1b490dbfdac03bdb4eaa1b15e8bd8664076725a28d80148d4f5db2d42cc7a21b",
+      "matches": true
+    },
+    {
+      "name": "path-learner-600.webp",
+      "status": 200,
+      "localSha256": "2a020ed66d37b683cdc5e793dd70c13f384575c8b80466782a4ad964515df500",
+      "liveSha256": "2a020ed66d37b683cdc5e793dd70c13f384575c8b80466782a4ad964515df500",
+      "matches": true
+    },
+    {
+      "name": "path-ribbon.svg",
+      "status": 200,
+      "localSha256": "b7ff29e6043bca96d46c6d71a3de08eec3507629cbf0e47cf98c80e2128f5b21",
+      "liveSha256": "b7ff29e6043bca96d46c6d71a3de08eec3507629cbf0e47cf98c80e2128f5b21",
+      "matches": true
+    }
+  ],
+  "homeProof": {
+    "heading": "Satu modul.Satu hasil.",
+    "cards": [
+      {
+        "top": 508,
+        "bottom": 758,
+        "height": 250
+      },
+      {
+        "top": 508,
+        "bottom": 758,
+        "height": 250
+      },
+      {
+        "top": 508,
+        "bottom": 758,
+        "height": 250
+      }
+    ],
+    "layers": [
+      "/assets/illustrations/ui-v3/home-ribbon.svg",
+      "/assets/illustrations/ui-v3/emblem.svg",
+      "/assets/illustrations/ui-v3/growth-arrow.svg",
+      "/assets/illustrations/ui-v3/kl-skyline.svg"
+    ],
+    "stylesheets": [
+      "/_next/static/css/276ec12ce64b1494.css",
+      "/_next/static/css/16f478a8a40c3a08.css",
+      "/_next/static/css/d8e2fbbb4ba3f569.css",
+      "/_next/static/css/1c973c026bcb74a6.css"
+    ]
+  },
+  "pathProof": {
+    "width": 360,
+    "scrollWidth": 360,
+    "learner": "/assets/illustrations/ui-v3/path-learner-1100.webp"
+  },
+  "communityProof": {
+    "thumbnails": 3,
+    "demoLabels": 3
+  }
+}
