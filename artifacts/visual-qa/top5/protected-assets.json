@@ -1,0 +1,29 @@
+[
+  {
+    "source": "brand/logo-concepts/siapsatu-primary-final.png",
+    "copy": "public/assets/brand/siapsatu-logo.png",
+    "sha256": "ae9bb07dfea1e484b19b0c7bde78f220ba92dfd49d243692e60ad765ed4be9a4",
+    "copyUnchanged": true,
+    "sourceHashNow": "ae9bb07dfea1e484b19b0c7bde78f220ba92dfd49d243692e60ad765ed4be9a4",
+    "copyHashNow": "ae9bb07dfea1e484b19b0c7bde78f220ba92dfd49d243692e60ad765ed4be9a4",
+    "matchesRecorded": true
+  },
+  {
+    "source": "brand/tool-logos/n8n-official.png",
+    "copy": "public/assets/tools/n8n.png",
+    "sha256": "91dbb88374435fa289906faa19ea724f57421a046023f6c331e54eb7cbcd6fb4",
+    "copyUnchanged": true,
+    "sourceHashNow": "91dbb88374435fa289906faa19ea724f57421a046023f6c331e54eb7cbcd6fb4",
+    "copyHashNow": "91dbb88374435fa289906faa19ea724f57421a046023f6c331e54eb7cbcd6fb4",
+    "matchesRecorded": true
+  },
+  {
+    "source": "brand/tool-logos/hermes-agent-official.png",
+    "copy": "public/assets/tools/hermes-agent.png",
+    "sha256": "5fbced606189c9bfc2925a16f8903333041cabbf1f8699fe9fe9b3e24504048f",
+    "copyUnchanged": true,
+    "sourceHashNow": "5fbced606189c9bfc2925a16f8903333041cabbf1f8699fe9fe9b3e24504048f",
+    "copyHashNow": "5fbced606189c9bfc2925a16f8903333041cabbf1f8699fe9fe9b3e24504048f",
+    "matchesRecorded": true
+  }
+]

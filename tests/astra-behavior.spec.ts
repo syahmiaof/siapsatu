@@ -148,7 +148,8 @@ test("Mobile dock leaves final tool reachable", async ({ page }, info) => {
   await page.goto("/tools");
   await page.evaluate(() => scrollTo(0, document.body.scrollHeight));
   const dock = page.locator("[data-fixed-dock]");
-  const last = page.locator("main a").last();
+  // Upcoming cards are articles; validate the actual final tool, not the last link.
+  const last = page.locator("[data-tool]").last();
   await last.scrollIntoViewIfNeeded();
   const a = await last.boundingBox(),
     d = await dock.boundingBox();

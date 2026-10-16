@@ -1,8 +1,8 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
-import React, { useState, useMemo, useEffect, Suspense } from "react";
-import { BrandScene } from "@/components/brand/BrandScene";
+import { useDirectoryFilters } from "@/lib/useDirectoryFilters";
+import React, { useMemo, Suspense } from "react";
+import { DirectoryArtwork } from "@/components/brand/DirectoryArtwork";
 import {
   Search,
   Bot,
@@ -15,7 +15,7 @@ import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
 import { RevealSection } from "@/components/motion/RevealSection";
 import { ToolCard } from "@/components/tools/ToolCard";
 import { EmptyState } from "@/components/modules/EmptyState";
-import { TOOLS } from "@/data/mockData";
+import { directoryTools } from "@/lib/catalog";
 import styles from "./tools.module.css";
 
 export default function ToolsDirectoryPage() {
@@ -27,16 +27,13 @@ export default function ToolsDirectoryPage() {
 }
 
 function DirectoryContent() {
-  const params = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("semua");
-  useEffect(() => {
-    const goal = params.get("goal");
-    setSearchQuery(params.get("search") || "");
-    setSelectedCategory(
-      params.get("category") || (goal === "jual" ? "bisnes" : goal) || "semua",
-    );
-  }, [params]);
+  const {
+    searchQuery,
+    selectedCategory,
+    setSearchQuery,
+    setSelectedCategory,
+    resetFilters,
+  } = useDirectoryFilters();
 
   const categories = [
     { id: "semua", label: "Semua", icon: null },
@@ -48,7 +45,7 @@ function DirectoryContent() {
   ];
 
   const filteredTools = useMemo(() => {
-    return TOOLS.filter((tool) => {
+    return directoryTools.filter((tool) => {
       const matchesSearch =
         searchQuery.trim() === "" ||
         tool.name.toLowerCase().includes(searchQuery.trim().toLowerCase()) ||
@@ -63,7 +60,7 @@ function DirectoryContent() {
   }, [searchQuery, selectedCategory]);
 
   return (
-    <div className="container">
+    <div className={`container ${styles.directory}`}>
       {/* Hero Banner */}
       <section className={styles.pageHeader} aria-label="Direktori Tools">
         <div className={styles.heroBanner}>
@@ -81,10 +78,7 @@ function DirectoryContent() {
           </div>
 
           <div className={styles.heroRight}>
-            <BrandScene variant="ribbon" />
-            <div className={styles.mobileLearner}>
-              <BrandScene variant="learner" />
-            </div>
+            <DirectoryArtwork />
           </div>
         </div>
       </section>
@@ -133,10 +127,7 @@ function DirectoryContent() {
         <EmptyState
           title="Tiada tool dijumpai"
           description={`Tiada tool yang sepadan dengan "${searchQuery}". Cuba cari kata kunci lain seperti "n8n", "AI", atau "Figma".`}
-          onAction={() => {
-            setSearchQuery("");
-            setSelectedCategory("semua");
-          }}
+          onAction={resetFilters}
         />
       ) : (
         <RevealSection className={styles.toolsGrid}>

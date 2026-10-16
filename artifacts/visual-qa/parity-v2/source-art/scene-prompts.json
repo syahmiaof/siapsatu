@@ -1,0 +1,14 @@
+[
+  {
+    "name": "hero-trio",
+    "mode": "built-in imagegen, transparent background, reference-guided generation",
+    "reference": "mockups/homepage-theme-03-malaysia-utility.png",
+    "prompt": "Use case: background-extraction. Extract/reconstruct ONLY the three illustrated people from the UPPER RIGHT HERO of this user-owned SiapSatu website reference. Produce one clean genuinely transparent RGBA cutout, not a website. Match the existing reference characters, cel-shaded navy outlines, exact pose direction, group overlap and relative head heights as closely as possible: left young Malaysian man navy shirt looking up-left holding silver laptop at chest; central woman navy hijab white blouse looking up-right holding navy tablet; shorter right man orange hoodie black glasses looking up-right. Their bodies end in a flat waist crop as in the reference. Preserve small white sticker-like edge outlines. Leave laptop/tablet covers plain for separate crisp logo overlays. No flag, no crescent/star, no skyline, no arrow, no note, no words, no text, no heading, no prices, no navbar, no buttons, no card UI, no background. Tightly frame the complete three-person silhouette with transparent surrounding pixels; landscape roughly 1.75:1. Do not use the bottom community characters; only hero trio. This asset will be composited with separately authored vector background and DOM text."
+  },
+  {
+    "name": "discussion",
+    "mode": "built-in imagegen, transparent background, reference-guided generation",
+    "reference": "mockups/homepage-theme-03-malaysia-utility.png",
+    "prompt": "Use case: background-extraction. Extract/reconstruct ONLY the distinct discussion illustration in the BOTTOM LEFT COMMUNITY STRIP of the supplied user-owned reference. One genuinely transparent RGBA illustration asset. Three Malaysian learners interacting around one open laptop: navy shirt man on left in profile talking and gesturing toward center, navy-hijab woman in white blouse in center smiling and using laptop, orange-red hoodie man wearing black glasses on right looking towards woman. Preserve their conversation-focused poses, relative heights, expressive faces, navy cel shading and crisp white sticker outlines from the reference. Include small white speech bubble with three dots near left and a second near right, and blue outlined community/chat bubble above center with a generic three-person icon (no letters). Tight wide composition around 2.8:1, full heads, shoulders, hands and laptop; flat horizontal bottom crop as reference. NO hero-trio standing/looking up pose. NO background, no flag ribbon, no text, no headings, no typography, no navbar, no card UI, no prices, no buttons, no logos. Do not output the webpage or any rectangular crop of it. Surround illustration with actual transparency."
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "name": "male",
+    "prompt": "Create one clean genuinely transparent RGBA character cutout matching the supplied user-owned SiapSatu Malaysian illustration reference. Cel-shaded navy outlines, warm skin, confident happy expression, a thin clean white sticker silhouette edge. Half-body from full head to waist including both hands and device, tight portrait frame. No other people, no words, no letters, no logo, no background, no card, no UI, no prices, no flag or arrow. Device cover must be plain for separate logo overlay. Only the navy shirt young Malaysian man holding a silver laptop across his chest, looking up-left, smiling; comparable to the first blue card's man. Preserve the whole half body, do not crop to just a face."
+  },
+  {
+    "name": "woman",
+    "prompt": "Create one clean genuinely transparent RGBA character cutout matching the supplied user-owned SiapSatu Malaysian illustration reference. Cel-shaded navy outlines, warm skin, confident happy expression, a thin clean white sticker silhouette edge. Half-body from full head to waist including both hands and device, tight portrait frame. No other people, no words, no letters, no logo, no background, no card, no UI, no prices, no flag or arrow. Device cover must be plain for separate logo overlay. Only the Malaysian woman wearing navy hijab and white blouse holding navy tablet in front of her torso, looking up-right and smiling; comparable to the second red card's woman. Preserve whole half body."
+  },
+  {
+    "name": "coder",
+    "prompt": "Create one clean genuinely transparent RGBA character cutout matching the supplied user-owned SiapSatu Malaysian illustration reference. Cel-shaded navy outlines, warm skin, confident happy expression, a thin clean white sticker silhouette edge. Half-body from full head to waist including both hands and device, tight portrait frame. No other people, no words, no letters, no logo, no background, no card, no UI, no prices, no flag or arrow. Device cover must be plain for separate logo overlay. Only the young Malaysian man in orange hoodie and black glasses, looking up-right smiling, holding a navy tablet against his chest with both hands; comparable to third green card's man. Preserve whole half body."
+  }
+]

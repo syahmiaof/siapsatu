@@ -3,7 +3,7 @@
 }
 .heroGrid {
   position: relative;
-  min-height: 320px;
+  min-height: 305px;
   display: grid;
   grid-template-columns: 65% 35%;
   align-items: start;
@@ -17,24 +17,24 @@
   padding: 20px 0 12px;
 }
 .headline {
-  font-size: clamp(38px, 4.1vw, 62px);
+  font-size: clamp(38px, 4.5vw, 65px);
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: -0.035em;
   white-space: nowrap;
 }
 .subtitle {
-  font-size: 21px;
+  font-size: 23px;
   line-height: 1.4;
 }
 .searchBox {
   display: flex;
   align-items: center;
-  width: 78%;
+  width: 80%;
   background: white;
   border: 1px solid var(--ss-line);
   border-radius: 24px;
-  padding: 6px 7px 6px 18px;
+  padding: 8px 9px 8px 18px;
   margin-top: 4px;
   box-shadow: 0 3px 10px #03143a05;
 }
@@ -90,7 +90,7 @@
 }
 .heroRight {
   position: absolute;
-  inset: -20px calc(-1 * var(--page-gutter)) 0 53%;
+  inset: -114px calc(-1 * var(--page-gutter)) 0 51%;
   pointer-events: none;
 }
 .heroArtWrap {
@@ -137,6 +137,9 @@
   gap: 12px;
 }
 @media (max-width: 1100px) {
+  .heroRight {
+    inset: -14px calc(-1 * var(--page-gutter)) 0 54%;
+  }
   .heroGrid {
     min-height: 305px;
   }
@@ -254,4 +257,81 @@
   }
 }
 
-@media(max-width:700px){.pageHeader{padding-top:0}.sectionBlock[aria-label="Modul Pilihan"]>.sectionHeader{display:none}.sectionBlock{margin-top:4px}.headline{font-size:8.8vw}.heroLeft{gap:6px}}
+@media (max-width: 700px) {
+  .pageHeader {
+    padding-top: 0;
+  }
+  .sectionBlock[aria-label="Modul Pilihan"] > .sectionHeader {
+    display: none;
+  }
+  .sectionBlock {
+    margin-top: 4px;
+  }
+  .headline {
+    font-size: 8.8vw;
+  }
+  .heroLeft {
+    gap: 6px;
+  }
+}
+
+.toolFilterNotice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 14px;
+  color: var(--ss-muted);
+}
+.toolFilterNotice button {
+  min-height: 44px;
+  font-weight: 800;
+  color: var(--ss-navy-900);
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  .headline {
+    font-size: clamp(34px, 10vw, 48px);
+    line-height: 1.02;
+  }
+  .subtitle {
+    font-size: 15px;
+    max-width: 30ch;
+    margin-top: -8px;
+  }
+  .searchBox {
+    background: var(--ss-surface-subtle);
+    min-height: 46px;
+  }
+  .filterChip {
+    min-height: 36px;
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+  .activeChip,
+  .activeChip:hover {
+    background: var(--ss-red);
+  }
+  .heroLeft {
+    gap: 3px;
+    padding-bottom: 4px;
+  }
+  .featuredGrid {
+    gap: 8px;
+  }
+  .toolFilterNotice {
+    align-items: flex-start;
+    font-size: 12px;
+  }
+  .filterBar {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 380px) {
+  .heroLeft {
+    padding-top: 0;
+    gap: 2px;
+  }
+}

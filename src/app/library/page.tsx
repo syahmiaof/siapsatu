@@ -287,7 +287,7 @@ export default function LibraryDashboardPage() {
             >
               <div className={styles.myModuleIcon}>
                 <Image
-                  src="/assets/tools/gemini.svg"
+                  src="/assets/tools/gemini-google-v2.png"
                   alt="Gemini"
                   width={28}
                   height={28}

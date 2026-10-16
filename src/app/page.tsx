@@ -1,5 +1,5 @@
 import React from "react";
-import { BrandScene } from "@/components/brand/BrandScene";
+import { HeroArtwork } from "@/components/brand/HeroArtwork";
 import Link from "next/link";
 import { Briefcase, Building, GraduationCap } from "lucide-react";
 import { AnimatedHeading } from "@/components/motion/AnimatedHeading";
@@ -14,7 +14,7 @@ export default function HomePage() {
   const featuredModules = MODULES.filter((m) => m.featured);
 
   return (
-    <div className="container">
+    <div className="container" data-home>
       {/* Hero Section */}
       <section className={styles.heroSection} aria-label="Pengenalan SiapSatu">
         <div className={styles.heroGrid}>
@@ -130,12 +130,7 @@ export default function HomePage() {
           {/* Right Column: Hero Illustration */}
           <div className={styles.heroRight}>
             <div className={styles.heroIllustrationWrap}>
-              <BrandScene />
-              <div className={styles.yellowNote}>
-                MODUL PRAKTIKAL
-                <br />
-                UNTUK SEMUA
-              </div>
+              <HeroArtwork />
             </div>
           </div>
         </div>

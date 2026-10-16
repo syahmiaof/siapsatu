@@ -24,7 +24,7 @@ export const TOOLS: Tool[] = [
     slug: "gemini",
     name: "Gemini",
     category: "ai",
-    logoPath: "/assets/tools/gemini.svg",
+    logoPath: "/assets/tools/gemini-google-v2.png",
     brandColor: "#1ba1e3",
     summary:
       "Tulis, reka, susun dan hasilkan kerja dengan pantas menggunakan Google Gemini.",
@@ -273,6 +273,7 @@ export const TOOLS: Tool[] = [
 export const MODULES: Module[] = [
   {
     slug: "meta-ads-ai",
+    discoveryTitle: "Susun kempen iklan",
     title: "Meta Ads + AI",
     shortOutcome:
       "Buat iklan berkesan dengan kuasa AI. Dari asas sampai hasil.",
@@ -303,6 +304,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "gemini-canvas",
+    discoveryTitle: "Sunting dokumen",
     title: "Gemini Canvas",
     shortOutcome: "Tulis, reka, susun dan hasilkan kerja dengan lebih pantas.",
     priceMyr: 10,
@@ -329,6 +331,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "vibe-code-website",
+    discoveryTitle: "Bina website pertama",
     title: "Vibe Code Website",
     shortOutcome: "Bina website moden tanpa perlu jadi programmer.",
     priceMyr: 10,
@@ -548,6 +551,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "7-hari-content",
+    discoveryTitle: "Rancang content untuk 7 hari",
     title: "7 Hari Content",
     shortOutcome: "Rancang, hasilkan dan jadualkan content untuk 7 hari.",
     priceMyr: 10,
@@ -569,6 +573,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "notebooklm-pdf-study",
+    discoveryTitle: "Ringkaskan dokumen PDF",
     title: "NotebookLM untuk PDF",
     shortOutcome: "Ringkaskan, analisis dan tanya dokumen dengan AI.",
     priceMyr: 10,
@@ -592,6 +597,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "github-dari-kosong",
+    discoveryTitle: "Cipta repositori pertama",
     title: "GitHub dari Kosong",
     shortOutcome: "Belajar version control dengan langkah mudah dan praktikal.",
     priceMyr: 10,
@@ -615,6 +621,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "kuasai-codex",
+    discoveryTitle: "Hasilkan fungsi dengan AI",
     title: "Kuasai Codex",
     shortOutcome: "Guna Codex untuk tulis, baiki dan jelaskan kod dengan AI.",
     priceMyr: 10,
@@ -638,6 +645,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "antigravity-agent-ide",
+    discoveryTitle: "Kenal ruang kerja AI coding",
     title: "Antigravity Agent IDE",
     shortOutcome: "Kenali AI agent IDE untuk kerja developer lebih laju.",
     priceMyr: 10,
@@ -781,6 +789,7 @@ export const MODULES: Module[] = [
   },
   {
     slug: "n8n-faq-assistant",
+    discoveryTitle: "Jawab soalan pelanggan dengan AI",
     title: "AI FAQ Assistant",
     shortOutcome:
       "Guna AI untuk jawab soalan pelanggan secara automatik dari pelbagai platform.",

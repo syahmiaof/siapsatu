@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png",
+    "path": "public/assets/tools/gemini-google-v2.png",
+    "bytes": 61823,
+    "sha256": "5e7cfecaa53f4f65a313fe89b0f389548126544a78fad8489510c70ae641a4a1"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kalam/Kalam-Regular.ttf",
+    "path": "public/assets/fonts/Kalam-Regular.ttf",
+    "bytes": 427360,
+    "sha256": "57cecb63d4608019371954274ae1d8c397764debd5b19d4a33c1efa4dc923c0b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/kalam/OFL.txt",
+    "path": "public/assets/fonts/Kalam-OFL.txt",
+    "bytes": 4373,
+    "sha256": "f62ef357d3a1c3d27edd35a6e1ba350e8a8d13499797964eeadefbf0b3b15d1f"
+  }
+]

@@ -48,3 +48,42 @@
     right: 0;
   }
 }
+
+.directory .people {
+  width: 95%;
+  height: 100%;
+  left: auto;
+  right: -8%;
+  bottom: -6px;
+  object-position: right bottom;
+}
+.directory .ribbon {
+  width: 130%;
+  left: -10%;
+}
+
+.emblem {
+  position: absolute;
+  width: 23%;
+  height: 32%;
+  left: 40%;
+  top: 4%;
+  z-index: -1;
+}
+.trio .people {
+  height: 94%;
+  width: 98%;
+  left: -2%;
+}
+.ribbonOnly .emblem {
+  width: 29%;
+  height: 58%;
+  left: 32%;
+  top: 3%;
+}
+.directory .emblem {
+  left: 40%;
+  top: 3%;
+  width: 46%;
+  height: 42%;
+}

@@ -163,7 +163,7 @@ export function DesktopMegaMenu({ isOpen, onClose }: DesktopMegaMenuProps) {
           >
             <div className={styles.itemLeft}>
               <Image
-                src="/assets/tools/gemini.svg"
+                src="/assets/tools/gemini-google-v2.png"
                 alt="Gemini"
                 width={18}
                 height={18}

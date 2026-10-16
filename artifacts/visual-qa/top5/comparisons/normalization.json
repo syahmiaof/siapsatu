@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "1440-home",
+    "reference": "homepage-theme-03-malaysia-utility.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-modules",
+    "reference": "modules-catalog-desktop.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-mega-menu",
+    "reference": "modules-mega-menu-desktop.png",
+    "originalSize": [
+      1586,
+      992
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 901
+  },
+  {
+    "slug": "1440-tools",
+    "reference": "ui-01-tools-directory-desktop.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-learn-n8n-google-sheets-2",
+    "reference": "ui-06-lesson-reader-n8n.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "1440-learn-n8n-google-sheets-3",
+    "reference": "ui-06-lesson-reader-n8n.png",
+    "originalSize": [
+      1505,
+      1045
+    ],
+    "removedTopPixels": 0,
+    "width": 1440,
+    "comparedHeight": 1000
+  },
+  {
+    "slug": "390-modules",
+    "reference": "modules-catalog-mobile.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 70,
+    "width": 390,
+    "comparedHeight": 811
+  },
+  {
+    "slug": "390-tools",
+    "reference": "ui-10-tools-directory-mobile-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 90,
+    "width": 390,
+    "comparedHeight": 802
+  },
+  {
+    "slug": "390-learn-n8n-google-sheets-2",
+    "reference": "lesson-mobile-siapsatu-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 0,
+    "width": 390,
+    "comparedHeight": 843
+  },
+  {
+    "slug": "390-learn-n8n-google-sheets-3",
+    "reference": "lesson-mobile-siapsatu-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 0,
+    "width": 390,
+    "comparedHeight": 843
+  },
+  {
+    "slug": "360-modules",
+    "reference": "modules-catalog-mobile.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 70,
+    "width": 360,
+    "comparedHeight": 749
+  },
+  {
+    "slug": "360-tools",
+    "reference": "ui-10-tools-directory-mobile-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 90,
+    "width": 360,
+    "comparedHeight": 740
+  },
+  {
+    "slug": "360-learn-n8n-google-sheets-2",
+    "reference": "lesson-mobile-siapsatu-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 0,
+    "width": 360,
+    "comparedHeight": 778
+  },
+  {
+    "slug": "360-learn-n8n-google-sheets-3",
+    "reference": "lesson-mobile-siapsatu-v2.png",
+    "originalSize": [
+      853,
+      1844
+    ],
+    "removedTopPixels": 0,
+    "width": 360,
+    "comparedHeight": 778
+  }
+]

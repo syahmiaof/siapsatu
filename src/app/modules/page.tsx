@@ -1,8 +1,8 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
-import React, { useState, useMemo, useEffect, Suspense } from "react";
-import { BrandScene } from "@/components/brand/BrandScene";
+import { useDirectoryFilters } from "@/lib/useDirectoryFilters";
+import React, { useMemo, Suspense } from "react";
+import { HeroArtwork } from "@/components/brand/HeroArtwork";
 import Link from "next/link";
 import {
   Search,
@@ -30,16 +30,14 @@ export default function ModulesCatalogPage() {
 }
 
 function DirectoryContent() {
-  const params = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("semua");
-  useEffect(() => {
-    const goal = params.get("goal");
-    setSearchQuery(params.get("search") || "");
-    setSelectedCategory(
-      params.get("category") || (goal === "jual" ? "bisnes" : goal) || "semua",
-    );
-  }, [params]);
+  const {
+    searchQuery,
+    selectedCategory,
+    selectedTool,
+    setSearchQuery,
+    setSelectedCategory,
+    resetFilters,
+  } = useDirectoryFilters();
 
   const categories = [
     { id: "semua", label: "Semua", icon: LayoutGrid },
@@ -55,6 +53,9 @@ function DirectoryContent() {
       const matchesSearch =
         searchQuery.trim() === "" ||
         m.title.toLowerCase().includes(searchQuery.trim().toLowerCase()) ||
+        !!m.discoveryTitle
+          ?.toLowerCase()
+          .includes(searchQuery.trim().toLowerCase()) ||
         m.shortOutcome
           .toLowerCase()
           .includes(searchQuery.trim().toLowerCase()) ||
@@ -76,9 +77,13 @@ function DirectoryContent() {
             m.tags.includes("AI Tools") ||
             m.tags.includes("AI / LLM")));
 
-      return matchesSearch && matchesCategory;
+      return (
+        matchesSearch &&
+        matchesCategory &&
+        (!selectedTool || m.toolSlugs.includes(selectedTool))
+      );
     });
-  }, [searchQuery, selectedCategory]);
+  }, [searchQuery, selectedCategory, selectedTool]);
 
   const featuredList = useMemo(() => {
     return filteredModules.filter((m) => m.featured);
@@ -89,7 +94,7 @@ function DirectoryContent() {
   }, [filteredModules]);
 
   return (
-    <div className="container">
+    <div className="container" data-catalog>
       {/* Header & Search Hero */}
       <section className={styles.pageHeader} aria-label="Katalog Modul">
         <div className={styles.heroGrid}>
@@ -102,9 +107,7 @@ function DirectoryContent() {
               className={styles.headline}
             />
 
-            <p className={styles.subtitle}>
-              Satu modul kecil, satu hasil yang boleh terus digunakan.
-            </p>
+            <p className={styles.subtitle}>Satu modul kecil, satu hasil yang boleh terus digunakan.</p>
 
             {/* Search Input */}
             <form
@@ -163,21 +166,28 @@ function DirectoryContent() {
 
           <div className={styles.heroRight}>
             <div className={styles.heroArtWrap}>
-              <BrandScene />
+              <HeroArtwork catalog />
             </div>
           </div>
         </div>
       </section>
 
+      {selectedTool && (
+        <div className={styles.toolFilterNotice}>
+          <span>
+            Modul untuk {selectedTool} · {filteredModules.length} hasil tersedia
+          </span>
+          <button type="button" onClick={resetFilters}>
+            Lihat semua modul
+          </button>
+        </div>
+      )}
       {/* Main Content Area */}
       {filteredModules.length === 0 ? (
         <EmptyState
           title="Tiada modul yang sepadan"
           description={`Tiada modul dijumpai untuk carian "${searchQuery}". Cuba gunakan kata kunci lain.`}
-          onAction={() => {
-            setSearchQuery("");
-            setSelectedCategory("semua");
-          }}
+          onAction={resetFilters}
         />
       ) : (
         <>
@@ -188,10 +198,13 @@ function DirectoryContent() {
                 <div className={styles.sectionTitleGroup}>
                   <h2 className={styles.sectionTitle}>Modul Pilihan</h2>
                   <p className={styles.sectionDesc}>
-                    Pilih satu hasil praktikal untuk mula belajar.
+                    Modul paling popular untuk mula belajar dan terus dapat hasil.
                   </p>
                 </div>
-                <Link href="#modul-lainnya" className={styles.viewAllLink}>
+                <Link
+                  href={regularList.length ? "#modul-lainnya" : "/modules"}
+                  className={styles.viewAllLink}
+                >
                   <span>Lihat semua modul</span>
                   <ArrowRight size={16} />
                 </Link>
@@ -199,7 +212,12 @@ function DirectoryContent() {
 
               <RevealSection className={styles.featuredGrid}>
                 {featuredList.map((m) => (
-                  <ModuleCard key={m.slug} module={m} variant="featured" density="catalog" />
+                  <ModuleCard
+                    key={m.slug}
+                    module={m}
+                    variant="featured"
+                    density="catalog"
+                  />
                 ))}
               </RevealSection>
             </section>
@@ -222,10 +240,7 @@ function DirectoryContent() {
                 </div>
                 <button
                   type="button"
-                  onClick={() => {
-                    setSelectedCategory("semua");
-                    setSearchQuery("");
-                  }}
+                  onClick={resetFilters}
                   className={styles.viewAllLink}
                 >
                   <span>Reset pilihan</span>
@@ -235,7 +250,12 @@ function DirectoryContent() {
 
               <RevealSection className={styles.compactGrid}>
                 {regularList.map((m) => (
-                  <ModuleCard key={m.slug} module={m} variant="compact" density="catalog" />
+                  <ModuleCard
+                    key={m.slug}
+                    module={m}
+                    variant="compact"
+                    density="catalog"
+                  />
                 ))}
               </RevealSection>
             </section>

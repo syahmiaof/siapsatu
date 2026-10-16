@@ -1,0 +1,20 @@
+
+Running 10 tests using 1 worker
+
+(node:17244) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop-chromium] › tests\top5-repair.spec.ts:4:5 › Tools availability is truthful and every published journey reaches content (6.8s)
+  ok  2 [desktop-chromium] › tests\top5-repair.spec.ts:30:5 › Directory filters survive Back and exact tool filters can be cleared (2.9s)
+  -   3 [desktop-chromium] › tests\top5-repair.spec.ts:53:5 › Reader controls, last paragraph and template remain above the dock
+  ok  4 [desktop-chromium] › tests\top5-repair.spec.ts:84:5 › Clipboard legacy fallback restores keyboard focus (1.1s)
+  -   5 [desktop-chromium] › tests\top5-repair.spec.ts:98:5 › Home first module is discoverable without scrolling on mobile
+(node:25836) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  6 [mobile-chromium] › tests\top5-repair.spec.ts:4:5 › Tools availability is truthful and every published journey reaches content (5.3s)
+  ok  7 [mobile-chromium] › tests\top5-repair.spec.ts:30:5 › Directory filters survive Back and exact tool filters can be cleared (3.1s)
+  ok  8 [mobile-chromium] › tests\top5-repair.spec.ts:53:5 › Reader controls, last paragraph and template remain above the dock (3.3s)
+  ok  9 [mobile-chromium] › tests\top5-repair.spec.ts:84:5 › Clipboard legacy fallback restores keyboard focus (1.1s)
+  ok 10 [mobile-chromium] › tests\top5-repair.spec.ts:98:5 › Home first module is discoverable without scrolling on mobile (2.8s)
+
+  2 skipped
+  8 passed (30.2s)

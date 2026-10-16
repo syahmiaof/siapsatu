@@ -68,9 +68,9 @@
 .container {
   margin: 0;
   padding: 16px;
-  border: 0;
+  border: 1px solid var(--ss-line);
   border-radius: 14px;
-  background: #edf3ff;
+  background: white;
 }
 .header {
   align-items: flex-start;
@@ -81,6 +81,15 @@
   font-size: 15px;
   gap: 8px;
 }
+.headerLeft svg {
+  width: 36px;
+  height: 36px;
+  padding: 7px;
+  background: #e4efff;
+  border-radius: 9px;
+  flex-shrink: 0;
+  color: #0864db;
+}
 .copyBtn {
   min-height: 40px;
   font-size: 12px;
@@ -89,6 +98,7 @@
 }
 .codeArea {
   font-size: 12px;
+  background: #f4f6fa;
   padding: 13px;
   border-radius: 10px;
   line-height: 1.5;

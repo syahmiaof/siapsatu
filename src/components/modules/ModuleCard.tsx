@@ -8,12 +8,11 @@ import {
   BarChart3,
   Edit3,
   Palette,
-  TrendingUp,
-  PanelsTopLeft,
-  FileText,
+  Code2,
 } from "lucide-react";
 import { Module } from "@/types";
 import styles from "./ModuleCard.module.css";
+import { CardMotif } from "./CardMotif";
 
 interface ModuleCardProps {
   module: Module;
@@ -36,7 +35,7 @@ export function ModuleCard({
     (module.toolSlugs.includes("meta")
       ? "/assets/tools/meta.svg"
       : module.toolSlugs.includes("gemini")
-        ? "/assets/tools/gemini.svg"
+        ? "/assets/tools/gemini-google-v2.png"
         : module.toolSlugs.includes("vibecode")
           ? "/assets/tools/vibecode.svg"
           : module.toolSlugs.includes("n8n")
@@ -53,7 +52,7 @@ export function ModuleCard({
                       ? "/assets/tools/codex.svg"
                       : module.toolSlugs.includes("antigravity")
                         ? "/assets/tools/antigravity.svg"
-                        : "/assets/tools/gemini.svg");
+                        : "/assets/tools/gemini-google-v2.png");
 
   const href = `/modules/${module.slug}`;
 
@@ -72,34 +71,59 @@ export function ModuleCard({
         data-reveal-item
       >
         <div className={styles.bgDeco} aria-hidden="true">
-          {module.themeColor === "green" ? (
-            <PanelsTopLeft size={240} />
-          ) : module.themeColor === "crimson" ? (
-            <FileText size={240} />
-          ) : (
-            <TrendingUp size={240} />
-          )}
+          <CardMotif theme={module.themeColor || "navy"} />
         </div>
-        <Image
-          className={styles.mobileCharacter}
-          src={`/assets/illustrations/${module.themeColor === "crimson" ? "hermes-clean" : "learner-clean"}.png`}
-          alt=""
-          width={180}
-          height={240}
-        />
+        <div className={styles.mobileCharacter} aria-hidden="true">
+          <Image
+            src={`/assets/illustrations/parity-v2/portrait-${module.themeColor === "crimson" ? "woman" : module.themeColor === "green" ? "coder" : "male"}-500.webp`}
+            alt=""
+            width={500}
+            height={
+              module.themeColor === "crimson"
+                ? 696
+                : module.themeColor === "green"
+                  ? 742
+                  : 739
+            }
+            sizes="(max-width:700px) 165px, 1px"
+          />
+          <Image
+            className={styles.portraitMark}
+            src="/assets/brand/siapsatu-symbol-v2.webp"
+            alt=""
+            width={160}
+            height={155}
+          />
+        </div>
         <div>
           <div className={styles.featuredTop}>
             <div className={styles.featuredIconSquare}>
-              <Image
-                src={resolvedIcon}
-                alt={module.title}
-                width={36}
-                height={36}
-                style={{ objectFit: "contain" }}
-              />
+              {module.toolSlugs.includes("vibecode") ? (
+                <Code2
+                  size={62}
+                  color="#03143a"
+                  strokeWidth={2.8}
+                  aria-hidden="true"
+                />
+              ) : (
+                <Image
+                  src={resolvedIcon}
+                  alt={module.title}
+                  width={36}
+                  height={36}
+                  style={{ objectFit: "contain" }}
+                />
+              )}
             </div>
             <div className={styles.featuredHeaderContent}>
-              <h3 className={styles.featuredTitle}>{module.title}</h3>
+              <h3 className={styles.featuredTitle}>
+                {density === "catalog"
+                  ? module.discoveryTitle || module.title
+                  : module.title}
+              </h3>
+              {density === "catalog" && module.discoveryTitle && (
+                <p className={styles.moduleName}>{module.title}</p>
+              )}
               <p className={styles.featuredDesc}>{module.shortOutcome}</p>
             </div>
           </div>
@@ -161,7 +185,14 @@ export function ModuleCard({
           />
         </div>
 
-        <h3 className={styles.compactTitle}>{module.title}</h3>
+        <h3 className={styles.compactTitle}>
+          {density === "catalog"
+            ? module.discoveryTitle || module.title
+            : module.title}
+        </h3>
+        {density === "catalog" && module.discoveryTitle && (
+          <p className={styles.compactModuleName}>{module.title}</p>
+        )}
         <p className={styles.compactDesc}>{module.shortOutcome}</p>
 
         {module.tags.length > 0 && (

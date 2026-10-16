@@ -176,3 +176,6 @@ button:disabled {
     --page-gutter: 16px;
   }
 }
+
+@font-face{font-family:Kalam;src:url("/assets/fonts/Kalam-latin-v2.woff2") format("woff2");font-display:swap;font-weight:400}
+:root{--font-hand:Kalam,"Segoe Print",cursive}

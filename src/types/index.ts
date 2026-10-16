@@ -60,6 +60,7 @@ export interface Lesson {
 
 export interface Module {
   slug: string;
+  discoveryTitle?: string;
   title: string;
   eyebrow?: string;
   shortOutcome: string;

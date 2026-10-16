@@ -6,7 +6,7 @@
   border: 1px solid #e5ebf5;
   border-radius: 18px;
   padding: 16px 18px;
-  min-height: 128px;
+  min-height: 130px;
   text-decoration: none;
   box-shadow: 0 5px 16px #03143a04;
   transition:
@@ -14,11 +14,11 @@
     border-color 160ms;
   min-width: 0;
 }
-.card:hover {
+.card[href]:hover {
   transform: translateY(-3px);
   border-color: var(--ss-navy-900);
 }
-.card:active {
+.card[href]:active {
   transform: scale(0.99);
 }
 .leftInfo {
@@ -89,9 +89,16 @@
   border-radius: 50%;
   background: #f1f5fc;
 }
-.card:hover .arrowBtn {
+.card[href]:hover .arrowBtn {
   background: var(--ss-navy-950);
   color: white;
+}
+.upcoming {
+  background: var(--ss-bg);
+  box-shadow: none;
+}
+.upcoming .countRow {
+  padding-right: 0;
 }
 @media (max-width: 1150px) and (min-width: 901px) {
   .card {
@@ -107,15 +114,15 @@
 @media (max-width: 600px) {
   .card {
     padding: 10px 8px;
-    min-height: 105px;
+    min-height: clamp(90px, 24vw, 100px);
     border-radius: 13px;
   }
   .leftInfo {
-    gap: 9px;
+    gap: 5px;
     align-items: center;
   }
   .name {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.15;
   }
   .details {
@@ -123,7 +130,7 @@
   }
   .categoryPill {
     font-size: 9px;
-    padding: 4px 6px;
+    padding: 4px;
   }
   .countRow {
     font-size: 11px;
@@ -137,10 +144,10 @@
     order: 2;
   }
   .arrowBtn {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     bottom: 10px;
-    right: 7px;
+    right: 5px;
   }
   .arrowBtn svg {
     width: 14px;
@@ -158,3 +165,22 @@
   }
 }
 
+@media (max-width: 600px) {
+  .upcoming .countRow {
+    font-size: 10px;
+    line-height: 1.35;
+  }
+  .upcoming .badgeRow {
+    padding-right: 0;
+  }
+  .card[data-tool="hermes-agent"] .name {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card[data-tool="notebooklm"] .name {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}

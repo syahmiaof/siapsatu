@@ -1,0 +1,327 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/modules",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/modules/n8n-whatsapp-autoreply?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/n8n-google-sheets?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/vibe-code-website?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/gemini-canvas?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/notebooklm-pdf-study?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/github-dari-kosong?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/kuasai-codex?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/antigravity-agent-ide?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/gemini-slide-assignment?_rsc=co44u",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/tools",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/tools/n8n",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/modules/n8n-google-sheets?_rsc=udn27",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/n8n-weekly-report?_rsc=udn27",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/modules/pasang-hermes-agent?_rsc=npf5h",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/2",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/learn/n8n-google-sheets/1?_rsc=rlqa9",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/learn/n8n-google-sheets/1?_rsc=12nwf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/learn/n8n-google-sheets/2?_rsc=12nwf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/learn/n8n-google-sheets/5?_rsc=12nwf",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/learn/n8n-google-sheets/6?_rsc=12nwf",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/learn/gemini-slide-assignment/1?_rsc=y7gj6",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/library",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/learn/n8n-google-sheets/4?_rsc=c771q",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/gemini-canvas?_rsc=c771q",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "url": "http://localhost:3110/modules/n8n-whatsapp-autoreply?_rsc=c771q",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/progress",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/community",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/login",
+    "width": 1440,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/modules/gemini-canvas?_rsc=19zvn",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/modules",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/tools",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/tools/n8n",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [
+      {
+        "url": "http://localhost:3110/modules/n8n-google-sheets?_rsc=aqgkl",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "retiredImages": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/2",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/library",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/progress",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/community",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  },
+  {
+    "route": "/login",
+    "width": 390,
+    "consoleErrors": [],
+    "httpErrors": [],
+    "failedRequests": [],
+    "retiredImages": []
+  }
+]

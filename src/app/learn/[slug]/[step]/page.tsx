@@ -16,6 +16,7 @@ import { CopyTemplate } from "@/components/learning/CopyTemplate";
 import { WorkflowDiagram } from "@/components/learning/WorkflowDiagram";
 import { SlideDeckDiagram } from "@/components/learning/SlideDeckDiagram";
 import { BrandScene } from "@/components/brand/BrandScene";
+import { ReaderArtwork } from "@/components/brand/ReaderArtwork";
 import { PrimaryButton } from "@/components/brand/PrimaryButton";
 import { MODULES } from "@/data/mockData";
 import { getStoredProgress, markStepCompleted } from "@/lib/storage";
@@ -29,9 +30,29 @@ export default function LessonReaderPage({
   const learningModule = MODULES.find((m) => m.slug === params.slug);
   const step = Number(params.step);
   const lesson = learningModule?.lessons.find((l) => l.stepNumber === step);
+  const shellRef = useRef<HTMLDivElement>(null);
+  const dockRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const dock = dockRef.current;
+    if (!dock) return;
+    const observer = new ResizeObserver(() => {
+      shellRef.current?.style.setProperty(
+        "--reader-dock-height",
+        `${dock.getBoundingClientRect().height}px`,
+      );
+    });
+    observer.observe(dock);
+    return () => observer.disconnect();
+  }, []);
   const chaptersRef = useRef<HTMLDetailsElement>(null);
   useEffect(() => {
-    if (chaptersRef.current) chaptersRef.current.open = window.innerWidth > 700;
+    const desktop = window.matchMedia("(min-width:701px)");
+    const syncChapters = () => {
+      if (chaptersRef.current) chaptersRef.current.open = desktop.matches;
+    };
+    syncChapters();
+    desktop.addEventListener("change", syncChapters);
+    return () => desktop.removeEventListener("change", syncChapters);
   }, []);
   const [completed, setCompleted] = useState<number[]>([]);
   const [taskDone, setTaskDone] = useState(false);
@@ -59,7 +80,7 @@ export default function LessonReaderPage({
     setMarkedDone(true);
   }
   return (
-    <div data-reader>
+    <div data-reader ref={shellRef} className={styles.readerShell}>
       <header className={styles.readerHeader}>
         <div className={`container ${styles.readerHeaderInner}`}>
           <Link href="/" aria-label="SiapSatu Home">
@@ -86,7 +107,9 @@ export default function LessonReaderPage({
           </Link>
         </div>
       </header>
-      <div className={`container ${styles.readerLayout} ${isSlideModule ? styles.slideReader : ""}`}>
+      <div
+        className={`container ${styles.readerLayout} ${isSlideModule ? styles.slideReader : ""}`}
+      >
         <details ref={chaptersRef} className={styles.chapterMenu} open>
           <summary>Langkah modul</summary>
           <LessonSidebar
@@ -98,7 +121,7 @@ export default function LessonReaderPage({
           />
         </details>
         <article className={styles.centerCol}>
-          <div>
+          <div className={styles.progressGroup}>
             <div className={styles.progressTop}>
               <span>
                 Langkah {step} daripada {learningModule.lessons.length}
@@ -116,16 +139,19 @@ export default function LessonReaderPage({
             <div className={styles.eyebrowBadge}>{learningModule.eyebrow}</div>
           )}
           <AnimatedHeading
-            text={
-              isSlideModule
-                ? learningModule.title
-                : lesson.title
+            text={isSlideModule ? learningModule.title : lesson.title}
+            accentWords={["Google", "Sheets", "slide", "AI"]}
+            breakAfter={
+              step === 3 && learningModule.slug === "n8n-google-sheets"
+                ? 3
+                : undefined
             }
-            accentWords={["n8n", "Google", "Sheets", "slide", "AI"]}
             as="h1"
             className={styles.mainHeadline}
           />
-          {!isSlideModule && <p className={styles.lessonSubtitle}>{lesson.body}</p>}
+          {!isSlideModule && (
+            <p className={styles.lessonSubtitle}>{lesson.body}</p>
+          )}
           <div className={styles.outcomeCallout}>
             <CheckCircle2 size={22} />
             <span>
@@ -143,8 +169,10 @@ export default function LessonReaderPage({
                   {lesson.actionTitle || lesson.title}
                 </h2>
                 <p className={styles.stepDetailSub}>
-                  {isSlideModule ? lesson.body : lesson.actionSubtitle ||
-                    "Ikut panduan dan semak hasil sebelum teruskan."}
+                  {isSlideModule
+                    ? lesson.body
+                    : lesson.actionSubtitle ||
+                      "Ikut panduan dan semak hasil sebelum teruskan."}
                 </p>
               </div>
             </div>
@@ -161,7 +189,7 @@ export default function LessonReaderPage({
                 ))}
               </ol>
               {learningModule.toolSlugs.includes("n8n") && (
-                <WorkflowDiagram setup={step < 3} compact />
+                <WorkflowDiagram setup={step < 3} />
               )}
               {learningModule.slug === "gemini-slide-assignment" && (
                 <SlideDeckDiagram />
@@ -175,10 +203,19 @@ export default function LessonReaderPage({
                     <div className={styles.officialLeft}>
                       {learningModule.slug === "gemini-slide-assignment" && (
                         <Image
-                          src="/assets/tools/gemini.svg"
+                          src="/assets/tools/gemini-google-v2.png"
                           alt="Gemini"
                           width={28}
                           height={28}
+                        />
+                      )}
+                      {learningModule.toolSlugs.includes("n8n") && (
+                        <Image
+                          src="/assets/tools/n8n.png"
+                          alt=""
+                          width={48}
+                          height={48}
+                          className={styles.officialLogo}
                         />
                       )}
                       <div>
@@ -206,7 +243,11 @@ export default function LessonReaderPage({
         </article>
         <aside className={styles.rightCol}>
           <div className={styles.readerArt}>
-            <BrandScene variant="learner" />
+            {learningModule.toolSlugs.includes("n8n") ? (
+              <ReaderArtwork setup={step < 3} />
+            ) : (
+              <BrandScene variant="learner" />
+            )}
           </div>
           <CopyTemplate code={template} title="Template untuk disalin" />
           <section className={styles.taskBox}>
@@ -232,7 +273,7 @@ export default function LessonReaderPage({
           </p>
         </aside>
       </div>
-      <footer className={styles.bottomActionDock} data-fixed-dock>
+      <footer ref={dockRef} className={styles.bottomActionDock} data-fixed-dock>
         <div className={`container ${styles.bottomDockInner}`}>
           <Link
             href={
@@ -241,6 +282,7 @@ export default function LessonReaderPage({
                 : `/modules/${learningModule.slug}`
             }
             className={styles.prevBtn}
+            aria-label={step > 1 ? "Langkah sebelumnya" : "Isi modul"}
           >
             <ArrowLeft size={16} />
             <span>{step > 1 ? "Sebelumnya" : "Isi modul"}</span>

@@ -1,0 +1,123 @@
+[
+  {
+    "name": "hero-trio",
+    "source": "exec-9ab37cb6-8fe5-4a57-ad14-5b71da7bd028.png",
+    "sourceSha256": "58c094606eb82b07c3c0eb0eb54224fdddc06743576a594427dc7efc2e456e49",
+    "alphaBounds": [
+      30,
+      10,
+      1621,
+      932
+    ],
+    "outputs": [
+      {
+        "path": "public\\assets\\illustrations\\parity-v2\\hero-trio-1400.webp",
+        "size": [
+          1400,
+          811
+        ],
+        "bytes": 147298
+      },
+      {
+        "path": "public\\assets\\illustrations\\parity-v2\\hero-trio-800.webp",
+        "size": [
+          800,
+          464
+        ],
+        "bytes": 70886
+      }
+    ]
+  },
+  {
+    "name": "discussion",
+    "source": "exec-248986f5-71c3-4f36-bfe0-04904fb5fe7d.png",
+    "sourceSha256": "b2bfe8589c1c5623d2fd596ffbbf84e58f9e67f1e2d37b7bb0ce2608cdb1518d",
+    "alphaBounds": [
+      31,
+      34,
+      2066,
+      718
+    ],
+    "outputs": [
+      {
+        "path": "public\\assets\\illustrations\\parity-v2\\discussion-1200.webp",
+        "size": [
+          1200,
+          403
+        ],
+        "bytes": 103046
+      },
+      {
+        "path": "public\\assets\\illustrations\\parity-v2\\discussion-650.webp",
+        "size": [
+          650,
+          218
+        ],
+        "bytes": 46358
+      }
+    ]
+  },
+  {
+    "name": "portrait-male",
+    "source": "exec-b2c49598-ff7a-4e38-b326-de0359a07d42.png",
+    "sourceSha256": "000d662921149d7024a348eff4f562c5238f7b381e02793902f6ccc27c1fb7b7",
+    "alphaBounds": [
+      16,
+      53,
+      1020,
+      1536
+    ],
+    "outputs": [
+      {
+        "path": "public\\assets\\illustrations\\parity-v2\\portrait-male-500.webp",
+        "size": [
+          500,
+          739
+        ],
+        "bytes": 56118
+      }
+    ]
+  },
+  {
+    "name": "portrait-woman",
+    "source": "exec-8659cb06-4cd5-44c9-a86e-7c06742c66d2.png",
+    "sourceSha256": "c7894058fbeabda10614257bd923920790ea858a8192d783c3b1616109c5ced0",
+    "alphaBounds": [
+      4,
+      117,
+      1011,
+      1519
+    ],
+    "outputs": [
+      {
+        "path": "public\\assets\\illustrations\\parity-v2\\portrait-woman-500.webp",
+        "size": [
+          500,
+          696
+        ],
+        "bytes": 55950
+      }
+    ]
+  },
+  {
+    "name": "portrait-coder",
+    "source": "exec-9d413767-cc6b-40d0-ab58-0185230e698b.png",
+    "sourceSha256": "ad635cec3b34881b381cd619d478896a500c3e84281ad557f4db0ae2822055fd",
+    "alphaBounds": [
+      15,
+      37,
+      1011,
+      1515
+    ],
+    "outputs": [
+      {
+        "path": "public\\assets\\illustrations\\parity-v2\\portrait-coder-500.webp",
+        "size": [
+          500,
+          742
+        ],
+        "bytes": 65046
+      }
+    ]
+  }
+]

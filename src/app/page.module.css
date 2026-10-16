@@ -14,12 +14,12 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 12px 0 20px;
+  gap: 12px;
+  padding: 0 0 20px;
 }
 .heroHeadline {
-  font-size: clamp(64px, 6.4vw, 96px);
-  line-height: 0.98;
+  font-size: clamp(64px, 6.7vw, 96px);
+  line-height: 0.956;
   letter-spacing: -0.04em;
   font-weight: 800;
   white-space: nowrap;
@@ -37,6 +37,7 @@
   gap: 16px;
 }
 .ctaContainer > a {
+  user-select: text;
   min-height: 74px;
   font-size: 30px;
   padding: 18px 38px;
@@ -96,7 +97,7 @@
 }
 .heroRight {
   position: absolute;
-  inset: -20px calc(-1 * var(--page-gutter)) 0 42%;
+  inset: -112px calc(-1 * var(--page-gutter)) 16px 42%;
   pointer-events: none;
 }
 .heroIllustrationWrap {
@@ -189,7 +190,7 @@
   .heroRight {
     position: relative;
     inset: auto;
-    height: 280px;
+    height: 200px;
     margin: -2px -16px 0;
     width: calc(100% + 32px);
   }
@@ -223,5 +224,25 @@
   }
   .featuredSection {
     padding-top: 12px;
+  }
+}
+
+@media (min-width: 1101px) {
+  .heroHeadline,
+  .subtitle,
+  .ctaContainer {
+    margin-left: 12px;
+  }
+  .audienceChips {
+    max-width: 550px;
+  }
+  .ctaContainer > a {
+    padding-inline: 49px;
+  }
+  .yellowNote {
+    max-width: 155px;
+    font-size: 17px;
+    padding: 16px;
+    transform: rotate(-10deg);
   }
 }

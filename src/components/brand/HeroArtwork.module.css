@@ -1,0 +1,148 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+}
+.backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.people {
+  position: absolute;
+  bottom: 0;
+  left: -3%;
+  width: 87%;
+  aspect-ratio: 1400/811;
+}
+.people picture,
+.people picture img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.deviceOne,
+.deviceTwo {
+  position: absolute;
+  width: 7%;
+  height: auto;
+  object-fit: contain;
+}
+.deviceOne {
+  left: 23%;
+  top: 60%;
+  transform: rotate(12deg) skewY(-5deg);
+}
+.deviceTwo {
+  left: 65%;
+  top: 79%;
+  transform: rotate(10deg) skewY(-9deg);
+  width: 6.5%;
+}
+.handnote {
+  position: absolute;
+  right: 2.5%;
+  top: 30%;
+  font-family: var(--font-hand), cursive;
+  font-size: clamp(17px, 1.65vw, 25px);
+  line-height: 1.04;
+  color: white;
+  transform: rotate(-7deg);
+}
+.handnote span {
+  display: block;
+  width: 50%;
+  height: 3px;
+  border-radius: 3px;
+  background: white;
+  transform: rotate(-10deg);
+  margin: 9px auto 0;
+}
+.sketch {
+  position: absolute;
+  left: 12%;
+  top: 25%;
+  width: 9%;
+  height: auto;
+}
+.practical {
+  position: absolute;
+  bottom: -5px;
+  right: 5%;
+  padding: 15px 18px 11px;
+  background: #ffdc45;
+  box-shadow: 3px 5px 0 #03143a10;
+  transform: rotate(-12deg);
+  font:
+    700 clamp(12px, 1.1vw, 17px) / 1.02 var(--font-hand),
+    cursive;
+  color: var(--ss-navy-950);
+  text-align: center;
+}
+.practical span {
+  position: absolute;
+  right: 4px;
+  bottom: 8px;
+  font:
+    800 26px var(--font-hand),
+    cursive;
+  transform: rotate(25deg);
+}
+.catalog .people {
+  width: 80%;
+  left: 1%;
+}
+.catalog .handnote {
+  font-size: 18px;
+  right: 2%;
+  top: 31%;
+}
+.catalog .sketch {
+  top: 13%;
+}
+@media (max-width: 1100px) {
+  .handnote {
+    font-size: 17px;
+  }
+  .practical {
+    right: 3%;
+    padding: 10px;
+  }
+  .people {
+    width: 91%;
+    left: -4%;
+  }
+  .sketch {
+    top: 31%;
+  }
+}
+@media (max-width: 700px) {
+  .scene {
+    overflow: hidden;
+  }
+  .people {
+    width: 89%;
+    left: 0;
+    bottom: 0;
+  }
+  .handnote {
+    display: none;
+  }
+  .practical {
+    font-size: 10px;
+    right: 3%;
+    bottom: 5px;
+    padding: 8px 12px;
+  }
+  .sketch {
+    top: 13%;
+    left: 12%;
+  }
+  .backdrop {
+    width: 110%;
+    left: -4%;
+  }
+}

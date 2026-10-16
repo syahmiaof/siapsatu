@@ -1,0 +1,372 @@
+{
+  "method": "Hand-inspected original reference card/CTA bounds; heading saturated/dark ink bounds in disclosed tight ROIs. Approximate 1-2px edge uncertainty. Positions and dimensions are not perceptual proof.",
+  "anchors": [
+    {
+      "route": "/",
+      "viewport": 1440,
+      "anchor": "cta",
+      "referenceBoxOriginal": [
+        54,
+        367,
+        388,
+        77
+      ],
+      "reference": {
+        "x": 51.66777408637874,
+        "y": 351.1495016611296,
+        "width": 371.2425249169435,
+        "height": 73.67441860465117
+      },
+      "actual": {
+        "x": 50.875,
+        "y": 354.515625,
+        "width": 371.34375,
+        "height": 74
+      },
+      "deltaPx": {
+        "x": -0.79,
+        "y": 3.37,
+        "width": 0.1,
+        "height": 0.33
+      },
+      "deltaPercentOfReference": {
+        "x": -1.53,
+        "y": 0.96,
+        "width": 0.03,
+        "height": 0.45
+      }
+    },
+    {
+      "route": "/",
+      "viewport": 1440,
+      "anchor": "firstCard",
+      "referenceBoxOriginal": [
+        35,
+        580,
+        471,
+        262
+      ],
+      "reference": {
+        "x": 33.48837209302326,
+        "y": 554.9501661129568,
+        "width": 450.6578073089701,
+        "height": 250.68438538205982
+      },
+      "actual": {
+        "x": 38.875,
+        "y": 554,
+        "width": 443.40625,
+        "height": 250
+      },
+      "deltaPx": {
+        "x": 5.39,
+        "y": -0.95,
+        "width": -7.25,
+        "height": -0.68
+      },
+      "deltaPercentOfReference": {
+        "x": 16.1,
+        "y": -0.17,
+        "width": -1.61,
+        "height": -0.27
+      }
+    },
+    {
+      "route": "/tools",
+      "viewport": 1440,
+      "anchor": "firstCard",
+      "referenceBoxOriginal": [
+        38,
+        445,
+        350,
+        132
+      ],
+      "reference": {
+        "x": 36.35880398671097,
+        "y": 425.78073089701,
+        "width": 334.8837209302326,
+        "height": 126.29900332225914
+      },
+      "actual": {
+        "x": 38.875,
+        "y": 428.765625,
+        "width": 330.8125,
+        "height": 130
+      },
+      "deltaPx": {
+        "x": 2.52,
+        "y": 2.98,
+        "width": -4.07,
+        "height": 3.7
+      },
+      "deltaPercentOfReference": {
+        "x": 6.93,
+        "y": 0.7,
+        "width": -1.22,
+        "height": 2.93
+      }
+    },
+    {
+      "route": "/modules",
+      "viewport": 1440,
+      "anchor": "firstCard",
+      "referenceBoxOriginal": [
+        37,
+        524,
+        476,
+        216
+      ],
+      "reference": {
+        "x": 35.40199335548173,
+        "y": 501.36877076411963,
+        "width": 455.4418604651163,
+        "height": 206.67109634551497
+      },
+      "actual": {
+        "x": 38.875,
+        "y": 499.1875,
+        "width": 443.40625,
+        "height": 208
+      },
+      "deltaPx": {
+        "x": 3.47,
+        "y": -2.18,
+        "width": -12.04,
+        "height": 1.33
+      },
+      "deltaPercentOfReference": {
+        "x": 9.8,
+        "y": -0.43,
+        "width": -2.64,
+        "height": 0.64
+      }
+    },
+    {
+      "route": "/tools",
+      "viewport": 390,
+      "anchor": "firstCard",
+      "referenceBoxOriginal": [
+        22,
+        738,
+        397,
+        206
+      ],
+      "reference": {
+        "x": 10.058616647127785,
+        "y": 296.2719812426729,
+        "width": 181.51230949589683,
+        "height": 94.1852286049238
+      },
+      "actual": {
+        "x": 10,
+        "y": 301.65625,
+        "width": 181,
+        "height": 93.59375
+      },
+      "deltaPx": {
+        "x": -0.06,
+        "y": 5.38,
+        "width": -0.51,
+        "height": -0.59
+      },
+      "deltaPercentOfReference": {
+        "x": -0.6,
+        "y": 1.82,
+        "width": -0.28,
+        "height": -0.63
+      }
+    },
+    {
+      "route": "/tools",
+      "viewport": 360,
+      "anchor": "firstCard",
+      "referenceBoxOriginal": [
+        22,
+        738,
+        397,
+        206
+      ],
+      "reference": {
+        "x": 9.284876905041031,
+        "y": 273.4818288393904,
+        "width": 167.5498241500586,
+        "height": 86.94021101992966
+      },
+      "actual": {
+        "x": 10,
+        "y": 284.9375,
+        "width": 166,
+        "height": 90.546875
+      },
+      "deltaPx": {
+        "x": 0.72,
+        "y": 11.46,
+        "width": -1.55,
+        "height": 3.61
+      },
+      "deltaPercentOfReference": {
+        "x": 7.75,
+        "y": 4.19,
+        "width": -0.93,
+        "height": 4.15
+      }
+    },
+    {
+      "route": "/modules",
+      "viewport": 390,
+      "anchor": "firstCard",
+      "referenceBoxOriginal": [
+        27,
+        647,
+        801,
+        275
+      ],
+      "reference": {
+        "x": 12.344665885111372,
+        "y": 263.81008206330597,
+        "width": 366.2250879249707,
+        "height": 125.7327080890973
+      },
+      "actual": {
+        "x": 16,
+        "y": 267.53125,
+        "width": 358,
+        "height": 132
+      },
+      "deltaPx": {
+        "x": 3.66,
+        "y": 3.72,
+        "width": -8.23,
+        "height": 6.27
+      },
+      "deltaPercentOfReference": {
+        "x": 29.65,
+        "y": 1.41,
+        "width": -2.25,
+        "height": 4.99
+      }
+    },
+    {
+      "route": "/modules",
+      "viewport": 360,
+      "anchor": "firstCard",
+      "referenceBoxOriginal": [
+        27,
+        647,
+        801,
+        275
+      ],
+      "reference": {
+        "x": 11.395076201641267,
+        "y": 243.51699882766707,
+        "width": 338.05392731535756,
+        "height": 116.0609613130129
+      },
+      "actual": {
+        "x": 16,
+        "y": 254.4375,
+        "width": 328,
+        "height": 132
+      },
+      "deltaPx": {
+        "x": 4.6,
+        "y": 10.92,
+        "width": -10.05,
+        "height": 15.94
+      },
+      "deltaPercentOfReference": {
+        "x": 40.37,
+        "y": 4.48,
+        "width": -2.97,
+        "height": 13.73
+      }
+    },
+    {
+      "route": "home",
+      "viewport": 1440,
+      "anchor": "heading ink",
+      "reference": {
+        "x": 52,
+        "y": 123,
+        "width": 510,
+        "height": 168
+      },
+      "actual": {
+        "x": 55,
+        "y": 120,
+        "width": 521,
+        "height": 162
+      },
+      "deltaPx": {
+        "x": 3,
+        "y": -3,
+        "width": 11,
+        "height": -6
+      },
+      "deltaPercentOfReference": {
+        "x": 5.77,
+        "y": -2.44,
+        "width": 2.16,
+        "height": -3.57
+      }
+    },
+    {
+      "route": "tools",
+      "viewport": 1440,
+      "anchor": "heading ink",
+      "reference": {
+        "x": 52,
+        "y": 135,
+        "width": 675,
+        "height": 128
+      },
+      "actual": {
+        "x": 41,
+        "y": 125,
+        "width": 640,
+        "height": 133
+      },
+      "deltaPx": {
+        "x": -11,
+        "y": -10,
+        "width": -35,
+        "height": 5
+      },
+      "deltaPercentOfReference": {
+        "x": -21.15,
+        "y": -7.41,
+        "width": -5.19,
+        "height": 3.91
+      }
+    },
+    {
+      "route": "modules",
+      "viewport": 1440,
+      "anchor": "heading ink",
+      "reference": {
+        "x": 47,
+        "y": 133,
+        "width": 776,
+        "height": 60
+      },
+      "actual": {
+        "x": 44,
+        "y": 140,
+        "width": 765,
+        "height": 61
+      },
+      "deltaPx": {
+        "x": -3,
+        "y": 7,
+        "width": -11,
+        "height": 1
+      },
+      "deltaPercentOfReference": {
+        "x": -6.38,
+        "y": 5.26,
+        "width": -1.42,
+        "height": 1.67
+      }
+    }
+  ]
+}

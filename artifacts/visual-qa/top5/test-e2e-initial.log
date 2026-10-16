@@ -1,0 +1,158 @@
+
+> siapsatu-lms@1.0.0 test:e2e
+> playwright test
+
+
+Running 66 tests using 1 worker
+
+(node:28632) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [desktop-chromium] › tests\astra-behavior.spec.ts:3:5 › Tools search, empty reset, and category selection (1.4s)
+  ok  2 [desktop-chromium] › tests\astra-behavior.spec.ts:23:5 › Query-linked catalog and back navigation remain readable (3.0s)
+  ok  3 [desktop-chromium] › tests\astra-behavior.spec.ts:49:5 › Checkout keyboard trap, Escape and focus restoration (996ms)
+  ok  4 [desktop-chromium] › tests\astra-behavior.spec.ts:69:5 › Reader coherent step, clipboard contents and persistent completion (1.4s)
+  ok  5 [desktop-chromium] › tests\astra-behavior.spec.ts:101:5 › Denied clipboard reports manual fallback (670ms)
+  ok  6 [desktop-chromium] › tests\astra-behavior.spec.ts:118:5 › Malformed local progress safely falls back to demo (596ms)
+  ok  7 [desktop-chromium] › tests\astra-behavior.spec.ts:134:5 › Login preview makes no account or delivery claim (641ms)
+  -   8 [desktop-chromium] › tests\astra-behavior.spec.ts:146:5 › Mobile dock leaves final tool reachable
+  ok  9 [desktop-chromium] › tests\astra-behavior.spec.ts:168:5 › Community publishing stays local and supports optional title (1.2s)
+  ok 10 [desktop-chromium] › tests\astra-behavior.spec.ts:179:5 › Mega menu keyboard arrows and Escape restore trigger focus (843ms)
+  ok 11 [desktop-chromium] › tests\top5-repair.spec.ts:4:5 › Tools availability is truthful and every published journey reaches content (6.4s)
+  ok 12 [desktop-chromium] › tests\top5-repair.spec.ts:44:5 › Directory filters survive Back and exact tool filters can be cleared (2.2s)
+  -  13 [desktop-chromium] › tests\top5-repair.spec.ts:80:5 › Reader controls, last paragraph and template remain above the dock
+  ok 14 [desktop-chromium] › tests\top5-repair.spec.ts:137:5 › Clipboard legacy fallback restores keyboard focus (1.3s)
+  -  15 [desktop-chromium] › tests\top5-repair.spec.ts:161:5 › Home first module is discoverable without scrolling on mobile
+  x  16 [desktop-chromium] › tests\top5-repair.spec.ts:183:5 › Reader normal motion stays visible after reverse scroll and Back (6.3s)
+(node:13756) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 17 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for homepage (/) (2.5s)
+  ok 18 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for modules-catalog (/modules) (2.5s)
+  ok 19 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tools-directory (/tools) (2.3s)
+  ok 20 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-n8n (/tools/n8n) (2.1s)
+  ok 21 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-hermes-agent (/tools/hermes-agent) (2.0s)
+  ok 22 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for learning-path-automation (/paths/ai-automation) (2.0s)
+  ok 23 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for module-detail-n8n (/modules/n8n-google-sheets) (2.1s)
+  ok 24 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for lesson-reader-n8n (/learn/n8n-google-sheets/2) (2.0s)
+  ok 25 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for library-dashboard (/library) (2.0s)
+  ok 26 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for progress-map (/progress) (2.0s)
+  ok 27 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for community-hub (/community) (2.1s)
+  ok 28 [desktop-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for login-page (/login) (1.9s)
+  ok 29 [desktop-chromium] › tests\visual-qa.spec.ts:86:5 › Mega menu interaction on desktop (2.1s)
+  -  30 [desktop-chromium] › tests\visual-qa.spec.ts:114:5 › Mobile menu drawer interaction on mobile
+  ok 31 [desktop-chromium] › tests\visual-qa.spec.ts:146:5 › Tools directory search and category filter (1.5s)
+  ok 32 [desktop-chromium] › tests\visual-qa.spec.ts:177:5 › Checkout preview modal on module detail (2.0s)
+  ok 33 [desktop-chromium] › tests\visual-qa.spec.ts:209:5 › Lesson reader copy template and step completion (1.5s)
+(node:25852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 34 [mobile-chromium] › tests\astra-behavior.spec.ts:3:5 › Tools search, empty reset, and category selection (583ms)
+  ok 35 [mobile-chromium] › tests\astra-behavior.spec.ts:23:5 › Query-linked catalog and back navigation remain readable (2.3s)
+  ok 36 [mobile-chromium] › tests\astra-behavior.spec.ts:49:5 › Checkout keyboard trap, Escape and focus restoration (528ms)
+  ok 37 [mobile-chromium] › tests\astra-behavior.spec.ts:69:5 › Reader coherent step, clipboard contents and persistent completion (724ms)
+  ok 38 [mobile-chromium] › tests\astra-behavior.spec.ts:101:5 › Denied clipboard reports manual fallback (448ms)
+  ok 39 [mobile-chromium] › tests\astra-behavior.spec.ts:118:5 › Malformed local progress safely falls back to demo (391ms)
+  ok 40 [mobile-chromium] › tests\astra-behavior.spec.ts:134:5 › Login preview makes no account or delivery claim (430ms)
+  x  41 [mobile-chromium] › tests\astra-behavior.spec.ts:146:5 › Mobile dock leaves final tool reachable (547ms)
+(node:28996) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 42 [mobile-chromium] › tests\astra-behavior.spec.ts:168:5 › Community publishing stays local and supports optional title (776ms)
+  -  43 [mobile-chromium] › tests\astra-behavior.spec.ts:179:5 › Mega menu keyboard arrows and Escape restore trigger focus
+  ok 44 [mobile-chromium] › tests\top5-repair.spec.ts:4:5 › Tools availability is truthful and every published journey reaches content (5.3s)
+  ok 45 [mobile-chromium] › tests\top5-repair.spec.ts:44:5 › Directory filters survive Back and exact tool filters can be cleared (1.6s)
+  ok 46 [mobile-chromium] › tests\top5-repair.spec.ts:80:5 › Reader controls, last paragraph and template remain above the dock (2.3s)
+  ok 47 [mobile-chromium] › tests\top5-repair.spec.ts:137:5 › Clipboard legacy fallback restores keyboard focus (946ms)
+  ok 48 [mobile-chromium] › tests\top5-repair.spec.ts:161:5 › Home first module is discoverable without scrolling on mobile (707ms)
+  x  49 [mobile-chromium] › tests\top5-repair.spec.ts:183:5 › Reader normal motion stays visible after reverse scroll and Back (6.0s)
+(node:27440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 50 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for homepage (/) (2.5s)
+  ok 51 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for modules-catalog (/modules) (2.4s)
+  ok 52 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tools-directory (/tools) (2.2s)
+  ok 53 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-n8n (/tools/n8n) (2.2s)
+  ok 54 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for tool-hermes-agent (/tools/hermes-agent) (2.2s)
+  ok 55 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for learning-path-automation (/paths/ai-automation) (2.4s)
+  ok 56 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for module-detail-n8n (/modules/n8n-google-sheets) (2.4s)
+  ok 57 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for lesson-reader-n8n (/learn/n8n-google-sheets/2) (2.1s)
+  ok 58 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for library-dashboard (/library) (2.3s)
+  ok 59 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for progress-map (/progress) (2.5s)
+  ok 60 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for community-hub (/community) (2.3s)
+  ok 61 [mobile-chromium] › tests\visual-qa.spec.ts:35:7 › Capture visual screenshot for login-page (/login) (2.0s)
+  -  62 [mobile-chromium] › tests\visual-qa.spec.ts:86:5 › Mega menu interaction on desktop
+  ok 63 [mobile-chromium] › tests\visual-qa.spec.ts:114:5 › Mobile menu drawer interaction on mobile (2.2s)
+  -  64 [mobile-chromium] › tests\visual-qa.spec.ts:146:5 › Tools directory search and category filter
+  -  65 [mobile-chromium] › tests\visual-qa.spec.ts:177:5 › Checkout preview modal on module detail
+  -  66 [mobile-chromium] › tests\visual-qa.spec.ts:209:5 › Lesson reader copy template and step completion
+
+
+  1) [desktop-chromium] › tests\top5-repair.spec.ts:183:5 › Reader normal motion stays visible after reverse scroll and Back 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: locator('h1 [data-word]').first()
+    Expected: "1"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveCSS" locator('h1 [data-word]').first() with timeout 5000ms
+      - waiting for locator('h1 [data-word]').first()
+
+
+      190 |   await page.goBack();
+      191 |   await page.evaluate(() => scrollTo(0, 0));
+    > 192 |   await expect(page.locator("h1 [data-word]").first()).toHaveCSS(
+          |                                                        ^
+      193 |     "opacity",
+      194 |     "1",
+      195 |   );
+        at C:\Users\USER\Desktop\academy-syahmi\tests\top5-repair.spec.ts:192:56
+
+    Error Context: test-results\top5-repair-Reader-normal--aa7dc-ter-reverse-scroll-and-Back-desktop-chromium\error-context.md
+
+  2) [mobile-chromium] › tests\astra-behavior.spec.ts:146:5 › Mobile dock leaves final tool reachable 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      153 |   const a = await last.boundingBox(),
+      154 |     d = await dock.boundingBox();
+    > 155 |   expect(a && d && a.y + a.height <= d.y + 1).toBeTruthy();
+          |                                               ^
+      156 |   await page
+      157 |     .getByRole("button", { name: "Buka menu" })
+      158 |     .scrollIntoViewIfNeeded();
+        at C:\Users\USER\Desktop\academy-syahmi\tests\astra-behavior.spec.ts:155:47
+
+    Error Context: test-results\astra-behavior-Mobile-dock-leaves-final-tool-reachable-mobile-chromium\error-context.md
+
+  3) [mobile-chromium] › tests\top5-repair.spec.ts:183:5 › Reader normal motion stays visible after reverse scroll and Back 
+
+    Error: expect(locator).toHaveCSS(expected) failed
+
+    Locator: locator('h1 [data-word]').first()
+    Expected: "1"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveCSS" locator('h1 [data-word]').first() with timeout 5000ms
+      - waiting for locator('h1 [data-word]').first()
+
+
+      190 |   await expect(page).toHaveURL(/\/learn\/n8n-google-sheets\/3$/);
+      191 |   await page.goBack();
+    > 192 |   await expect(page).toHaveURL(/\/learn\/n8n-google-sheets\/2$/);
+          |                                                        ^
+      193 |   await page.evaluate(() => scrollTo(0, 0));
+      194 |   await expect(page.locator("h1 [data-word]").first()).toHaveCSS(
+      195 |     "opacity",
+        at C:\Users\USER\Desktop\academy-syahmi\tests\top5-repair.spec.ts:192:56
+
+    Error Context: test-results\top5-repair-Reader-normal--aa7dc-ter-reverse-scroll-and-Back-mobile-chromium\error-context.md
+
+  3 failed
+    [desktop-chromium] › tests\top5-repair.spec.ts:183:5 › Reader normal motion stays visible after reverse scroll and Back 
+    [mobile-chromium] › tests\astra-behavior.spec.ts:146:5 › Mobile dock leaves final tool reachable 
+    [mobile-chromium] › tests\top5-repair.spec.ts:183:5 › Reader normal motion stays visible after reverse scroll and Back 
+  9 skipped
+  54 passed (2.0m)

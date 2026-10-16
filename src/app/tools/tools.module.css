@@ -3,22 +3,22 @@
 }
 .heroBanner {
   position: relative;
-  min-height: 226px;
+  min-height: 222px;
   display: flex;
   align-items: center;
-  background: #f5f8fe;
-  margin: 0 calc(-1 * var(--page-gutter));
-  padding: 26px var(--page-gutter);
+  background: var(--ss-bg);
+  margin-inline: calc(-1 * var(--page-gutter));
+  padding: 22px var(--page-gutter);
   overflow: hidden;
 }
 .heroLeft {
   position: relative;
   z-index: 1;
-  width: 64%;
+  width: 66%;
 }
 .headline {
-  font-size: clamp(44px, 4.5vw, 68px);
-  line-height: 1.03;
+  font-size: clamp(44px, 5vw, 72px);
+  line-height: 0.92;
   font-weight: 800;
   letter-spacing: -0.035em;
   white-space: nowrap;
@@ -27,7 +27,6 @@
   font-size: clamp(18px, 1.9vw, 28px);
   line-height: 1.4;
   margin-top: 12px;
-  color: var(--ss-navy-950);
 }
 .heroRight {
   position: absolute;
@@ -36,14 +35,25 @@
   bottom: 0;
   width: 51%;
 }
+.artCaption {
+  position: absolute;
+  right: 3%;
+  top: 53%;
+  color: white;
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+  transform: rotate(-8deg);
+}
 .mobileLearner {
   display: none;
 }
 .controlsBar {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin: 20px 0 24px;
+  gap: 10px;
+  margin: 18px 0 24px;
 }
 .searchBox {
   display: flex;
@@ -51,8 +61,8 @@
   gap: 12px;
   border: 1.5px solid var(--ss-line);
   border-radius: 18px;
-  padding: 16px 20px;
-  min-width: 230px;
+  padding: 14px 18px;
+  min-width: 220px;
   flex: 1;
   background: white;
 }
@@ -60,10 +70,8 @@
   width: 27px;
   height: 27px;
   flex-shrink: 0;
-  color: var(--ss-navy-950);
 }
 .searchBox:focus-within {
-  border-color: var(--ss-navy-950);
   outline: 2px solid var(--ss-navy-950);
 }
 .searchInput {
@@ -71,6 +79,7 @@
   outline: 0;
   background: transparent;
   width: 100%;
+  min-width: 0;
   font-size: 22px;
   color: var(--ss-navy-950);
 }
@@ -85,9 +94,9 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 12px 17px;
+  padding: 12px 21px;
   border-radius: 24px;
-  background: #f0f4fc;
+  background: var(--ss-surface-subtle);
   font-weight: 800;
   font-size: 15px;
   white-space: nowrap;
@@ -100,19 +109,19 @@
   height: 22px;
 }
 .chip:hover {
-  background: #e1e9f8;
+  background: var(--ss-line);
   transform: translateY(-2px);
 }
 .activeChip,
 .activeChip:hover {
   background: var(--ss-orange);
-  color: #fff;
+  color: white;
 }
 .toolsGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 13px;
-  margin: 0 0 32px;
+  margin-bottom: 32px;
 }
 @media (max-width: 1250px) {
   .controlsBar {
@@ -125,12 +134,11 @@
     font-size: 14px;
     padding: 10px 15px;
   }
-  .heroBanner {
-    margin-inline: calc(-1 * var(--page-gutter));
-    padding-inline: var(--page-gutter);
-  }
   .headline {
     font-size: 4.4vw;
+  }
+  .artCaption {
+    font-size: 16px;
   }
 }
 @media (max-width: 900px) {
@@ -150,12 +158,22 @@
     font-size: 19px;
     max-width: 480px;
   }
+  .artCaption {
+    display: none;
+  }
+  .filterChips {
+    width: 100%;
+    overflow-x: auto;
+    padding: 3px 0 6px;
+  }
 }
 @media (max-width: 600px) {
+  .directory {
+    --page-gutter: 10px;
+  }
   .heroBanner {
-    margin: 0 -16px;
-    padding: 22px 16px 0;
-    min-height: 206px;
+    padding: 8px var(--page-gutter) 10px;
+    min-height: 122px;
     display: block;
     overflow: visible;
     background: white;
@@ -164,48 +182,42 @@
     width: 100%;
   }
   .headline {
-    font-size: clamp(27px, 7.65vw, 34px);
+    font-size: clamp(26px, 7.3vw, 34px);
     line-height: 1.08;
     letter-spacing: -0.04em;
     white-space: normal;
   }
   .subtitle {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
-    max-width: 65%;
-    margin-top: 12px;
+    max-width: 69%;
+    margin-top: 9px;
   }
   .heroRight {
-    width: 49%;
-    height: 198px;
-    right: 0;
-    top: 10px;
-    z-index: 0;
+    width: 40%;
+    height: 175px;
+    top: 0;
   }
-  .heroRight > div:first-child {
-    display: none;
+  .heroRight > [data-hero-art] {
+    display: block;
   }
   .mobileLearner {
     display: block;
     height: 100%;
   }
-  .heroLeft {
-    z-index: 1;
-  }
   .controlsBar {
     position: relative;
     z-index: 2;
-    margin: 0 0 12px;
-    gap: 12px;
+    margin: 0 0 8px;
+    gap: 8px;
   }
   .searchBox {
     min-width: 0;
     flex: none;
     width: 82%;
-    padding: 12px;
+    padding: 10px;
     border-radius: 14px;
     min-height: 48px;
-    box-shadow: 0 3px 8px #03143a05;
   }
   .searchInput {
     font-size: 18px;
@@ -214,14 +226,12 @@
     width: 22px;
   }
   .filterChips {
-    width: calc(100% + 16px);
-    overflow-x: auto;
-    padding: 0 0 5px;
     gap: 6px;
+    padding: 0 0 5px;
     scrollbar-width: thin;
   }
   .chip {
-    min-height: 40px;
+    min-height: 36px;
     font-size: 12px;
     padding: 8px 11px;
     border-radius: 16px;
@@ -238,39 +248,27 @@
     content: "AI";
     font-size: 12px;
   }
+  .activeChip,
+  .activeChip:hover {
+    background: var(--ss-red);
+  }
   .toolsGrid {
-    gap: 9px;
-    margin-bottom: 22px;
+    gap: 8px;
+    margin-bottom: 24px;
   }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 380px) {
   .heroBanner {
-    min-height: 140px;
-    padding-top: 8px;
-  }
-  .heroRight {
-    height: 185px;
-    top: 0;
-  }
-  .subtitle {
-    font-size: 15px;
-    margin-top: 10px;
-  }
-  .searchBox {
-    min-height: 48px;
-    padding: 11px 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    min-height: 110px;
   }
   .controlsBar {
-    gap: 10px;
+    gap: 6px;
   }
-  .filterChips {
-    width: 100%;
-  }
-  .chip {
-    min-height: 38px;
-  }
-  .headline {
-    font-size: 7.65vw;
+}
+@media (prefers-reduced-motion: reduce) {
+  .chip:hover {
+    transform: none;
   }
 }

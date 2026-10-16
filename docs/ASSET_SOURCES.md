@@ -46,3 +46,47 @@ Exact URLs, hashes and retrieval results: [new marks](../artifacts/visual-qa/ast
 Old `hero-learners.png`, `community-learners.png`, `n8n-hero-character.png`, `hermes-hero-character.png`, `path-hero-character.png`, avatar and thumbnail crops are historical rectangular portions of generated mockups. Some contain UI/text. They are retained as historical files, **not isolated artwork**, and are not rendered by rebuilt route components. Dormant mock-data image paths do not constitute runtime usage.
 
 The later `hero-malaysia-utility.png` was visually inspected during recovery: it includes baked-in navigation, a login button, text fragments and a sticky note. It has been removed from `BrandScene` runtime usage. `community-discussion.png` is another rectangular reference crop; the shared notice now uses the clean transparent trio instead. Both files remain on disk for recovery history, not as approved runtime assets. The prior implementation and screenshots are archived under `artifacts/visual-qa/astra/recovery/`.
+
+
+## Top 5 local repair — 16 Oct 2026
+
+No raster asset or approved mockup was changed or newly generated in this sprint. The exact supplied logo, n8n and Hermes files still match their recorded SHA-256 hashes: [fresh verification](../artifacts/visual-qa/top5/protected-assets.json). All eight selected approved references match HEAD blobs: [reference integrity](../artifacts/visual-qa/top5/reference-integrity.json). The four deleted legacy mockups were already deleted in the [initial worktree](../artifacts/visual-qa/top5/status-before.txt).
+
+- `BrandScene` separates the crescent/star into an aspect-preserving SVG and adds simplified KL tower/twin-tower bridge accents. The ribbon remains stylized decoration.
+- Directory mobile art reuses `learner-clean.png` with CSS placement. It is not extracted from a mockup; its pointing pose differs from the reference.
+- Mobile featured cards reuse `learners-clean.png` inside CSS crop windows for the three characters. CSS clipping suppresses a neighbouring head on the middle crop. Original bytes remain untouched; the close portrait crops differ from the full torso poses in the approved card art.
+- The community strip adds a decorative Lucide conversation icon above the existing clean trio. The demo/community copy remains factual and does not invent membership figures.
+- All new card titles, badges, counts and reader controls are selectable DOM text. There is no screenshot used as interface or as a baked-in text illustration.
+
+## Reference-parity pass 2 — 16 Oct 2026
+
+This section supersedes the Top 5 runtime-art descriptions above for Home, the catalog, directory and n8n reader. Historical assets remain recoverable. [Integrity proof](../artifacts/visual-qa/parity-v2/integrity.json) verifies all 247 Top 5 evidence files, eight approved references and three protected source/runtime asset pairs unchanged.
+
+### New transparent artwork
+
+Five reference-guided illustrations were generated using the built-in `imagegen` tool with `transparent_background: true`, then copied into this workspace. These are reconstructed illustrations, **not exact extractions of the original illustrator's layers**. They contain no navigation, prices, headings or card UI. Device covers were generated plain; separate SiapSatu symbol graphics are composed in the browser.
+
+| Runtime asset under `public/assets/illustrations/parity-v2/` | Reference and purpose | Optimized output |
+|---|---|---|
+| `hero-trio-1400.webp`, `hero-trio-800.webp` | Approved Home hero: navy shirt man looking left, hijab woman, shorter orange hoodie man; layered waist crop | 147,298 / 70,886 bytes |
+| `discussion-1200.webp`, `discussion-650.webp` | Approved Home community strip: three people talking around a laptop, speech/group bubbles; distinct poses from hero | 103,046 / 46,358 bytes |
+| `portrait-male-500.webp` | Approved mobile catalog's first card; full head, torso, hands and laptop | 56,118 bytes |
+| `portrait-woman-500.webp` | Approved mobile catalog's second card; hijab, white blouse, tablet | 55,950 bytes |
+| `portrait-coder-500.webp` | Approved mobile catalog's third card; orange hoodie, glasses and tablet | 65,046 bytes |
+
+Original generated PNGs are preserved in [source-art](../artifacts/visual-qa/parity-v2/source-art/). The [manifest](../artifacts/visual-qa/parity-v2/source-art/manifest.json) records filenames, SHA-256, alpha crop bounds, dimensions and output sizes. Exact [scene prompts](../artifacts/visual-qa/parity-v2/source-art/scene-prompts.json) and [portrait prompts](../artifacts/visual-qa/parity-v2/source-art/portrait-prompts.json) are saved. Portrait prompts used `mockups/modules-catalog-mobile.png`; scene prompts used `mockups/homepage-theme-03-malaysia-utility.png`.
+
+Reproduce derivatives with `python scripts/prepare-parity-art.py` (Pillow, OpenCV, NumPy, FontTools/Brotli). The script prefers preserved workspace originals, removes disconnected alpha islands under 100 pixels, crops to alpha bounds and emits WebP at quality 88. A threshold of 220 isolates the portraits' opaque white-edged silhouette from the generated low-alpha glow; the two scene assets use threshold 12 to retain their soft edge. This masking was explicitly permitted by the brief. [Checkerboard and unscaled edge inspection](../artifacts/visual-qa/parity-v2/alpha-edge-inspection.png) shows actual transparency at 100% in the right-hand panels. No mockup rectangle is used as live UI.
+
+### Deterministic artwork, marks and typography
+
+- `MalaysiaBackdrop.tsx`: authored SVG curves, crescent, fourteen-point star, green arrow, yellow city circle, Petronas bridge and Menara KL silhouette. Stylized cultural decoration, not an official flag specification.
+- `DirectoryArtwork.tsx`: separate wide banner composition and mobile portrait; handwritten caption remains selectable DOM.
+- `ReaderArtwork.tsx`: illustration plus separate n8n tile and generic spreadsheet/play icon. The spreadsheet icon is Lucide, **not a claimed official Google Sheets mark**. It illustrates the lesson and is not evidence of an executed workflow.
+- `CardMotif.tsx`: authored growth arrow, document stack and browser-window motifs. Vibe Code's navy `Code2` is a generic topic icon, not an official product brand.
+- `public/assets/brand/siapsatu-symbol-v2.webp`: nondestructive derivative of `siapsatu-display.png`, crop `(0,0,470,455)`, downsampled to 160×155 lossless WebP. Reproduced by the preparation script. Protected original logo files unchanged.
+- `public/assets/tools/gemini-google-v2.png`: multicolour source found in the live [Google Gemini page](https://gemini.google.com/) and downloaded from [Google's static asset](https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png). Retrieval URL/hash recorded in [sourced-assets.json](../artifacts/visual-qa/parity-v2/sourced-assets.json). Used to identify Gemini, with no affiliation or endorsement claim. This replaces the earlier monochrome runtime mark while keeping its file intact.
+- `public/assets/fonts/Kalam-latin-v2.woff2`: Latin subset of [Google Fonts Kalam Regular](https://github.com/google/fonts/tree/main/ofl/kalam), with original TTF and SIL Open Font License preserved beside it. The preparation script subsets Unicode 32–255. Loaded locally with `font-display: swap`; used only for handwritten notes. Main UI retains DESIGN.md's Bricolage Grotesque/Manrope.
+- ChatGPT's verified library geometry is presented white on a green tile with CSS; supplied n8n/Hermes bitmaps fill their tiles without modifying bytes. Codex/NotebookLM/Antigravity retain clearly neutral text marks because distinct verified assets were not acquired. Hermes remains visibly source-resolution limited.
+
+The WhatsApp preview uses an abstract group icon instead of invented member avatars. No learner totals, reviews, invitation availability or payment/backend capability is asserted by the artwork.

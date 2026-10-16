@@ -1,0 +1,91 @@
+ M docs/ASSET_SOURCES.md
+ M docs/VISUAL_QA.md
+ D mockups/catalog-desktop-concept.png
+ D mockups/homepage-siapsatu-concept.png
+ D mockups/homepage-theme-01-editorial.png
+ D mockups/homepage-theme-02-ai-saas.png
+ M src/app/learn/[slug]/[step]/page.tsx
+ M src/app/learn/[slug]/[step]/reader.module.css
+ M src/app/modules/modules.module.css
+ M src/app/modules/page.tsx
+ M src/app/page.module.css
+ M src/app/tools/page.tsx
+ M src/app/tools/tools.module.css
+ M src/components/brand/BrandScene.module.css
+ M src/components/brand/BrandScene.tsx
+ M src/components/community/CommunityNotice.module.css
+ M src/components/community/CommunityNotice.tsx
+ M src/components/learning/LessonSidebar.module.css
+ M src/components/learning/LessonSidebar.tsx
+ M src/components/modules/ModuleCard.module.css
+ M src/components/modules/ModuleCard.tsx
+ M src/components/tools/ToolCard.module.css
+ M src/components/tools/ToolCard.tsx
+ M src/components/tools/ToolLogoTile.module.css
+ M src/data/mockData.ts
+ M src/types/index.ts
+ M tests/astra-behavior.spec.ts
+?? ASTRA_REFERENCE_PARITY_V2_PROMPT.md
+?? ASTRA_TOP5_REPAIR_PROMPT.md
+?? artifacts/visual-qa/astra/recovery/refine-1440-modules-n8n-google-sheets.png
+?? artifacts/visual-qa/astra/recovery/refine-1440-modules.png
+?? artifacts/visual-qa/astra/recovery/refine-1440-tools-hermes-agent.png
+?? artifacts/visual-qa/astra/recovery/refine-390-learn-gemini-slide-assignment-2.png
+?? artifacts/visual-qa/astra/recovery/refine-menu.png
+?? artifacts/visual-qa/astra/recovery/refine-reader-final.png
+?? artifacts/visual-qa/astra/recovery/repair-1440-ai-automation.png
+?? artifacts/visual-qa/astra/recovery/repair-1440-community.png
+?? artifacts/visual-qa/astra/recovery/repair-1440-home.png
+?? artifacts/visual-qa/astra/recovery/repair-390-home.png
+?? artifacts/visual-qa/astra/recovery/runtime-audit-with-teardown.json
+?? artifacts/visual-qa/astra/runtime-audit.json
+?? artifacts/visual-qa/card1_mockup.png
+?? artifacts/visual-qa/card2_mockup.png
+?? artifacts/visual-qa/card3_mockup.png
+?? artifacts/visual-qa/check_im1.png
+?? artifacts/visual-qa/community_box_original.png
+?? artifacts/visual-qa/community_chars_original.png
+?? artifacts/visual-qa/community_wa_original.png
+?? artifacts/visual-qa/current_1280x888.png
+?? artifacts/visual-qa/diff_1280.png
+?? artifacts/visual-qa/header_nav_crop.png
+?? artifacts/visual-qa/hero_art_exact.png
+?? artifacts/visual-qa/hero_badges_crop.png
+?? artifacts/visual-qa/hero_cta_crop.png
+?? artifacts/visual-qa/hero_headline_crop.png
+?? artifacts/visual-qa/hero_learners_left150.png
+?? artifacts/visual-qa/hero_right_full.png
+?? artifacts/visual-qa/hero_subtitle_crop.png
+?? artifacts/visual-qa/inspect_cards.png
+?? artifacts/visual-qa/inspect_community.png
+?? artifacts/visual-qa/inspect_header.png
+?? artifacts/visual-qa/inspect_hero_left.png
+?? artifacts/visual-qa/inspect_hero_right.png
+?? artifacts/visual-qa/overlay_1280.png
+?? artifacts/visual-qa/parity-v2/
+?? artifacts/visual-qa/side_by_side_1280.jpg
+?? artifacts/visual-qa/top5/
+?? artifacts/visual-qa/wa_avatars_crop.png
+?? artifacts/visual-qa/wa_card_mockup.png
+?? docs/INDEPENDENT_VISUAL_AUDIT_2026-10-16.md
+?? docs/UI_REVIEW_2026-10-16.md
+?? docs/VISUAL_QA_PRE_TOP5.md
+?? "mockups/homepage-theme-03-malaysia-utility - Copy.png"
+?? "mockups/lesson-mobile-concept - Copy.png"
+?? "mockups/lesson-mobile-siapsatu-v2 - Copy.png"
+?? "mockups/modules-catalog-desktop - Copy.png"
+?? "mockups/modules-catalog-mobile - Copy.png"
+?? "mockups/modules-mega-menu-desktop - Copy.png"
+?? "mockups/syambal-gepuk-editorial-frame - Copy.png"
+?? "mockups/syambal-gepuk-theme-editorial - Copy.png"
+?? "mockups/ui-01-tools-directory-desktop - Copy.png"
+?? "mockups/ui-02-tool-n8n-desktop - Copy.png"
+?? "mockups/ui-03-tool-hermes-desktop - Copy.png"
+?? "mockups/ui-04-learning-path-automation - Copy.png"
+?? "mockups/ui-04-learning-path-automation-v2 - Copy.png"
+?? scripts/capture-top5.mjs
+?? scripts/compare-top5.py
+?? scripts/top5-report-index.py
+?? src/lib/catalog.ts
+?? src/lib/useDirectoryFilters.ts
+?? tests/top5-repair.spec.ts

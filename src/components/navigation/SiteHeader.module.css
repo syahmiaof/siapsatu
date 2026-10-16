@@ -223,5 +223,30 @@
   }
 }
 
-.menuScrim{position:fixed;inset:100px 0 0;background:#03143a55;z-index:0}.inner{position:relative;z-index:1}
-@media(max-width:900px){.menuScrim{display:none}}
+.menuScrim {
+  position: fixed;
+  inset: 100px 0 0;
+  background: #03143a55;
+  z-index: 0;
+}
+.inner {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .menuScrim {
+    display: none;
+  }
+}
+
+@media (min-width: 1101px) {
+  :global(body:has([data-home])) .header {
+    background: transparent;
+  }
+}
+
+@media (min-width: 1101px) {
+  :global(body:has([data-catalog])) .header {
+    background: transparent;
+  }
+}

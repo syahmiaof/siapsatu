@@ -1,0 +1,77 @@
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+}
+.banner {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.caption {
+  position: absolute;
+  right: 2%;
+  top: 39%;
+  font:
+    21px/1.05 var(--font-hand),
+    cursive;
+  color: white;
+  transform: rotate(-8deg);
+  width: 18%;
+}
+.caption span {
+  display: block;
+  width: 65%;
+  height: 2px;
+  background: white;
+  margin: 8px 0 0 15%;
+  transform: rotate(-6deg);
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 900px) {
+  .caption {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .banner,
+  .caption {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+  .flag {
+    position: absolute;
+    width: 290px;
+    height: 220px;
+    right: -34px;
+    top: -15px;
+  }
+  .person {
+    position: absolute;
+    right: -9%;
+    top: 8px;
+    width: 97%;
+    aspect-ratio: 2/3;
+  }
+  .person > img:first-child {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .mark {
+    position: absolute;
+    left: 51%;
+    top: 52%;
+    width: 18%;
+    height: auto;
+    transform: rotate(10deg);
+  }
+}

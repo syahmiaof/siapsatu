@@ -34,6 +34,7 @@ export function LessonSidebar({
             <Link
               key={lesson.id}
               href={`/learn/${moduleSlug}/${lesson.stepNumber}`}
+              aria-current={isActive ? "step" : undefined}
               className={`${styles.stepItem} ${isActive ? styles.active : ""} ${
                 isCompleted ? styles.completed : ""
               }`}

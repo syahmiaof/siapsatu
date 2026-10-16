@@ -5,55 +5,51 @@
   margin: 14px 0 24px;
 }
 .navyBox {
-  background: var(--ss-navy-900);
-  border-radius: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   position: relative;
+  isolation: isolate;
   overflow: hidden;
   height: 164px;
-  padding: 0 26px 0 0;
+  border-radius: 22px 0 0 22px;
+  clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%);
+  background: linear-gradient(140deg, #0b3474, #03143a 70%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5% 0 0;
 }
-.navyBox:after {
-  content: "";
+.ribbon {
   position: absolute;
-  bottom: -30px;
-  left: -20px;
-  right: -20px;
-  height: 60px;
-  border-top: 12px solid white;
-  border-bottom: 12px solid white;
-  background: var(--ss-red);
-  transform: rotate(6deg);
-  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 .learnersArt {
-  width: 48%;
-  height: 215px;
-  object-fit: cover;
-  object-position: center top;
-  align-self: flex-start;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 53%;
+  display: block;
+}
+.learnersArt img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 .headingText {
-  font-family: var(--font-display);
-  font-size: clamp(24px, 3vw, 43px);
-  font-weight: 800;
-  line-height: 1.06;
+  font: 800 clamp(24px, 3.1vw, 45px) / 1.06 var(--font-display);
+  letter-spacing: -0.035em;
   color: white;
   position: relative;
-  z-index: 1;
   white-space: nowrap;
 }
 .orangeWord {
   color: var(--ss-orange);
 }
 .whatsappBox {
-  background: #f0f4fc;
+  background: linear-gradient(130deg, #e8eefb, #f8f9fe);
   border-radius: 22px;
-  padding: 24px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,54 +59,106 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-display);
-  font-size: 21px;
-  font-weight: 800;
+  padding: 6px 10px 6px 6px;
+  background: white;
+  border-radius: 18px;
+  font: 800 21px/1.2 var(--font-display);
+}
+.whatsappIcon {
+  display: grid;
+  place-items: center;
+  background: #0bcb59;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+.whatsappBtn img {
+  width: 48px;
+  height: 48px;
+  padding: 7px;
+  filter: brightness(0) invert(1);
 }
 .whatsappBtn:hover {
   color: var(--ss-orange);
 }
-.whatsappBtn img {
-  filter: none;
+.previewInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-inline: 6px;
+}
+.previewIcon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 40px;
+  border-radius: 22px;
+  background: #dbe7ff;
+  color: #0b3474;
+  flex-shrink: 0;
 }
 .subtext {
   font-size: 13px;
-  color: var(--ss-muted);
   line-height: 1.5;
+  color: var(--ss-muted);
+}
+@media (max-width: 1100px) {
+  .headingText {
+    font-size: 2.7vw;
+  }
+  .whatsappBtn {
+    font-size: 17px;
+  }
+  .whatsappBox {
+    padding: 14px;
+  }
+  .whatsappBtn img {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (max-width: 900px) {
   .banner {
     grid-template-columns: 1fr;
   }
+  .navyBox {
+    height: 170px;
+    padding-right: 8%;
+  }
   .headingText {
-    font-size: 30px;
+    font-size: 4.5vw;
   }
   .learnersArt {
-    height: 100%;
-    object-fit: contain;
-    object-position: bottom;
-  }
-  .navyBox {
-    height: 160px;
-  }
-  .whatsappBox {
-    padding: 20px;
+    width: 57%;
   }
   .whatsappBtn {
     font-size: 21px;
   }
+  .whatsappBox {
+    padding: 18px;
+  }
 }
 @media (max-width: 600px) {
-  .headingText {
-    font-size: clamp(19px, 5.5vw, 30px);
-  }
   .navyBox {
-    padding-right: 15px;
-  }
-}
-@media (max-width: 400px) {
-  .navyBox {
-    padding-right: 15px;
     height: 140px;
+    padding-right: 7%;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+  .headingText {
+    font-size: 5.1vw;
+  }
+  .learnersArt {
+    width: 66%;
+    left: -7%;
+    bottom: 0;
+  }
+  .banner {
+    gap: 10px;
+  }
+  .whatsappBtn {
+    font-size: 20px;
+  }
+  .subtext {
+    font-size: 12px;
   }
 }
