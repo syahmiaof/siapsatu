@@ -91,6 +91,12 @@ Commands: npm run build; npm run typecheck; npm run lint; QA_URL=http://localhos
   6. **Mobile Horizontal Overflow**: Resolved 406px `scrollWidth` on 390px/360px mobile community page by adding `min-width: 0; max-width: 100%; box-sizing: border-box; overflow-x: hidden;` to `.pageLayout` and `.channelsSidebar`.
   7. **Strict Product Truth**: Retained honest standalone RM10 pricing, removed reference bundle/certificate copy, preserved authentic WhatsApp coming-soon preview copy.
 - **Evidence Directory**:
-  - `artifacts/visual-qa/ui-v4/post/`: 28 raw screenshots and `geometry.json`.
+  - `artifacts/visual-qa/ui-v4/post/`: 28 raw local post-change screenshots and `geometry.json`.
+  - `artifacts/visual-qa/ui-v4/live/`: 28 fresh production screenshots captured directly from `https://siapsatu.syahmiaof.my/` and `geometry.json` (0 broken images, 0 overflow, CLS < 0.0004).
   - `artifacts/visual-qa/ui-v4/comparisons/`: 28 side-by-side JPGs, 50% overlay PNGs, `contact-1505.jpg`, `landmark-analysis.json`, and `comparison-meta.json`.
-
+- **Production Deployment Verification**:
+  - **Live URL**: `https://siapsatu.syahmiaof.my/`
+  - **Git Commit**: `cd5c8253100838d5ba9cfd3ee350222313bc6567` (`fix(ui): complete ui-v4 visual fidelity polish and reference parity finish`)
+  - **Vercel Deployment**: `dpl_5gWjYCbeZPsfLrn49rCBq4NMLprq` (State: `READY`, Substate: `PROMOTED`)
+  - **Asset Verification**: Production HTTP 200 responses verified on all UI v4 SVG assets (`/assets/illustrations/ui-v4/home-ribbon.svg`, `emblem.svg`, `growth-arrow.svg`, `tools-ribbon.svg`, etc.)
+  - **Production Responsive Metrics**: Zero horizontal overflow verified across all 7 target viewports (1505×1029, 1880×880, 1440×900, 1248×588 @ DPR 1.5, 768×1024, 390×844, 360×800).
