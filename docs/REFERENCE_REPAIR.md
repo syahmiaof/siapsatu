@@ -24,3 +24,13 @@ Viewports: 1880 × 880, 1505 × 1029, 1440 × 900, 768 × 1024, 390 × 844, 360 
 ## Reproduce
 
 Run `python scripts/extract-reference-art.py`, then `python scripts/verify-reference-extraction.py`. Run the app on port 3113 and use `node scripts/capture-reference-repair.mjs final`, followed by `python scripts/compare-reference-repair.py final`. Set `QA_URL` to the public production URL for live captures/tests. `node scripts/verify-reference-release.mjs` checks public assets against local SHA-256 hashes and verifies all four reference compositions and the WhatsApp status interaction.
+
+## Public production verification
+
+Application commit `3617bf4e6863248536a71e16c89bfc6f5d247fdc` is deployed at [siapsatu.syahmiaof.my](https://siapsatu.syahmiaof.my). Vercel deployment `dpl_A61WmXGfZmd9A3fL5ti2LvuxVSg6` reached READY with the exact Git SHA, and the public custom domain resolves to this deployment. [Deployment proof](../artifacts/visual-qa/reference-repair/release-app.json).
+
+The [live capture summary](../artifacts/visual-qa/reference-repair/live-comparisons/summary.json) records **28 route/viewport captures, zero horizontal overflow, broken images or page errors, and zero observed CLS** in this controlled run. [Live runtime audit](../artifacts/visual-qa/reference-repair/runtime-live.json): **28 checks, zero findings**. [Public asset/version verification](../artifacts/visual-qa/reference-repair/version-live.json) confirms HTTPS 200, seven byte-identical assets, all four reference compositions and the WhatsApp status interaction. [Local/live geometry](../artifacts/visual-qa/reference-repair/local-live-geometry.json): measured headers, heroes and cards have **0 CSS px maximum delta**.
+
+The comparison viewer now uses the released production captures, including the final decorative ribbon adjustment. It intentionally preserves the font, icon and truthful-data differences described above rather than treating passing functional tests as visual identity.
+
+The complete [production browser suite](../artifacts/visual-qa/reference-repair/tests-live.log) finished with **70 passed, 10 device-specific skips, zero failures (2.8 minutes)**. The following evidence-only commit records these results without changing application code.

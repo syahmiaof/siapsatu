@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-17T00:39:45.1514998Z",
+  "commit": "3617bf4e6863248536a71e16c89bfc6f5d247fdc",
+  "deploymentId": "dpl_A61WmXGfZmd9A3fL5ti2LvuxVSg6",
+  "url": "siapsatu-l1q1db7av-syahmiaofs-projects.vercel.app",
+  "state": "READY",
+  "aliases": [
+    "siapsatu.vercel.app",
+    "siapsatu.syahmiaof.my",
+    "siapsatu-syahmiaofs-projects.vercel.app",
+    "siapsatu-git-master-syahmiaofs-projects.vercel.app"
+  ],
+  "gitPushVerified": true,
+  "target": "production"
+}

@@ -1,0 +1,105 @@
+{
+  "checkedAt": "2026-10-17T00:38:38.232Z",
+  "base": "https://siapsatu.syahmiaof.my",
+  "assets": [
+    {
+      "name": "community.webp",
+      "bytes": 202970,
+      "sha256": "01b07b7cd639f54394dc55caccdc90dd99b46b165f0e92bb5c3b303cc3367c13",
+      "status": 200
+    },
+    {
+      "name": "home-discussion.webp",
+      "bytes": 112618,
+      "sha256": "dcfe17277f8ad36d9f2bf4d9ff10543d92de127f5a7cf7129fb83bac88ae69dc",
+      "status": 200
+    },
+    {
+      "name": "home-mobile.webp",
+      "bytes": 443564,
+      "sha256": "8931cc7dd5d4aba8909145db9db5e6f34328a44f95264b75ed3524caf0966258",
+      "status": 200
+    },
+    {
+      "name": "home.webp",
+      "bytes": 451760,
+      "sha256": "efbd2a262eab61b16588e87bba096738d79b6b545c49166fdb664c90b2bb5283",
+      "status": 200
+    },
+    {
+      "name": "path-learner.webp",
+      "bytes": 275326,
+      "sha256": "8325c43c6d09f132441aa92d9f5e38ea9e21d6f5c47e48b0028f191c01072065",
+      "status": 200
+    },
+    {
+      "name": "tools-mobile.webp",
+      "bytes": 137038,
+      "sha256": "9690d115e027c69b867cc99ffdf724048b181f0c7379737bfe7800196c40a4d4",
+      "status": 200
+    },
+    {
+      "name": "tools.webp",
+      "bytes": 132514,
+      "sha256": "b5993a9e14d9d8c6d9e07bd889d788a93ba550a5db65b66a928a250a97ffaa79",
+      "status": 200
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "artwork": "/assets/illustrations/reference/home.webp",
+      "width": 1505,
+      "scrollWidth": 1505,
+      "stylesheets": [
+        "/_next/static/css/276ec12ce64b1494.css",
+        "/_next/static/css/0985fe230835bf2d.css",
+        "/_next/static/css/d8e2fbbb4ba3f569.css",
+        "/_next/static/css/b5ba50d895437531.css"
+      ]
+    },
+    {
+      "route": "/tools",
+      "status": 200,
+      "artwork": "/assets/illustrations/reference/tools.webp",
+      "width": 1505,
+      "scrollWidth": 1505,
+      "stylesheets": [
+        "/_next/static/css/276ec12ce64b1494.css",
+        "/_next/static/css/0985fe230835bf2d.css",
+        "/_next/static/css/d8e2fbbb4ba3f569.css",
+        "/_next/static/css/b5ba50d895437531.css",
+        "/_next/static/css/cb00d183de91badc.css",
+        "/_next/static/css/5bf12f7c1fe5c98e.css"
+      ]
+    },
+    {
+      "route": "/paths/ai-automation",
+      "status": 200,
+      "artwork": "/assets/illustrations/reference/path-learner.webp",
+      "width": 1505,
+      "scrollWidth": 1505,
+      "stylesheets": [
+        "/_next/static/css/276ec12ce64b1494.css",
+        "/_next/static/css/0985fe230835bf2d.css",
+        "/_next/static/css/d8e2fbbb4ba3f569.css",
+        "/_next/static/css/b5ba50d895437531.css",
+        "/_next/static/css/78e1f7aa669a976a.css"
+      ]
+    },
+    {
+      "route": "/community",
+      "status": 200,
+      "artwork": "/assets/illustrations/reference/community.webp",
+      "width": 1505,
+      "scrollWidth": 1505,
+      "stylesheets": [
+        "/_next/static/css/276ec12ce64b1494.css",
+        "/_next/static/css/0985fe230835bf2d.css",
+        "/_next/static/css/d8e2fbbb4ba3f569.css",
+        "/_next/static/css/b5ba50d895437531.css"
+      ]
+    }
+  ]
+}

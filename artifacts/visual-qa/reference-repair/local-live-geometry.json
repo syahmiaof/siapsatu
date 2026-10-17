@@ -1,0 +1,142 @@
+[
+  {
+    "route": "/",
+    "width": 1880,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/tools",
+    "width": 1880,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1880,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/community",
+    "width": 1880,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/",
+    "width": 1505,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/tools",
+    "width": 1505,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1505,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/community",
+    "width": 1505,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/",
+    "width": 1440,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/tools",
+    "width": 1440,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1440,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/community",
+    "width": 1440,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/tools",
+    "width": 768,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 768,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/community",
+    "width": 768,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/tools",
+    "width": 390,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 390,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/community",
+    "width": 390,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/",
+    "width": 360,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/tools",
+    "width": 360,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 360,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/community",
+    "width": 360,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/",
+    "width": 1248,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/tools",
+    "width": 1248,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/paths/ai-automation",
+    "width": 1248,
+    "maxGeometryDeltaCssPx": 0
+  },
+  {
+    "route": "/community",
+    "width": 1248,
+    "maxGeometryDeltaCssPx": 0
+  }
+]

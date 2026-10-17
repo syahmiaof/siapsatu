@@ -1,3 +1,23 @@
+# Current release — reference artwork repair, 17 October 2026
+
+Live at [siapsatu.syahmiaof.my](https://siapsatu.syahmiaof.my). Application commit `3617bf4e6863248536a71e16c89bfc6f5d247fdc` was pushed to GitHub master. Vercel deployment `dpl_A61WmXGfZmd9A3fL5ti2LvuxVSg6` reached READY with that exact SHA and the existing custom-domain alias; no DNS changes were needed.
+
+Seven deterministic source crops replace the reconstructed hero artwork. Home composition and cards, Tools desktop/mobile artwork, pale Path cards and CTA placement, and Community hero/feed spacing are repaired. Unsupported community claims now use truthful preview wording. Navigation, local interactions, protected source mockups and logos are preserved.
+
+Production evidence:
+
+- Full browser suite: **70 passed, 10 device-specific skips, 0 failures**.
+- Runtime: **28 route/viewport checks, 0 findings**.
+- Visual: **28 route/viewport captures**, zero horizontal overflow, broken images or page errors; zero observed CLS in this controlled live run.
+- HTTPS 200; **7/7 artwork files byte-identical** to local source. Measured local/live headers, heroes and cards have **0 CSS px delta**.
+- Production build, lint and typecheck passed locally.
+
+[Visual report and remaining differences](REFERENCE_REPAIR.md), [comparison viewer](../artifacts/visual-qa/reference-repair/index.html), [live tests](../artifacts/visual-qa/reference-repair/tests-live.log), [deployment proof](../artifacts/visual-qa/reference-repair/release-app.json), [asset/version proof](../artifacts/visual-qa/reference-repair/version-live.json).
+
+Exact source artwork does **not** mean whole-page pixel-perfect parity: browser typography, icons, live navigation and truthful data still differ from the flattened reference. The following evidence-only commit preserves these results without application changes. Historical release reports follow.
+
+---
+
 # SiapSatu release — 2026-10-17
 
 ## UI / asset / layout repair v3
