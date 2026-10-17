@@ -93,7 +93,7 @@ export function MobileMenuSheet({ isOpen, onClose }: MobileMenuSheetProps) {
             variant="navy"
             className="w-full"
           >
-            Masuk ke akaun
+            Login
           </PrimaryButton>
         </div>
       </div>

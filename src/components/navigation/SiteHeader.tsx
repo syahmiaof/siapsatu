@@ -100,7 +100,7 @@ export function SiteHeader() {
 
         <div className={styles.rightActions}>
           <PrimaryButton href="/login" variant="navy" size="sm">
-            Masuk
+            Login
           </PrimaryButton>
         </div>
 
