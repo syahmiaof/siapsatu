@@ -1,0 +1,42 @@
+
+> siapsatu-lms@1.0.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/15) ...
+   Generating static pages (3/15)
+   Generating static pages (7/15)
+   Generating static pages (11/15)
+ ✓ Generating static pages (15/15)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    2.63 kB         148 kB
+├ ○ /_not-found                          873 B          88.2 kB
+├ ○ /community                           6.93 kB         167 kB
+├ ƒ /learn/[slug]/[step]                 7.89 kB         168 kB
+├ ○ /library                             5.04 kB         165 kB
+├ ○ /login                               4.05 kB         149 kB
+├ ○ /modules                             7.1 kB          167 kB
+├ ƒ /modules/[slug]                      6.33 kB         166 kB
+├ ○ /opengraph-image.png                 0 B                0 B
+├ ○ /paths/ai-automation                 5.83 kB         166 kB
+├ ○ /progress                            3.4 kB          163 kB
+├ ○ /tools                               5.31 kB         165 kB
+├ ○ /tools/hermes-agent                  2.32 kB         147 kB
+├ ○ /tools/n8n                           2.58 kB         148 kB
+└ ○ /twitter-image.png                   0 B                0 B
++ First Load JS shared by all            87.3 kB
+  ├ chunks/117-33a5490b659f19af.js       31.7 kB
+  ├ chunks/fd9d1056-1757cfae5c74b74c.js  53.6 kB
+  └ other shared chunks (total)          1.97 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

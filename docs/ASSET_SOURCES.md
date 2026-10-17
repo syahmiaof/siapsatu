@@ -136,3 +136,8 @@ The founder explicitly approved extracting/cropping supplied reference artwork a
 - Source lettering within decorative art (handwritten notes/sticky labels) remains raster artwork. Main headings, navigation, pricing, search, cards and actions remain HTML. Login/search controls embedded in the mockups are excluded with transparent masks.
 - `scripts/verify-reference-extraction.py` confirms original hashes, exact opaque RGB pixels and transparent excluded controls. These are source derivatives, not newly generated artwork or a claim to independent third-party licensing.
 - Source dimensions limit high-DPR sharpness; no upscaling is claimed to recover lost detail. Prior reconstruction assets and evidence remain on disk.
+
+
+## All-page source extraction — 17 October 2026
+
+Seven additional lossless crops (`catalog`, `hermes`, `module`, `progress`, `library`, `reader`, `n8n-learner`) come directly from their named approved mockups. Extraction is reproducible through `scripts/extract-page-reference-art.py`; exact source/output hashes, masks and control exclusions are in `artifacts/visual-qa/all-pages-repair/asset-manifest.json`. These are user-authorized crops, not regenerated illustrations. Original files and existing brand/tool logos are unchanged. Decorative handwritten notes remain within artwork; functional headings, controls and workflow diagrams remain HTML. See [all-page QA report](ALL_PAGES_REFERENCE_REPAIR.md).

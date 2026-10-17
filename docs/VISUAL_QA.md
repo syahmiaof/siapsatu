@@ -1,3 +1,9 @@
+# Current all-page reference pass — 17 October 2026
+
+[ALL_PAGES_REFERENCE_REPAIR.md](ALL_PAGES_REFERENCE_REPAIR.md) records the latest audit and seven additional source crops after Antigravity's catalogue expansion. Earlier reports below remain historical.
+
+---
+
 # Current reference extraction repair â€” 17 October 2026
 
 See [REFERENCE_REPAIR.md](REFERENCE_REPAIR.md) for the current source-crop implementation, matched comparisons, test evidence and honest remaining differences. The v3 reports below are historical and do not describe the current artwork.

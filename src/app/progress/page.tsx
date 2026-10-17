@@ -1,6 +1,6 @@
 "use client";
 
-import { BrandScene } from "@/components/brand/BrandScene";
+import { ReferenceArtwork } from "@/components/brand/ReferenceArtwork";
 
 import React from "react";
 
@@ -178,7 +178,7 @@ export default function ProgressMapPage() {
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <BrandScene variant="trio" />
+            <ReferenceArtwork variant="progress" />
           </div>
         </section>
 

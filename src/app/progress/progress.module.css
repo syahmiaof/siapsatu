@@ -574,3 +574,14 @@
     font-size: 12px;
   }
 }
+
+/* Reference-sized title and the original Malaysia group, not a shared redraw. */
+@media (min-width: 1101px) {
+  .headerGrid { grid-template-columns: 58% 42%; min-height: 240px; margin-bottom: 12px; }
+  .headline { font-size: clamp(52px, 5vw, 76px); }
+  .subtitle { font-size: 20px; }
+  .headerGrid > div:last-child { height: 286px; margin-top: -36px; }
+  .statsRow { gap: 0; padding: 12px 0; background: var(--ss-surface-blue); border-radius: 22px; }
+  .statCard { flex: 1; padding: 8px 14px; background: transparent; border-radius: 0; }
+  .statCard + .statCard { border-left: 1px solid var(--ss-line); }
+}

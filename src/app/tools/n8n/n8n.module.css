@@ -805,3 +805,14 @@
     width: 30%;
   }
 }
+
+/* Keep the diagram semantic; the pointing learner and note use source pixels. */
+.heroCharacter { width: 35%; height: 100%; z-index: 1; }
+@media (min-width: 1101px) {
+  .heroSection { min-height: 430px; }
+  .heroRight { height: 430px; }
+  .workflowBrowserMockup { top: 32px; width: 69%; }
+}
+@media (max-width: 600px) {
+  .heroCharacter { width: 34%; }
+}

@@ -1,5 +1,5 @@
 "use client";
-import { BrandScene } from "@/components/brand/BrandScene";
+import { ReferenceArtwork } from "@/components/brand/ReferenceArtwork";
 
 import React, { useState, useRef, useCallback } from "react";
 import Image from "next/image";
@@ -75,7 +75,7 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
     : MODULES[1];
 
   return (
-    <div className="container">
+    <div className="container" data-reference-header>
       {/* Breadcrumb */}
       <nav className={styles.breadcrumb} aria-label="Jejak navigasi">
         <Link href="/modules">Modul</Link>
@@ -161,7 +161,7 @@ export default function ModuleDetailPage({ params }: ModuleDetailPageProps) {
         </div>
 
         <div className={styles.heroRight}>
-          <BrandScene variant="trio" />
+          <ReferenceArtwork variant="module" />
         </div>
       </section>
 

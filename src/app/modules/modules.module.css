@@ -132,7 +132,7 @@
 }
 .heroRight {
   position: absolute;
-  inset: -114px calc(-1 * var(--page-gutter)) 0 51%;
+  inset: -114px calc(-1 * var(--page-gutter)) 0 49%;
   pointer-events: none;
 }
 .heroArtWrap {

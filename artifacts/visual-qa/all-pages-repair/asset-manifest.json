@@ -1,0 +1,590 @@
+[
+  {
+    "name": "catalog",
+    "source": "mockups/modules-catalog-desktop.png",
+    "sourceSha256": "219470690e0bdd4a68a6135b0912781a5166f04324499bf64222e6c852014a62",
+    "crop": [
+      740,
+      0,
+      1505,
+      419
+    ],
+    "maskPolygon": [
+      [
+        757,
+        367
+      ],
+      [
+        771,
+        320
+      ],
+      [
+        790,
+        280
+      ],
+      [
+        810,
+        240
+      ],
+      [
+        850,
+        205
+      ],
+      [
+        875,
+        175
+      ],
+      [
+        851,
+        156
+      ],
+      [
+        850,
+        105
+      ],
+      [
+        903,
+        100
+      ],
+      [
+        918,
+        80
+      ],
+      [
+        1040,
+        0
+      ],
+      [
+        1505,
+        0
+      ],
+      [
+        1505,
+        419
+      ],
+      [
+        1030,
+        419
+      ],
+      [
+        1030,
+        367
+      ]
+    ],
+    "excludedUI": [
+      [
+        1290,
+        8,
+        1480,
+        80
+      ]
+    ],
+    "size": [
+      765,
+      419
+    ],
+    "output": "public/assets/illustrations/reference/catalog.webp",
+    "outputSha256": "caacc13e927c8cb7baa54e929060cff216b9e5ac1d75871e65b55c60b9944b74"
+  },
+  {
+    "name": "hermes",
+    "source": "mockups/ui-03-tool-hermes-desktop.png",
+    "sourceSha256": "3ecb8a59acb792524a81876e01c161af0d7219d8d29d30569d5e61bb70fcf6c7",
+    "crop": [
+      705,
+      0,
+      1505,
+      494
+    ],
+    "maskPolygon": [
+      [
+        711,
+        494
+      ],
+      [
+        723,
+        450
+      ],
+      [
+        735,
+        406
+      ],
+      [
+        752,
+        380
+      ],
+      [
+        752,
+        327
+      ],
+      [
+        784,
+        286
+      ],
+      [
+        788,
+        209
+      ],
+      [
+        820,
+        195
+      ],
+      [
+        900,
+        140
+      ],
+      [
+        1100,
+        75
+      ],
+      [
+        1240,
+        0
+      ],
+      [
+        1505,
+        0
+      ],
+      [
+        1505,
+        494
+      ]
+    ],
+    "excludedUI": [
+      [
+        1310,
+        8,
+        1490,
+        85
+      ]
+    ],
+    "size": [
+      800,
+      494
+    ],
+    "output": "public/assets/illustrations/reference/hermes.webp",
+    "outputSha256": "97b5eaf49882504f2c8844dd956696414641700e69d404469f088c6a03ae47a6"
+  },
+  {
+    "name": "module",
+    "source": "mockups/ui-05-module-detail-n8n.png",
+    "sourceSha256": "3b7f08c379a2a4ae70e60fd37b8eaea20950374a0339d8096205fa09d0d8f247",
+    "crop": [
+      785,
+      0,
+      1505,
+      443
+    ],
+    "maskPolygon": [
+      [
+        789,
+        443
+      ],
+      [
+        790,
+        395
+      ],
+      [
+        815,
+        344
+      ],
+      [
+        836,
+        283
+      ],
+      [
+        868,
+        223
+      ],
+      [
+        898,
+        180
+      ],
+      [
+        870,
+        161
+      ],
+      [
+        870,
+        104
+      ],
+      [
+        926,
+        100
+      ],
+      [
+        942,
+        80
+      ],
+      [
+        1100,
+        40
+      ],
+      [
+        1190,
+        0
+      ],
+      [
+        1505,
+        0
+      ],
+      [
+        1505,
+        443
+      ]
+    ],
+    "excludedUI": [
+      [
+        1320,
+        8,
+        1490,
+        85
+      ]
+    ],
+    "size": [
+      720,
+      443
+    ],
+    "output": "public/assets/illustrations/reference/module.webp",
+    "outputSha256": "10bc52974b2818000d132a7bf0df78eb58f6e6041f3afef865afed2203d762b5"
+  },
+  {
+    "name": "progress",
+    "source": "mockups/ui-08-progress-map.png",
+    "sourceSha256": "ff3a66f339084dcf4c6451396eafae5827285b70bcb65b827df648ad26b69fae",
+    "crop": [
+      880,
+      75,
+      1505,
+      361
+    ],
+    "maskPolygon": [
+      [
+        885,
+        361
+      ],
+      [
+        890,
+        320
+      ],
+      [
+        903,
+        274
+      ],
+      [
+        932,
+        235
+      ],
+      [
+        973,
+        190
+      ],
+      [
+        934,
+        165
+      ],
+      [
+        932,
+        112
+      ],
+      [
+        994,
+        107
+      ],
+      [
+        1014,
+        95
+      ],
+      [
+        1100,
+        75
+      ],
+      [
+        1505,
+        75
+      ],
+      [
+        1505,
+        361
+      ]
+    ],
+    "excludedUI": [],
+    "size": [
+      625,
+      286
+    ],
+    "output": "public/assets/illustrations/reference/progress.webp",
+    "outputSha256": "2f1709b9732f3b04a0e588a092275a7a8befec0c6330c767c1a94e9408ff4cd4"
+  },
+  {
+    "name": "library",
+    "source": "mockups/ui-07-library-dashboard.png",
+    "sourceSha256": "8132098ac7b80dee3029e36eced9d207abce71ce3b170864232a4610baaf82a6",
+    "crop": [
+      518,
+      300,
+      980,
+      618
+    ],
+    "maskPolygon": [
+      [
+        518,
+        618
+      ],
+      [
+        530,
+        575
+      ],
+      [
+        558,
+        550
+      ],
+      [
+        580,
+        520
+      ],
+      [
+        588,
+        490
+      ],
+      [
+        565,
+        479
+      ],
+      [
+        558,
+        440
+      ],
+      [
+        551,
+        390
+      ],
+      [
+        560,
+        366
+      ],
+      [
+        650,
+        354
+      ],
+      [
+        690,
+        320
+      ],
+      [
+        750,
+        302
+      ],
+      [
+        810,
+        307
+      ],
+      [
+        890,
+        320
+      ],
+      [
+        950,
+        344
+      ],
+      [
+        949,
+        380
+      ],
+      [
+        973,
+        405
+      ],
+      [
+        980,
+        485
+      ],
+      [
+        974,
+        546
+      ],
+      [
+        950,
+        618
+      ]
+    ],
+    "excludedUI": [],
+    "size": [
+      462,
+      318
+    ],
+    "output": "public/assets/illustrations/reference/library.webp",
+    "outputSha256": "b69ac19a2042bdb54c64d6b8f4c6b2a8fa9db808f711c84442f65c7ca3d9e6a3"
+  },
+  {
+    "name": "reader",
+    "source": "mockups/ui-06-lesson-reader-n8n.png",
+    "sourceSha256": "fef5fe49477e08c9bdd8ce2ebba1f8ce54930a21fdc1084befbbc652db1f0a8b",
+    "crop": [
+      917,
+      110,
+      1505,
+      387
+    ],
+    "maskPolygon": [
+      [
+        927,
+        162
+      ],
+      [
+        1050,
+        135
+      ],
+      [
+        1188,
+        110
+      ],
+      [
+        1390,
+        114
+      ],
+      [
+        1505,
+        165
+      ],
+      [
+        1505,
+        387
+      ],
+      [
+        1075,
+        387
+      ],
+      [
+        1035,
+        350
+      ],
+      [
+        1019,
+        320
+      ],
+      [
+        1001,
+        290
+      ],
+      [
+        935,
+        286
+      ],
+      [
+        917,
+        245
+      ]
+    ],
+    "excludedUI": [
+      [
+        1410,
+        100,
+        1495,
+        127
+      ]
+    ],
+    "size": [
+      588,
+      277
+    ],
+    "output": "public/assets/illustrations/reference/reader.webp",
+    "outputSha256": "fdb3f55739aff39e103b6879428206af83be94d6b6f203d3aee4c03ca5219465"
+  },
+  {
+    "name": "n8n-learner",
+    "source": "mockups/ui-02-tool-n8n-desktop.png",
+    "sourceSha256": "b40fd4996da0f2e53f636613f291451bc3fdf7080e1507f6148a9cc2ba92b0df",
+    "crop": [
+      1210,
+      120,
+      1505,
+      574
+    ],
+    "maskPolygon": [
+      [
+        1210,
+        441
+      ],
+      [
+        1253,
+        430
+      ],
+      [
+        1268,
+        394
+      ],
+      [
+        1272,
+        355
+      ],
+      [
+        1271,
+        326
+      ],
+      [
+        1283,
+        310
+      ],
+      [
+        1276,
+        272
+      ],
+      [
+        1277,
+        190
+      ],
+      [
+        1318,
+        173
+      ],
+      [
+        1400,
+        164
+      ],
+      [
+        1401,
+        125
+      ],
+      [
+        1476,
+        130
+      ],
+      [
+        1476,
+        181
+      ],
+      [
+        1453,
+        201
+      ],
+      [
+        1454,
+        253
+      ],
+      [
+        1461,
+        306
+      ],
+      [
+        1505,
+        354
+      ],
+      [
+        1505,
+        574
+      ],
+      [
+        1230,
+        574
+      ]
+    ],
+    "excludedUI": [],
+    "size": [
+      295,
+      454
+    ],
+    "output": "public/assets/illustrations/reference/n8n-learner.webp",
+    "outputSha256": "46a1c68462237f0b84818d436b14cf6c1d0b768f4a6f3d457ff58b59dd4541bb"
+  }
+]

@@ -3,9 +3,10 @@ from pathlib import Path
 from PIL import Image, ImageChops
 import json
 import hashlib
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-QA = ROOT/'artifacts/visual-qa/reference-repair'
+QA = ROOT/(sys.argv[1] if len(sys.argv) > 1 else 'artifacts/visual-qa/reference-repair')
 results=[]
 for record in json.loads((QA/'asset-manifest.json').read_text()):
     source=ROOT/record['source']; output=ROOT/record['output']

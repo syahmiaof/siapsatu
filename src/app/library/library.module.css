@@ -612,3 +612,36 @@
     gap: 10px;
   }
 }
+
+/* Match the dashboard's title/stat hierarchy and seated learner composition. */
+@media (min-width: 1101px) {
+  .pageHeader { grid-template-columns: 42% 58%; gap: 0; }
+  .headline { font-size: 54px; }
+  .metricCard { min-height: 110px; }
+  .metricNum { font-size: 44px; }
+  .metricIconBox { width: 64px; height: 64px; }
+  .metricIconBox svg { width: 32px; height: 32px; }
+  .metricLabel { font-size: 15px; }
+  .continueCard { min-height: 350px; grid-template-columns: 53% 47%; }
+  .continueRight { height: 318px; margin-right: -10px; margin-bottom: -10px; }
+  .continueTitle { font-size: 36px; }
+  .continueDesc { font-size: 18px; }
+  .myModulesTitle { font-size: 32px; }
+}
+
+@media (min-width: 1101px) {
+  .pageHeader { padding-block: 4px 10px; }
+  .continueGrid { margin-top: 4px; gap: 16px; }
+  .continueCard { padding: 22px; }
+  .progressBarContainer { flex-direction: row; align-items: center; gap: 12px; }
+  .progressLabel { white-space: nowrap; font-size: 18px; }
+  .progressBarTrack { height: 12px; }
+  .continueLeft { gap: 10px; }
+  .continueRight { height: 318px; margin-bottom: -6px; }
+  .outcomesTitle { font-size: 28px; }
+  .outcomesSub { font-size: 16px; }
+  .outcomeCard { min-height: 125px; }
+  .outcomeIconBox { width: 72px; height: 88px; }
+  .outcomeIconBox svg { width: 38px; height: 38px; }
+  .outcomeItemTitle { font-size: 19px; }
+}

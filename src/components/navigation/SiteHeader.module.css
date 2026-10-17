@@ -249,6 +249,9 @@
   :global(body:has([data-catalog])) .header {
     background: transparent;
   }
+  :global(body:has([data-reference-header])) .header {
+    background: transparent;
+  }
 }
 
 @media (min-width: 901px) {

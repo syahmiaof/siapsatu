@@ -1,4 +1,4 @@
-import { BrandScene } from "@/components/brand/BrandScene";
+import { ReferenceArtwork } from "@/components/brand/ReferenceArtwork";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -58,7 +58,7 @@ export default function HermesAgentHubPage() {
   ];
 
   return (
-    <div className="container">
+    <div className="container" data-reference-header>
       {/* Breadcrumb */}
       <nav className={styles.breadcrumb} aria-label="Jejak navigasi">
         <Link href="/">Home</Link>
@@ -124,6 +124,14 @@ export default function HermesAgentHubPage() {
             </a>
           </div>
 
+
+        </div>
+
+        <div className={styles.heroRight}>
+          <div className={styles.characterArtWrap}>
+            <ReferenceArtwork variant="hermes" />
+          </div>
+        </div>
           <div className={styles.highlightsStrip}>
             <div className={styles.highlightPill}>
               <BookOpen size={16} color="var(--ss-navy-950)" />
@@ -146,13 +154,6 @@ export default function HermesAgentHubPage() {
               <span>Bina skills sebenar</span>
             </div>
           </div>
-        </div>
-
-        <div className={styles.heroRight}>
-          <div className={styles.characterArtWrap}>
-            <BrandScene variant="hermes" />
-          </div>
-        </div>
       </section>
 
       {/* Modules Section */}

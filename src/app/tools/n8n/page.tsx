@@ -1,6 +1,6 @@
+import { ReferenceArtwork } from "@/components/brand/ReferenceArtwork";
 import { WorkflowDiagram } from "@/components/learning/WorkflowDiagram";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ChevronRight,
@@ -176,18 +176,8 @@ export default function N8nToolHubPage() {
           <div className={styles.workflowBrowserMockup}>
             <WorkflowDiagram />
           </div>
-          <Image
-            src="/assets/illustrations/learner-clean.png"
-            alt=""
-            width={1024}
-            height={1536}
-            priority
-            className={styles.heroCharacter}
-          />
-          <div className={styles.stickySticky}>
-            Satu workflow,
-            <br />
-            banyak hasil.
+          <div className={styles.heroCharacter}>
+            <ReferenceArtwork variant="n8n" />
           </div>
         </div>
       </section>

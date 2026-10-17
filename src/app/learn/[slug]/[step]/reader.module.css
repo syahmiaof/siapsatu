@@ -530,3 +530,15 @@
     transform: none;
   }
 }
+
+/* The source reader illustration spans the empty space above the template rail. */
+@media (min-width: 1400px) {
+  .readerArt { position: relative; height: 264px; }
+  .readerArt > :global([data-reference-art="reader"]) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 560px;
+    height: 264px;
+  }
+}

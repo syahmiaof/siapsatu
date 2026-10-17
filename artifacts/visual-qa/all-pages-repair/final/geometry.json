@@ -1,0 +1,1130 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "home",
+        "x": 600.15625,
+        "y": 0,
+        "width": 904.84375,
+        "height": 580.046875,
+        "top": 0,
+        "right": 1505,
+        "bottom": 580.046875,
+        "left": 600.15625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "catalog",
+        "x": 738.25,
+        "y": 0,
+        "width": 766.75,
+        "height": 419,
+        "top": 0,
+        "right": 1505,
+        "bottom": 419,
+        "left": 738.25
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "tools",
+        "x": 662.203125,
+        "y": 100,
+        "width": 842.796875,
+        "height": 242,
+        "top": 100,
+        "right": 1505,
+        "bottom": 342,
+        "left": 662.203125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/n8n",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "n8n",
+        "x": 1190.3125,
+        "y": 151,
+        "width": 274.0625,
+        "height": 430,
+        "top": 151,
+        "right": 1464.375,
+        "bottom": 581,
+        "left": 1190.3125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "hermes",
+        "x": 709.78125,
+        "y": 1,
+        "width": 795.21875,
+        "height": 486,
+        "top": 1,
+        "right": 1505,
+        "bottom": 487,
+        "left": 709.78125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "path",
+        "x": 764.65625,
+        "y": 100,
+        "width": 740.34375,
+        "height": 375,
+        "top": 100,
+        "right": 1505,
+        "bottom": 475,
+        "left": 764.65625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 780.96875,
+        "y": -4,
+        "width": 724.03125,
+        "height": 447,
+        "top": -4,
+        "right": 1505,
+        "bottom": 443,
+        "left": 780.96875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/gemini-slide-assignment",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 780.96875,
+        "y": -4,
+        "width": 724.03125,
+        "height": 447,
+        "top": -4,
+        "right": 1505,
+        "bottom": 443,
+        "left": 780.96875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "reader",
+        "x": 904.375,
+        "y": 111.125,
+        "width": 560,
+        "height": 264,
+        "top": 111.125,
+        "right": 1464.375,
+        "bottom": 375.125,
+        "left": 904.375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 1104.375,
+        "y": 111.125,
+        "width": 360,
+        "height": 264,
+        "top": 111.125,
+        "right": 1464.375,
+        "bottom": 375.125,
+        "left": 1104.375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/library",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "library",
+        "x": 546.703125,
+        "y": 348.96875,
+        "width": 430.40625,
+        "height": 318,
+        "top": 348.96875,
+        "right": 977.109375,
+        "bottom": 666.96875,
+        "left": 546.703125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/progress",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "progress",
+        "x": 901.6875,
+        "y": 110,
+        "width": 603.296875,
+        "height": 286,
+        "top": 110,
+        "right": 1504.984375,
+        "bottom": 396,
+        "left": 901.6875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/community",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "community",
+        "x": 591.921875,
+        "y": 100,
+        "width": 872.453125,
+        "height": 200,
+        "top": 100,
+        "right": 1464.375,
+        "bottom": 300,
+        "left": 591.921875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/login",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "home",
+        "x": 325.875,
+        "y": 76,
+        "width": 442.125,
+        "height": 395,
+        "top": 76,
+        "right": 768,
+        "bottom": 471,
+        "left": 325.875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "catalog",
+        "x": 413.046875,
+        "y": 84,
+        "width": 354.953125,
+        "height": 319,
+        "top": 84,
+        "right": 768,
+        "bottom": 403,
+        "left": 413.046875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "tools",
+        "x": 337.921875,
+        "y": 84,
+        "width": 430.078125,
+        "height": 220,
+        "top": 84,
+        "right": 768,
+        "bottom": 304,
+        "left": 337.921875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/n8n",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "n8n",
+        "x": 492.984375,
+        "y": 430.890625,
+        "width": 254.28125,
+        "height": 360,
+        "top": 430.890625,
+        "right": 747.265625,
+        "bottom": 790.890625,
+        "left": 492.984375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "hermes",
+        "x": 0.734375,
+        "y": 395.71875,
+        "width": 766.53125,
+        "height": 350,
+        "top": 395.71875,
+        "right": 767.265625,
+        "bottom": 745.71875,
+        "left": 0.734375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "path",
+        "x": 20.734375,
+        "y": 355.1875,
+        "width": 726.53125,
+        "height": 290,
+        "top": 355.1875,
+        "right": 747.265625,
+        "bottom": 645.1875,
+        "left": 20.734375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0.734375,
+        "y": 352.5,
+        "width": 766.53125,
+        "height": 250,
+        "top": 352.5,
+        "right": 767.265625,
+        "bottom": 602.5,
+        "left": 0.734375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/gemini-slide-assignment",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0.734375,
+        "y": 352.5,
+        "width": 766.53125,
+        "height": 250,
+        "top": 352.5,
+        "right": 767.265625,
+        "bottom": 602.5,
+        "left": 0.734375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "reader",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/library",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "library",
+        "x": 406.484375,
+        "y": 491,
+        "width": 340.78125,
+        "height": 280,
+        "top": 491,
+        "right": 747.265625,
+        "bottom": 771,
+        "left": 406.484375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/progress",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "progress",
+        "x": 0,
+        "y": 301.828125,
+        "width": 768,
+        "height": 210,
+        "top": 301.828125,
+        "right": 768,
+        "bottom": 511.828125,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/community",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "community",
+        "x": 20.734375,
+        "y": 274.5,
+        "width": 726.53125,
+        "height": 165.34375,
+        "top": 274.5,
+        "right": 747.265625,
+        "bottom": 439.84375,
+        "left": 20.734375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/login",
+    "status": 200,
+    "scrollWidth": 768,
+    "width": 768,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "home",
+        "x": 0,
+        "y": 394.6875,
+        "width": 390,
+        "height": 220,
+        "top": 394.6875,
+        "right": 390,
+        "bottom": 614.6875,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "catalog",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "tools",
+        "x": 171.609375,
+        "y": 68,
+        "width": 218.390625,
+        "height": 192,
+        "top": 68,
+        "right": 390,
+        "bottom": 260,
+        "left": 171.609375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/n8n",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "n8n",
+        "x": 252.28125,
+        "y": 493.140625,
+        "width": 121.71875,
+        "height": 240,
+        "top": 493.140625,
+        "right": 374,
+        "bottom": 733.140625,
+        "left": 252.28125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "hermes",
+        "x": 0,
+        "y": 386.859375,
+        "width": 390,
+        "height": 270,
+        "top": 386.859375,
+        "right": 390,
+        "bottom": 656.859375,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "path",
+        "x": 16,
+        "y": 385.078125,
+        "width": 358,
+        "height": 290,
+        "top": 385.078125,
+        "right": 374,
+        "bottom": 675.078125,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0,
+        "y": 493.515625,
+        "width": 390,
+        "height": 230,
+        "top": 493.515625,
+        "right": 390,
+        "bottom": 723.515625,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/gemini-slide-assignment",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0,
+        "y": 444.328125,
+        "width": 390,
+        "height": 230,
+        "top": 444.328125,
+        "right": 390,
+        "bottom": 674.328125,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "reader",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/library",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "library",
+        "x": 16,
+        "y": 728.828125,
+        "width": 358,
+        "height": 210,
+        "top": 728.828125,
+        "right": 374,
+        "bottom": 938.828125,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/progress",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "progress",
+        "x": 0,
+        "y": 303.953125,
+        "width": 390,
+        "height": 210,
+        "top": 303.953125,
+        "right": 390,
+        "bottom": 513.953125,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/community",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "community",
+        "x": 16,
+        "y": 255.75,
+        "width": 358,
+        "height": 81.46875,
+        "top": 255.75,
+        "right": 374,
+        "bottom": 337.21875,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/login",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "home",
+        "x": 0,
+        "y": 391.6875,
+        "width": 360,
+        "height": 220,
+        "top": 391.6875,
+        "right": 360,
+        "bottom": 611.6875,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "catalog",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "tools",
+        "x": 158.40625,
+        "y": 68,
+        "width": 201.59375,
+        "height": 192,
+        "top": 68,
+        "right": 360,
+        "bottom": 260,
+        "left": 158.40625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/n8n",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "n8n",
+        "x": 232.484375,
+        "y": 493.140625,
+        "width": 111.515625,
+        "height": 240,
+        "top": 493.140625,
+        "right": 344,
+        "bottom": 733.140625,
+        "left": 232.484375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "hermes",
+        "x": 0,
+        "y": 417.75,
+        "width": 360,
+        "height": 270,
+        "top": 417.75,
+        "right": 360,
+        "bottom": 687.75,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "path",
+        "x": 16,
+        "y": 385.078125,
+        "width": 328,
+        "height": 290,
+        "top": 385.078125,
+        "right": 344,
+        "bottom": 675.078125,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0,
+        "y": 493.515625,
+        "width": 360,
+        "height": 230,
+        "top": 493.515625,
+        "right": 360,
+        "bottom": 723.515625,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/gemini-slide-assignment",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0,
+        "y": 470.328125,
+        "width": 360,
+        "height": 230,
+        "top": 470.328125,
+        "right": 360,
+        "bottom": 700.328125,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "reader",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/library",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "library",
+        "x": 16,
+        "y": 749.125,
+        "width": 328,
+        "height": 210,
+        "top": 749.125,
+        "right": 344,
+        "bottom": 959.125,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/progress",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "progress",
+        "x": 0,
+        "y": 303.953125,
+        "width": 360,
+        "height": 210,
+        "top": 303.953125,
+        "right": 360,
+        "bottom": 513.953125,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/community",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "community",
+        "x": 16,
+        "y": 255.75,
+        "width": 328,
+        "height": 74.640625,
+        "top": 255.75,
+        "right": 344,
+        "bottom": 330.390625,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/login",
+    "status": 200,
+    "scrollWidth": 360,
+    "width": 360,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  }
+]

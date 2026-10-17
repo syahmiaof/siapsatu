@@ -654,3 +654,9 @@
     margin-top: 10px;
   }
 }
+
+/* Original two-person scene, with readable HTML alongside it. */
+@media (min-width: 1101px) {
+  .heroSection { position: relative; grid-template-columns: 55% 45%; min-height: 305px; }
+  .heroRight { position: absolute; inset: -142px calc(-1 * var(--page-gutter)) 0 52%; height: auto; margin: 0; }
+}

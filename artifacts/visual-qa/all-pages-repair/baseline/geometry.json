@@ -1,0 +1,350 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "home",
+        "x": 600.15625,
+        "y": 0,
+        "width": 904.84375,
+        "height": 580.046875,
+        "top": 0,
+        "right": 1505,
+        "bottom": 580.046875,
+        "left": 600.15625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/tools",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "tools",
+        "x": 662.203125,
+        "y": 100,
+        "width": 842.796875,
+        "height": 242,
+        "top": 100,
+        "right": 1505,
+        "bottom": 342,
+        "left": 662.203125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/n8n",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "path",
+        "x": 764.65625,
+        "y": 100,
+        "width": 740.34375,
+        "height": 375,
+        "top": 100,
+        "right": 1505,
+        "bottom": 475,
+        "left": 764.65625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/modules/gemini-slide-assignment",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/library",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/progress",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/community",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "community",
+        "x": 591.921875,
+        "y": 100,
+        "width": 872.453125,
+        "height": 200,
+        "top": 100,
+        "right": 1464.375,
+        "bottom": 300,
+        "left": 591.921875
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/login",
+    "status": 200,
+    "scrollWidth": 1505,
+    "width": 1505,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "home",
+        "x": 0,
+        "y": 394.6875,
+        "width": 390,
+        "height": 220,
+        "top": 394.6875,
+        "right": 390,
+        "bottom": 614.6875,
+        "left": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/tools",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "tools",
+        "x": 171.609375,
+        "y": 68,
+        "width": 218.390625,
+        "height": 192,
+        "top": 68,
+        "right": 390,
+        "bottom": 260,
+        "left": 171.609375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/n8n",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/paths/ai-automation",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "path",
+        "x": 16,
+        "y": 406.484375,
+        "width": 358,
+        "height": 290,
+        "top": 406.484375,
+        "right": 374,
+        "bottom": 696.484375,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/modules/gemini-slide-assignment",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/learn/gemini-slide-assignment/2",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/library",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/progress",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  },
+  {
+    "route": "/community",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "community",
+        "x": 16,
+        "y": 255.75,
+        "width": 358,
+        "height": 81.46875,
+        "top": 255.75,
+        "right": 374,
+        "bottom": 337.21875,
+        "left": 16
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/login",
+    "status": 200,
+    "scrollWidth": 390,
+    "width": 390,
+    "brokenImages": [],
+    "artwork": [],
+    "errors": []
+  }
+]

@@ -15,7 +15,7 @@ import { LessonSidebar } from "@/components/learning/LessonSidebar";
 import { CopyTemplate } from "@/components/learning/CopyTemplate";
 import { WorkflowDiagram } from "@/components/learning/WorkflowDiagram";
 import { SlideDeckDiagram } from "@/components/learning/SlideDeckDiagram";
-import { BrandScene } from "@/components/brand/BrandScene";
+import { ReferenceArtwork } from "@/components/brand/ReferenceArtwork";
 import { ReaderArtwork } from "@/components/brand/ReaderArtwork";
 import { PrimaryButton } from "@/components/brand/PrimaryButton";
 import { MODULES } from "@/data/mockData";
@@ -244,9 +244,9 @@ export default function LessonReaderPage({
         <aside className={styles.rightCol}>
           <div className={styles.readerArt}>
             {learningModule.toolSlugs.includes("n8n") ? (
-              <ReaderArtwork setup={step < 3} />
+              <ReaderArtwork />
             ) : (
-              <BrandScene variant="learner" />
+              <ReferenceArtwork variant="module" />
             )}
           </div>
           <CopyTemplate code={template} title="Template untuk disalin" />

@@ -6,6 +6,13 @@ const artwork = {
   tools: { file: "tools", width: 765, height: 234 },
   path: { file: "path-learner", width: 765, height: 391 },
   community: { file: "community", width: 870, height: 198 },
+  catalog: { file: "catalog", width: 765, height: 419 },
+  hermes: { file: "hermes", width: 800, height: 494 },
+  module: { file: "module", width: 720, height: 443 },
+  progress: { file: "progress", width: 625, height: 286 },
+  library: { file: "library", width: 462, height: 318 },
+  reader: { file: "reader", width: 588, height: 277 },
+  n8n: { file: "n8n-learner", width: 295, height: 454 },
 } as const;
 
 /** User-authorized source crops; functional UI is excluded by reproducible masks. */

@@ -1,0 +1,44 @@
+[
+  {
+    "asset": "catalog",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "hermes",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "module",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "progress",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "library",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "reader",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "n8n-learner",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  }
+]

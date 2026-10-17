@@ -1,6 +1,6 @@
 "use client";
 
-import { BrandScene } from "@/components/brand/BrandScene";
+import { ReferenceArtwork } from "@/components/brand/ReferenceArtwork";
 
 import React, { useState, useEffect } from "react";
 
@@ -54,6 +54,7 @@ export default function LibraryDashboardPage() {
         <div>
           <AnimatedHeading
             text="Sambung benda yang belum siap."
+            breakAfter={2}
             accentWords={["yang", "belum", "siap."]}
             as="h1"
             className={styles.headline}
@@ -169,7 +170,7 @@ export default function LibraryDashboardPage() {
           </div>
 
           <div className={styles.continueRight}>
-            <BrandScene variant="learner" />
+            <ReferenceArtwork variant="library" />
           </div>
         </div>
 
