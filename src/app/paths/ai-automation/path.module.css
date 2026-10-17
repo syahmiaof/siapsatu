@@ -1,11 +1,11 @@
 .heroSection {
   background: transparent;
-  padding: 24px 0 0;
+  padding: 16px 0 0;
   display: grid;
   grid-template-columns: 52% 48%;
   align-items: flex-end;
   gap: 0;
-  min-height: 380px;
+  min-height: 375px;
   position: relative;
   overflow: visible;
 }
@@ -16,7 +16,7 @@
   gap: 10px;
   position: relative;
   z-index: 1;
-  padding-bottom: 24px;
+  padding-bottom: 14px;
 }
 
 .pathBadge {
@@ -100,10 +100,10 @@
   position: absolute;
   right: calc(-1 * var(--page-gutter, 24px));
   bottom: 0;
-  top: -40px;
+  top: 0;
   width: 52%;
   margin: 0;
-  height: calc(100% + 40px);
+  height: 100%;
   overflow: visible;
   pointer-events: none;
 }
@@ -113,7 +113,7 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) 340px;
   gap: 22px;
-  margin: 28px 0 32px;
+  margin: 18px 0;
   align-items: start;
 }
 
@@ -126,7 +126,7 @@
   font-size: 28px;
   font-weight: 900;
   color: var(--ss-navy-950, #062457);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 /* Desktop Horizontal Timeline Track */
@@ -136,7 +136,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   height: 6px;
-  margin-bottom: 36px;
+  margin-bottom: 20px;
   padding: 0 4px;
 }
 
@@ -177,7 +177,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 310px;
+  min-height: 300px;
   position: relative;
   box-shadow: 0 4px 16px rgba(3, 20, 58, 0.03);
   transition:
@@ -208,7 +208,7 @@
 
 .stepNumberPip {
   position: absolute;
-  top: -39px;
+  top: -43px;
   left: calc(50% - 20px);
   width: 40px;
   height: 40px;
@@ -362,7 +362,7 @@
   background: #ffffff;
   border: 1.5px solid var(--ss-line, #e5ebf5);
   border-radius: 20px;
-  padding: 22px 18px;
+  padding: 16px 18px;
   box-shadow: 0 4px 18px rgba(3, 20, 58, 0.04);
 }
 
@@ -384,14 +384,14 @@
 .outcomeList {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .outcomeRow {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   background: #f8fafc;
   border-radius: 14px;
   border: 1px solid rgba(6, 36, 87, 0.05);

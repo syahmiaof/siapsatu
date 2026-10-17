@@ -1,0 +1,635 @@
+[
+  {
+    "name": "home-mobile",
+    "source": "mockups\\homepage-theme-03-malaysia-utility.png",
+    "sourceSha256": "81944f9381e3df2314f6b205b58de72567d535253c26bbaf4b2eca2a1805a3fd",
+    "crop": [
+      600,
+      40,
+      1505,
+      575
+    ],
+    "maskPolygon": [
+      [
+        644,
+        565
+      ],
+      [
+        644,
+        550
+      ],
+      [
+        625,
+        522
+      ],
+      [
+        615,
+        495
+      ],
+      [
+        604,
+        460
+      ],
+      [
+        618,
+        410
+      ],
+      [
+        645,
+        355
+      ],
+      [
+        675,
+        300
+      ],
+      [
+        710,
+        250
+      ],
+      [
+        743,
+        226
+      ],
+      [
+        718,
+        185
+      ],
+      [
+        715,
+        134
+      ],
+      [
+        777,
+        125
+      ],
+      [
+        790,
+        105
+      ],
+      [
+        895,
+        72
+      ],
+      [
+        1040,
+        0
+      ],
+      [
+        1505,
+        0
+      ],
+      [
+        1505,
+        575
+      ],
+      [
+        1340,
+        575
+      ],
+      [
+        1335,
+        565
+      ]
+    ],
+    "excludedUI": [
+      [
+        1290,
+        8,
+        1480,
+        82
+      ]
+    ],
+    "output": "public\\assets\\illustrations\\reference\\home-mobile.webp",
+    "size": [
+      905,
+      535
+    ],
+    "outputSha256": "8931cc7dd5d4aba8909145db9db5e6f34328a44f95264b75ed3524caf0966258"
+  },
+  {
+    "name": "home",
+    "source": "mockups\\homepage-theme-03-malaysia-utility.png",
+    "sourceSha256": "81944f9381e3df2314f6b205b58de72567d535253c26bbaf4b2eca2a1805a3fd",
+    "crop": [
+      600,
+      0,
+      1505,
+      575
+    ],
+    "maskPolygon": [
+      [
+        644,
+        565
+      ],
+      [
+        644,
+        550
+      ],
+      [
+        625,
+        522
+      ],
+      [
+        615,
+        495
+      ],
+      [
+        604,
+        460
+      ],
+      [
+        618,
+        410
+      ],
+      [
+        645,
+        355
+      ],
+      [
+        675,
+        300
+      ],
+      [
+        710,
+        250
+      ],
+      [
+        743,
+        226
+      ],
+      [
+        718,
+        185
+      ],
+      [
+        715,
+        134
+      ],
+      [
+        777,
+        125
+      ],
+      [
+        790,
+        105
+      ],
+      [
+        895,
+        72
+      ],
+      [
+        1040,
+        0
+      ],
+      [
+        1505,
+        0
+      ],
+      [
+        1505,
+        575
+      ],
+      [
+        1340,
+        575
+      ],
+      [
+        1335,
+        565
+      ]
+    ],
+    "excludedUI": [
+      [
+        1290,
+        8,
+        1480,
+        82
+      ]
+    ],
+    "output": "public\\assets\\illustrations\\reference\\home.webp",
+    "size": [
+      905,
+      575
+    ],
+    "outputSha256": "efbd2a262eab61b16588e87bba096738d79b6b545c49166fdb664c90b2bb5283"
+  },
+  {
+    "name": "tools",
+    "source": "mockups\\ui-01-tools-directory-desktop.png",
+    "sourceSha256": "4033d3ab19c294f8bbcce4a24b73020c5b078829dbd8d5259eaec9ffad6342fc",
+    "crop": [
+      740,
+      103,
+      1505,
+      337
+    ],
+    "maskPolygon": [
+      [
+        980,
+        103
+      ],
+      [
+        1505,
+        103
+      ],
+      [
+        1505,
+        337
+      ],
+      [
+        742,
+        337
+      ],
+      [
+        795,
+        286
+      ],
+      [
+        825,
+        237
+      ],
+      [
+        870,
+        183
+      ],
+      [
+        918,
+        145
+      ]
+    ],
+    "excludedUI": [],
+    "output": "public\\assets\\illustrations\\reference\\tools.webp",
+    "size": [
+      765,
+      234
+    ],
+    "outputSha256": "b5993a9e14d9d8c6d9e07bd889d788a93ba550a5db65b66a928a250a97ffaa79"
+  },
+  {
+    "name": "path-learner",
+    "source": "mockups\\ui-04-learning-path-automation-v2.png",
+    "sourceSha256": "957f4f2ceb28f3d145dee4bb5df112745490532d7284cbb861dcfa3ecc8bebd4",
+    "crop": [
+      740,
+      84,
+      1505,
+      475
+    ],
+    "maskPolygon": [
+      [
+        768,
+        475
+      ],
+      [
+        768,
+        400
+      ],
+      [
+        780,
+        360
+      ],
+      [
+        748,
+        290
+      ],
+      [
+        748,
+        205
+      ],
+      [
+        775,
+        190
+      ],
+      [
+        775,
+        110
+      ],
+      [
+        825,
+        104
+      ],
+      [
+        900,
+        97
+      ],
+      [
+        975,
+        57
+      ],
+      [
+        1100,
+        0
+      ],
+      [
+        1505,
+        0
+      ],
+      [
+        1505,
+        475
+      ]
+    ],
+    "excludedUI": [
+      [
+        1318,
+        8,
+        1480,
+        83
+      ]
+    ],
+    "output": "public\\assets\\illustrations\\reference\\path-learner.webp",
+    "size": [
+      765,
+      391
+    ],
+    "outputSha256": "8325c43c6d09f132441aa92d9f5e38ea9e21d6f5c47e48b0028f191c01072065"
+  },
+  {
+    "name": "community",
+    "source": "mockups\\ui-09-community-hub.png",
+    "sourceSha256": "e9dd44e07a4c92d41486b445e29722da18554e006c4fe883f974a73d8fbc7b54",
+    "crop": [
+      635,
+      89,
+      1505,
+      287
+    ],
+    "maskPolygon": [
+      [
+        635,
+        287
+      ],
+      [
+        660,
+        265
+      ],
+      [
+        675,
+        235
+      ],
+      [
+        710,
+        195
+      ],
+      [
+        728,
+        140
+      ],
+      [
+        757,
+        120
+      ],
+      [
+        850,
+        89
+      ],
+      [
+        1505,
+        89
+      ],
+      [
+        1505,
+        287
+      ]
+    ],
+    "excludedUI": [],
+    "output": "public\\assets\\illustrations\\reference\\community.webp",
+    "size": [
+      870,
+      198
+    ],
+    "outputSha256": "01b07b7cd639f54394dc55caccdc90dd99b46b165f0e92bb5c3b303cc3367c13"
+  },
+  {
+    "name": "home-discussion",
+    "source": "mockups\\homepage-theme-03-malaysia-utility.png",
+    "sourceSha256": "81944f9381e3df2314f6b205b58de72567d535253c26bbaf4b2eca2a1805a3fd",
+    "crop": [
+      35,
+      856,
+      610,
+      1027
+    ],
+    "maskPolygon": [
+      [
+        35,
+        1027
+      ],
+      [
+        45,
+        980
+      ],
+      [
+        65,
+        940
+      ],
+      [
+        75,
+        912
+      ],
+      [
+        92,
+        884
+      ],
+      [
+        130,
+        865
+      ],
+      [
+        170,
+        867
+      ],
+      [
+        195,
+        878
+      ],
+      [
+        207,
+        859
+      ],
+      [
+        270,
+        856
+      ],
+      [
+        291,
+        872
+      ],
+      [
+        296,
+        898
+      ],
+      [
+        326,
+        900
+      ],
+      [
+        341,
+        878
+      ],
+      [
+        350,
+        867
+      ],
+      [
+        413,
+        865
+      ],
+      [
+        427,
+        887
+      ],
+      [
+        447,
+        881
+      ],
+      [
+        482,
+        878
+      ],
+      [
+        510,
+        891
+      ],
+      [
+        525,
+        920
+      ],
+      [
+        557,
+        920
+      ],
+      [
+        590,
+        922
+      ],
+      [
+        609,
+        937
+      ],
+      [
+        608,
+        958
+      ],
+      [
+        579,
+        970
+      ],
+      [
+        584,
+        1000
+      ],
+      [
+        588,
+        1027
+      ]
+    ],
+    "excludedUI": [],
+    "output": "public\\assets\\illustrations\\reference\\home-discussion.webp",
+    "size": [
+      575,
+      171
+    ],
+    "outputSha256": "dcfe17277f8ad36d9f2bf4d9ff10543d92de127f5a7cf7129fb83bac88ae69dc"
+  },
+  {
+    "name": "tools-mobile",
+    "source": "mockups\\ui-10-tools-directory-mobile-v2.png",
+    "sourceSha256": "8c9898e728def0c30563ac0cebc60d3bebee8e00731319bf048439c777ec57d7",
+    "crop": [
+      380,
+      190,
+      853,
+      606
+    ],
+    "maskPolygon": [
+      [
+        380,
+        514
+      ],
+      [
+        475,
+        472
+      ],
+      [
+        535,
+        439
+      ],
+      [
+        560,
+        400
+      ],
+      [
+        570,
+        350
+      ],
+      [
+        571,
+        286
+      ],
+      [
+        543,
+        280
+      ],
+      [
+        542,
+        214
+      ],
+      [
+        610,
+        214
+      ],
+      [
+        633,
+        258
+      ],
+      [
+        690,
+        228
+      ],
+      [
+        735,
+        215
+      ],
+      [
+        790,
+        211
+      ],
+      [
+        853,
+        190
+      ],
+      [
+        853,
+        606
+      ],
+      [
+        653,
+        606
+      ],
+      [
+        665,
+        581
+      ],
+      [
+        665,
+        540
+      ],
+      [
+        650,
+        520
+      ],
+      [
+        630,
+        514
+      ]
+    ],
+    "excludedUI": [],
+    "output": "public\\assets\\illustrations\\reference\\tools-mobile.webp",
+    "size": [
+      473,
+      416
+    ],
+    "outputSha256": "9690d115e027c69b867cc99ffdf724048b181f0c7379737bfe7800196c40a4d4"
+  }
+]

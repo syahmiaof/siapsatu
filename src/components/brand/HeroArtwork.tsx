@@ -1,8 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./HeroArtwork.module.css";
+import { ReferenceArtwork } from "./ReferenceArtwork";
 
 export function HeroArtwork({ catalog = false }: { catalog?: boolean }) {
+  if (!catalog) return <ReferenceArtwork variant="home" />;
   return (
     <div
       className={`${styles.scene} ${catalog ? styles.catalog : ""}`}

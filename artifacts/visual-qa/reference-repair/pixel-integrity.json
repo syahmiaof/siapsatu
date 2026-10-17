@@ -1,0 +1,44 @@
+[
+  {
+    "asset": "home-mobile",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "home",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "tools",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "path-learner",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "community",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "home-discussion",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  },
+  {
+    "asset": "tools-mobile",
+    "sourceUnchanged": true,
+    "opaquePixelsMatchSourceExactly": true,
+    "excludedUITransparent": true
+  }
+]

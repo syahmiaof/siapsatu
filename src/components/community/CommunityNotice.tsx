@@ -14,28 +14,25 @@ export function CommunityNotice({ className = "" }: { className?: string }) {
           aria-hidden="true"
         >
           <path
-            d="M-50 85C220 120 480 195 960 115"
+            d="M-50 85C170 0 230 112 480 146S780 161 960 131"
             fill="none"
             stroke="white"
             strokeWidth="22"
           />
           <path
-            d="M-50 109C220 144 480 219 960 139"
+            d="M-50 97C170 12 230 124 480 158S780 173 960 143"
             fill="none"
             stroke="#d72837"
             strokeWidth="15"
           />
         </svg>
         <picture className={styles.learnersArt}>
-          <source
-            media="(max-width:700px)"
-            srcSet="/assets/illustrations/parity-v2/discussion-650.webp"
-          />
           <Image
-            src="/assets/illustrations/parity-v2/discussion-1200.webp"
+            src="/assets/illustrations/reference/home-discussion.webp"
             alt=""
-            width={1200}
-            height={403}
+            width={575}
+            height={171}
+            unoptimized
             sizes="(max-width:900px) 60vw, 36vw"
           />
         </picture>

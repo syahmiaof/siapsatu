@@ -124,3 +124,15 @@ Authored clean SVG vectors with stable viewBox geometry and intrinsic aspect rat
 ### Community Demo Project Previews
 - `public/assets/illustrations/community-digest-thumb.png`, `community-portfolio-thumb.png`, `community-workflow-thumb.png`: Mockup-derived project previews with honest prototype captions (`Ilustrasi contoh`, `Rekaan demo`, `Diagram contoh`). No false claims of live student submissions.
 
+
+
+## Reference extraction repair — 17 October 2026
+
+The founder explicitly approved extracting/cropping supplied reference artwork after reviewing the v4 audit. This supersedes earlier reconstruction-only guidance for Home, Tools, Path, Community and the Home discussion strip. The original mockups remain unchanged.
+
+- Seven lossless WebP derivatives live under `public/assets/illustrations/reference/`.
+- `scripts/extract-reference-art.py` records original source coordinates, polygon masks, excluded functional UI, SHA-256 hashes and dimensions in `artifacts/visual-qa/reference-repair/asset-manifest.json`.
+- Home has a separate mobile framing. Tools mobile comes from its approved mobile reference. Other mobile compositions preserve the desktop illustration aspect ratio and adapt the HTML layout.
+- Source lettering within decorative art (handwritten notes/sticky labels) remains raster artwork. Main headings, navigation, pricing, search, cards and actions remain HTML. Login/search controls embedded in the mockups are excluded with transparent masks.
+- `scripts/verify-reference-extraction.py` confirms original hashes, exact opaque RGB pixels and transparent excluded controls. These are source derivatives, not newly generated artwork or a claim to independent third-party licensing.
+- Source dimensions limit high-DPR sharpness; no upscaling is claimed to recover lost detail. Prior reconstruction assets and evidence remain on disk.

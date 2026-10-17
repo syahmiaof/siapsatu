@@ -1,3 +1,9 @@
+# Current reference extraction repair — 17 October 2026
+
+See [REFERENCE_REPAIR.md](REFERENCE_REPAIR.md) for the current source-crop implementation, matched comparisons, test evidence and honest remaining differences. The v3 reports below are historical and do not describe the current artwork.
+
+---
+
 # SiapSatu UI / asset / layout repair v3
 
 Date: 17 October 2026 (work began 16 October). Started at b079d3c287e63cd6faf7519e4e33507881f53c0a. Scope: Home, Tools, AI Automation Path and Community. This report supersedes the older Top 5 runtime verdicts; historical reports/evidence remain unchanged.

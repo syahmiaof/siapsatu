@@ -235,12 +235,7 @@ export default function CommunityPage() {
             <form onSubmit={handlePublishPost}>
               <div className={styles.postTopRow}>
                 <span className={styles.userAvatar} aria-hidden="true">
-                  <Image
-                    src="/assets/avatars/avatar-user.png"
-                    alt="Anda"
-                    width={42}
-                    height={42}
-                  />
+                  S
                 </span>
 
                 <textarea
@@ -248,7 +243,7 @@ export default function CommunityPage() {
                   value={newPostContent}
                   onChange={(e) => setNewPostContent(e.target.value)}
                   className={styles.postInput}
-                  rows={2}
+                  rows={1}
                   ref={composeRef}
                   aria-label="Isi hantaran demo"
                   style={{ resize: "vertical" }}
@@ -554,7 +549,7 @@ export default function CommunityPage() {
             </div>
 
             <p className={styles.whatsappSub}>
-              Bergabung dengan komuniti di WhatsApp untuk diskusi harian, perkongsian dan sokongan.
+              Ruang untuk diskusi, kongsi hasil dan belajar bersama. Jemputan WhatsApp belum dibuka.
             </p>
 
             <button
@@ -566,7 +561,7 @@ export default function CommunityPage() {
                 )
               }
             >
-              <span>Sertai WhatsApp Community</span>
+              <span>Status komuniti WhatsApp</span>
               <ArrowRight size={16} />
             </button>
 
@@ -598,7 +593,7 @@ export default function CommunityPage() {
                 </span>
               </div>
               <span className={styles.socialProofText}>
-                Ratusan learners saling bantu setiap hari.
+                Pratonton komuniti · watak dan hantaran contoh.
               </span>
             </div>
           </div>
@@ -629,11 +624,11 @@ export default function CommunityPage() {
             <div className={styles.challengeHeader}>
               <div className={styles.challengeTitleGroup}>
                 <Trophy size={18} />
-                <span className={styles.challengeCategory}>Cabaran minggu ini</span>
+                <span className={styles.challengeCategory}>Cadangan latihan</span>
               </div>
               <span className={styles.challengeBadge}>
                 <Clock size={12} />
-                <span>1 minggu lagi</span>
+                <span>Ikut masa sendiri</span>
               </span>
             </div>
 
@@ -644,7 +639,7 @@ export default function CommunityPage() {
             </p>
 
             <Link href="/modules/n8n-google-sheets" className={styles.challengeBtn}>
-              <span>Sertai cabaran</span>
+              <span>Buka modul latihan</span>
               <ArrowRight size={15} />
             </Link>
           </div>

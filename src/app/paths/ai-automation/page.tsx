@@ -198,7 +198,7 @@ export default function LearningPathAutomationPage() {
               return (
                 <div
                   key={m.slug}
-                  className={`${styles.trackModuleCard} ${m.colorClass}`}
+                  className={styles.trackModuleCard}
                   data-reveal-item
                   data-step={m.num}
                 >

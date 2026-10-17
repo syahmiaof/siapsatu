@@ -1,42 +1,5 @@
-import Image from "next/image";
-import styles from "./CommunityArtwork.module.css";
+import { ReferenceArtwork } from "./ReferenceArtwork";
 
 export function CommunityArtwork() {
-  return (
-    <div className={styles.scene} aria-hidden="true" data-hero-art>
-      <Image
-        className={styles.ribbon}
-        src="/assets/illustrations/ui-v4/community-ribbon.svg"
-        alt=""
-        width={900}
-        height={300}
-        unoptimized
-      />
-      <Image
-        className={styles.emblem}
-        src="/assets/illustrations/ui-v4/emblem.svg"
-        alt=""
-        width={172}
-        height={121}
-        unoptimized
-      />
-      <Image
-        className={styles.city}
-        src="/assets/illustrations/ui-v4/kl-skyline.svg"
-        alt=""
-        width={320}
-        height={320}
-        unoptimized
-      />
-      <Image
-        className={styles.people}
-        src="/assets/illustrations/parity-v2/discussion-1200.webp"
-        alt=""
-        width={1200}
-        height={403}
-        sizes="(max-width:600px) 100vw, 44vw"
-        priority
-      />
-    </div>
-  );
+  return <ReferenceArtwork variant="community" />;
 }

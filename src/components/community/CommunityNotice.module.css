@@ -11,7 +11,7 @@
   height: 164px;
   border-radius: 22px 0 0 22px;
   clip-path: polygon(0 0, 94% 0, 100% 100%, 0 100%);
-  background: linear-gradient(140deg, #0b3474, #03143a 70%);
+  background: #031944;
   display: flex;
   align-items: center;
   justify-content: flex-end;

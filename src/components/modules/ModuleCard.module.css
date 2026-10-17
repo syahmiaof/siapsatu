@@ -1,4 +1,10 @@
 /* Large Featured Card */
+@media (min-width: 1101px) and (min-height: 900px) {
+  :global([data-home]) .featuredCard { min-height: 262px; }
+  :global([data-home]) .featuredTitle { font-size: 32px; }
+  :global([data-home]) .featuredDesc { font-size: 18px; }
+  :global([data-home]) .featuredIconSquare { width: 92px; height: 92px; }
+}
 .featuredCard {
   position: relative;
   display: flex;
