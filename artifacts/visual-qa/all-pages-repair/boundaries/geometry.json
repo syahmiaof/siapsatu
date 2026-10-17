@@ -1,0 +1,170 @@
+[
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 1101,
+    "width": 1101,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "catalog",
+        "x": 540.078125,
+        "y": 0,
+        "width": 560.921875,
+        "height": 419,
+        "top": 0,
+        "right": 1101,
+        "bottom": 419,
+        "left": 540.078125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 1101,
+    "width": 1101,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "hermes",
+        "x": 519.25,
+        "y": 1,
+        "width": 581.75,
+        "height": 558,
+        "top": 1,
+        "right": 1101,
+        "bottom": 559,
+        "left": 519.25
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 1101,
+    "width": 1101,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 571.328125,
+        "y": -4,
+        "width": 529.671875,
+        "height": 459.25,
+        "top": -4,
+        "right": 1101,
+        "bottom": 455.25,
+        "left": 571.328125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 1101,
+    "width": 1101,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "reader",
+        "x": 771.28125,
+        "y": 111.125,
+        "width": 300,
+        "height": 210,
+        "top": 111.125,
+        "right": 1071.28125,
+        "bottom": 321.125,
+        "left": 771.28125
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules",
+    "status": 200,
+    "scrollWidth": 1400,
+    "width": 1400,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "catalog",
+        "x": 686.75,
+        "y": 0,
+        "width": 713.25,
+        "height": 419,
+        "top": 0,
+        "right": 1400,
+        "bottom": 419,
+        "left": 686.75
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/tools/hermes-agent",
+    "status": 200,
+    "scrollWidth": 1400,
+    "width": 1400,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "hermes",
+        "x": 660.265625,
+        "y": 1,
+        "width": 739.734375,
+        "height": 486,
+        "top": 1,
+        "right": 1400,
+        "bottom": 487,
+        "left": 660.265625
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/modules/n8n-google-sheets",
+    "status": 200,
+    "scrollWidth": 1400,
+    "width": 1400,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "module",
+        "x": 726.484375,
+        "y": -4,
+        "width": 673.515625,
+        "height": 447,
+        "top": -4,
+        "right": 1400,
+        "bottom": 443,
+        "left": 726.484375
+      }
+    ],
+    "errors": []
+  },
+  {
+    "route": "/learn/n8n-google-sheets/3",
+    "status": 200,
+    "scrollWidth": 1400,
+    "width": 1400,
+    "brokenImages": [],
+    "artwork": [
+      {
+        "variant": "reader",
+        "x": 802.203125,
+        "y": 111.125,
+        "width": 560,
+        "height": 264,
+        "top": 111.125,
+        "right": 1362.203125,
+        "bottom": 375.125,
+        "left": 802.203125
+      }
+    ],
+    "errors": []
+  }
+]

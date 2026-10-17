@@ -1,0 +1,10 @@
+{
+  "phase": "live",
+  "checks": 56,
+  "routes": 14,
+  "overflow": 0,
+  "brokenImages": 0,
+  "pageErrors": 0,
+  "non200": 0,
+  "normalization": "Desktop reference at native 1505px width; white padding for differing heights only. No whole-page pixel-perfect claim."
+}

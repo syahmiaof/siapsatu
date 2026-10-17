@@ -1,4 +1,24 @@
-# Current release — reference artwork repair, 17 October 2026
+# Current release — all-page reference repair, 17 October 2026
+
+Live at [siapsatu.syahmiaof.my](https://siapsatu.syahmiaof.my). Artwork commit `86d465e` and reader clearance correction `ec2d778386f56c5b5a399d87b6a4104a4d804017` are pushed to GitHub master. Vercel deployment `dpl_Bs8SAQxz75Q7WCkkHHmXvpvKuciD` reached READY with the final application SHA and the existing custom-domain alias.
+
+Seven additional source crops repair the catalogue, Hermes hub, module detail, library, progress map, n8n hub and lesson reader. Desktop text clearance prevents reader artwork hiding lesson text. Antigravity's expanded tools catalogue and Login label are preserved, alongside the existing Home, Tools, Path and Community repair. Original mockups, brand assets, data and business logic remain unchanged.
+
+Production evidence:
+
+- Full production browser suite: **70 passed, 10 device-specific skips, zero failures** after the final reader correction.
+- Visual audit: **56 page/viewport checks** across 14 routes, plus **8 breakpoint checks**; no horizontal overflow, broken images or browser errors.
+- Published content: **72 module/lesson checks**, zero findings.
+- HTTPS 200; **14/14 source artwork files byte-identical**, with all 11 expected reference compositions loaded.
+- Local production build, lint and typecheck passed. Reader interactions additionally passed 10 tests with 2 device-specific skips.
+
+[Full repair report](ALL_PAGES_REFERENCE_REPAIR.md), [live reference comparisons](../artifacts/visual-qa/all-pages-repair/index.html), [production tests](../artifacts/visual-qa/all-pages-repair/tests-live.log), [deployment proof](../artifacts/visual-qa/all-pages-repair/release-final-app.json).
+
+The artwork now comes directly from the references. Browser text, icons, semantic diagrams, truthful demo data and mobile adaptations still have documented differences; whole-page pixel-perfect parity is not claimed. The following evidence-only commit preserves the verified release without runtime changes.
+
+---
+
+# Previous release — reference artwork repair, 17 October 2026
 
 Live at [siapsatu.syahmiaof.my](https://siapsatu.syahmiaof.my). Application commit `3617bf4e6863248536a71e16c89bfc6f5d247fdc` was pushed to GitHub master. Vercel deployment `dpl_A61WmXGfZmd9A3fL5ti2LvuxVSg6` reached READY with that exact SHA and the existing custom-domain alias; no DNS changes were needed.
 

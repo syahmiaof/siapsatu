@@ -1,0 +1,16 @@
+{
+  "checkedAt": "2026-10-17T11:34:09.528Z",
+  "commit": "ec2d778386f56c5b5a399d87b6a4104a4d804017",
+  "artworkCommit": "86d465e553290fb5f0fef66140dcf453d9993b45",
+  "deploymentId": "dpl_Bs8SAQxz75Q7WCkkHHmXvpvKuciD",
+  "url": "siapsatu-a9rr23kin-syahmiaofs-projects.vercel.app",
+  "state": "READY",
+  "aliases": [
+    "siapsatu.vercel.app",
+    "siapsatu.syahmiaof.my",
+    "siapsatu-syahmiaofs-projects.vercel.app",
+    "siapsatu-git-master-syahmiaofs-projects.vercel.app"
+  ],
+  "target": "production",
+  "remoteShaVerified": true
+}
