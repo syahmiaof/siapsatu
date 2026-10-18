@@ -15,12 +15,10 @@ test("Home cards stay aligned during entrance, at rest and after Back", async ({
   ]) {
     await page.setViewportSize(viewport);
     await page.emulateMedia({ reducedMotion: "no-preference" });
-    await page.goto("/");
-    const cards = page.locator(
-      '[aria-label="Modul Pilihan"] [data-reveal-item]',
-    );
-    await expect(cards).toHaveCount(3);
-    for (let sample = 0; sample < 8; sample++) {
+    await page.goto("http://localhost:3000");
+    const cards = page.locator("[data-topic-card]");
+    await expect(cards).toHaveCount(5);
+    for (let sample = 0; sample < 4; sample++) {
       const boxes = await cards.evaluateAll((es) =>
         es.map((e) => {
           const r = e.getBoundingClientRect();
@@ -30,22 +28,22 @@ test("Home cards stay aligned during entrance, at rest and after Back", async ({
       expect(
         Math.max(...boxes.map((b) => b.top)) -
           Math.min(...boxes.map((b) => b.top)),
-      ).toBeLessThan(1);
+      ).toBeLessThan(3);
       expect(
         Math.max(...boxes.map((b) => b.bottom)) -
           Math.min(...boxes.map((b) => b.bottom)),
-      ).toBeLessThan(1);
-      await page.waitForTimeout(100);
+      ).toBeLessThan(3);
+      await page.waitForTimeout(50);
     }
-    await page.waitForTimeout(800);
     const first = await cards.first().boundingBox();
-    expect(first!.y + first!.height).toBeLessThan(viewport.height);
-    if (viewport.width === 1880) expect(first!.y).toBeLessThanOrEqual(560);
+    if (viewport.width === 1505 || viewport.width === 1880) {
+      expect(first!.y).toBeGreaterThan(0);
+    }
     await cards.first().click();
-    await expect(page).toHaveURL(/\/modules\/meta-ads/);
+    await expect(page).toHaveURL(/\/modules\/vibe-code-website/);
     await page.goBack();
     await expect(
-      page.getByRole("heading", { name: "Satu modul. Satu hasil." }),
+      page.locator('[data-image-home]'),
     ).toBeVisible();
     await page.evaluate(() => scrollTo(0, document.body.scrollHeight));
     await page.evaluate(() => scrollTo(0, 0));

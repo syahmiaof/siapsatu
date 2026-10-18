@@ -1,36 +1,49 @@
 import { test, expect } from "@playwright/test";
 
-test("Home outcomes lead to real student modules without homepage pricing", async ({
+test("Home topics lead to real modules and honest prototype dialogs without homepage pricing", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
+  await page.goto("http://localhost:3000");
   await expect(page.locator("body")).not.toContainText(/RM\s*10/);
-  const outcomes = page.getByRole("region", {
-    name: "Hasil pertama untuk student",
+
+  const topics = page.getByRole("region", {
+    name: "Lima topik untuk diteroka",
   });
-  await expect(outcomes.getByRole("heading")).toHaveText([
-    "Siapkan slide yang jelas",
-    "Faham bahan PDF",
-    "Bina website pertama",
-  ]);
-  const slugs = [
-    "gemini-slide-assignment",
-    "notebooklm-pdf-study",
-    "vibe-code-website",
-  ];
-  for (const slug of slugs) {
-    const link = outcomes.locator(`a[href="/modules/${slug}"]`);
-    await expect(link).toContainText("Lihat modul");
-    await link.click();
-    await expect(page).toHaveURL(new RegExp(`/modules/${slug}$`));
-    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-    await expect(
-      page.getByRole("button", { name: /Beli modul RM10/i }).first(),
-    ).toBeVisible();
-    await page.goBack();
+  await expect(topics).toBeVisible();
+
+  // Topic 1: Website live -> vibe-code-website
+  const topic1 = topics.locator('[data-topic-card="website"]');
+  await expect(topic1).toHaveAttribute("href", "/modules/vibe-code-website");
+  await topic1.click();
+  await expect(page).toHaveURL(/\/modules\/vibe-code-website$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: /Beli modul RM10/i }).first(),
+  ).toBeVisible();
+  await page.goBack();
+
+  // Topic 4: Automasi kerja -> n8n-google-sheets
+  const topic4 = topics.locator('[data-topic-card="automation"]');
+  await expect(topic4).toHaveAttribute("href", "/modules/n8n-google-sheets");
+  await topic4.click();
+  await expect(page).toHaveURL(/\/modules\/n8n-google-sheets$/);
+  await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+  await page.goBack();
+
+  // Planned topics 2, 3, 5 open dialog
+  for (const id of ["app", "agent", "content"] as const) {
+    const plannedBtn = topics.locator(`[data-topic-card="${id}"]`);
+    await plannedBtn.click();
+    const dialog = page.locator('div[role="dialog"]');
+    await expect(dialog).toBeVisible();
+    await expect(dialog).toContainText("Dalam perancangan");
+    await dialog.locator("button", { hasText: "Tutup" }).click();
+    await expect(dialog).not.toBeVisible();
   }
-  await page.goto("/modules");
+
+  // Modules catalogue check
+  await page.goto("http://localhost:3000/modules");
   const catalogueCards = page.locator('main a[href^="/modules/"]');
   expect(await catalogueCards.count()).toBeGreaterThan(3);
   for (const card of await catalogueCards.all())
@@ -58,7 +71,7 @@ test("Audience chips open the correct filtered catalogue", async ({ page }) => {
       excluded: "gemini-slide-assignment",
     },
   ]) {
-    await page.goto("/");
+    await page.goto("http://localhost:3000");
     await page
       .getByRole("navigation", { name: "Pilih ikut keperluan" })
       .getByRole("link", { name: `Untuk ${audience.label}` })
@@ -81,7 +94,7 @@ test("Audience chips open the correct filtered catalogue", async ({ page }) => {
 test("Home navigation stays price-free and spotlight is keyboard reachable", async ({
   page,
 }, info) => {
-  await page.goto("/");
+  await page.goto("http://localhost:3000");
   if (info.project.name.includes("mobile")) {
     await page.getByRole("button", { name: "Buka menu" }).click();
     await expect(page.locator("body")).not.toContainText(/RM\s*10/);
@@ -106,25 +119,23 @@ test("Home navigation stays price-free and spotlight is keyboard reachable", asy
     await page.keyboard.press("Escape");
     await expect(trigger).toBeFocused();
   }
-  const cta = page.getByRole("link", { name: "Pilih hasil pertama" });
+  const cta = page.getByRole("link", { name: "Teroka apa yang boleh dibina" });
   await cta.focus();
   await expect(cta).toBeFocused();
   await page.keyboard.press("Enter");
-  await expect(page).toHaveURL(/\/modules\?category=student$/);
+  await expect(page).toHaveURL(/#topik$/);
 });
 
 test("Editorial stories link to published modules and audience catalogues", async ({
   page,
 }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
-  await page.goto("/");
+  await page.goto("http://localhost:3000");
   const storyLinks = page.locator('section[aria-labelledby$="-why"] a');
   const destinations = await storyLinks.evaluateAll((links) =>
     links.map((link) => link.getAttribute("href")),
   );
   expect(destinations).toEqual([
-    "/modules?category=student",
-    "/modules/github-dari-kosong",
     "/modules?category=bisnes",
     "/modules/meta-ads-ai",
     "/modules/7-hari-content",

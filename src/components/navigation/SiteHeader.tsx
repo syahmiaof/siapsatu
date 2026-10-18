@@ -23,7 +23,7 @@ export function SiteHeader() {
   const isLaluanActive = pathname.startsWith("/paths");
   const isKomunitiActive = pathname.startsWith("/community");
 
-  if (pathname.startsWith("/learn/")) return null;
+  if (pathname === "/" || pathname.startsWith("/learn/")) return null;
 
   return (
     <header className={styles.header}>

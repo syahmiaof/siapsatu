@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, BookOpen, Share2, User } from "lucide-react";
 import styles from "./MobileBottomNav.module.css";
+import { HomeReferenceDock } from "@/components/home/HomeReferenceDock";
 
 export function MobileBottomNav() {
   const pathname = usePathname();
@@ -13,6 +14,7 @@ export function MobileBottomNav() {
   if (pathname.startsWith("/learn/")) {
     return null;
   }
+  if (pathname === "/") return <HomeReferenceDock />;
 
   const navItems = [
     { label: "Home", href: "/", icon: Home, exact: true },

@@ -1,0 +1,217 @@
+{
+  "sources": {
+    "desktop": {
+      "path": "mockups\\build-with-ai-v3\\homepage-desktop.png",
+      "sha256": "510a1ebda1a00fdc7395896478da96e4946494f63cdb4227f38668308b6515f4",
+      "size": [
+        1536,
+        1024
+      ]
+    },
+    "mobile": {
+      "path": "mockups\\build-with-ai-v3\\homepage-mobile.png",
+      "sha256": "a1960d44d7eaad29c08bf6ddec96302387a402b57626d517188ac10033e651bc",
+      "size": [
+        809,
+        1944
+      ]
+    }
+  },
+  "slices": [
+    {
+      "file": "hero-desktop.webp",
+      "source": "desktop",
+      "box": [
+        0,
+        0,
+        1536,
+        572
+      ],
+      "size": [
+        1536,
+        572
+      ],
+      "bytes": 933644
+    },
+    {
+      "file": "hero-mobile.webp",
+      "source": "mobile",
+      "box": [
+        0,
+        0,
+        809,
+        598
+      ],
+      "size": [
+        809,
+        598
+      ],
+      "bytes": 516158
+    },
+    {
+      "file": "dock-mobile.webp",
+      "source": "mobile",
+      "box": [
+        0,
+        1868,
+        809,
+        1944
+      ],
+      "size": [
+        809,
+        76
+      ],
+      "bytes": 32146
+    },
+    {
+      "file": "topic-1-desktop.webp",
+      "source": "desktop",
+      "box": [
+        0,
+        572,
+        312,
+        1024
+      ],
+      "size": [
+        312,
+        452
+      ],
+      "bytes": 157540
+    },
+    {
+      "file": "topic-1-mobile.webp",
+      "source": "mobile",
+      "box": [
+        0,
+        598,
+        809,
+        860
+      ],
+      "size": [
+        809,
+        262
+      ],
+      "bytes": 255288
+    },
+    {
+      "file": "topic-2-desktop.webp",
+      "source": "desktop",
+      "box": [
+        312,
+        572,
+        607,
+        1024
+      ],
+      "size": [
+        295,
+        452
+      ],
+      "bytes": 139794
+    },
+    {
+      "file": "topic-2-mobile.webp",
+      "source": "mobile",
+      "box": [
+        0,
+        860,
+        809,
+        1138
+      ],
+      "size": [
+        809,
+        278
+      ],
+      "bytes": 240350
+    },
+    {
+      "file": "topic-3-desktop.webp",
+      "source": "desktop",
+      "box": [
+        607,
+        572,
+        910,
+        1024
+      ],
+      "size": [
+        303,
+        452
+      ],
+      "bytes": 142442
+    },
+    {
+      "file": "topic-3-mobile.webp",
+      "source": "mobile",
+      "box": [
+        0,
+        1138,
+        809,
+        1396
+      ],
+      "size": [
+        809,
+        258
+      ],
+      "bytes": 213122
+    },
+    {
+      "file": "topic-4-desktop.webp",
+      "source": "desktop",
+      "box": [
+        910,
+        572,
+        1227,
+        1024
+      ],
+      "size": [
+        317,
+        452
+      ],
+      "bytes": 135720
+    },
+    {
+      "file": "topic-4-mobile.webp",
+      "source": "mobile",
+      "box": [
+        0,
+        1396,
+        809,
+        1641
+      ],
+      "size": [
+        809,
+        245
+      ],
+      "bytes": 198318
+    },
+    {
+      "file": "topic-5-desktop.webp",
+      "source": "desktop",
+      "box": [
+        1227,
+        572,
+        1536,
+        1024
+      ],
+      "size": [
+        309,
+        452
+      ],
+      "bytes": 159082
+    },
+    {
+      "file": "topic-5-mobile.webp",
+      "source": "mobile",
+      "box": [
+        0,
+        1641,
+        809,
+        1868
+      ],
+      "size": [
+        809,
+        227
+      ],
+      "bytes": 225332
+    }
+  ]
+}
