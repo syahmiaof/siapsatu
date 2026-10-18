@@ -6,7 +6,7 @@
   <p>Panduan praktikal dalam Bahasa Melayu untuk membina website, automasi kerja, prototaip app, AI agent dan content dengan kos RM10 per modul.</p>
 
   <p>
-    <a href="https://siapsatu.syahmiaof.my"><img src="https://img.shields.io/badge/Live%20Demo-siapsatu.syahmiaof.my-ff5a0a?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
+    <a href="https://siapsatu.syahmiaof.my"><img src="https://img.shields.io/badge/Live%20Platform-siapsatu.syahmiaof.my-ff5a0a?style=for-the-badge&logo=vercel" alt="Live Platform" /></a>
     <a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
     <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.7-blue?style=for-the-badge&logo=typescript" alt="TypeScript" /></a>
     <a href="https://playwright.dev"><img src="https://img.shields.io/badge/Playwright-80%2F80%20Passing-green?style=for-the-badge&logo=playwright" alt="Tests" /></a>
@@ -91,40 +91,6 @@ academy-syahmi/
 ├── package.json                 # Konfigurasi dependensi & skrip npm
 ├── playwright.config.ts         # Konfigurasi peranti & viewport ujian
 └── tsconfig.json                # Konfigurasi TypeScript strict
-```
-
----
-
-## 💻 Panduan Mula (Getting Started)
-
-### 1. Prasyarat
-* [Node.js](https://nodejs.org/) versi 18.17 atau lebih baru
-* npm versi 9 atau lebih baru
-
-### 2. Pemasangan Dependensi
-```bash
-git clone https://github.com/syahmiaof/siapsatu.git
-cd siapsatu
-npm install
-```
-
-### 3. Jalankan Development Server
-```bash
-npm run dev
-```
-Buka pelayar anda di [http://localhost:3000](http://localhost:3000).
-
-### 4. Semakan Kualiti & Production Build
-```bash
-npm run typecheck   # Semakan ketepatan TypeScript (0 error)
-npm run lint        # Semakan kod standard ESLint (0 warning/error)
-npm run build       # Menjana 15 halaman statik Next.js
-npm start           # Menjalankan production server
-```
-
-### 5. Jalankan Ujian E2E Playwright
-```bash
-npm run test:e2e    # Menjalankan 80 ujian Playwright secara automatik
 ```
 
 ---
