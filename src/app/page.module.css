@@ -30,7 +30,7 @@
   line-height: 1.35;
   color: var(--ss-navy-950);
   max-width: 620px;
-  white-space: nowrap;
+  white-space: normal;
 }
 .ctaContainer {
   display: flex;
@@ -74,9 +74,10 @@
   font-weight: 800;
   transition: transform 160ms;
 }
-.audienceChip > div:last-child > div:first-child {
-  font-size: 18px !important;
-  color: var(--ss-navy-950) !important;
+.chipCaption {
+  display: block;
+  font-size: 0.8em;
+  font-weight: 500;
 }
 .audienceChip:nth-child(2) {
   background: #fff1e8;
@@ -169,9 +170,6 @@
   }
 }
 @media (max-width: 700px) {
-  .audienceChip > div:last-child > div:first-child {
-    font-size: 12px !important;
-  }
   .heroGrid {
     display: block;
     min-height: 0;
@@ -271,7 +269,7 @@
   }
   .subtitle {
     white-space: normal;
-    width: 110%;
+    width: calc(100% - 12px);
     max-width: 620px;
     font-size: clamp(17px, min(1.8vw, 2.7vh), 26px);
   }
@@ -303,5 +301,335 @@
 }
 
 @media (min-width: 1101px) and (min-height: 900px) {
-  .heroGrid { min-height: clamp(272px, calc(45vh + 5px), 473px); }
+  .heroGrid {
+    min-height: clamp(272px, calc(45vh + 5px), 473px);
+  }
+}
+
+/* Outcome-led homepage: reuse the brand palette and editorial type scale. */
+.studentSection,
+.workSection {
+  padding: clamp(40px, 6vw, 88px) 12px;
+}
+.studentStory,
+.businessStory,
+.workStory {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: center;
+}
+.studentStory {
+  align-items: start;
+}
+.studentStory h2,
+.businessStory h2,
+.workStory h2 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  max-width: 19ch;
+  text-wrap: balance;
+}
+.eyebrow,
+.listCaption {
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.eyebrow {
+  color: var(--ss-muted);
+  margin-bottom: 16px;
+}
+.storyCopy {
+  max-width: 52ch;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ss-muted);
+  margin: 20px 0;
+}
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+.textLink svg,
+.businessLinks svg {
+  flex-shrink: 0;
+  transition: transform var(--ss-motion-fast) var(--ss-ease-out);
+}
+.textLink:hover svg,
+.businessLinks a:hover > svg {
+  transform: translateX(4px);
+}
+.learningSteps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.learningSteps li {
+  display: flex;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--ss-line);
+}
+.learningSteps li:first-child {
+  padding-top: 0;
+}
+.learningSteps li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.stepNumber {
+  flex-shrink: 0;
+  font: 800 28px / 1.2 var(--font-display);
+  color: var(--ss-orange);
+}
+.learningSteps h3 {
+  font: 800 21px / 1.2 var(--font-display);
+  margin-bottom: 8px;
+}
+.learningSteps p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ss-muted);
+  max-width: 44ch;
+}
+.codingEntry {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+  padding: 18px 24px;
+  border-radius: var(--ss-radius-sm);
+  background: var(--ss-surface-blue);
+}
+.codingEntry > svg {
+  flex-shrink: 0;
+}
+.codingEntry p {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.codingEntry strong {
+  display: block;
+}
+.codingEntry .textLink {
+  font-size: 14px;
+}
+.businessSection {
+  padding: clamp(28px, 4vw, 60px);
+  background: var(--ss-navy-900);
+  color: white;
+  border-radius: var(--ss-radius-lg);
+}
+.businessSection h2,
+.businessSection h3 {
+  color: white;
+}
+.businessSection .eyebrow,
+.businessSection .listCaption,
+.businessLinks a span {
+  color: var(--ss-yellow);
+}
+.businessSection .storyCopy,
+.businessLinks a p {
+  color: #dbe4f1;
+}
+.businessSection a:focus-visible {
+  outline-color: var(--ss-yellow);
+}
+.businessLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid #ffffff40;
+  padding: 24px 0;
+}
+.businessLinks a:last-child {
+  padding-bottom: 0;
+}
+.businessLinks .listCaption {
+  margin-bottom: 24px;
+}
+.businessLinks a span {
+  font-size: 12px;
+  font-weight: 700;
+}
+.businessLinks h3 {
+  font: 800 27px / 1.2 var(--font-display);
+  margin: 8px 0;
+}
+.businessLinks a p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.workSheet {
+  padding: 28px 32px;
+  background: var(--ss-surface-yellow);
+  border-top: 4px solid var(--ss-yellow);
+  border-radius: 0 0 var(--ss-radius-md) var(--ss-radius-md);
+}
+.workSheet > a {
+  display: block;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--ss-line);
+}
+.workSheet > a:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.workLabel {
+  font-size: 12px;
+  color: var(--ss-muted);
+  font-weight: 700;
+}
+.workSheet h3 {
+  font: 800 24px / 1.2 var(--font-display);
+  margin: 8px 0 14px;
+  max-width: 24ch;
+}
+.workAction {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 800;
+}
+.workSheet > a:hover .workAction {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .heroGrid {
+    grid-template-columns: 47% 53%;
+    min-height: 390px;
+  }
+  .heroRight {
+    left: 47%;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+  .ctaContainer {
+    gap: 8px;
+  }
+  .ctaContainer > a {
+    font-size: 20px;
+    padding-inline: 20px;
+  }
+  .sunburstRays {
+    display: none;
+  }
+  .audienceChip {
+    gap: 5px;
+    padding: 10px 7px;
+    font-size: 12px;
+  }
+  .chipIconWrap {
+    width: 23px;
+  }
+  .chipIconWrap svg {
+    width: 23px;
+    height: 23px;
+  }
+  .studentStory,
+  .businessStory,
+  .workStory {
+    gap: 28px;
+  }
+  .codingEntry {
+    flex-wrap: wrap;
+  }
+  .codingEntry p {
+    flex-basis: 70%;
+  }
+  .codingEntry .textLink {
+    margin-left: 42px;
+  }
+}
+@media (max-width: 700px) {
+  .heroLeft {
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+  .subtitle {
+    font-size: 16px;
+    max-width: 100%;
+  }
+  .heroRight {
+    height: clamp(160px, calc(100vw - 200px), 190px);
+  }
+  .studentSection,
+  .workSection {
+    padding-inline: 0;
+  }
+  .studentStory,
+  .businessStory,
+  .workStory {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .storyCopy {
+    font-size: 15px;
+    margin: 16px 0;
+  }
+  .eyebrow {
+    font-size: 11px;
+    margin-bottom: 12px;
+  }
+  .learningSteps h3 {
+    font-size: 20px;
+  }
+  .learningSteps li {
+    gap: 14px;
+    padding-block: 18px;
+  }
+  .codingEntry {
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    padding: 16px;
+    margin-top: 28px;
+  }
+  .codingEntry p {
+    flex-basis: 75%;
+  }
+  .codingEntry .textLink {
+    margin-left: 38px;
+  }
+  .businessSection {
+    padding: 28px 22px;
+    border-radius: var(--ss-radius-md);
+  }
+  .businessLinks h3 {
+    font-size: 25px;
+  }
+  .workSheet {
+    padding: 24px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .audienceChip,
+  .textLink svg,
+  .businessLinks svg {
+    transition: none;
+  }
+  .audienceChip:hover,
+  .textLink:hover svg,
+  .businessLinks a:hover > svg {
+    transform: none;
+  }
 }

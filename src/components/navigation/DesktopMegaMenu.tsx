@@ -8,7 +8,6 @@ import {
   Zap,
   Box,
   Briefcase,
-  Building,
   GraduationCap,
   ChevronRight,
   ArrowRight,
@@ -132,7 +131,7 @@ export function DesktopMegaMenu({ isOpen, onClose }: DesktopMegaMenuProps) {
           >
             <div className={styles.itemLeft}>
               <div className={styles.iconWrap} style={{ color: "#062457" }}>
-                <Building size={20} />
+                <GraduationCap size={20} />
               </div>
               <span>Student</span>
             </div>
@@ -241,18 +240,18 @@ export function DesktopMegaMenu({ isOpen, onClose }: DesktopMegaMenuProps) {
         <div className={styles.spotlightLeft}>
           <div className={styles.spotlightLogo}>
             <Image
-              src="/assets/tools/meta.svg"
-              alt="Meta"
+              src="/assets/tools/gemini-google-v2.png"
+              alt="Gemini"
               width={22}
               height={22}
             />
           </div>
           <span className={styles.spotlightText}>
-            Modul pilihan minggu ini — Meta Ads + AI · RM10
+            Mula dengan satu hasil — Siapkan slide yang jelas
           </span>
         </div>
         <Link
-          href="/modules/meta-ads-ai"
+          href="/modules/gemini-slide-assignment"
           onClick={onClose}
           className={styles.spotlightBtn}
         >

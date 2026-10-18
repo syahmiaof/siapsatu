@@ -1,0 +1,178 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "overflow": false,
+    "firstCard": {
+      "x": 38.875,
+      "y": 544.796875,
+      "width": 443.40625,
+      "height": 287.78125,
+      "bottom": 832.578125,
+      "right": 482.28125
+    },
+    "dock": {
+      "x": 0,
+      "y": 0,
+      "width": 0,
+      "height": 0,
+      "bottom": 0,
+      "right": 0
+    },
+    "subtitle": {
+      "x": 50.875,
+      "y": 295.671875,
+      "width": 587.375,
+      "height": 65.59375,
+      "bottom": 361.265625,
+      "right": 638.25
+    },
+    "art": {
+      "x": 574.234375,
+      "y": 0,
+      "width": 865.765625,
+      "height": 544.796875,
+      "bottom": 544.796875,
+      "right": 1440
+    },
+    "brokenImages": [],
+    "focus": {
+      "text": "Untuk Student",
+      "outline": "solid"
+    },
+    "errors": [],
+    "normalHeadingVisible": true
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "overflow": false,
+    "firstCard": {
+      "x": 20.734375,
+      "y": 486,
+      "width": 231.5,
+      "height": 291.6875,
+      "bottom": 777.6875,
+      "right": 252.234375
+    },
+    "dock": {
+      "x": 0,
+      "y": 956,
+      "width": 768,
+      "height": 68,
+      "bottom": 1024,
+      "right": 768
+    },
+    "subtitle": {
+      "x": 20.734375,
+      "y": 197.5625,
+      "width": 341.46875,
+      "height": 72.890625,
+      "bottom": 270.453125,
+      "right": 362.203125
+    },
+    "art": {
+      "x": 362.203125,
+      "y": 76,
+      "width": 405.796875,
+      "height": 410,
+      "bottom": 486,
+      "right": 768
+    },
+    "brokenImages": [],
+    "focus": {
+      "text": "Untuk Student",
+      "outline": "solid"
+    },
+    "errors": [],
+    "normalHeadingVisible": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "firstCard": {
+      "x": 16,
+      "y": 571,
+      "width": 358,
+      "height": 181.875,
+      "bottom": 752.875,
+      "right": 374
+    },
+    "dock": {
+      "x": 0,
+      "y": 776,
+      "width": 390,
+      "height": 68,
+      "bottom": 844,
+      "right": 390
+    },
+    "subtitle": {
+      "x": 16,
+      "y": 185.5625,
+      "width": 358,
+      "height": 43.1875,
+      "bottom": 228.75,
+      "right": 374
+    },
+    "art": {
+      "x": 0,
+      "y": 369,
+      "width": 390,
+      "height": 190,
+      "bottom": 559,
+      "right": 390
+    },
+    "brokenImages": [],
+    "focus": {
+      "text": "Untuk Student",
+      "outline": "solid"
+    },
+    "errors": [],
+    "normalHeadingVisible": true
+  },
+  {
+    "width": 360,
+    "height": 800,
+    "overflow": false,
+    "firstCard": {
+      "x": 16,
+      "y": 538,
+      "width": 328,
+      "height": 181.875,
+      "bottom": 719.875,
+      "right": 344
+    },
+    "dock": {
+      "x": 0,
+      "y": 732,
+      "width": 360,
+      "height": 68,
+      "bottom": 800,
+      "right": 360
+    },
+    "subtitle": {
+      "x": 16,
+      "y": 182.5625,
+      "width": 328,
+      "height": 43.1875,
+      "bottom": 225.75,
+      "right": 344
+    },
+    "art": {
+      "x": 0,
+      "y": 366,
+      "width": 360,
+      "height": 160,
+      "bottom": 526,
+      "right": 360
+    },
+    "brokenImages": [],
+    "focus": {
+      "text": "Untuk Student",
+      "outline": "solid"
+    },
+    "errors": [],
+    "normalHeadingVisible": true
+  }
+]

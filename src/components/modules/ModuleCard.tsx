@@ -20,6 +20,10 @@ interface ModuleCardProps {
   iconPath?: string;
   className?: string;
   density?: "normal" | "catalog";
+  displayTitle?: string;
+  showPrice?: boolean;
+  actionLabel?: string;
+  theme?: "navy" | "crimson" | "green";
 }
 
 export function ModuleCard({
@@ -28,6 +32,10 @@ export function ModuleCard({
   iconPath,
   className = "",
   density = "normal",
+  displayTitle,
+  showPrice = true,
+  actionLabel,
+  theme,
 }: ModuleCardProps) {
   // Determine tool icon
   const resolvedIcon =
@@ -55,12 +63,18 @@ export function ModuleCard({
                         : "/assets/tools/gemini-google-v2.png");
 
   const href = `/modules/${module.slug}`;
+  const visualTheme = theme ?? module.themeColor ?? "navy";
+  const title =
+    displayTitle ??
+    (density === "catalog"
+      ? module.discoveryTitle || module.title
+      : module.title);
 
   if (variant === "featured") {
     const themeClass =
-      module.themeColor === "crimson"
+      visualTheme === "crimson"
         ? styles["theme-crimson"]
-        : module.themeColor === "green"
+        : visualTheme === "green"
           ? styles["theme-green"]
           : styles["theme-navy"];
 
@@ -71,17 +85,17 @@ export function ModuleCard({
         data-reveal-item
       >
         <div className={styles.bgDeco} aria-hidden="true">
-          <CardMotif theme={module.themeColor || "navy"} />
+          <CardMotif theme={visualTheme} />
         </div>
         <div className={styles.mobileCharacter} aria-hidden="true">
           <Image
-            src={`/assets/illustrations/parity-v2/portrait-${module.themeColor === "crimson" ? "woman" : module.themeColor === "green" ? "coder" : "male"}-500.webp`}
+            src={`/assets/illustrations/parity-v2/portrait-${visualTheme === "crimson" ? "woman" : visualTheme === "green" ? "coder" : "male"}-500.webp`}
             alt=""
             width={500}
             height={
-              module.themeColor === "crimson"
+              visualTheme === "crimson"
                 ? 696
-                : module.themeColor === "green"
+                : visualTheme === "green"
                   ? 742
                   : 739
             }
@@ -116,11 +130,7 @@ export function ModuleCard({
               )}
             </div>
             <div className={styles.featuredHeaderContent}>
-              <h3 className={styles.featuredTitle}>
-                {density === "catalog"
-                  ? module.discoveryTitle || module.title
-                  : module.title}
-              </h3>
+              <h3 className={styles.featuredTitle}>{title}</h3>
               {density === "catalog" && module.discoveryTitle && (
                 <p className={styles.moduleName}>{module.title}</p>
               )}
@@ -143,7 +153,12 @@ export function ModuleCard({
         </div>
 
         <div className={styles.featuredBottom}>
-          <div className={styles.priceTag}>RM{module.priceMyr}</div>
+          {showPrice && (
+            <div className={styles.priceTag}>RM{module.priceMyr}</div>
+          )}
+          {actionLabel && (
+            <span className={styles.actionLabel}>{actionLabel}</span>
+          )}
           <div className={styles.circleArrowBtn} aria-hidden="true">
             <ArrowRight size={22} />
           </div>
@@ -185,11 +200,7 @@ export function ModuleCard({
           />
         </div>
 
-        <h3 className={styles.compactTitle}>
-          {density === "catalog"
-            ? module.discoveryTitle || module.title
-            : module.title}
-        </h3>
+        <h3 className={styles.compactTitle}>{title}</h3>
         {density === "catalog" && module.discoveryTitle && (
           <p className={styles.compactModuleName}>{module.title}</p>
         )}
@@ -201,7 +212,12 @@ export function ModuleCard({
       </div>
 
       <div className={styles.compactBottom}>
-        <div className={styles.compactPrice}>RM{module.priceMyr}</div>
+        {showPrice && (
+          <div className={styles.compactPrice}>RM{module.priceMyr}</div>
+        )}
+        {actionLabel && (
+          <span className={styles.actionLabel}>{actionLabel}</span>
+        )}
         <div className={styles.compactArrowBtn} aria-hidden="true">
           <ArrowRight size={18} />
         </div>

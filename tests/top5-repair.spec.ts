@@ -169,15 +169,16 @@ test("Home first module is discoverable without scrolling on mobile", async ({
     await page.setViewportSize({ width, height: width === 360 ? 800 : 844 });
     await page.goto("/");
     const card = await page
-      .locator('main a[href="/modules/meta-ads-ai"]')
+      .locator('main a[href="/modules/gemini-slide-assignment"]')
       .first()
       .boundingBox();
     const dock = await page.locator("[data-fixed-dock]").boundingBox();
     expect(card && dock && dock.y - card.y >= 100).toBeTruthy();
-    await page.getByRole("link", { name: "Cari modul RM10" }).click();
-    await expect(page).toHaveURL(/\/modules$/);
+    expect(card && dock && card.y + card.height <= dock.y).toBeTruthy();
+    await page.getByRole("link", { name: "Pilih hasil pertama" }).click();
+    await expect(page).toHaveURL(/\/modules\?category=student$/);
     await expect(
-      page.getByRole("heading", { name: "Sunting dokumen" }),
+      page.getByRole("heading", { name: "Siapkan slide assignment dengan AI" }),
     ).toBeVisible();
   }
 });
