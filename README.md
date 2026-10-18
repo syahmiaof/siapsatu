@@ -1,112 +1,164 @@
-# SiapSatu LMS Frontend
+# SiapSatu
 
-> **Satu modul. Satu hasil.**  
-> Practical Malay-first micro-learning platform for AI, tools, and software at RM10 per module.
+<div align="center">
+  <img src="public/assets/brand/siapsatu-logo.png" alt="SiapSatu Logo" width="220" />
+  <p><strong>Platform Belajar Tools AI untuk Malaysia — Satu Modul. Satu Hasil.</strong></p>
+  <p>Panduan praktikal dalam Bahasa Melayu untuk membina website, automasi kerja, prototaip app, AI agent dan content dengan kos RM10 per modul.</p>
 
-This repository contains the complete responsive frontend implementation for **SiapSatu**, built according to the **Malaysia Utility** visual design system and verified against the approved reference mockups.
+  <p>
+    <a href="https://siapsatu.syahmiaof.my"><img src="https://img.shields.io/badge/Live%20Demo-siapsatu.syahmiaof.my-ff5a0a?style=for-the-badge&logo=vercel" alt="Live Demo" /></a>
+    <a href="https://nextjs.org"><img src="https://img.shields.io/badge/Next.js-14.2-black?style=for-the-badge&logo=next.js" alt="Next.js" /></a>
+    <a href="https://www.typescriptlang.org"><img src="https://img.shields.io/badge/TypeScript-5.7-blue?style=for-the-badge&logo=typescript" alt="TypeScript" /></a>
+    <a href="https://playwright.dev"><img src="https://img.shields.io/badge/Playwright-80%2F80%20Passing-green?style=for-the-badge&logo=playwright" alt="Tests" /></a>
+  </p>
 
----
-
-## Tech Stack
-
-- **Framework:** [Next.js](https://nextjs.org/) 14 (App Router)
-- **Library:** [React](https://react.dev/) 18 & [TypeScript](https://www.typescriptlang.org/) (strict mode)
-- **Styling:** CSS Modules with custom design tokens (`src/styles/tokens.css`)
-- **Motion & Interactions:** [GSAP](https://gsap.com/) & `@gsap/react` with ScrollTrigger
-- **Icons:** Official SVGs for tools + [Lucide React](https://lucide.dev/) for UI glyphs
-- **Testing & Visual QA:** [Playwright](https://playwright.dev/) test suite (Desktop 1440x1024 & Mobile 390x844)
-
----
-
-## Getting Started
-
-### 1. Install Dependencies
-```bash
-npm install
-```
-
-### 2. Run the Development Server
-```bash
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### 3. Production Build & Typecheck
-```bash
-npm run typecheck   # TypeScript check (0 errors)
-npm run lint        # ESLint check (0 errors)
-npm run build       # Next.js production build
-npm start           # Serve production build
-```
-
-### 4. Run End-to-End & Visual QA Tests
-```bash
-npm run test:e2e    # Runs Playwright suite and captures screenshots to artifacts/visual-qa/
-```
+  <br />
+  <img src="public/og-image.png" alt="SiapSatu Platform Preview" width="100%" />
+  <br />
+</div>
 
 ---
 
-## Route Overview
+## 💡 Mengenai SiapSatu
 
-| Route | Description | Reference Mockup |
-|:---|:---|:---|
-| `/` | Homepage with Malaysia utility hero, value pillars, and tool grid | `homepage-theme-03-malaysia-utility.png` |
-| `/modules` | Filterable module catalog with categories and search | `modules-catalog-desktop.png` / `modules-catalog-mobile.png` |
-| `/tools` | Directory of AI, automation, and software tools | `ui-01-tools-directory-desktop.png` / `ui-10-tools-directory-mobile-v2.png` |
-| `/tools/n8n` | Dedicated n8n tool landing page with outcomes | `ui-02-tool-n8n-desktop.png` |
-| `/tools/hermes-agent` | Hermes Agent tool hub and quickstart | `ui-03-tool-hermes-desktop.png` |
-| `/paths/ai-automation` | 4-step progressive AI Automation learning path | `ui-04-learning-path-automation-v2.png` |
-| `/modules/[slug]` | RM10 module detail page & checkout preview | `ui-05-module-detail-n8n.png` |
-| `/learn/[slug]/[step]` | Practical text/template/link lesson reader | `ui-06-lesson-reader-n8n.png` / `lesson-mobile-siapsatu-v2.png` |
-| `/library` | Learner dashboard with purchased modules and outputs | `ui-07-library-dashboard.png` |
-| `/progress` | Skill progress map and milestone tracking | `ui-08-progress-map.png` |
-| `/community` | WhatsApp channels, learner wins, and guidelines | `ui-09-community-hub.png` |
-| `/login` | High-conversion OTP login view | Derived Malaysia Utility system |
+**SiapSatu** ialah platform pembelajaran mikro praktikal (micro-learning LMS) yang direka khas untuk rakyat Malaysia — merangkumi **pelajar, pemilik bisnes, dan staf pejabat**. 
+
+Berbeza dengan kursus teori yang panjang dan mahal, SiapSatu berpegang kepada prinsip:
+* **Satu modul, satu hasil praktikal yang boleh terus diuji**.
+* **RM10 setiap modul mandiri** — tiada yuran tersembunyi atau langganan wajib.
+* **Bahasa Melayu yang santai dan mudah difahami** — tak perlu jadi orang IT untuk mula bina sesuatu dengan AI.
 
 ---
 
-## Project Structure
+## 🚀 5 Laluan Pembelajaran Utama
+
+| Laluan | Janji Teknikal | Status Produk | Modul Berkaitan |
+|:---|:---|:---|:---|
+| **01 · Website live** | Brief → Bina → Deploy | Modul Aktif | [`vibe-code-website`](src/data/mockData.ts) |
+| **02 · App & sistem tanpa coding** | Form → Data → Dashboard | Dalam Perancangan | [Koleksi Tools Produktiviti](/tools?category=productivity) |
+| **03 · AI agent** | Arahan → Tools → Tindakan | Dalam Perancangan | [Koleksi Tools AI](/tools?category=ai) |
+| **04 · Automasi kerja** | Trigger → Proses → Output | Modul Aktif | [`n8n-google-sheets`](src/data/mockData.ts) |
+| **05 · Content AI** | Idea → Imej, Video & Lagu | Dalam Perancangan | [Koleksi Tools Reka Bentuk](/tools?category=design) |
+
+> *Semua modul dalam perancangan dilabel secara jujur dan tidak mempunyai sebarang aliran pembelian palsu.*
+
+---
+
+## 🛠️ Tech Stack & Senibina
+
+* **Core Framework:** [Next.js](https://nextjs.org/) 14.2 (App Router & Static Generation)
+* **Frontend UI:** [React](https://react.dev/) 18 & [TypeScript](https://www.typescriptlang.org/) (Strict Mode)
+* **Styling System:** CSS Modules dengan token warna & tipografi tersuai ([`src/styles/tokens.css`](src/styles/tokens.css))
+* **Motion & Interactivity:** [GSAP](https://gsap.com/) 3 & ScrollTrigger (`@gsap/react`)
+* **Ikon & Logo:** Vector SVG rasmi untuk 66+ tools AI & dev + [Lucide React](https://lucide.dev/) untuk UI glyphs
+* **Ujian & Kualiti:** [Playwright](https://playwright.dev/) Test Suite (80 test kes merangkumi Desktop & Mobile viewports)
+* **Automasi CI:** GitHub Actions ([`.github/workflows/ci.yml`](.github/workflows/ci.yml))
+
+---
+
+## 📁 Struktur Repositori
 
 ```text
 academy-syahmi/
-├── artifacts/
-│   └── visual-qa/            # 27 desktop & mobile full-page screenshots
-├── brand/                    # Brand identity assets and concept files
+├── .github/
+│   └── workflows/
+│       └── ci.yml               # GitHub Actions CI (Typecheck, Lint & Build)
 ├── docs/
-│   ├── ASSET_SOURCES.md      # Official provenance of all logos and artwork
-│   └── VISUAL_QA.md          # Visual audit matrix and design decision notes
-├── mockups/                  # Visual source-of-truth mockup references
+│   ├── specs/                   # Spesifikasi produk, strategi bisnes & reka bentuk
+│   │   ├── PRODUCT.md           # Fakta produk rasmi & skop pelaksanaan
+│   │   ├── DESIGN.md            # Sistem visual tokens & tipografi
+│   │   ├── BUSINESS_STRATEGY.md # Model ekonomi RM10 & perancangan modul
+│   │   ├── RESEARCH.md          # Penyelidikan pasaran Malaysia & audiens
+│   │   ├── UI_PLAN.md           # Struktur antaramuka & aliran pengguna
+│   │   └── BRAND_COPY.md        # Panduan copy & nada suara jenama
+│   ├── prompts/                 # Arkib master agent prompts & QA briefing
+│   ├── ASSET_SOURCES.md         # Sumber asal & lesen setiap logo/aset
+│   └── VISUAL_QA.md             # Matriks semakan kualiti visual & bukti ujian
+├── mockups/                     # Rujukan mockup asal yang telah diluluskan
 ├── public/
-│   └── assets/
-│       ├── brand/            # Official SiapSatu logo marks
-│       ├── illustrations/    # Extracted artwork crops (no baked text)
-│       └── tools/            # Official vector SVG & PNG tool logos
+│   ├── assets/
+│   │   ├── brand/               # Aset logo & simbol SiapSatu
+│   │   ├── home/                # Slices WebP berkualiti tinggi untuk homepage
+│   │   └── tools/               # 66+ logo rasmi tools AI & pembangun
+│   └── og-image.png             # Kad preview OpenGraph & media sosial terkini
 ├── src/
-│   ├── app/                  # Next.js App Router routes & styles
-│   ├── components/           # Modular React components
-│   │   ├── brand/            # Logo & brand accents
-│   │   ├── community/        # Community notices & discussion cards
-│   │   ├── learning/         # ModuleCard, LessonSidebar, CopyTemplate
-│   │   ├── motion/           # AnimatedHeading, RevealSection
-│   │   ├── navigation/       # SiteHeader, DesktopMegaMenu, MobileMenuSheet, MobileBottomNav
-│   │   └── tools/            # ToolCard, ToolLogoTile
-│   ├── data/                 # Typed mock data (modules, tools, paths, lessons)
-│   ├── lib/                  # LocalStorage adapter & helper utilities
-│   ├── styles/               # Design tokens and global CSS
-│   └── types/                # Strict TypeScript interfaces
-└── tests/                    # Playwright test specs
+│   ├── app/                     # Next.js App Router (15 route statik)
+│   ├── components/              # Komponen modular (Home, Brand, Navigation, Tools, dll.)
+│   ├── data/                    # Data mock katalog modul & katalog 66 tools
+│   ├── lib/                     # Utiliti bantuan & integrasi GSAP
+│   └── styles/                  # Token reka bentuk global & reset CSS
+├── tests/                       # Playwright test specs (E2E, navigation, visual QA)
+├── package.json                 # Konfigurasi dependensi & skrip npm
+├── playwright.config.ts         # Konfigurasi peranti & viewport ujian
+└── tsconfig.json                # Konfigurasi TypeScript strict
 ```
 
 ---
 
-## Planning & Research Documentation
+## 💻 Panduan Mula (Getting Started)
 
-- [PRODUCT.md](PRODUCT.md): Confirmed product facts and scope constraints.
-- [RESEARCH.md](RESEARCH.md): Malaysian market signals and pricing evidence.
-- [BUSINESS_STRATEGY.md](BUSINESS_STRATEGY.md): RM10 unit economics and catalog strategy.
-- [UI_PLAN.md](UI_PLAN.md): UX architecture and visual direction.
-- [BRAND_COPY.md](BRAND_COPY.md): Copy deck and taglines.
-- [mockups/UI_MOCKUPS_INDEX.md](mockups/UI_MOCKUPS_INDEX.md): Index of 10 Malaysia Utility expansion screens.
-- [docs/ASSET_SOURCES.md](docs/ASSET_SOURCES.md): Previous agent's asset log; some logo and crop claims need verification.
-- [docs/VISUAL_QA.md](docs/VISUAL_QA.md): Previous agent's QA report; visual match claims need fresh comparison.
-- [ASTRA_VISUAL_REBUILD_PROMPT.md](ASTRA_VISUAL_REBUILD_PROMPT.md): targeted repair brief for Astra, based on actual gaps between saved captures and approved mockups.
+### 1. Prasyarat
+* [Node.js](https://nodejs.org/) versi 18.17 atau lebih baru
+* npm versi 9 atau lebih baru
+
+### 2. Pemasangan Dependensi
+```bash
+git clone https://github.com/syahmiaof/siapsatu.git
+cd siapsatu
+npm install
+```
+
+### 3. Jalankan Development Server
+```bash
+npm run dev
+```
+Buka pelayar anda di [http://localhost:3000](http://localhost:3000).
+
+### 4. Semakan Kualiti & Production Build
+```bash
+npm run typecheck   # Semakan ketepatan TypeScript (0 error)
+npm run lint        # Semakan kod standard ESLint (0 warning/error)
+npm run build       # Menjana 15 halaman statik Next.js
+npm start           # Menjalankan production server
+```
+
+### 5. Jalankan Ujian E2E Playwright
+```bash
+npm run test:e2e    # Menjalankan 80 ujian Playwright secara automatik
+```
+
+---
+
+## 🗺️ Senarai Route Utama
+
+| Route | Penerangan Halaman |
+|:---|:---|
+| `/` | Homepage utama berorientasikan image-first dengan 5 laluan visual |
+| `/modules` | Katalog penuh modul dengan carian dan tapisan mengikut kategori |
+| `/tools` | Direktori 66 tools AI, automasi, pembangunan perisian & MCP |
+| `/tools/[slug]` | Halaman khas setiap tool (cth: n8n, Hermes Agent) |
+| `/paths/ai-automation` | Laluan pembelajaran bertahap 4 langkah (AI Automation) |
+| `/modules/[slug]` | Halaman butiran modul RM10 & pratonton checkout |
+| `/learn/[slug]/[step]` | Pembaca modul langkah-demi-langkah dengan butang salin template |
+| `/library` | Dashboard modul yang telah dipelajari oleh pengguna |
+| `/progress` | Peta kemajuan kemahiran & pencapaian hasil |
+| `/community` | Hub komuniti latihan, perkongsian hasil & saluran WhatsApp |
+| `/login` | Antaramuka log masuk OTP yang ringkas dan bersih |
+
+---
+
+## 📚 Dokumentasi Projek
+
+* 📋 [Spesifikasi Produk](docs/specs/PRODUCT.md) — Fakta, had dan skop perkhidmatan
+* 🎨 [Panduan Sistem Reka Bentuk](docs/specs/DESIGN.md) — Palet warna, tipografi dan grid
+* 💼 [Strategi Bisnes](docs/specs/BUSINESS_STRATEGY.md) — Model harga RM10 & pelan katalog
+* 🔬 [Penyelidikan Pasaran](docs/specs/RESEARCH.md) — Bukti keperluan audiens Malaysia
+* 🖼️ [Sumber Aset & Logo](docs/ASSET_SOURCES.md) — Rekod sumber sah untuk 66+ tools
+* 🤖 [Arkib Master Prompts](docs/prompts/) — Dokumentasi arahan ejen AI
+
+---
+
+## 📄 Lesen & Hak Cipta
+
+© 2026 **SiapSatu**. Hak cipta terpelihara.
+Direka dan dibangunkan dengan penuh teliti untuk komuniti pembelajaran teknologi Malaysia.
