@@ -25,19 +25,19 @@ export const metadata: Metadata = {
   ),
   title: "SiapSatu — Satu modul. Satu hasil.",
   description:
-    "Panduan mudah untuk AI, tools & software. RM10 satu modul, dengan satu hasil yang boleh anda terus guna.",
+    "Platform belajar tools AI untuk Malaysia. Belajar tools AI dengan bahasa mudah—bina website, prototaip app, AI agent, automasi dan content.",
   openGraph: {
     title: "SiapSatu — Satu modul. Satu hasil.",
     description:
-      "Panduan mudah untuk AI, tools & software. RM10 satu modul, dengan satu hasil yang boleh anda terus guna.",
+      "Platform belajar tools AI untuk Malaysia. Belajar tools AI dengan bahasa mudah—bina website, prototaip app, AI agent, automasi dan content.",
     url: "https://siapsatu.syahmiaof.my",
     siteName: "SiapSatu",
     images: [
       {
         url: "/og-image.png",
-        width: 1505,
-        height: 1045,
-        alt: "SiapSatu — Satu modul. Satu hasil.",
+        width: 1536,
+        height: 1024,
+        alt: "SiapSatu — Platform belajar tools AI untuk Malaysia. Satu modul. Satu hasil.",
       },
     ],
     locale: "ms_MY",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "SiapSatu — Satu modul. Satu hasil.",
     description:
-      "Panduan mudah untuk AI, tools & software. RM10 satu modul, dengan satu hasil yang boleh anda terus guna.",
+      "Platform belajar tools AI untuk Malaysia. Belajar tools AI dengan bahasa mudah—bina website, prototaip app, AI agent, automasi dan content.",
     images: ["/og-image.png"],
   },
 };
