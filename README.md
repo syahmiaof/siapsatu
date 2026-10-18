@@ -56,75 +56,13 @@ Berbeza dengan kursus teori yang panjang dan mahal, SiapSatu berpegang kepada pr
 
 ---
 
-## 📁 Struktur Repositori
+## 👨‍💻 Builder
 
-```text
-academy-syahmi/
-├── .github/
-│   └── workflows/
-│       └── ci.yml               # GitHub Actions CI (Typecheck, Lint & Build)
-├── docs/
-│   ├── specs/                   # Spesifikasi produk, strategi bisnes & reka bentuk
-│   │   ├── PRODUCT.md           # Fakta produk rasmi & skop pelaksanaan
-│   │   ├── DESIGN.md            # Sistem visual tokens & tipografi
-│   │   ├── BUSINESS_STRATEGY.md # Model ekonomi RM10 & perancangan modul
-│   │   ├── RESEARCH.md          # Penyelidikan pasaran Malaysia & audiens
-│   │   ├── UI_PLAN.md           # Struktur antaramuka & aliran pengguna
-│   │   └── BRAND_COPY.md        # Panduan copy & nada suara jenama
-│   ├── prompts/                 # Arkib master agent prompts & QA briefing
-│   ├── ASSET_SOURCES.md         # Sumber asal & lesen setiap logo/aset
-│   └── VISUAL_QA.md             # Matriks semakan kualiti visual & bukti ujian
-├── mockups/                     # Rujukan mockup asal yang telah diluluskan
-├── public/
-│   ├── assets/
-│   │   ├── brand/               # Aset logo & simbol SiapSatu
-│   │   ├── home/                # Slices WebP berkualiti tinggi untuk homepage
-│   │   └── tools/               # 66+ logo rasmi tools AI & pembangun
-│   └── og-image.png             # Kad preview OpenGraph & media sosial terkini
-├── src/
-│   ├── app/                     # Next.js App Router (15 route statik)
-│   ├── components/              # Komponen modular (Home, Brand, Navigation, Tools, dll.)
-│   ├── data/                    # Data mock katalog modul & katalog 66 tools
-│   ├── lib/                     # Utiliti bantuan & integrasi GSAP
-│   └── styles/                  # Token reka bentuk global & reset CSS
-├── tests/                       # Playwright test specs (E2E, navigation, visual QA)
-├── package.json                 # Konfigurasi dependensi & skrip npm
-├── playwright.config.ts         # Konfigurasi peranti & viewport ujian
-└── tsconfig.json                # Konfigurasi TypeScript strict
-```
+* **Builder:** [Syahmi Aof](https://github.com/syahmiaof) ([@syahmiaof](https://github.com/syahmiaof))
+* **Platform:** [siapsatu.syahmiaof.my](https://siapsatu.syahmiaof.my)
 
 ---
 
-## 🗺️ Senarai Route Utama
-
-| Route | Penerangan Halaman |
-|:---|:---|
-| `/` | Homepage utama berorientasikan image-first dengan 5 laluan visual |
-| `/modules` | Katalog penuh modul dengan carian dan tapisan mengikut kategori |
-| `/tools` | Direktori 66 tools AI, automasi, pembangunan perisian & MCP |
-| `/tools/[slug]` | Halaman khas setiap tool (cth: n8n, Hermes Agent) |
-| `/paths/ai-automation` | Laluan pembelajaran bertahap 4 langkah (AI Automation) |
-| `/modules/[slug]` | Halaman butiran modul RM10 & pratonton checkout |
-| `/learn/[slug]/[step]` | Pembaca modul langkah-demi-langkah dengan butang salin template |
-| `/library` | Dashboard modul yang telah dipelajari oleh pengguna |
-| `/progress` | Peta kemajuan kemahiran & pencapaian hasil |
-| `/community` | Hub komuniti latihan, perkongsian hasil & saluran WhatsApp |
-| `/login` | Antaramuka log masuk OTP yang ringkas dan bersih |
-
----
-
-## 📚 Dokumentasi Projek
-
-* 📋 [Spesifikasi Produk](docs/specs/PRODUCT.md) — Fakta, had dan skop perkhidmatan
-* 🎨 [Panduan Sistem Reka Bentuk](docs/specs/DESIGN.md) — Palet warna, tipografi dan grid
-* 💼 [Strategi Bisnes](docs/specs/BUSINESS_STRATEGY.md) — Model harga RM10 & pelan katalog
-* 🔬 [Penyelidikan Pasaran](docs/specs/RESEARCH.md) — Bukti keperluan audiens Malaysia
-* 🖼️ [Sumber Aset & Logo](docs/ASSET_SOURCES.md) — Rekod sumber sah untuk 66+ tools
-* 🤖 [Arkib Master Prompts](docs/prompts/) — Dokumentasi arahan ejen AI
-
----
-
-## 📄 Lesen & Hak Cipta
-
-© 2026 **SiapSatu**. Hak cipta terpelihara.
-Direka dan dibangunkan dengan penuh teliti untuk komuniti pembelajaran teknologi Malaysia.
+<div align="center">
+  <p>© 2026 <strong>SiapSatu</strong>. Hak cipta terpelihara.</p>
+</div>
